@@ -1,0 +1,204 @@
+{
+  "status": "local_corrected_smoke_stopped_colab_upload_approval_required",
+  "training_started": false,
+  "colab_executed": false,
+  "official_benchmark": false,
+  "decision": "Do not start full pilot extraction. Preserve both local attempts; use the prepared GPU smoke after explicit Colab upload authorization.",
+  "attempts": {
+    "v1": {
+      "supervisor": {
+        "status": "complete",
+        "started_utc": "2026-10-10T20:58:31.022467+00:00",
+        "training_started": false,
+        "eval_enabled": false,
+        "peak_rss_bytes": 853299200,
+        "source_sha256": {
+          "scripts/ssl_smoke_job.py": "9a157d9618ac1b2f1e0caf5ee0e82b5b1485dfeb7659caee674d337f31051ca5",
+          "scripts/ssl_smoke_worker.py": "5266ca79204708679726828152dfb2ad2818de4fca729f11299a708c0c096430",
+          "src/audio_deepfake/localization_ssl_geometry.py": "ddd6e4fe0de0111560281a3f7281220799f16a24554b9b11a4ea27618480cfe5",
+          "configs/localization_ssl_v1.json": "44b1e5d8ae54a9f259fa64051b4ef7ca7267c476454116dc80cb7acaedd9e264",
+          "requirements/ssl-windows.lock": "c6b6d75601e7127c6c3e02aba4d1cdbfbe7d71b52f25649878d7304cae1881ca"
+        },
+        "start_memory": {
+          "system_available_ram_bytes": 4808634368
+        },
+        "worker_seconds": 180,
+        "child_pid": null,
+        "last_memory": {
+          "system_available_ram_bytes": 4577775616,
+          "child_peak_rss_bytes": 853299200
+        },
+        "elapsed_seconds": 9.703000000008615,
+        "exit_code": 0,
+        "finished_utc": "2026-10-10T20:58:40.714376+00:00"
+      },
+      "worker": {
+        "status": "complete",
+        "created_utc": "2026-10-10T20:58:31.265492+00:00",
+        "recording_id": "LA_T_1963829",
+        "training_started": false,
+        "labels_opened": false,
+        "dev_audio_accessed": false,
+        "eval_accessed": false,
+        "model_downloaded_by_worker": false,
+        "source_sha256": {
+          "scripts/ssl_smoke_worker.py": "5266ca79204708679726828152dfb2ad2818de4fca729f11299a708c0c096430"
+        },
+        "warnings": [
+          {
+            "category": "UserWarning",
+            "message": "Passing `gradient_checkpointing` to a config initialization is deprecated and will be removed in v5 Transformers. Using `model.gradient_checkpointing_enable()` instead, or if you are using the `Trainer` API, pass `gradient_checkpointing=True` in your `TrainingArguments`."
+          }
+        ],
+        "resources_before_import": {
+          "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+          "rss_bytes": 26738688,
+          "peak_rss_bytes": 28803072,
+          "system_total_ram_bytes": 16872415232,
+          "system_available_ram_bytes": 4777652224
+        },
+        "model_sha256": {
+          "config.json": "4937977e24d12d1bba70cdce8709c3c04807a8e4ae8ddac4229c48c436ae99ae",
+          "preprocessor_config.json": "b225d617c025463b9e157e06afea8b90dc7078fc70b013c533328423e0486b4a",
+          "pytorch_model.bin": "3249fe98bfc62fcbc26067f724716a6ec49d12c4728a2af1df659013905dff21"
+        },
+        "audio_sha256": "a9e12df4f477580c27b1be39104317654dde668ab1cdca2b84509f82a4656e31",
+        "config_sha256": "44b1e5d8ae54a9f259fa64051b4ef7ca7267c476454116dc80cb7acaedd9e264",
+        "geometry_source_sha256": "ddd6e4fe0de0111560281a3f7281220799f16a24554b9b11a4ea27618480cfe5",
+        "environment": {
+          "torch": "2.10.0+cpu",
+          "transformers": "4.57.6",
+          "numpy": "2.2.6",
+          "soundfile": "0.13.1",
+          "safetensors": "0.8.0",
+          "huggingface-hub": "0.36.2"
+        },
+        "model_loading_info": {
+          "missing_keys": [],
+          "unexpected_keys": [
+            "project_hid.bias",
+            "project_hid.weight",
+            "project_q.bias",
+            "project_q.weight",
+            "quantizer.codevectors",
+            "quantizer.weight_proj.bias",
+            "quantizer.weight_proj.weight"
+          ],
+          "mismatched_keys": [],
+          "error_msgs": []
+        },
+        "model_load_seconds": 0.20209360000444576,
+        "resources_after_load": {
+          "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+          "rss_bytes": 328593408,
+          "peak_rss_bytes": 328593408,
+          "system_total_ram_bytes": 16872415232,
+          "system_available_ram_bytes": 4476796928
+        },
+        "extraction_seconds": 1.058903899975121,
+        "resources_after_extraction": {
+          "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+          "rss_bytes": 845635584,
+          "peak_rss_bytes": 853299200,
+          "system_total_ram_bytes": 16872415232,
+          "system_available_ram_bytes": 4010143744
+        },
+        "audio_samples": 118059,
+        "audio_seconds": 7.3786875,
+        "source_frame_count": 368,
+        "aligned_shape": [
+          369,
+          768
+        ],
+        "dtype": "float32",
+        "features_sha256": "61afc89b7d6eceb1d767631867034fca77b318835ad91a6ae3e54c98c4a88ebb",
+        "features_bytes": 1133696,
+        "real_time_factor": 0.14350843560933038,
+        "offline_whole_recording_context": true,
+        "elapsed_seconds": 8.597103400010383,
+        "finished_utc": "2026-10-10T20:58:39.862448+00:00"
+      },
+      "source_snapshot_hashes_verified": true
+    },
+    "v2": {
+      "supervisor": {
+        "status": "stopped",
+        "started_utc": "2026-10-10T20:59:20.488249+00:00",
+        "training_started": false,
+        "eval_enabled": false,
+        "peak_rss_bytes": 295538688,
+        "source_sha256": {
+          "scripts/ssl_smoke_job.py": "904c4b409e947d36c544fc0501e478a9d63d89569279305b5dd56f3921e5d87a",
+          "scripts/ssl_smoke_worker.py": "dd188053da4f5360b70944ed2bacbe2f2732dfbea1651acc7d6490a481fb6fc2",
+          "src/audio_deepfake/localization_ssl_geometry.py": "ddd6e4fe0de0111560281a3f7281220799f16a24554b9b11a4ea27618480cfe5",
+          "configs/localization_ssl_v1.json": "44b1e5d8ae54a9f259fa64051b4ef7ca7267c476454116dc80cb7acaedd9e264",
+          "requirements/ssl-windows.lock": "c6b6d75601e7127c6c3e02aba4d1cdbfbe7d71b52f25649878d7304cae1881ca",
+          "scripts/full_run_job.py": "36d8389fe042b9e882af5df19e3336396c838d24b1f893d9db5d1c945f57504a",
+          "src/audio_deepfake/resources.py": "9d68202f7335b17e83f2138600f0f1c7312adab46c3d73609d61751800282e7a"
+        },
+        "start_memory": {
+          "system_available_ram_bytes": 4515188736
+        },
+        "worker_seconds": 180,
+        "child_pid": null,
+        "last_memory": {
+          "system_available_ram_bytes": 4137263104,
+          "child_peak_rss_bytes": 295538688
+        },
+        "elapsed_seconds": 16.375,
+        "exit_code": 1,
+        "error": "Smoke worker exit 1; inspect stderr.log",
+        "finished_utc": "2026-10-10T20:59:36.860546+00:00"
+      },
+      "worker": {
+        "status": "failed",
+        "created_utc": "2026-10-10T20:59:20.972310+00:00",
+        "recording_id": "LA_T_1963829",
+        "training_started": false,
+        "labels_opened": false,
+        "dev_audio_accessed": false,
+        "eval_accessed": false,
+        "model_downloaded_by_worker": false,
+        "source_sha256": {
+          "scripts/ssl_smoke_worker.py": "dd188053da4f5360b70944ed2bacbe2f2732dfbea1651acc7d6490a481fb6fc2"
+        },
+        "warnings": [],
+        "resources_before_import": {
+          "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+          "rss_bytes": 26705920,
+          "peak_rss_bytes": 28770304,
+          "system_total_ram_bytes": 16872415232,
+          "system_available_ram_bytes": 4505485312
+        },
+        "model_sha256": {
+          "config.json": "4937977e24d12d1bba70cdce8709c3c04807a8e4ae8ddac4229c48c436ae99ae",
+          "preprocessor_config.json": "b225d617c025463b9e157e06afea8b90dc7078fc70b013c533328423e0486b4a",
+          "pytorch_model.bin": "3249fe98bfc62fcbc26067f724716a6ec49d12c4728a2af1df659013905dff21"
+        },
+        "audio_sha256": "a9e12df4f477580c27b1be39104317654dde668ab1cdca2b84509f82a4656e31",
+        "config_sha256": "44b1e5d8ae54a9f259fa64051b4ef7ca7267c476454116dc80cb7acaedd9e264",
+        "geometry_source_sha256": "ddd6e4fe0de0111560281a3f7281220799f16a24554b9b11a4ea27618480cfe5",
+        "environment": {
+          "torch": "2.10.0+cpu",
+          "transformers": "4.57.6",
+          "numpy": "2.2.6",
+          "soundfile": "0.13.1",
+          "safetensors": "0.8.0",
+          "huggingface-hub": "0.36.2"
+        },
+        "error_type": "RuntimeError",
+        "error": "SSL smoke available-RAM guard failed",
+        "elapsed_seconds": 15.075242299993988,
+        "finished_utc": "2026-10-10T20:59:36.047543+00:00"
+      },
+      "source_snapshot_hashes_verified": true
+    }
+  },
+  "notes": [
+    "v1 measured speed/features successfully but did not recheck 4 GiB immediately before model load; not accepted as the strict resource gate.",
+    "v2 added that guard and stopped before model loading. It was not automatically restarted.",
+    "v1 features are retained only as a numerical reference for a future CUDA smoke.",
+    "No dev audio, labels, eval or classifier training accessed by smoke workers.",
+    "Colab upload rejected by automatic approval review; no notebook or bundle uploaded."
+  ]
+}

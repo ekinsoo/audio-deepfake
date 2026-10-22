@@ -1,0 +1,54 @@
+{
+  "status": "ready_for_supervised_smoke",
+  "client_date": "2026-10-11",
+  "source_hashes": {
+    "scripts/ssl_colab_smoke_supervisor_v2.py": "2074f299b257d2a4a9b1a2ac527e8132696d91b5eebb7e8c9edf2f8e4b149107",
+    "tests/test_ssl_colab_smoke_supervisor_v2.py": "9f0d0c483ec6f2cd552e2693ea314b6877ed7684ac387595ee82a13b66fca8ac",
+    "scripts/ssl_colab_smoke.py": "c3c38b21e0d1b3a672831bff57cd8fec33d9dc7f2d91e2227176b11528e21337"
+  },
+  "frozen_source_directory": "outputs/colab/supervisor-v2-frozen-sources",
+  "frozen_sources_verified": true,
+  "frozen_worker_unchanged": true,
+  "manifest_sha256": "0f4df17c238c3df1b369239342c86fd4552011cd3e4c8c745fbf8e65048f5c7c",
+  "worker_seconds": 180,
+  "exit_grace_seconds": 1.0,
+  "minimum_start_available_ram_bytes": 4294967296,
+  "minimum_runtime_available_ram_bytes": 2147483648,
+  "maximum_worker_peak_rss_bytes": 3221225472,
+  "minimum_free_disk_bytes": 21474836480,
+  "all_sources_ast_parse": "passed",
+  "regression_tests": {
+    "framework": "stdlib unittest",
+    "command": "$env:TEMP = Join-Path (Get-Location) '.cache\\tmp'; $env:TMP = $env:TEMP; & 'C:\\Users\\EKINO\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' -S -m unittest discover -s tests -p test_ssl_colab_smoke_supervisor_v2.py -v",
+    "passed": 9,
+    "failed": 0,
+    "elapsed_seconds": 0.053,
+    "cases": [
+      "Owned child exit observed after /proc metrics disappear.",
+      "Missing metrics while child stays alive fails after bounded grace.",
+      "System RAM gate remains active during exit grace.",
+      "Exit grace cannot extend overall worker deadline.",
+      "Nonzero worker exit rejected even when result says complete.",
+      "Live process peak RSS limit remains enforced.",
+      "Resource failure terminates owned process group and records error class.",
+      "Missing zombie process memory fields produce explicit probe error.",
+      "Process parser preserves VmHWM independently of current RSS."
+    ]
+  },
+  "implementation_review": {
+    "status": "no_blocking_issue_found_in_author_review",
+    "scope": "New supervisor only; frozen worker imports after exact source hash validation, input manifest pin, original bundle verification, resource gates and result/source/feature checks retained.",
+    "cause_of_v1_stop": "Exit-time /proc metrics race is consistent with empty error and code, but not proven: parent traceback was not captured.",
+    "independent_review": "Root reported a separate execution reviewer found no execution blocker before the final manifest-pin addition; final acceptance belongs to root."
+  },
+  "execution": {
+    "gpu_executed_by_this_agent": false,
+    "training_started": false,
+    "downloads_started": false
+  },
+  "limitations": [
+    "Tests use deterministic process/resource mocks on Windows; actual Linux CUDA execution is still required.",
+    "Exit-time unavailable process metrics are accepted only after owned child exit; completion still requires zero exit code and trusted worker final peak snapshot.",
+    "A ready supervisor is not a successful GPU smoke or localization result."
+  ]
+}

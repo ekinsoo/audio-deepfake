@@ -1,0 +1,16 @@
+{
+  "checked_utc": "2026-10-10T12:26:33.767911+00:00",
+  "purpose": "Localization planning only; no audio download or training",
+  "memory": {
+    "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+    "rss_bytes": 15876096,
+    "peak_rss_bytes": 15876096,
+    "system_total_ram_bytes": 16872415232,
+    "system_available_ram_bytes": 3810906112
+  },
+  "disk_free_bytes": 61760565248,
+  "gpu": "Intel Iris Xe (previous hardware audit; not re-probed)",
+  "cpu": "Intel Core i7-1195G7 (previous hardware audit; not re-probed)",
+  "training_started": false,
+  "audio_download_started": false
+}

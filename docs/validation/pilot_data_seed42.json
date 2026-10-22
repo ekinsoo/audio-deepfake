@@ -1,0 +1,125 @@
+{
+  "audited_utc": "2026-10-09T19:15:39.766268+00:00",
+  "dataset": "ASVspoof 2019 Logical Access",
+  "dataset_version": "v1",
+  "record_url": "https://zenodo.org/records/6906306",
+  "official_challenge_url": "https://www.asvspoof.org/index2019.html",
+  "official_datashare_record": "https://doi.org/10.7488/ds/2555",
+  "license": "ODC-By-1.0",
+  "license_url": "https://opendatacommons.org/licenses/by/1.0/",
+  "scope": "Fixed balanced seed-42 pilot; 2000 official train and 1000 official dev; no eval extraction or modeling.",
+  "seed": 42,
+  "records": 3000,
+  "splits": {
+    "train": {
+      "count": 2000,
+      "labels": {
+        "bonafide": 1000,
+        "spoof": 1000
+      },
+      "attacks": {
+        "-": 1000,
+        "A01": 167,
+        "A02": 167,
+        "A03": 167,
+        "A04": 167,
+        "A05": 166,
+        "A06": 166
+      },
+      "speakers": 20,
+      "bonafide_speakers": 20,
+      "spoof_speakers": 20,
+      "audio_bytes": 124326860,
+      "duration_seconds": 6911.3770625,
+      "min_duration_seconds": 0.8138125,
+      "max_duration_seconds": 10.91425
+    },
+    "dev": {
+      "count": 1000,
+      "labels": {
+        "bonafide": 500,
+        "spoof": 500
+      },
+      "attacks": {
+        "-": 500,
+        "A01": 84,
+        "A02": 84,
+        "A03": 83,
+        "A04": 83,
+        "A05": 83,
+        "A06": 83
+      },
+      "speakers": 20,
+      "bonafide_speakers": 20,
+      "spoof_speakers": 10,
+      "audio_bytes": 62870902,
+      "duration_seconds": 3523.1335625,
+      "min_duration_seconds": 0.883625,
+      "max_duration_seconds": 10.7579375
+    }
+  },
+  "saved_audio_bytes": 187197762,
+  "duration_seconds": 10434.510625,
+  "all_validated": true,
+  "format": "FLAC",
+  "subtype": "PCM_16",
+  "sample_rate_hz": 16000,
+  "channels": 1,
+  "finite_nonempty_waveforms_checked": true,
+  "actual_paths_exactly_match_selection": true,
+  "all_audio_sha256_match_journal_and_archive_members": true,
+  "eval_audio_files_extracted": 0,
+  "train_dev_shared_speakers": 0,
+  "train_dev_shared_utterance_ids": 0,
+  "source_manifest_sha256": {
+    "pilot_train.csv": "aa7a1ae65fbf02b99e587a57b53ee3ce1814649c9e3927290a25a6c7cafadc17",
+    "pilot_dev.csv": "449228652db5c402522ae951aab6f84342e59f6d785049f7f00278a13d2ac6c8"
+  },
+  "official_protocols": {
+    "train": {
+      "path": "data/metadata/asvspoof2019/ASVspoof2019.LA.cm.train.trn.txt",
+      "sha256": "65a289e4009400b42bb4f1e47ac60938d93f7f595452d1f220d35defc3de8ab8",
+      "size_bytes": 840120,
+      "url": "https://zenodo.org/api/records/6906306/files/LA.zip/container/LA/ASVspoof2019_LA_cm_protocols/ASVspoof2019.LA.cm.train.trn.txt"
+    },
+    "dev": {
+      "path": "data/metadata/asvspoof2019/ASVspoof2019.LA.cm.dev.trl.txt",
+      "sha256": "2fedaebf1ba3ae1a9bb7d3ec916804ac237b4eee063a27fa92e6549f03d129c7",
+      "size_bytes": 822400,
+      "url": "https://zenodo.org/api/records/6906306/files/LA.zip/container/LA/ASVspoof2019_LA_cm_protocols/ASVspoof2019.LA.cm.dev.trl.txt"
+    }
+  },
+  "archive": {
+    "path": "data/archives/LA.zip",
+    "published_size_bytes": 7640952520,
+    "observed_size_bytes": 7640952520,
+    "published_md5": "30c98f11d8b2bc21f2c257bfd78bb5c5",
+    "observed_md5": "30c98f11d8b2bc21f2c257bfd78bb5c5",
+    "published_checksum_verified": true
+  },
+  "last_chosen_archive_source": "datashare",
+  "last_chosen_archive_url": "https://datashare.ed.ac.uk/bitstreams/a9f87c35-f055-4015-80e2-2fdff0d46269/download",
+  "source_urls": {
+    "zenodo": "https://zenodo.org/records/6906306/files/LA.zip?download=1",
+    "datashare": "https://datashare.ed.ac.uk/bitstreams/a9f87c35-f055-4015-80e2-2fdff0d46269/download"
+  },
+  "download_prefix": {
+    "size_bytes": 639631360,
+    "observed_sha256": "0f19a7074fe978d5e2615a5638a2d31803fd9b8e7692c7bb147cac9e56f810f1",
+    "matches_downloader_plan": true,
+    "remaining_chunk_source_url": "https://datashare.ed.ac.uk/bitstreams/a9f87c35-f055-4015-80e2-2fdff0d46269/download",
+    "chunk_size_bytes": 8388608,
+    "provenance_note": "The existing contiguous prefix was reused; bytes may include both official sources. Last chosen source does not identify every byte origin."
+  },
+  "hash_provenance": "Published full-archive MD5 independently rechecked locally; individual audio SHA-256 hashes are locally observed and checked against archive members.",
+  "audio_sha256_manifest_encoding": "SHA256 of sorted [relative_audio_path, observed_sha256] pairs as compact sorted-key JSON",
+  "audio_sha256_manifest": "a3dfeffd294007ad2db4a844e6e2c58fe03269d01e992be861fbc0f5c015d4c4",
+  "extraction_journal_sha256": "4e8c88f41092071fbece015cb92576cb550a2b1f1aae497ff561e9b6ca770ed7",
+  "extraction_historical_error_count": 0,
+  "audit_helper_sha256": "714b3a8a4e3c72b92bdb3be33933282b1a9d041a82fa0d09946ddcd8bbb343b0",
+  "limitations": [
+    "Only selected pilot files were decoded and inspected; full archive checksum covers all distributed bytes but is not a semantic audit of unselected audio.",
+    "Pilot label balance differs from deployment prevalence. This audit measures data integrity, not detection performance.",
+    "The retained archive includes eval bytes; eval audio was not extracted, decoded, or scored."
+  ]
+}

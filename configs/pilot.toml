@@ -1,0 +1,46 @@
+# Frozen full-pilot configuration. Prepare the selected audio before running.
+# Use configs/smoke.toml for the separate 100-record pipeline check.
+[experiment]
+name = "la2019-lfcc-gmm-pilot"
+seed = 42
+stage = "pilot"
+
+[data]
+dataset = "ASVspoof2019-LA"
+version = "Zenodo-6906306-v1"
+sample_rate = 16000
+train_limit = 2000
+dev_limit = 1000
+eval_enabled = false
+sampling_policy = "balanced-labels-proportional-spoof-attacks-sha256"
+
+[model]
+family = "lfcc-gmm"
+n_components = 32
+covariance_type = "diag"
+max_total_training_frames = 100000
+max_iter = 50
+reg_covar = 0.000001
+tol = 0.001
+
+[features]
+sample_rate = 16000
+window_ms = 20.0
+hop_ms = 10.0
+n_fft = 512
+n_filters = 20
+n_coeffs = 20
+pre_emphasis = 0.97
+delta_order = 2
+
+[resources]
+workers = 1
+target_peak_ram_gib = 2
+
+[paths]
+# Ignored local data and reproducible combined selection.
+audio_root = "data/asvspoof2019/LA"
+manifest_dir = "outputs/manifests/asvspoof2019-la-seed42"
+selection_manifest = "outputs/pilot-data/selection3000.csv"
+selection_sha256 = "fe2811f468705c571a5e2e617d0623d3d18fdd61782129bf07e5dc2d11b472df"
+audio_journal = "outputs/pilot-data/prepare_report.json"

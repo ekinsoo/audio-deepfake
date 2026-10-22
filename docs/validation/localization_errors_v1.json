@@ -1,0 +1,4303 @@
+{
+  "version": 1,
+  "status": "complete",
+  "scope": "custom fixed 64-dev descriptive error analysis; no training/eval/tuning",
+  "threshold": 0,
+  "tie_rule": "score < 0 predicts spoof; equality bona fide",
+  "source_sha256": {
+    "scripts/analyze_localization_errors.py": "ff7c228a3eef7a4baf93ba8393ba189f682e4e6da657a708d538c659805c9ab7",
+    "outputs/jobs/localization-pilot-20261010T163921940Z/pilot/dev_scores.json": "fb98f3be73b8c4ef7a0a7b2b7b0d78c2895880f6f272ed0a81efc350f5d79e27",
+    "outputs/jobs/localization-pilot-20261010T163921940Z/pilot/results.json": "9aaea4f1e9e9e333e83466ec9b5896c91a1d378468dd5eafa2a870805cf0b00c",
+    "outputs/jobs/localization-pilot-20261010T163921940Z/pilot/config.json": "44a8a664b4a0f53875e23ef8821b26bfddad560f74c95648ad1cf81294a31921",
+    "docs/validation/partial_selection_v1.json": "c7efeacc6a19e80557fed89183131ebbc64e476ce5c240b0a02fe151b6cfc374",
+    "docs/validation/localization_alignment.json": "87adda47fee58c4f367e26f6731469e8c5041f5df2c29a692aefd34e5106caaa",
+    "data/partialspoof/selected_labels_v1.json": "9c29d4eb387ca9b0ff2a7f524a03e73dfe592165b6969c6134a6274b184a0a4f"
+  },
+  "vad_sha256": {
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0000586.vad": "2c097019f1ac995e3a92c7dbd54397c5cceb51dceec67ec2026fc488c7b0adb5",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0000734.vad": "e21d37ee927541b9df7d6b5bddba967c1d26b0adef0478cd1e8d19951abc66a1",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0002058.vad": "2e84310972ae3b506c7fea991be636077751a5e562ac95a22f4404c87b398875",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0003090.vad": "3c75d6d7a5234ca0946800ea7016c0cba120c888e757a0c4f46309a8a150ca9c",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0003229.vad": "b7b2c52139b7ea5f94ac53961827565e08937c288c93b596b9948a57ec5eed6b",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0005417.vad": "5f401a15d0a7b715dedb76d65bd7fb652872faf4b65c36a922e8b8b22ce46b78",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0007306.vad": "86b74b2ba6f8efcfb9f055b0a8b0bcb58a80395bb059389eab255029fa5e78b3",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0007314.vad": "00dc4bcb66eedab9bcd4041f1a8a251c5c0a09936982ddb3134b74d8ecd1a71f",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0008727.vad": "a90e46f7c010fa2239f9c43d92d348214f8e4b52abb7258df94fbc8dbee68296",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0008895.vad": "9cebadcd51f3e22c104ea571312b236f8cd9bedce3a00f33c1f92d10e4f7757f",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0010275.vad": "9d2245840beb219efdbbd2e36746b2869162c643b278c529a2c3fd866309de63",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0011093.vad": "57e2004d15af8cccdf0bc3c1c9fe45dd837976833ba35fcfd055a42d2e345dee",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0011199.vad": "55f13e01346de93a54bb81759cb56f519bdf864a7226b92deabe15f808bc22d2",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0011498.vad": "decc483e3b9cf0de80dda15ed25177ff5626fa6dc279a09a7956326177a8764a",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0012291.vad": "ca9395e14cfb2ab33d983ff05dd59b85f7c52e8fab90c71db19075624dd3af7f",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0013088.vad": "7c1b6011d38604679d1204f46cdf442c44cfa49e264991a395c1aa0745fc2d35",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0013550.vad": "e7591bdb5973b862e510b09d5cfd286ef91112db2675fcdb23b507476a82e4e6",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0014412.vad": "5c6a7043f5530ccf223ec180dad605e1e1fe9bc8a2f8224a1544cfcdcf6724b5",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0014522.vad": "a381e5ac70daba906d2b11d127b08d3ed70c3f6c7d744c049a39c62bb21f2419",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0014853.vad": "1bd52a1027fba1167e7e5947656c17d8d361735b4ce5fa027fa8b73b6dd21f95",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0017259.vad": "ec8e2b26370988619acc9e5c2995690c3182b636b5a4eb9432b57811b6868438",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0017506.vad": "d5399045411e228cbc75710237575de8a3dc366e1d41bf6415013e04f60be53f",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0018582.vad": "02a10c8111cc8877d93d2359df912e019f1eb0188a0a445cb955fc3cdda5e85f",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0018799.vad": "5e92f8d32ce0e15a1f422fc8b7460b54e1639249fdd843913709c2e9e7c982de",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0020736.vad": "e7ca9f0b1d6797f1b3097cc5d5f932ef9105df3e040f60a8a7dde2fbe294e872",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0021704.vad": "fe4990db66f87ff62f7b8e01a737093ec73635df215f52d7571e82f5c8972a9f",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0021788.vad": "bf6c39fdccecf14ee81e2b409d55465359d91a169181c4baa9e9aef606e635e9",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0021890.vad": "7a159a60ed4d38f436bf9374e9f103aa6a0dfc3be09cc633cc81d51c0904056f",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0022095.vad": "e4a94830ff1db5d60844a441fb573039f27d5eeed65c685adcc3a9b85ca69120",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0022484.vad": "05e9c139ad82260ec9a2734b150031d80f1b3c26d3bd5da40e6c8538054d1d72",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0023089.vad": "373e7422d3eb799981a1681c361bb7560726bec3b86a4f42e44e5d940769ffa7",
+    "data/partialspoof/verified_train_dev/database/vad/dev/CON_D_0023180.vad": "944c4499a34ee3d8c4454d2372f8f86cffec11629c7fa3dec6432e2f7f862808",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_1161800.vad": "0ad795d7a8147ed82f054513a4027ca8d5bd58f2d1705f2898b8d1c1dcb66dd3",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_1323454.vad": "387d1b2863c0531815f4908940311328c546f62c995911b4e9a81b07f5d90eb3",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_1469404.vad": "3ab934a3bdbe4fab390bff0acfab49a5ec8e1f694f925c57f59f7c519884c0f1",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_1494418.vad": "03ad5aff9c0751a0f53477047a4cae0e4736282d7a71adda8409e0fd2872feda",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_1796445.vad": "f1f773a8d8689f4b9b068e023e9576db3ca50b7707705723714945043a28e785",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_1902645.vad": "0b78eeb2a27b63328a74f963ed5e01dedfe6e0dcd6a2bfacba219640b04f97ba",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_2002365.vad": "1da4c9bed6cc7d2d02ef458966f855f1681f9627b165b7f84844b088b4a0e746",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_2035158.vad": "d6ab51533b187651b4421b63208c04e63723ffbcd41d0d4bb9d66dfe426be766",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_2156985.vad": "3e082046a884221857a1990145251b27b7ad1d8addbb5f2d823d0ebf9d973bef",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_2748583.vad": "dea75c90c2f5bfe31c82095cf3e64eeddf83a9cef870fa187f61340965cdaa79",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_2812544.vad": "49ce00049e421ebf1b2cede38b8409b16b9174c9d86c7cf97811f73c5092a670",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_3056969.vad": "43603e0d16e8b06e7fa882064da90626e91905d8eef9cd8d207c0058736e225f",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_3170323.vad": "96dc4ca0a5c0f4cd5a0f2fb0b3aadcfbf9ffdbec3b1a4b3031a9bee88f97cf4b",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_3323539.vad": "3888632a94bd748fc08c41ef996ebd8f1059711f67db4d42775eb209850ac9f4",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_3559270.vad": "51b9928923b0daf108c2398567b0be5639ab1ac7e37350142dedade4997ee42e",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_4148603.vad": "8ea3abaa16a9a6d62960478792027810ec555a326273088adf8303849bb77f91",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_4771667.vad": "b0d2d070c60782d6358fd3affa84ba1abf2c4fdec1f17c3c0867992b636c4d64",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_4828901.vad": "b0c375d95ddaa2c9a62f5337ced8975e7c6e9d0279f30a04a40e938a1ba131d5",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_5026692.vad": "84152f304bc5cb856fd0f84253f9aa732364a89c374299d1d9563eb74e37bc31",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_5029338.vad": "41b8c2af43da8e875e84e0f38065bb9d612024dfef1349251fd008cdebbfea78",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_5226379.vad": "ba080ab3fa330078156f0d571dd6a4008bb1a4bd4e08303deda2b3dc0af9b26c",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_5513082.vad": "b4e57fdeba92ded04e166246b17d99283cfe82e1025606d49e2850ba390071ad",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_5651240.vad": "02a742eea9937ef6eeb6b77b6a9ab0dabd30d8e4158b417347cf0f275a5bd45a",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_5774989.vad": "c4f76b275ac851891204204a4f4649b615bf386847258a7c515e3c0b9d4083ba",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_6023315.vad": "6491c36690188c7636e865ceb7f4ec44ac55d1f6158933d4e4567c1c10bc5680",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_6258471.vad": "99b7f2c413ea8e20be86f90f91a36c861c64e2dcc85923b123417a2cf4900a13",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_6900009.vad": "003977c1d30bd724778a3d90fd266285f78ad96036b089802c42510aebc93332",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_7050071.vad": "c46a7b7f043dd9b51b2f48f239fc1fdd07186c91666e8a8718cb4c027bbbe797",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_7179593.vad": "3936e12a33150393176c0705608c1e3fdb77f56ce0eafbfc95a7f2beae7b0349",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_7944625.vad": "6bd9fbd2de25e57c92953884c5c7857a76519f9b3b59c29a70ec196b1ef03c99",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_8003563.vad": "3018164a2caf5da593e71cd6586fb72d22bc1a392cace7799a1a59879ecc3d97",
+    "data/partialspoof/verified_train_dev/database/vad/dev/LA_D_9851827.vad": "fb93a602aca8431e0b09ce5991c38dcf38d059125753520e15d0ebef2ffc2836"
+  },
+  "pooled20ms_total": {
+    "spoof_seconds": 58.05250000000328,
+    "bonafide_seconds": 175.0901875000155,
+    "missed_spoof_seconds": 18.285812499999718,
+    "false_alarm_seconds": 84.19831250000017,
+    "miss_fraction": 0.31498751130440006,
+    "false_alarm_fraction": 0.48088538656680985
+  },
+  "pooled20ms_by_utterance_class": {
+    "bonafide": {
+      "spoof_seconds": 0.0,
+      "bonafide_seconds": 122.91237499999254,
+      "missed_spoof_seconds": 0.0,
+      "false_alarm_seconds": 58.9439375000035,
+      "miss_fraction": null,
+      "false_alarm_fraction": 0.47956064228689
+    },
+    "spoof": {
+      "spoof_seconds": 58.05250000000328,
+      "bonafide_seconds": 52.17781250000243,
+      "missed_spoof_seconds": 18.285812499999718,
+      "false_alarm_seconds": 25.25437499999955,
+      "miss_fraction": 0.31498751130440006,
+      "false_alarm_fraction": 0.48400601309221947
+    }
+  },
+  "native10ms_by_vad": {
+    "speech": {
+      "spoof_seconds": 33.6634375,
+      "bonafide_seconds": 115.26056249999996,
+      "missed_spoof_seconds": 12.052687500000003,
+      "false_alarm_seconds": 52.16893750000001,
+      "miss_fraction": 0.3580349600363897,
+      "false_alarm_fraction": 0.45261741196170224
+    },
+    "nonspeech": {
+      "spoof_seconds": 23.526999999999994,
+      "bonafide_seconds": 60.663812500000006,
+      "missed_spoof_seconds": 5.879437500000001,
+      "false_alarm_seconds": 32.52375,
+      "miss_fraction": 0.2499017086751393,
+      "false_alarm_fraction": 0.536130992426498
+    },
+    "vad_uncovered": {
+      "spoof_seconds": 0.012062499999999865,
+      "bonafide_seconds": 0.015812500000000007,
+      "missed_spoof_seconds": 0.0036874999999989555,
+      "false_alarm_seconds": 0.005624999999999325,
+      "miss_fraction": 0.3056994818652018,
+      "false_alarm_fraction": 0.35573122529639983
+    }
+  },
+  "native10ms_total": {
+    "spoof_seconds": 57.20249999999999,
+    "bonafide_seconds": 175.94018749999998,
+    "missed_spoof_seconds": 17.935812500000004,
+    "false_alarm_seconds": 84.69831250000001,
+    "miss_fraction": 0.3135494515099866,
+    "false_alarm_fraction": 0.4814040140772274
+  },
+  "native_spoof_run_duration_groups": {
+    "up_to_100ms": {
+      "runs": 38,
+      "spoof_seconds": 0.8900000000000003,
+      "missed_spoof_seconds": 0.38000000000000045,
+      "miss_fraction": 0.4269662921348318
+    },
+    "over_100_to_500ms": {
+      "runs": 33,
+      "spoof_seconds": 8.078499999999998,
+      "missed_spoof_seconds": 2.467437499999998,
+      "miss_fraction": 0.30543262981989217
+    },
+    "over_500ms": {
+      "runs": 38,
+      "spoof_seconds": 48.234,
+      "missed_spoof_seconds": 15.088375000000005,
+      "miss_fraction": 0.31281616701911524
+    }
+  },
+  "fragmentation20ms": {
+    "reference_runs": 109,
+    "predicted_runs": 1349,
+    "reference_runs_with_no_overlap": 15,
+    "reference_runs_with_one_prediction_run": 35,
+    "reference_runs_split_over_multiple_predictions": 59,
+    "predicted_runs_with_no_reference_overlap": 989
+  },
+  "predicted_run_duration_median_seconds": 0.05999999999999961,
+  "boundaries20ms": {
+    "onset": {
+      "count_with_predictions": 109,
+      "median_nearest_same_type_error_seconds": 0.020000000000000018,
+      "within_20ms": 61,
+      "within_100ms": 96
+    },
+    "offset": {
+      "count_with_predictions": 109,
+      "median_nearest_same_type_error_seconds": 0.019999999999999962,
+      "within_20ms": 72,
+      "within_100ms": 93
+    },
+    "definition": "Each reference boundary chooses nearest predicted boundary of the same type within its recording; no one-to-one matching, so not detection precision/recall. Missing prediction runs excluded from distance and counted by fragmentation."
+  },
+  "preselected_timeline_ids": [
+    "CON_D_0000586",
+    "CON_D_0000734",
+    "CON_D_0002058",
+    "CON_D_0003090",
+    "CON_D_0003229",
+    "LA_D_1161800",
+    "LA_D_1323454",
+    "LA_D_1469404",
+    "LA_D_1494418",
+    "LA_D_1796445"
+  ],
+  "records": [
+    {
+      "utterance_id": "CON_D_0000586",
+      "utterance_class": "spoof",
+      "duration_seconds": 2.3234375,
+      "pooled20ms": {
+        "spoof_seconds": 1.3400000000000003,
+        "bonafide_seconds": 0.9834374999999995,
+        "missed_spoof_seconds": 0.8599999999999999,
+        "false_alarm_seconds": 0.3999999999999998,
+        "miss_fraction": 0.6417910447761191,
+        "false_alarm_fraction": 0.4067365745154115
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 1.3021250000000002,
+          "bonafide_seconds": 0.4815625,
+          "missed_spoof_seconds": 0.8506874999999998,
+          "false_alarm_seconds": 0.12943749999999998,
+          "miss_fraction": 0.6533070941729863,
+          "false_alarm_fraction": 0.2687865022712524
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.027875000000000094,
+          "bonafide_seconds": 0.5111249999999995,
+          "missed_spoof_seconds": 0.009312500000000057,
+          "false_alarm_seconds": 0.2805624999999999,
+          "miss_fraction": 0.33408071748879015,
+          "false_alarm_fraction": 0.5489117143555885
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0007500000000000284,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 3,
+        "predicted_runs": 17,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 3,
+        "predicted_runs_with_no_reference_overlap": 6
+      },
+      "reference20ms_spoof_intervals": [
+        [
+          0.36,
+          0.68
+        ],
+        [
+          1.04,
+          1.58
+        ],
+        [
+          1.76,
+          2.24
+        ]
+      ],
+      "predicted_spoof_intervals": [
+        [
+          0.04,
+          0.12
+        ],
+        [
+          0.16,
+          0.18
+        ],
+        [
+          0.2,
+          0.22
+        ],
+        [
+          0.24,
+          0.28
+        ],
+        [
+          0.32,
+          0.38
+        ],
+        [
+          0.44,
+          0.46
+        ],
+        [
+          0.48,
+          0.5
+        ],
+        [
+          0.6,
+          0.7
+        ],
+        [
+          0.96,
+          1.06
+        ],
+        [
+          1.22,
+          1.3
+        ],
+        [
+          1.4,
+          1.42
+        ],
+        [
+          1.56,
+          1.58
+        ],
+        [
+          1.6,
+          1.64
+        ],
+        [
+          1.74,
+          1.86
+        ],
+        [
+          1.88,
+          1.96
+        ],
+        [
+          1.98,
+          2.0
+        ],
+        [
+          2.28,
+          2.32
+        ]
+      ]
+    },
+    {
+      "utterance_id": "CON_D_0000734",
+      "utterance_class": "spoof",
+      "duration_seconds": 2.674375,
+      "pooled20ms": {
+        "spoof_seconds": 1.7600000000000002,
+        "bonafide_seconds": 0.9143749999999997,
+        "missed_spoof_seconds": 0.6599999999999999,
+        "false_alarm_seconds": 0.654375,
+        "miss_fraction": 0.3749999999999999,
+        "false_alarm_fraction": 0.7156527682843475
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 1.757375,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.6596874999999998,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.3753823173767692,
+          "false_alarm_fraction": null
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.002625000000000155,
+          "bonafide_seconds": 0.9136875,
+          "missed_spoof_seconds": 0.00031250000000015987,
+          "false_alarm_seconds": 0.6536875000000003,
+          "miss_fraction": 0.11904761904767293,
+          "false_alarm_fraction": 0.7154388125042757
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.00068749999999973,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.00068749999999973,
+          "miss_fraction": null,
+          "false_alarm_fraction": 1.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 1,
+        "predicted_runs": 20,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 1,
+        "predicted_runs_with_no_reference_overlap": 7
+      },
+      "reference20ms_spoof_intervals": [
+        [
+          0.46,
+          2.22
+        ]
+      ],
+      "predicted_spoof_intervals": [
+        [
+          0.0,
+          0.24
+        ],
+        [
+          0.3,
+          0.48
+        ],
+        [
+          0.52,
+          0.64
+        ],
+        [
+          0.66,
+          0.68
+        ],
+        [
+          0.7,
+          0.72
+        ],
+        [
+          0.74,
+          0.76
+        ],
+        [
+          0.84,
+          0.86
+        ],
+        [
+          0.88,
+          1.24
+        ],
+        [
+          1.26,
+          1.28
+        ],
+        [
+          1.48,
+          1.52
+        ],
+        [
+          1.54,
+          1.56
+        ],
+        [
+          1.6,
+          1.86
+        ],
+        [
+          2.0,
+          2.16
+        ],
+        [
+          2.18,
+          2.2
+        ],
+        [
+          2.3,
+          2.36
+        ],
+        [
+          2.38,
+          2.4
+        ],
+        [
+          2.42,
+          2.44
+        ],
+        [
+          2.48,
+          2.54
+        ],
+        [
+          2.56,
+          2.58
+        ],
+        [
+          2.6,
+          2.674375
+        ]
+      ]
+    },
+    {
+      "utterance_id": "CON_D_0002058",
+      "utterance_class": "spoof",
+      "duration_seconds": 4.2050625,
+      "pooled20ms": {
+        "spoof_seconds": 1.8850624999999999,
+        "bonafide_seconds": 2.3200000000000003,
+        "missed_spoof_seconds": 0.525062500000001,
+        "false_alarm_seconds": 0.9600000000000003,
+        "miss_fraction": 0.27853850999635343,
+        "false_alarm_fraction": 0.41379310344827597
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 1.3236875000000001,
+          "bonafide_seconds": 2.36,
+          "missed_spoof_seconds": 0.1923750000000003,
+          "false_alarm_seconds": 0.9799999999999999,
+          "miss_fraction": 0.1453326408234574,
+          "false_alarm_fraction": 0.41525423728813554
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.5210000000000004,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.3123125000000009,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.5994481765834946,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0003750000000000142,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0003750000000000142,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 1.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 3,
+        "predicted_runs": 21,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 1,
+        "reference_runs_split_over_multiple_predictions": 2,
+        "predicted_runs_with_no_reference_overlap": 12
+      },
+      "reference20ms_spoof_intervals": [
+        [
+          0.0,
+          0.2
+        ],
+        [
+          2.22,
+          2.26
+        ],
+        [
+          2.56,
+          4.2050625
+        ]
+      ],
+      "predicted_spoof_intervals": [
+        [
+          0.0,
+          0.06
+        ],
+        [
+          0.12,
+          0.14
+        ],
+        [
+          0.22,
+          0.28
+        ],
+        [
+          0.36,
+          0.4
+        ],
+        [
+          0.48,
+          0.52
+        ],
+        [
+          0.58,
+          1.14
+        ],
+        [
+          1.16,
+          1.18
+        ],
+        [
+          1.54,
+          1.56
+        ],
+        [
+          1.76,
+          1.78
+        ],
+        [
+          1.8,
+          1.82
+        ],
+        [
+          1.98,
+          2.0
+        ],
+        [
+          2.02,
+          2.06
+        ],
+        [
+          2.12,
+          2.14
+        ],
+        [
+          2.16,
+          2.26
+        ],
+        [
+          2.5,
+          2.54
+        ],
+        [
+          2.58,
+          2.6
+        ],
+        [
+          2.62,
+          2.76
+        ],
+        [
+          2.8,
+          3.26
+        ],
+        [
+          3.36,
+          3.9
+        ],
+        [
+          3.94,
+          4.0
+        ],
+        [
+          4.04,
+          4.06
+        ]
+      ]
+    },
+    {
+      "utterance_id": "CON_D_0003090",
+      "utterance_class": "spoof",
+      "duration_seconds": 1.6174375,
+      "pooled20ms": {
+        "spoof_seconds": 0.7974375,
+        "bonafide_seconds": 0.8200000000000001,
+        "missed_spoof_seconds": 0.06,
+        "false_alarm_seconds": 0.42000000000000026,
+        "miss_fraction": 0.0752410063484599,
+        "false_alarm_fraction": 0.5121951219512197
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.01674999999999982,
+          "bonafide_seconds": 0.8500000000000001,
+          "missed_spoof_seconds": 0.011312499999999837,
+          "false_alarm_seconds": 0.43000000000000027,
+          "miss_fraction": 0.6753731343283557,
+          "false_alarm_fraction": 0.5058823529411768
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.75,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.028687500000000143,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.038250000000000194,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0006875000000001741,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 3,
+        "predicted_runs": 6,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 3,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 3
+      },
+      "reference20ms_spoof_intervals": [
+        [
+          0.0,
+          0.48
+        ],
+        [
+          1.06,
+          1.1
+        ],
+        [
+          1.34,
+          1.6174375
+        ]
+      ],
+      "predicted_spoof_intervals": [
+        [
+          0.0,
+          0.46
+        ],
+        [
+          0.5,
+          0.52
+        ],
+        [
+          0.72,
+          0.88
+        ],
+        [
+          0.96,
+          1.08
+        ],
+        [
+          1.14,
+          1.28
+        ],
+        [
+          1.36,
+          1.6174375
+        ]
+      ]
+    },
+    {
+      "utterance_id": "CON_D_0003229",
+      "utterance_class": "spoof",
+      "duration_seconds": 2.7173125,
+      "pooled20ms": {
+        "spoof_seconds": 0.8173124999999999,
+        "bonafide_seconds": 1.9,
+        "missed_spoof_seconds": 0.3400000000000002,
+        "false_alarm_seconds": 0.52,
+        "miss_fraction": 0.4159975529555711,
+        "false_alarm_fraction": 0.2736842105263158
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.014999999999999902,
+          "bonafide_seconds": 1.9195625,
+          "missed_spoof_seconds": 0.014999999999999902,
+          "false_alarm_seconds": 0.52,
+          "miss_fraction": 1.0,
+          "false_alarm_fraction": 0.27089506072347214
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.7820625000000001,
+          "bonafide_seconds": 0.00043749999999986855,
+          "missed_spoof_seconds": 0.30500000000000027,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.38999440581794964,
+          "false_alarm_fraction": 0.0
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.00024999999999986144,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 3,
+        "predicted_runs": 20,
+        "reference_runs_with_no_overlap": 1,
+        "reference_runs_with_one_prediction_run": 1,
+        "reference_runs_split_over_multiple_predictions": 1,
+        "predicted_runs_with_no_reference_overlap": 11
+      },
+      "reference20ms_spoof_intervals": [
+        [
+          0.0,
+          0.52
+        ],
+        [
+          1.16,
+          1.2
+        ],
+        [
+          2.46,
+          2.7173125
+        ]
+      ],
+      "predicted_spoof_intervals": [
+        [
+          0.0,
+          0.06
+        ],
+        [
+          0.08,
+          0.1
+        ],
+        [
+          0.14,
+          0.16
+        ],
+        [
+          0.18,
+          0.2
+        ],
+        [
+          0.22,
+          0.24
+        ],
+        [
+          0.26,
+          0.3
+        ],
+        [
+          0.32,
+          0.44
+        ],
+        [
+          0.46,
+          0.48
+        ],
+        [
+          0.56,
+          0.58
+        ],
+        [
+          0.64,
+          0.66
+        ],
+        [
+          0.82,
+          0.96
+        ],
+        [
+          1.32,
+          1.34
+        ],
+        [
+          1.36,
+          1.38
+        ],
+        [
+          1.64,
+          1.72
+        ],
+        [
+          1.76,
+          1.78
+        ],
+        [
+          1.88,
+          1.9
+        ],
+        [
+          1.92,
+          1.94
+        ],
+        [
+          2.0,
+          2.14
+        ],
+        [
+          2.26,
+          2.28
+        ],
+        [
+          2.56,
+          2.7173125
+        ]
+      ]
+    },
+    {
+      "utterance_id": "CON_D_0005417",
+      "utterance_class": "spoof",
+      "duration_seconds": 4.2764375,
+      "pooled20ms": {
+        "spoof_seconds": 0.4764375000000001,
+        "bonafide_seconds": 3.8,
+        "missed_spoof_seconds": 0.17643749999999997,
+        "false_alarm_seconds": 2.04,
+        "miss_fraction": 0.3703266430539156,
+        "false_alarm_fraction": 0.5368421052631579
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.04118750000000049,
+          "bonafide_seconds": 3.8595624999999996,
+          "missed_spoof_seconds": 0.02075000000000038,
+          "false_alarm_seconds": 2.0795624999999998,
+          "miss_fraction": 0.5037936267071352,
+          "false_alarm_fraction": 0.5388078311984843
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.3745625000000001,
+          "bonafide_seconds": 0.0004375000000000906,
+          "missed_spoof_seconds": 0.13499999999999984,
+          "false_alarm_seconds": 0.0004375000000000906,
+          "miss_fraction": 0.3604204905723339,
+          "false_alarm_fraction": 1.0
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.00068749999999973,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.00068749999999973,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 1.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 7,
+        "predicted_runs": 26,
+        "reference_runs_with_no_overlap": 2,
+        "reference_runs_with_one_prediction_run": 4,
+        "reference_runs_split_over_multiple_predictions": 1,
+        "predicted_runs_with_no_reference_overlap": 19
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0007306",
+      "utterance_class": "spoof",
+      "duration_seconds": 1.9393125,
+      "pooled20ms": {
+        "spoof_seconds": 1.5593125,
+        "bonafide_seconds": 0.38,
+        "missed_spoof_seconds": 0.8793124999999999,
+        "false_alarm_seconds": 0.019999999999999962,
+        "miss_fraction": 0.5639103771694256,
+        "false_alarm_fraction": 0.05263157894736832
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 1.0668125,
+          "bonafide_seconds": 0.39,
+          "missed_spoof_seconds": 0.5668124999999999,
+          "false_alarm_seconds": 0.019999999999999962,
+          "miss_fraction": 0.5313140781533774,
+          "false_alarm_fraction": 0.05128205128205118
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.48200000000000004,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.3020000000000001,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.6265560165975105,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0004999999999999449,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0004999999999999449,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 1.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 2,
+        "predicted_runs": 11,
+        "reference_runs_with_no_overlap": 1,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 1,
+        "predicted_runs_with_no_reference_overlap": 1
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0007314",
+      "utterance_class": "spoof",
+      "duration_seconds": 1.76525,
+      "pooled20ms": {
+        "spoof_seconds": 0.72525,
+        "bonafide_seconds": 1.04,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 0.28000000000000025,
+        "miss_fraction": 0.0,
+        "false_alarm_fraction": 0.26923076923076944
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0019374999999999254,
+          "bonafide_seconds": 1.04,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.28000000000000025,
+          "miss_fraction": 0.0,
+          "false_alarm_fraction": 0.26923076923076944
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.7230000000000001,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.0,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.00031249999999993783,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 2,
+        "predicted_runs": 8,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 2,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 6
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0008727",
+      "utterance_class": "spoof",
+      "duration_seconds": 5.217,
+      "pooled20ms": {
+        "spoof_seconds": 4.696999999999999,
+        "bonafide_seconds": 0.52,
+        "missed_spoof_seconds": 0.6399999999999997,
+        "false_alarm_seconds": 0.45999999999999996,
+        "miss_fraction": 0.13625718543751325,
+        "false_alarm_fraction": 0.8846153846153845
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 4.200750000000001,
+          "bonafide_seconds": 0.54,
+          "missed_spoof_seconds": 0.5988749999999993,
+          "false_alarm_seconds": 0.48,
+          "miss_fraction": 0.14256382788787694,
+          "false_alarm_fraction": 0.8888888888888888
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.47599999999999965,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.04112500000000041,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.08639705882353034,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.00024999999999941735,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 3,
+        "predicted_runs": 19,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 1,
+        "reference_runs_split_over_multiple_predictions": 2,
+        "predicted_runs_with_no_reference_overlap": 2
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0008895",
+      "utterance_class": "spoof",
+      "duration_seconds": 3.373875,
+      "pooled20ms": {
+        "spoof_seconds": 1.3938749999999998,
+        "bonafide_seconds": 1.9800000000000004,
+        "missed_spoof_seconds": 0.5399999999999999,
+        "false_alarm_seconds": 0.9200000000000004,
+        "miss_fraction": 0.387409200968523,
+        "false_alarm_fraction": 0.46464646464646475
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.6213750000000002,
+          "bonafide_seconds": 2.0000000000000004,
+          "missed_spoof_seconds": 0.30999999999999983,
+          "false_alarm_seconds": 0.9400000000000004,
+          "miss_fraction": 0.49889358278012425,
+          "false_alarm_fraction": 0.4700000000000001
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.7524999999999994,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.23000000000000007,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.3056478405315618,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 4,
+        "predicted_runs": 23,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 4,
+        "predicted_runs_with_no_reference_overlap": 7
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0010275",
+      "utterance_class": "spoof",
+      "duration_seconds": 2.231625,
+      "pooled20ms": {
+        "spoof_seconds": 0.7516250000000002,
+        "bonafide_seconds": 1.48,
+        "missed_spoof_seconds": 0.21999999999999997,
+        "false_alarm_seconds": 0.7999999999999999,
+        "miss_fraction": 0.2926991518376849,
+        "false_alarm_fraction": 0.5405405405405405
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.3371875000000003,
+          "bonafide_seconds": 1.5,
+          "missed_spoof_seconds": 0.09499999999999997,
+          "false_alarm_seconds": 0.8099999999999999,
+          "miss_fraction": 0.2817423540315103,
+          "false_alarm_fraction": 0.5399999999999999
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.3939999999999995,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.11499999999999999,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.2918781725888328,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.00043750000000031264,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 2,
+        "predicted_runs": 10,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 1,
+        "reference_runs_split_over_multiple_predictions": 1,
+        "predicted_runs_with_no_reference_overlap": 6
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0011093",
+      "utterance_class": "spoof",
+      "duration_seconds": 5.3648125,
+      "pooled20ms": {
+        "spoof_seconds": 2.1448125000000005,
+        "bonafide_seconds": 3.2199999999999993,
+        "missed_spoof_seconds": 0.22000000000000064,
+        "false_alarm_seconds": 2.1599999999999984,
+        "miss_fraction": 0.10257306874144038,
+        "false_alarm_fraction": 0.6708074534161487
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.8413125000000001,
+          "bonafide_seconds": 3.25,
+          "missed_spoof_seconds": 0.19706250000000058,
+          "false_alarm_seconds": 2.1899999999999986,
+          "miss_fraction": 0.23423222643191507,
+          "false_alarm_fraction": 0.6738461538461534
+        },
+        "nonspeech": {
+          "spoof_seconds": 1.2735,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.022937500000000055,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.018011385944248177,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 5,
+        "predicted_runs": 17,
+        "reference_runs_with_no_overlap": 1,
+        "reference_runs_with_one_prediction_run": 3,
+        "reference_runs_split_over_multiple_predictions": 1,
+        "predicted_runs_with_no_reference_overlap": 10
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0011199",
+      "utterance_class": "spoof",
+      "duration_seconds": 4.575,
+      "pooled20ms": {
+        "spoof_seconds": 3.955,
+        "bonafide_seconds": 0.62,
+        "missed_spoof_seconds": 1.2400000000000007,
+        "false_alarm_seconds": 0.27999999999999997,
+        "miss_fraction": 0.31352718078381814,
+        "false_alarm_fraction": 0.4516129032258064
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 3.350375,
+          "bonafide_seconds": 0.62,
+          "missed_spoof_seconds": 1.1103750000000003,
+          "false_alarm_seconds": 0.27999999999999997,
+          "miss_fraction": 0.3314181248367721,
+          "false_alarm_fraction": 0.4516129032258064
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.6039999999999996,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.12962500000000032,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.21461092715231855,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0006250000000003197,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 2,
+        "predicted_runs": 26,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 1,
+        "reference_runs_split_over_multiple_predictions": 1,
+        "predicted_runs_with_no_reference_overlap": 2
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0011498",
+      "utterance_class": "spoof",
+      "duration_seconds": 4.20875,
+      "pooled20ms": {
+        "spoof_seconds": 1.4287500000000006,
+        "bonafide_seconds": 2.7799999999999994,
+        "missed_spoof_seconds": 0.2599999999999997,
+        "false_alarm_seconds": 1.0600000000000003,
+        "miss_fraction": 0.18197725284339428,
+        "false_alarm_fraction": 0.38129496402877716
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.06987500000000002,
+          "bonafide_seconds": 2.82,
+          "missed_spoof_seconds": 0.045624999999999805,
+          "false_alarm_seconds": 1.0900000000000005,
+          "miss_fraction": 0.6529516994633244,
+          "false_alarm_fraction": 0.3865248226950357
+        },
+        "nonspeech": {
+          "spoof_seconds": 1.3185000000000002,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.20437499999999967,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.1550056882821385,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0003750000000000142,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 5,
+        "predicted_runs": 25,
+        "reference_runs_with_no_overlap": 1,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 4,
+        "predicted_runs_with_no_reference_overlap": 16
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0012291",
+      "utterance_class": "spoof",
+      "duration_seconds": 4.843625,
+      "pooled20ms": {
+        "spoof_seconds": 2.6436250000000006,
+        "bonafide_seconds": 2.1999999999999993,
+        "missed_spoof_seconds": 1.2200000000000002,
+        "false_alarm_seconds": 0.7399999999999989,
+        "miss_fraction": 0.46148754078207005,
+        "false_alarm_fraction": 0.336363636363636
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 1.3818124999999994,
+          "bonafide_seconds": 2.2300000000000004,
+          "missed_spoof_seconds": 0.9200000000000013,
+          "false_alarm_seconds": 0.7600000000000002,
+          "miss_fraction": 0.6657922113166596,
+          "false_alarm_fraction": 0.3408071748878924
+        },
+        "nonspeech": {
+          "spoof_seconds": 1.2314999999999996,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.2899999999999992,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.23548518067397425,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.00031250000000060396,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 3,
+        "predicted_runs": 28,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 3,
+        "predicted_runs_with_no_reference_overlap": 11
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0013088",
+      "utterance_class": "spoof",
+      "duration_seconds": 3.1796875,
+      "pooled20ms": {
+        "spoof_seconds": 0.9596875,
+        "bonafide_seconds": 2.2199999999999998,
+        "missed_spoof_seconds": 0.38000000000000006,
+        "false_alarm_seconds": 1.3600000000000005,
+        "miss_fraction": 0.39596222728752856,
+        "false_alarm_fraction": 0.6126126126126129
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.6642499999999998,
+          "bonafide_seconds": 2.259875,
+          "missed_spoof_seconds": 0.30006249999999984,
+          "false_alarm_seconds": 1.3899375000000005,
+          "miss_fraction": 0.45173127587504697,
+          "false_alarm_fraction": 0.6150506112063723
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.2548750000000001,
+          "bonafide_seconds": 0.0001250000000003748,
+          "missed_spoof_seconds": 0.06993749999999999,
+          "false_alarm_seconds": 6.250000000007638e-05,
+          "miss_fraction": 0.2743992153016183,
+          "false_alarm_fraction": 0.4999999999991118
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0005625000000000213,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 5,
+        "predicted_runs": 21,
+        "reference_runs_with_no_overlap": 1,
+        "reference_runs_with_one_prediction_run": 2,
+        "reference_runs_split_over_multiple_predictions": 2,
+        "predicted_runs_with_no_reference_overlap": 13
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0013550",
+      "utterance_class": "spoof",
+      "duration_seconds": 2.5608125,
+      "pooled20ms": {
+        "spoof_seconds": 2.4208125,
+        "bonafide_seconds": 0.14,
+        "missed_spoof_seconds": 0.8400000000000001,
+        "false_alarm_seconds": 0.07999999999999996,
+        "miss_fraction": 0.34699093795987923,
+        "false_alarm_fraction": 0.5714285714285711
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 1.2951249999999999,
+          "bonafide_seconds": 0.15000000000000002,
+          "missed_spoof_seconds": 0.5399999999999999,
+          "false_alarm_seconds": 0.08999999999999997,
+          "miss_fraction": 0.4169481710259627,
+          "false_alarm_fraction": 0.5999999999999998
+        },
+        "nonspeech": {
+          "spoof_seconds": 1.1150000000000002,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.30000000000000016,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.26905829596412567,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.00068749999999973,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 2,
+        "predicted_runs": 18,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 2,
+        "predicted_runs_with_no_reference_overlap": 0
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0014412",
+      "utterance_class": "spoof",
+      "duration_seconds": 1.129625,
+      "pooled20ms": {
+        "spoof_seconds": 0.22962500000000002,
+        "bonafide_seconds": 0.9,
+        "missed_spoof_seconds": 0.04962499999999992,
+        "false_alarm_seconds": 0.26,
+        "miss_fraction": 0.21611322808927563,
+        "false_alarm_fraction": 0.2888888888888889
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.017874999999999863,
+          "bonafide_seconds": 0.92,
+          "missed_spoof_seconds": 0.0129999999999999,
+          "false_alarm_seconds": 0.27,
+          "miss_fraction": 0.7272727272727273,
+          "false_alarm_fraction": 0.29347826086956524
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.19150000000000006,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.026374999999999926,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.1377284595300257,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0002500000000000835,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0002500000000000835,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 1.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 3,
+        "predicted_runs": 7,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 3,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 4
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0014522",
+      "utterance_class": "spoof",
+      "duration_seconds": 2.16375,
+      "pooled20ms": {
+        "spoof_seconds": 1.4437499999999999,
+        "bonafide_seconds": 0.7200000000000001,
+        "missed_spoof_seconds": 0.7237499999999997,
+        "false_alarm_seconds": 0.30000000000000016,
+        "miss_fraction": 0.5012987012987011,
+        "false_alarm_fraction": 0.41666666666666685
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.9088749999999999,
+          "bonafide_seconds": 0.7400000000000001,
+          "missed_spoof_seconds": 0.321125,
+          "false_alarm_seconds": 0.31000000000000016,
+          "miss_fraction": 0.353321413835786,
+          "false_alarm_fraction": 0.4189189189189191
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.5140000000000002,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.39175,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.7621595330739296,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0008749999999997371,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0008749999999997371,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 1.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 2,
+        "predicted_runs": 8,
+        "reference_runs_with_no_overlap": 1,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 1,
+        "predicted_runs_with_no_reference_overlap": 1
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0014853",
+      "utterance_class": "spoof",
+      "duration_seconds": 3.205625,
+      "pooled20ms": {
+        "spoof_seconds": 1.1656250000000001,
+        "bonafide_seconds": 2.0399999999999996,
+        "missed_spoof_seconds": 0.4400000000000003,
+        "false_alarm_seconds": 1.3000000000000003,
+        "miss_fraction": 0.3774798927613943,
+        "false_alarm_fraction": 0.6372549019607846
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.5188750000000001,
+          "bonafide_seconds": 2.0799999999999996,
+          "missed_spoof_seconds": 0.05500000000000005,
+          "false_alarm_seconds": 1.3200000000000003,
+          "miss_fraction": 0.10599855456516509,
+          "false_alarm_fraction": 0.6346153846153849
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.6065000000000003,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.3650000000000002,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.6018136850783183,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.00024999999999986144,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 4,
+        "predicted_runs": 20,
+        "reference_runs_with_no_overlap": 1,
+        "reference_runs_with_one_prediction_run": 1,
+        "reference_runs_split_over_multiple_predictions": 2,
+        "predicted_runs_with_no_reference_overlap": 10
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0017259",
+      "utterance_class": "spoof",
+      "duration_seconds": 4.437125,
+      "pooled20ms": {
+        "spoof_seconds": 2.717125,
+        "bonafide_seconds": 1.72,
+        "missed_spoof_seconds": 0.52,
+        "false_alarm_seconds": 0.7199999999999998,
+        "miss_fraction": 0.1913787551180016,
+        "false_alarm_fraction": 0.41860465116279055
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 1.015625,
+          "bonafide_seconds": 1.8000000000000005,
+          "missed_spoof_seconds": 0.140625,
+          "false_alarm_seconds": 0.76,
+          "miss_fraction": 0.13846153846153847,
+          "false_alarm_fraction": 0.4222222222222221
+        },
+        "nonspeech": {
+          "spoof_seconds": 1.6214999999999995,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.3393749999999997,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.20929694727104523,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 5,
+        "predicted_runs": 30,
+        "reference_runs_with_no_overlap": 1,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 4,
+        "predicted_runs_with_no_reference_overlap": 11
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0017506",
+      "utterance_class": "spoof",
+      "duration_seconds": 2.1790625,
+      "pooled20ms": {
+        "spoof_seconds": 1.5990625,
+        "bonafide_seconds": 0.5800000000000001,
+        "missed_spoof_seconds": 0.56,
+        "false_alarm_seconds": 0.12000000000000005,
+        "miss_fraction": 0.35020519835841313,
+        "false_alarm_fraction": 0.20689655172413798
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 1.4117499999999998,
+          "bonafide_seconds": 0.61,
+          "missed_spoof_seconds": 0.5400000000000003,
+          "false_alarm_seconds": 0.13999999999999996,
+          "miss_fraction": 0.38250398441650457,
+          "false_alarm_fraction": 0.22950819672131142
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.15649999999999983,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.009999999999999898,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.06389776357827417,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0008125000000003268,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 3,
+        "predicted_runs": 12,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 1,
+        "reference_runs_split_over_multiple_predictions": 2,
+        "predicted_runs_with_no_reference_overlap": 3
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0018582",
+      "utterance_class": "spoof",
+      "duration_seconds": 4.9479375,
+      "pooled20ms": {
+        "spoof_seconds": 3.4279375,
+        "bonafide_seconds": 1.52,
+        "missed_spoof_seconds": 0.8400000000000014,
+        "false_alarm_seconds": 0.6000000000000003,
+        "miss_fraction": 0.24504530785640094,
+        "false_alarm_fraction": 0.39473684210526333
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 1.3991875000000003,
+          "bonafide_seconds": 1.5400000000000003,
+          "missed_spoof_seconds": 0.48081250000000053,
+          "false_alarm_seconds": 0.6100000000000005,
+          "miss_fraction": 0.343636932148122,
+          "false_alarm_fraction": 0.3961038961038964
+        },
+        "nonspeech": {
+          "spoof_seconds": 2.0084999999999993,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.34918750000000087,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.17385486681603235,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.00025000000000030553,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 3,
+        "predicted_runs": 22,
+        "reference_runs_with_no_overlap": 1,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 2,
+        "predicted_runs_with_no_reference_overlap": 6
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0018799",
+      "utterance_class": "spoof",
+      "duration_seconds": 4.20025,
+      "pooled20ms": {
+        "spoof_seconds": 2.7402499999999996,
+        "bonafide_seconds": 1.46,
+        "missed_spoof_seconds": 0.8202499999999993,
+        "false_alarm_seconds": 0.54,
+        "miss_fraction": 0.2993340023720461,
+        "false_alarm_fraction": 0.36986301369863017
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 2.1829375000000004,
+          "bonafide_seconds": 1.47,
+          "missed_spoof_seconds": 0.7491875000000003,
+          "false_alarm_seconds": 0.55,
+          "miss_fraction": 0.3432015346293699,
+          "false_alarm_fraction": 0.3741496598639456
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.5469999999999994,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0708124999999995,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.12945612431444165,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0003124999999997158,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.00024999999999941735,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.7999999999988632,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 3,
+        "predicted_runs": 20,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 3,
+        "predicted_runs_with_no_reference_overlap": 4
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0020736",
+      "utterance_class": "spoof",
+      "duration_seconds": 3.165,
+      "pooled20ms": {
+        "spoof_seconds": 2.525,
+        "bonafide_seconds": 0.64,
+        "missed_spoof_seconds": 1.3799999999999994,
+        "false_alarm_seconds": 0.24000000000000005,
+        "miss_fraction": 0.5465346534653464,
+        "false_alarm_fraction": 0.37500000000000006
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 1.9105625000000004,
+          "bonafide_seconds": 0.65,
+          "missed_spoof_seconds": 1.1494374999999994,
+          "false_alarm_seconds": 0.25000000000000006,
+          "miss_fraction": 0.6016225588013997,
+          "false_alarm_fraction": 0.3846153846153847
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.6039999999999996,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.23056249999999978,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.3817259933774833,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.00043749999999986855,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 2,
+        "predicted_runs": 19,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 1,
+        "reference_runs_split_over_multiple_predictions": 1,
+        "predicted_runs_with_no_reference_overlap": 3
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0021704",
+      "utterance_class": "spoof",
+      "duration_seconds": 2.8851875,
+      "pooled20ms": {
+        "spoof_seconds": 1.7851874999999997,
+        "bonafide_seconds": 1.1,
+        "missed_spoof_seconds": 0.34000000000000025,
+        "false_alarm_seconds": 0.26000000000000023,
+        "miss_fraction": 0.19045618457444963,
+        "false_alarm_fraction": 0.23636363636363655
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.7649375,
+          "bonafide_seconds": 1.12,
+          "missed_spoof_seconds": 0.3200000000000003,
+          "false_alarm_seconds": 0.27000000000000024,
+          "miss_fraction": 0.41833483127706544,
+          "false_alarm_fraction": 0.24107142857142877
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.9999999999999998,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.009999999999999953,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.009999999999999955,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.00024999999999986144,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 2,
+        "predicted_runs": 11,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 1,
+        "reference_runs_split_over_multiple_predictions": 1,
+        "predicted_runs_with_no_reference_overlap": 5
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0021788",
+      "utterance_class": "spoof",
+      "duration_seconds": 3.3384375,
+      "pooled20ms": {
+        "spoof_seconds": 0.8984374999999992,
+        "bonafide_seconds": 2.440000000000001,
+        "missed_spoof_seconds": 0.2599999999999995,
+        "false_alarm_seconds": 0.4200000000000004,
+        "miss_fraction": 0.2893913043478258,
+        "false_alarm_fraction": 0.17213114754098371
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.027875000000000205,
+          "bonafide_seconds": 2.4799999999999995,
+          "missed_spoof_seconds": 0.0228750000000002,
+          "false_alarm_seconds": 0.4200000000000004,
+          "miss_fraction": 0.8206278026905841,
+          "false_alarm_fraction": 0.1693548387096776
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.8305,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.19712500000000016,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.23735701384708027,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 6.249999999985434e-05,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 4,
+        "predicted_runs": 15,
+        "reference_runs_with_no_overlap": 2,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 2,
+        "predicted_runs_with_no_reference_overlap": 8
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0021890",
+      "utterance_class": "spoof",
+      "duration_seconds": 4.3418125,
+      "pooled20ms": {
+        "spoof_seconds": 3.1418124999999995,
+        "bonafide_seconds": 1.2000000000000002,
+        "missed_spoof_seconds": 0.9399999999999997,
+        "false_alarm_seconds": 0.2599999999999999,
+        "miss_fraction": 0.2991903558853369,
+        "false_alarm_fraction": 0.21666666666666656
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 2.1392500000000005,
+          "bonafide_seconds": 1.23,
+          "missed_spoof_seconds": 0.8899999999999999,
+          "false_alarm_seconds": 0.2899999999999997,
+          "miss_fraction": 0.41603365665536973,
+          "false_alarm_fraction": 0.235772357723577
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.9719999999999989,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.04999999999999982,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.05144032921810687,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0005625000000000213,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 4,
+        "predicted_runs": 21,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 4,
+        "predicted_runs_with_no_reference_overlap": 4
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0022095",
+      "utterance_class": "spoof",
+      "duration_seconds": 1.82275,
+      "pooled20ms": {
+        "spoof_seconds": 1.06275,
+        "bonafide_seconds": 0.76,
+        "missed_spoof_seconds": 0.20000000000000018,
+        "false_alarm_seconds": 0.3199999999999999,
+        "miss_fraction": 0.18819101387908743,
+        "false_alarm_fraction": 0.42105263157894723
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.6023124999999999,
+          "bonafide_seconds": 0.77,
+          "missed_spoof_seconds": 0.14731250000000007,
+          "false_alarm_seconds": 0.3199999999999999,
+          "miss_fraction": 0.24457818823285268,
+          "false_alarm_fraction": 0.41558441558441545
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.45000000000000007,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.042687500000000086,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.09486111111111128,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0004375000000000906,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 2,
+        "predicted_runs": 9,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 1,
+        "reference_runs_split_over_multiple_predictions": 1,
+        "predicted_runs_with_no_reference_overlap": 4
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0022484",
+      "utterance_class": "spoof",
+      "duration_seconds": 3.5338125,
+      "pooled20ms": {
+        "spoof_seconds": 3.3738124999999997,
+        "bonafide_seconds": 0.16000000000000003,
+        "missed_spoof_seconds": 1.3999999999999995,
+        "false_alarm_seconds": 0.0,
+        "miss_fraction": 0.4149608195476185,
+        "false_alarm_fraction": 0.0
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 1.3534375000000003,
+          "bonafide_seconds": 0.18000000000000005,
+          "missed_spoof_seconds": 0.45999999999999985,
+          "false_alarm_seconds": 0.020000000000000018,
+          "miss_fraction": 0.3398753174786422,
+          "false_alarm_fraction": 0.11111111111111117
+        },
+        "nonspeech": {
+          "spoof_seconds": 1.9999999999999996,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.9399999999999996,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.4699999999999999,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0003750000000000142,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 2,
+        "predicted_runs": 23,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 2,
+        "predicted_runs_with_no_reference_overlap": 0
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0023089",
+      "utterance_class": "spoof",
+      "duration_seconds": 4.891375,
+      "pooled20ms": {
+        "spoof_seconds": 1.5713749999999993,
+        "bonafide_seconds": 3.3200000000000007,
+        "missed_spoof_seconds": 0.5513749999999985,
+        "false_alarm_seconds": 2.46,
+        "miss_fraction": 0.35088696205552383,
+        "false_alarm_fraction": 0.7409638554216865
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 1.0246249999999997,
+          "bonafide_seconds": 3.3600000000000003,
+          "missed_spoof_seconds": 0.2923124999999991,
+          "false_alarm_seconds": 2.4799999999999995,
+          "miss_fraction": 0.28528730023179133,
+          "false_alarm_fraction": 0.7380952380952379
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.506,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.23831249999999937,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.4709733201581015,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0007500000000000284,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0007500000000000284,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 1.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 5,
+        "predicted_runs": 29,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 1,
+        "reference_runs_split_over_multiple_predictions": 4,
+        "predicted_runs_with_no_reference_overlap": 15
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "CON_D_0023180",
+      "utterance_class": "spoof",
+      "duration_seconds": 6.91475,
+      "pooled20ms": {
+        "spoof_seconds": 0.6147500000000006,
+        "bonafide_seconds": 6.299999999999999,
+        "missed_spoof_seconds": 0.20000000000000098,
+        "false_alarm_seconds": 4.300000000000002,
+        "miss_fraction": 0.3253355022366829,
+        "false_alarm_fraction": 0.6825396825396829
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.09837499999999999,
+          "bonafide_seconds": 6.379999999999999,
+          "missed_spoof_seconds": 0.03737500000000005,
+          "false_alarm_seconds": 4.3400000000000025,
+          "miss_fraction": 0.3799237611181708,
+          "false_alarm_fraction": 0.6802507836990601
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.4360000000000003,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.12262500000000112,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.2812500000000024,
+          "false_alarm_fraction": null
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0003750000000000142,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": 0.0,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 10,
+        "predicted_runs": 35,
+        "reference_runs_with_no_overlap": 2,
+        "reference_runs_with_one_prediction_run": 7,
+        "reference_runs_split_over_multiple_predictions": 1,
+        "predicted_runs_with_no_reference_overlap": 27
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_1161800",
+      "utterance_class": "bonafide",
+      "duration_seconds": 4.172375,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 4.172375,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.4123750000000004,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.33850624644237404
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 2.7499999999999996,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.8600000000000003,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.3127272727272729
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.422,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.5519999999999999,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.3881856540084388
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0003750000000000142,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0003750000000000142,
+          "miss_fraction": null,
+          "false_alarm_fraction": 1.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 24,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 24
+      },
+      "reference20ms_spoof_intervals": [],
+      "predicted_spoof_intervals": [
+        [
+          0.04,
+          0.06
+        ],
+        [
+          0.08,
+          0.1
+        ],
+        [
+          0.24,
+          0.26
+        ],
+        [
+          0.28,
+          0.32
+        ],
+        [
+          0.42,
+          0.46
+        ],
+        [
+          0.48,
+          0.5
+        ],
+        [
+          0.52,
+          0.54
+        ],
+        [
+          0.56,
+          0.58
+        ],
+        [
+          0.6,
+          0.62
+        ],
+        [
+          0.64,
+          0.74
+        ],
+        [
+          0.88,
+          0.9
+        ],
+        [
+          1.04,
+          1.2
+        ],
+        [
+          1.24,
+          1.34
+        ],
+        [
+          1.72,
+          1.82
+        ],
+        [
+          1.84,
+          1.86
+        ],
+        [
+          2.14,
+          2.24
+        ],
+        [
+          2.26,
+          2.28
+        ],
+        [
+          2.38,
+          2.4
+        ],
+        [
+          2.5,
+          2.62
+        ],
+        [
+          2.82,
+          2.9
+        ],
+        [
+          3.3,
+          3.32
+        ],
+        [
+          3.44,
+          3.66
+        ],
+        [
+          3.86,
+          3.96
+        ],
+        [
+          4.16,
+          4.172375
+        ]
+      ]
+    },
+    {
+      "utterance_id": "LA_D_1323454",
+      "utterance_class": "bonafide",
+      "duration_seconds": 7.505625,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 7.505625,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 3.745625000000001,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.4990423848780083
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.5400000000000003,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.76,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.49350649350649345
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 5.965,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 2.9850000000000003,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.5004191114836547
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0006250000000003197,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0006250000000003197,
+          "miss_fraction": null,
+          "false_alarm_fraction": 1.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 57,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 57
+      },
+      "reference20ms_spoof_intervals": [],
+      "predicted_spoof_intervals": [
+        [
+          0.0,
+          0.24
+        ],
+        [
+          0.26,
+          0.28
+        ],
+        [
+          0.32,
+          0.42
+        ],
+        [
+          0.44,
+          0.46
+        ],
+        [
+          0.5,
+          0.52
+        ],
+        [
+          0.54,
+          0.58
+        ],
+        [
+          0.6,
+          0.62
+        ],
+        [
+          0.78,
+          1.08
+        ],
+        [
+          1.1,
+          1.18
+        ],
+        [
+          1.26,
+          1.36
+        ],
+        [
+          1.46,
+          1.48
+        ],
+        [
+          1.72,
+          1.8
+        ],
+        [
+          1.92,
+          1.94
+        ],
+        [
+          2.0,
+          2.06
+        ],
+        [
+          2.1,
+          2.12
+        ],
+        [
+          2.14,
+          2.3
+        ],
+        [
+          2.4,
+          2.68
+        ],
+        [
+          2.74,
+          2.88
+        ],
+        [
+          3.16,
+          3.18
+        ],
+        [
+          3.26,
+          3.28
+        ],
+        [
+          3.42,
+          3.48
+        ],
+        [
+          3.54,
+          3.68
+        ],
+        [
+          3.82,
+          3.84
+        ],
+        [
+          3.86,
+          3.94
+        ],
+        [
+          4.2,
+          4.22
+        ],
+        [
+          4.24,
+          4.26
+        ],
+        [
+          4.3,
+          4.32
+        ],
+        [
+          4.34,
+          4.36
+        ],
+        [
+          4.5,
+          4.62
+        ],
+        [
+          4.64,
+          4.68
+        ],
+        [
+          4.72,
+          4.74
+        ],
+        [
+          4.88,
+          4.96
+        ],
+        [
+          4.98,
+          5.02
+        ],
+        [
+          5.08,
+          5.2
+        ],
+        [
+          5.24,
+          5.26
+        ],
+        [
+          5.32,
+          5.34
+        ],
+        [
+          5.36,
+          5.46
+        ],
+        [
+          5.48,
+          5.5
+        ],
+        [
+          5.58,
+          5.64
+        ],
+        [
+          5.66,
+          5.7
+        ],
+        [
+          5.72,
+          5.74
+        ],
+        [
+          5.76,
+          5.78
+        ],
+        [
+          5.8,
+          5.86
+        ],
+        [
+          5.94,
+          6.0
+        ],
+        [
+          6.12,
+          6.14
+        ],
+        [
+          6.22,
+          6.38
+        ],
+        [
+          6.5,
+          6.56
+        ],
+        [
+          6.62,
+          6.74
+        ],
+        [
+          6.76,
+          6.78
+        ],
+        [
+          6.8,
+          6.9
+        ],
+        [
+          6.96,
+          6.98
+        ],
+        [
+          7.0,
+          7.02
+        ],
+        [
+          7.04,
+          7.2
+        ],
+        [
+          7.3,
+          7.32
+        ],
+        [
+          7.34,
+          7.36
+        ],
+        [
+          7.38,
+          7.4
+        ],
+        [
+          7.48,
+          7.505625
+        ]
+      ]
+    },
+    {
+      "utterance_id": "LA_D_1469404",
+      "utterance_class": "bonafide",
+      "duration_seconds": 3.491,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 3.491,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.7599999999999998,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.5041535376682899
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.7700000000000002,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 1.22,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.6892655367231637
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.7209999999999999,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.5399999999999997,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.31377106333527005
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 17,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 17
+      },
+      "reference20ms_spoof_intervals": [],
+      "predicted_spoof_intervals": [
+        [
+          0.04,
+          0.06
+        ],
+        [
+          0.38,
+          0.4
+        ],
+        [
+          0.42,
+          0.5
+        ],
+        [
+          0.52,
+          0.54
+        ],
+        [
+          0.62,
+          0.64
+        ],
+        [
+          0.72,
+          0.76
+        ],
+        [
+          0.84,
+          0.86
+        ],
+        [
+          0.94,
+          0.96
+        ],
+        [
+          1.12,
+          1.14
+        ],
+        [
+          1.22,
+          1.24
+        ],
+        [
+          1.28,
+          1.3
+        ],
+        [
+          1.44,
+          1.72
+        ],
+        [
+          1.96,
+          2.2
+        ],
+        [
+          2.24,
+          2.34
+        ],
+        [
+          2.4,
+          2.5
+        ],
+        [
+          2.68,
+          3.38
+        ],
+        [
+          3.4,
+          3.44
+        ]
+      ]
+    },
+    {
+      "utterance_id": "LA_D_1494418",
+      "utterance_class": "bonafide",
+      "duration_seconds": 3.491875,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 3.491875,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.3200000000000003,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.3780204045104708
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.67,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.8799999999999999,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.5269461077844311
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.8210000000000002,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.4400000000000003,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.24162548050521704
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0008749999999997371,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 19,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 19
+      },
+      "reference20ms_spoof_intervals": [],
+      "predicted_spoof_intervals": [
+        [
+          0.0,
+          0.04
+        ],
+        [
+          0.28,
+          0.4
+        ],
+        [
+          0.42,
+          0.46
+        ],
+        [
+          1.36,
+          1.38
+        ],
+        [
+          1.4,
+          1.56
+        ],
+        [
+          1.64,
+          1.66
+        ],
+        [
+          1.68,
+          1.7
+        ],
+        [
+          1.72,
+          1.96
+        ],
+        [
+          2.08,
+          2.22
+        ],
+        [
+          2.34,
+          2.44
+        ],
+        [
+          2.48,
+          2.56
+        ],
+        [
+          2.66,
+          2.72
+        ],
+        [
+          2.74,
+          2.76
+        ],
+        [
+          2.82,
+          2.84
+        ],
+        [
+          3.0,
+          3.02
+        ],
+        [
+          3.08,
+          3.1
+        ],
+        [
+          3.16,
+          3.24
+        ],
+        [
+          3.26,
+          3.28
+        ],
+        [
+          3.36,
+          3.46
+        ]
+      ]
+    },
+    {
+      "utterance_id": "LA_D_1796445",
+      "utterance_class": "bonafide",
+      "duration_seconds": 3.36775,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 3.36775,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.5477499999999997,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.45957983817088555
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.54,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.35999999999999965,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.23376623376623354
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.827,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 1.187,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.6496989600437877
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0007500000000000284,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0007500000000000284,
+          "miss_fraction": null,
+          "false_alarm_fraction": 1.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 22,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 22
+      },
+      "reference20ms_spoof_intervals": [],
+      "predicted_spoof_intervals": [
+        [
+          0.0,
+          0.1
+        ],
+        [
+          0.12,
+          0.16
+        ],
+        [
+          0.24,
+          0.26
+        ],
+        [
+          0.28,
+          0.32
+        ],
+        [
+          0.34,
+          0.38
+        ],
+        [
+          0.4,
+          0.48
+        ],
+        [
+          0.5,
+          0.52
+        ],
+        [
+          0.54,
+          0.62
+        ],
+        [
+          0.72,
+          0.88
+        ],
+        [
+          0.92,
+          0.94
+        ],
+        [
+          0.98,
+          1.0
+        ],
+        [
+          1.04,
+          1.12
+        ],
+        [
+          1.3,
+          1.4
+        ],
+        [
+          1.42,
+          1.48
+        ],
+        [
+          1.78,
+          1.8
+        ],
+        [
+          2.42,
+          2.44
+        ],
+        [
+          2.56,
+          2.58
+        ],
+        [
+          2.6,
+          2.62
+        ],
+        [
+          2.7,
+          2.96
+        ],
+        [
+          2.98,
+          3.08
+        ],
+        [
+          3.1,
+          3.2
+        ],
+        [
+          3.22,
+          3.36775
+        ]
+      ]
+    },
+    {
+      "utterance_id": "LA_D_1902645",
+      "utterance_class": "bonafide",
+      "duration_seconds": 2.3024375,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 2.3024375,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.26,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.5472461250305383
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.2999999999999996,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.52,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.40000000000000013
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.0020000000000004,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.74,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.738522954091816
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.00043749999999986855,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 13,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 13
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_2002365",
+      "utterance_class": "bonafide",
+      "duration_seconds": 2.08875,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 2.08875,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 0.9287500000000002,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.44464392579293843
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.9099999999999998,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.29000000000000004,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.31868131868131877
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.1780000000000002,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.6380000000000001,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.5415959252971138
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0007500000000000284,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0007500000000000284,
+          "miss_fraction": null,
+          "false_alarm_fraction": 1.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 18,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 18
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_2035158",
+      "utterance_class": "bonafide",
+      "duration_seconds": 4.180625,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 4.180625,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.2399999999999998,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.535805053072208
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.75,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.8099999999999998,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.46285714285714274
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 2.4299999999999997,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 1.4300000000000002,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.5884773662551441
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0006250000000003197,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 33,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 33
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_2156985",
+      "utterance_class": "bonafide",
+      "duration_seconds": 3.14925,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 3.14925,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.2999999999999998,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.41279669762641896
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.53,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.5700000000000005,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.3725490196078435
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.6189999999999998,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.7299999999999994,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.45089561457689903
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.00024999999999986144,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 17,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 17
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_2748583",
+      "utterance_class": "bonafide",
+      "duration_seconds": 3.62375,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 3.62375,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 0.7200000000000002,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.19868920317350816
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.9599999999999997,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.1200000000000001,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.06122448979591843
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.6630000000000005,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.6000000000000001,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.36079374624173177
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0007499999999995843,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 17,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 17
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_2812544",
+      "utterance_class": "bonafide",
+      "duration_seconds": 3.238,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 3.238,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.7000000000000002,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.5250154416306363
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 2.3099999999999996,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 1.0799999999999996,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.46753246753246747
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.9280000000000004,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.6200000000000003,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.6681034482758621
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 21,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 21
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_3056969",
+      "utterance_class": "bonafide",
+      "duration_seconds": 5.841875,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 5.841875,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 4.04,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.6915587889162298
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 3.0699999999999994,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 1.8499999999999996,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.6026058631921825
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 2.771000000000001,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 2.190000000000001,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.79032840129917
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0008749999999997371,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 31,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 31
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_3170323",
+      "utterance_class": "bonafide",
+      "duration_seconds": 3.4966875,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 3.4966875,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.6599999999999995,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.47473501706972654
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 2.1999999999999997,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 1.1899999999999995,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.5409090909090908
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.296,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.47,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.36265432098765427
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0006875000000001741,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 16,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 16
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_3323539",
+      "utterance_class": "bonafide",
+      "duration_seconds": 2.126375,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 2.126375,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 0.24,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.11286814414202576
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.7399999999999999,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.1299999999999999,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.17567567567567555
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.386,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.1100000000000001,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.07936507936507944
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0003750000000000142,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 7,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 7
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_3559270",
+      "utterance_class": "bonafide",
+      "duration_seconds": 3.7933125,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 3.7933125,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.16,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.30580132799499116
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 2.1900000000000004,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.3900000000000001,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.17808219178082194
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.6029999999999998,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.7699999999999998,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.4803493449781659
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0003124999999997158,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 23,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 23
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_4148603",
+      "utterance_class": "bonafide",
+      "duration_seconds": 3.878625,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 3.878625,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.878625,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.48435334686905795
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 2.3199999999999994,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.9199999999999997,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.396551724137931
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.5580000000000007,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.9580000000000004,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.6148908857509627
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0006249999999998757,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0006249999999998757,
+          "miss_fraction": null,
+          "false_alarm_fraction": 1.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 18,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 18
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_4771667",
+      "utterance_class": "bonafide",
+      "duration_seconds": 2.725625,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 2.725625,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.8056249999999998,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.6624627379041503
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.2100000000000004,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.5500000000000005,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.4545454545454548
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.5149999999999997,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 1.2549999999999994,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.8283828382838282
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0006249999999998757,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0006249999999998757,
+          "miss_fraction": null,
+          "false_alarm_fraction": 1.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 14,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 14
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_4828901",
+      "utterance_class": "bonafide",
+      "duration_seconds": 5.1198125,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 5.1198125,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.380000000000001,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.46486077370997486
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 2.82,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 1.0999999999999992,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.39007092198581533
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 2.299,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 1.2800000000000011,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.5567638103523276
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0008125000000003268,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 42,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 42
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_5026692",
+      "utterance_class": "bonafide",
+      "duration_seconds": 4.1344375,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 4.1344375,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.7544375000000008,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.6662181977596713
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 2.62,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 1.7000000000000004,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.6488549618320612
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.5140000000000002,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 1.054000000000001,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.696169088507266
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.00043749999999942446,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.00043749999999942446,
+          "miss_fraction": null,
+          "false_alarm_fraction": 1.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 20,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 20
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_5029338",
+      "utterance_class": "bonafide",
+      "duration_seconds": 3.712,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 3.712,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.18,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.5872844827586207
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.9800000000000002,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 1.43,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.7222222222222221
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.732,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.7500000000000002,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.433025404157044
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": null
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 25,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 25
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_5226379",
+      "utterance_class": "bonafide",
+      "duration_seconds": 4.6453125,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 4.6453125,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.4400000000000004,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.5252606794483687
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 3.109999999999999,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 1.2299999999999993,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.39549839228295813
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.5350000000000008,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 1.210000000000001,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.7882736156351794
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.00031250000000060396,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 28,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 28
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_5513082",
+      "utterance_class": "bonafide",
+      "duration_seconds": 3.1151875,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 3.1151875,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.4599999999999995,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.46867162891479225
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.6700000000000002,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.7299999999999998,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.43712574850299385
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.445,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.7299999999999998,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.505190311418685
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0001875000000000071,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 24,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 24
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_5651240",
+      "utterance_class": "bonafide",
+      "duration_seconds": 3.875625,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 3.875625,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 0.96,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.24770198355104014
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 2.58,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.7800000000000002,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.30232558139534893
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.295,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.17999999999999972,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.13899613899613877
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0006249999999998757,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 17,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 17
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_5774989",
+      "utterance_class": "bonafide",
+      "duration_seconds": 4.690375,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 4.690375,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.660000000000001,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.5671188337819473
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 2.3499999999999996,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 1.6600000000000004,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.7063829787234045
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 2.3400000000000007,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 1.0000000000000009,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.4273504273504276
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0003750000000000142,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 32,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 32
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_6023315",
+      "utterance_class": "bonafide",
+      "duration_seconds": 5.03075,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 5.03075,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 3.190750000000001,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.6342493663966606
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.2200000000000002,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.69,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.5655737704918031
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 3.81,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 2.500000000000001,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.6561679790026249
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0007500000000000284,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0007500000000000284,
+          "miss_fraction": null,
+          "false_alarm_fraction": 1.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 40,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 40
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_6258471",
+      "utterance_class": "bonafide",
+      "duration_seconds": 4.9034375,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 4.9034375,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.3999999999999995,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.4894525524185838
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 2.4200000000000004,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.8000000000000007,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.33057851239669445
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 2.482999999999999,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 1.599999999999999,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.6443817962142567
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.00043750000000031264,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 32,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 32
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_6900009",
+      "utterance_class": "bonafide",
+      "duration_seconds": 4.2201875,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 4.2201875,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.0200000000000002,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.24169542230054952
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 2.34,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.4300000000000006,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.18376068376068402
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.8800000000000001,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.5899999999999996,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.31382978723404237
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0001875000000000071,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 21,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 21
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_7050071",
+      "utterance_class": "bonafide",
+      "duration_seconds": 4.859125,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 4.859125,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.960000000000002,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.6091631723818594
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 2.849999999999999,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 1.4200000000000017,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.49824561403508844
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 2.0090000000000003,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 1.5400000000000005,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.7665505226480838
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.00012499999999970868,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 32,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 32
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_7179593",
+      "utterance_class": "bonafide",
+      "duration_seconds": 2.594125,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 2.594125,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.5600000000000003,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.6013588396858287
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.2299999999999998,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.5200000000000002,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.4227642276422767
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.364,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 1.04,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.7624633431085044
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.00012500000000015277,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 13,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 13
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_7944625",
+      "utterance_class": "bonafide",
+      "duration_seconds": 4.3458125,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 4.3458125,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.3600000000000008,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.5430515007262741
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 2.83,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 1.400000000000001,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.4946996466431099
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.5149999999999995,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.9599999999999995,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.6336633663366336
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0008125000000003268,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 29,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 29
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_8003563",
+      "utterance_class": "bonafide",
+      "duration_seconds": 2.4241875,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 2.4241875,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 0.62,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.2557557944672184
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.43,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.3999999999999999,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.2797202797202797
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.994,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.22000000000000008,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.22132796780684114
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 0.0001875000000000071,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 11,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 11
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    },
+    {
+      "utterance_id": "LA_D_9851827",
+      "utterance_class": "bonafide",
+      "duration_seconds": 2.7680625,
+      "pooled20ms": {
+        "spoof_seconds": 0.0,
+        "bonafide_seconds": 2.7680625,
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.2799999999999994,
+        "miss_fraction": null,
+        "false_alarm_fraction": 0.4624173045225674
+      },
+      "native10ms_by_vad": {
+        "speech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.4500000000000002,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.5599999999999998,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.38620689655172397
+        },
+        "nonspeech": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 1.3179999999999996,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.7199999999999995,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.5462822458270105
+        },
+        "vad_uncovered": {
+          "spoof_seconds": 0.0,
+          "bonafide_seconds": 6.250000000029843e-05,
+          "missed_spoof_seconds": 0.0,
+          "false_alarm_seconds": 0.0,
+          "miss_fraction": null,
+          "false_alarm_fraction": 0.0
+        }
+      },
+      "fragmentation20ms": {
+        "reference_runs": 0,
+        "predicted_runs": 19,
+        "reference_runs_with_no_overlap": 0,
+        "reference_runs_with_one_prediction_run": 0,
+        "reference_runs_split_over_multiple_predictions": 0,
+        "predicted_runs_with_no_reference_overlap": 19
+      },
+      "reference20ms_spoof_intervals": null,
+      "predicted_spoof_intervals": null
+    }
+  ],
+  "limitations": [
+    "Same 64 dev recordings as pilot; descriptive post-hoc analysis, not independent validation",
+    "Fixed 0 classifier threshold; no threshold or smoothing tuning",
+    "20ms pooled truth differs from native10ms truth near transitions; totals must not be mixed",
+    "VAD=2 can have native label0 or1; printed VAD uncovered audio retained separately",
+    "Prediction boundary precision is 20ms with clipped final interval; no sub-bin localization claim",
+    "LFCC uses future context; no streaming claim; PartialSpoof shares source with ASVspoof"
+  ]
+}

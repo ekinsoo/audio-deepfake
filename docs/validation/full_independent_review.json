@@ -1,0 +1,73 @@
+{
+  "status": "ok",
+  "reviewed_utc": "2026-10-10T01:26:08.118687+00:00",
+  "scope": "full official train/dev sklearn adaptation, seed 42; eval unopened",
+  "summary_sha256": "c3076b4ab41a8c4bb1a2572d537bcb71ae87aa569a47a6983bdb8497dd17f7ef",
+  "plan_sha256": "e3102c6f21de742c84bc4ca4a52e985fbaf0293c34c79d5ba0d2991b9492ce38",
+  "scores_sha256": "bdc3cd64a218eaa2e56db225d06a696bb3049cb7e556d5e8672d548c80d5915e",
+  "model_sha256": "701fc3d8107cc8b2696b5552dd9e1b4751e44d2d197cfd5d1dfe7e4814add101",
+  "train_count": 25380,
+  "dev_count": 24844,
+  "official_protocol_counts_metadata_and_order_verified": true,
+  "train_dev_id_and_speaker_separation_verified": true,
+  "original_prefix_count": 22815,
+  "original_prefix_exact_match": true,
+  "original_artifacts_unchanged": true,
+  "source_config_and_package_versions_verified": true,
+  "only_original_source_change": "resource memory instrumentation; model/features unchanged",
+  "audio_hashes_verified": 50224,
+  "direct_pinned_reference_metrics_exact_match": true,
+  "metrics": {
+    "eer": 0.05890201986234586,
+    "eer_threshold": 0.670067310333252,
+    "min_tDCF": 0.15267840463196913,
+    "min_tDCF_threshold": 0.479202002286911
+  },
+  "waveform_score_spotchecks": [
+    {
+      "index": 0,
+      "utterance_id": "LA_D_1047731",
+      "score": 1.2489408254623413,
+      "exact_match": true
+    },
+    {
+      "index": 11407,
+      "utterance_id": "LA_D_9596640",
+      "score": -4.57781457901001,
+      "exact_match": true
+    },
+    {
+      "index": 22814,
+      "utterance_id": "LA_D_7985250",
+      "score": 0.5275694727897644,
+      "exact_match": true
+    },
+    {
+      "index": 22815,
+      "utterance_id": "LA_D_8042295",
+      "score": 0.5902537703514099,
+      "exact_match": true
+    },
+    {
+      "index": 23815,
+      "utterance_id": "LA_D_3802962",
+      "score": 0.5303434133529663,
+      "exact_match": true
+    },
+    {
+      "index": 24843,
+      "utterance_id": "LA_D_9967770",
+      "score": 0.6461262702941895,
+      "exact_match": true
+    }
+  ],
+  "limitations": [
+    "Development only; no held-out eval or deployment claim.",
+    "Sklearn LFCC-GMM adaptation, not exact official MATLAB baseline reproduction.",
+    "Dev EER/min tDCF operating points use dev labels.",
+    "Recovery timings exclude original training and scoring."
+  ],
+  "seed": 42,
+  "eval_enabled": false,
+  "score_sha256": "bdc3cd64a218eaa2e56db225d06a696bb3049cb7e556d5e8672d548c80d5915e"
+}

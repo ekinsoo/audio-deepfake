@@ -1,0 +1,276 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-10T12:09:43.597737+00:00",
+  "status": "frozen",
+  "purpose": "Small engineering timing; not an accuracy experiment or production guarantee",
+  "model_seed": 43,
+  "model_selection": "Fixed seed 43 for future demo timing; no best-seed selection",
+  "model_sha256": "08b77256906a546d5eabbe9fa2cc5bbef0430d7d5dc7b10fc5b9f9e8449a19d0",
+  "model_path": "outputs/baseline-full-seed43/model.joblib",
+  "config_sha256": "9b01550be7eb1f9fefcde7807150a4999f5a47aabc58ab315fb90eddf66931bf",
+  "input_sha256": {
+    "selection_manifest": "37da16080ddbf0c0253b1f093a11917e1c463f12b2f88d322c270587abf17458",
+    "train_protocol": "65a289e4009400b42bb4f1e47ac60938d93f7f595452d1f220d35defc3de8ab8",
+    "dev_protocol": "2fedaebf1ba3ae1a9bb7d3ec916804ac237b4eee063a27fa92e6549f03d129c7",
+    "audio_journal": "cb80fcc2a80b26542178e87cb985ec81f51e7bd1efe60ab203ddfa53fe123440",
+    "clean_scores": "495b43938850d18ae391cf23f4d9047ef2851e440cba07024f27fa6fc388a069"
+  },
+  "source_sha256": {
+    "scripts/benchmark_demo.py": "475c2e1f97be45935a02f49d1361302790cc01edc2debfa35fbcd3444893bbf4",
+    "src/audio_deepfake/demo.py": "b8769ccd1d8d12c07588db3618d0db871b58800290505d70dbb2a14e75ab38da",
+    "src/audio_deepfake/audio.py": "aa3b33b4e5512f26202019b7f44d92c4bb4389bb2ae9d0c256cb822b54ad424c",
+    "src/audio_deepfake/features.py": "22152cdcb7c118fd168dc9c4e11a20f100f959d4f2e4e1cb6f16fdfbe83cbfb3",
+    "src/audio_deepfake/baseline.py": "2cf5b7d030bb9926d5e0aa3ed4089298f79a50038f1da5c8a41171f7a4d29c2f",
+    "src/audio_deepfake/resources.py": "9d68202f7335b17e83f2138600f0f1c7312adab46c3d73609d61751800282e7a"
+  },
+  "selection_policy": "First 20 official CM dev protocol rows, unchanged order; no duration selection",
+  "sample_labels": {
+    "bonafide": 20
+  },
+  "sample_speakers": [
+    "LA_0069"
+  ],
+  "records": [
+    {
+      "split": "dev",
+      "speaker_id": "LA_0069",
+      "utterance_id": "LA_D_1047731",
+      "attack_id": "-",
+      "label": "bonafide",
+      "audio_path": "ASVspoof2019_LA_dev/flac/LA_D_1047731.flac",
+      "audio_sha256": "5121b5c569bcd1c695f6d87ad68ebcc086ed382adb9862759f1c79358f5937f0",
+      "duration_seconds": 5.4140625,
+      "saved_clean_score": 1.0246808528900146
+    },
+    {
+      "split": "dev",
+      "speaker_id": "LA_0069",
+      "utterance_id": "LA_D_1105538",
+      "attack_id": "-",
+      "label": "bonafide",
+      "audio_path": "ASVspoof2019_LA_dev/flac/LA_D_1105538.flac",
+      "audio_sha256": "134bcce32a4cfeb2109825be1bfc56def7fb6986898290522261c1993dbba152",
+      "duration_seconds": 3.278625,
+      "saved_clean_score": 0.856620192527771
+    },
+    {
+      "split": "dev",
+      "speaker_id": "LA_0069",
+      "utterance_id": "LA_D_1125976",
+      "attack_id": "-",
+      "label": "bonafide",
+      "audio_path": "ASVspoof2019_LA_dev/flac/LA_D_1125976.flac",
+      "audio_sha256": "613553d6d119e9addb9227752db1405d50cac3590627735a35bbb2f03fddc63a",
+      "duration_seconds": 3.279625,
+      "saved_clean_score": 1.7360981702804565
+    },
+    {
+      "split": "dev",
+      "speaker_id": "LA_0069",
+      "utterance_id": "LA_D_1293230",
+      "attack_id": "-",
+      "label": "bonafide",
+      "audio_path": "ASVspoof2019_LA_dev/flac/LA_D_1293230.flac",
+      "audio_sha256": "faf1bf53534852e0d4d9b042db81a5cd6598fae0cc1a914551463b4f1cfdaf00",
+      "duration_seconds": 5.5013125,
+      "saved_clean_score": 0.53663569688797
+    },
+    {
+      "split": "dev",
+      "speaker_id": "LA_0069",
+      "utterance_id": "LA_D_1340209",
+      "attack_id": "-",
+      "label": "bonafide",
+      "audio_path": "ASVspoof2019_LA_dev/flac/LA_D_1340209.flac",
+      "audio_sha256": "4d71deeffef108f850abee18023f9806078cfa98dffeee2f84eb895fe1f71eb4",
+      "duration_seconds": 4.38675,
+      "saved_clean_score": 1.267417073249817
+    },
+    {
+      "split": "dev",
+      "speaker_id": "LA_0069",
+      "utterance_id": "LA_D_1376638",
+      "attack_id": "-",
+      "label": "bonafide",
+      "audio_path": "ASVspoof2019_LA_dev/flac/LA_D_1376638.flac",
+      "audio_sha256": "373170ed1c8c8714094d697f00de277b0d9ff77cfa01cd669aeb172a93f4f3d9",
+      "duration_seconds": 4.3881875,
+      "saved_clean_score": 1.268405556678772
+    },
+    {
+      "split": "dev",
+      "speaker_id": "LA_0069",
+      "utterance_id": "LA_D_1377420",
+      "attack_id": "-",
+      "label": "bonafide",
+      "audio_path": "ASVspoof2019_LA_dev/flac/LA_D_1377420.flac",
+      "audio_sha256": "37fdf4c6b93f1d3415851b28a0fe9d5c91e51d2badd69d91f79ff77cba352b98",
+      "duration_seconds": 4.3895625,
+      "saved_clean_score": 1.1086516380310059
+    },
+    {
+      "split": "dev",
+      "speaker_id": "LA_0069",
+      "utterance_id": "LA_D_1403371",
+      "attack_id": "-",
+      "label": "bonafide",
+      "audio_path": "ASVspoof2019_LA_dev/flac/LA_D_1403371.flac",
+      "audio_sha256": "7f27125bd38026fb13931b10ab833ad72b3cc30e7055f2313c06ad4d9ec19fd4",
+      "duration_seconds": 3.580125,
+      "saved_clean_score": 0.7305324077606201
+    },
+    {
+      "split": "dev",
+      "speaker_id": "LA_0069",
+      "utterance_id": "LA_D_1590530",
+      "attack_id": "-",
+      "label": "bonafide",
+      "audio_path": "ASVspoof2019_LA_dev/flac/LA_D_1590530.flac",
+      "audio_sha256": "a35168dada40e0905ec41ac9338538283b7033e93e66be727792be613c135c29",
+      "duration_seconds": 3.3246875,
+      "saved_clean_score": 0.7959258556365967
+    },
+    {
+      "split": "dev",
+      "speaker_id": "LA_0069",
+      "utterance_id": "LA_D_1595036",
+      "attack_id": "-",
+      "label": "bonafide",
+      "audio_path": "ASVspoof2019_LA_dev/flac/LA_D_1595036.flac",
+      "audio_sha256": "96a53ce4236ff666e96da5502f279c1a3b0752f44298705517b23d75ce4b80eb",
+      "duration_seconds": 2.555,
+      "saved_clean_score": 1.1098744869232178
+    },
+    {
+      "split": "dev",
+      "speaker_id": "LA_0069",
+      "utterance_id": "LA_D_1618135",
+      "attack_id": "-",
+      "label": "bonafide",
+      "audio_path": "ASVspoof2019_LA_dev/flac/LA_D_1618135.flac",
+      "audio_sha256": "940f21fcd32d124047e5575ac22c58723c2d48a01447fd4310d27f7fc773a42f",
+      "duration_seconds": 4.38975,
+      "saved_clean_score": 1.3679152727127075
+    },
+    {
+      "split": "dev",
+      "speaker_id": "LA_0069",
+      "utterance_id": "LA_D_1624385",
+      "attack_id": "-",
+      "label": "bonafide",
+      "audio_path": "ASVspoof2019_LA_dev/flac/LA_D_1624385.flac",
+      "audio_sha256": "861318a70183719657f2b588964906a49a7b05254da79f515add5ae57df3e224",
+      "duration_seconds": 2.945375,
+      "saved_clean_score": 1.0194172859191895
+    },
+    {
+      "split": "dev",
+      "speaker_id": "LA_0069",
+      "utterance_id": "LA_D_1766721",
+      "attack_id": "-",
+      "label": "bonafide",
+      "audio_path": "ASVspoof2019_LA_dev/flac/LA_D_1766721.flac",
+      "audio_sha256": "612ae09813da9fb09ccec70bc623dda0ec4ebdfb56a06bc986fa1e97ce01378f",
+      "duration_seconds": 4.3879375,
+      "saved_clean_score": 1.174749732017517
+    },
+    {
+      "split": "dev",
+      "speaker_id": "LA_0069",
+      "utterance_id": "LA_D_1833136",
+      "attack_id": "-",
+      "label": "bonafide",
+      "audio_path": "ASVspoof2019_LA_dev/flac/LA_D_1833136.flac",
+      "audio_sha256": "42c68f19ea3f39e1be5b7c6224c5ec8c79a8709f6bcb0c54116d5e15b1c22ac9",
+      "duration_seconds": 5.92725,
+      "saved_clean_score": 1.0219303369522095
+    },
+    {
+      "split": "dev",
+      "speaker_id": "LA_0069",
+      "utterance_id": "LA_D_1837988",
+      "attack_id": "-",
+      "label": "bonafide",
+      "audio_path": "ASVspoof2019_LA_dev/flac/LA_D_1837988.flac",
+      "audio_sha256": "97fc13b3fadb25d9d194656d709ec17b6b5799d32a7b356ff352ade467a1441f",
+      "duration_seconds": 2.9759375,
+      "saved_clean_score": 1.21718430519104
+    },
+    {
+      "split": "dev",
+      "speaker_id": "LA_0069",
+      "utterance_id": "LA_D_1849134",
+      "attack_id": "-",
+      "label": "bonafide",
+      "audio_path": "ASVspoof2019_LA_dev/flac/LA_D_1849134.flac",
+      "audio_sha256": "0cbc21c383cf74b43059a4905a714b3facfead4368cb0e787d512532a8eded9a",
+      "duration_seconds": 4.9041875,
+      "saved_clean_score": 0.7864648103713989
+    },
+    {
+      "split": "dev",
+      "speaker_id": "LA_0069",
+      "utterance_id": "LA_D_1865278",
+      "attack_id": "-",
+      "label": "bonafide",
+      "audio_path": "ASVspoof2019_LA_dev/flac/LA_D_1865278.flac",
+      "audio_sha256": "b855b74c91ff5730d0e07a338ded36e048632f543fc046cb8e7bb7462a51c711",
+      "duration_seconds": 3.3215625,
+      "saved_clean_score": 1.3720715045928955
+    },
+    {
+      "split": "dev",
+      "speaker_id": "LA_0069",
+      "utterance_id": "LA_D_1896334",
+      "attack_id": "-",
+      "label": "bonafide",
+      "audio_path": "ASVspoof2019_LA_dev/flac/LA_D_1896334.flac",
+      "audio_sha256": "ed0e657518cdfeded52d0003cf09f5d9e1749820804b0e23470ae2774c913599",
+      "duration_seconds": 4.0915,
+      "saved_clean_score": 1.380746841430664
+    },
+    {
+      "split": "dev",
+      "speaker_id": "LA_0069",
+      "utterance_id": "LA_D_1911275",
+      "attack_id": "-",
+      "label": "bonafide",
+      "audio_path": "ASVspoof2019_LA_dev/flac/LA_D_1911275.flac",
+      "audio_sha256": "2a1625187d47c05ef3a98e8b11eb571cfeeec930ec338f3107761e7be6cf836b",
+      "duration_seconds": 2.81325,
+      "saved_clean_score": 1.576585054397583
+    },
+    {
+      "split": "dev",
+      "speaker_id": "LA_0069",
+      "utterance_id": "LA_D_2112837",
+      "attack_id": "-",
+      "label": "bonafide",
+      "audio_path": "ASVspoof2019_LA_dev/flac/LA_D_2112837.flac",
+      "audio_sha256": "444ec803263959e6309a8f9652bf028190165fddbfec84edbb9d9c4d0265a086",
+      "duration_seconds": 3.705,
+      "saved_clean_score": 1.2976990938186646
+    }
+  ],
+  "repetitions": 3,
+  "warmup": "One complete score_audio call on the first selected recording",
+  "measured_scope": "Wall time around score_audio: bounded file read, decode, LFCC, GMM and return metadata; excludes model load and audio hash validation",
+  "cache_policy": "Warm process and warm OS file cache; hashes read each selected file before timing; not cold I/O",
+  "model_load_scope": "Separately timed trusted model hash validation, metadata checks and deserialization",
+  "threads": 1,
+  "max_total_seconds": 120,
+  "clean_score_absolute_tolerance": 1e-10,
+  "resource_limits": {
+    "min_available_ram_bytes": 1073741824,
+    "max_process_peak_bytes": 2147483648,
+    "min_free_disk_bytes": 21474836480
+  },
+  "eval_enabled": false,
+  "transformed_audio": false,
+  "machine": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "machine": "AMD64",
+    "processor": "Intel Core i7-1195G7 @ 2.90GHz; 4 physical cores, 8 logical threads; Iris Xe GPU unused",
+    "python": "3.12.14"
+  }
+}

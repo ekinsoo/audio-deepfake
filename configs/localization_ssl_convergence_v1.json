@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "status": "preregistered_train_only_followup_before_dev_scoring",
+  "original_config": "configs/localization_ssl_v1.json",
+  "original_config_sha256": "44b1e5d8ae54a9f259fa64051b4ef7ca7267c476454116dc80cb7acaedd9e264",
+  "original_convergence_failure": "docs/validation/localization_ssl_head_convergence_v2.json",
+  "extraction_identity_sha256": "93a5ee49123949554a27c4acced1f75f4742425bde9c0ca866103018241568fa",
+  "retained_sample_ids_sha256": "0fb814aa3cf8be436f199a2f971e1ccc31eb616a617b097767e93730aeabc82a",
+  "head": {
+    "seed": 45,
+    "frames_per_class_cap": 50000,
+    "expected_retained_per_class": 4524,
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 3000,
+    "tol": 0.0001,
+    "numerical_threads": 1,
+    "scaler": "StandardScaler fitted on retained train frames only",
+    "convergence_warning": "stop_without_another_increase"
+  },
+  "budgets": {
+    "head_fit_timeout_seconds": 300,
+    "worker_peak_bytes": 3221225472,
+    "minimum_runtime_available_ram_bytes": 2147483648,
+    "minimum_free_disk_bytes": 21474836480
+  },
+  "training_split": "train",
+  "train_record_count": 128,
+  "dev_scoring_enabled": false,
+  "eval_enabled": false,
+  "official_benchmark": false,
+  "automatic_retry": false,
+  "followup_policy": "Independent train-only convergence verification, then separately authorized fixed-64-dev scoring with the same ten timelines; no tuning or another iteration increase"
+}

@@ -1,0 +1,23 @@
+{
+  "status": "sampling_preflight_passed",
+  "client_date": "2026-10-11",
+  "command": ".venv/Scripts/python.exe scripts/run_localization_ssl_head.py --sampling-preflight --replay-lfcc",
+  "training_started": false,
+  "eval_accessed": false,
+  "retained_sample_ids_sha256": "0fb814aa3cf8be436f199a2f971e1ccc31eb616a617b097767e93730aeabc82a",
+  "frames_retained_per_class": 4524,
+  "frames_seen_by_native_class": [
+    4524,
+    16497
+  ],
+  "baseline_sampler_source_sha256": "85205d4d576b89c2a7b0956d390569fa1afd9e7c5eabee5e28148d53003b0c2b",
+  "lfcc_feature_replay": true,
+  "lfcc_retained_feature_bytes_sha256": "1ab4e744db9684827492c59b2bb5f64fc9ab63956fc3ee03fdfa228160b5adfd",
+  "input_sha256": {
+    "docs/validation/partial_selection_v1.json": "c7efeacc6a19e80557fed89183131ebbc64e476ce5c240b0a02fe151b6cfc374",
+    "docs/validation/localization_alignment.json": "87adda47fee58c4f367e26f6731469e8c5041f5df2c29a692aefd34e5106caaa",
+    "data/partialspoof/selected_labels_v1.json": "9c29d4eb387ca9b0ff2a7f524a03e73dfe592165b6969c6134a6274b184a0a4f",
+    "docs/validation/localization_pilot_v1.json": "d15ab66b987db6841eaa702e2e2649404baf51b003a6261a35c151d752e64318"
+  },
+  "interpretation": "Replayed real train LFCC retained feature bytes equal the frozen trained baseline. No fitting or dev prediction was performed."
+}

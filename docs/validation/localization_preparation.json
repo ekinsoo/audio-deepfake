@@ -1,0 +1,16 @@
+{
+  "status": "preparation_complete",
+  "localization_tests_passed": 8,
+  "frozen_detection_sources_unchanged": true,
+  "frozen_demo_sources_unchanged": true,
+  "training_started": false,
+  "audio_download_started": false,
+  "official_localization_metric_executed": false,
+  "sources": {
+    "src/audio_deepfake/localization.py": "9574564b39d6109524cd38e6b499c2753a811b42c736e730cd2ea18fd4f75efa",
+    "tests/test_localization.py": "0e077791b16b939e76ba446c127216ef6fd94afc2c2885a78f6d74ad170f9b65",
+    "docs/PARTIALSPOOF_PROTOCOL.md": "e926aaec2ecf8fb2f74f3ec5929d808dfce11c5a52106f935a9ed374761a0005",
+    "docs/LOCALIZATION_PILOT_PLAN.md": "9a98d33d05b5c319917404e42d9908fc6fcc3b6cf283b70027b1f9b9070e29e5"
+  },
+  "next_gate": "Small metadata acquisition, real label alignment and evaluator conformance; then freeze pilot IDs/config"
+}

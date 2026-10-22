@@ -1,0 +1,27 @@
+{
+  "status": "prepared_not_executed",
+  "client_date": "2026-10-11",
+  "notebook_path": "notebooks/ssl_colab_smoke_v2.ipynb",
+  "notebook_sha256": "e6db65c09c58b38ffbcf006752c2c53d402861a59e835d11fbf2aa043075595d",
+  "source_hashes": {
+    "notebooks/ssl_colab_smoke.ipynb": "f64d1c28686a16397d674ef28632e39f7796f8323b5c45bad27522c07aa1c3d2",
+    "scripts/prepare_colab_ssl_env.py": "23f95211fd8990bb363b2e65e612f64ec5d8e9933fa50353d0ce0f36d831c428",
+    "scripts/ssl_colab_smoke.py": "c3c38b21e0d1b3a672831bff57cd8fec33d9dc7f2d91e2227176b11528e21337"
+  },
+  "code_cell_count": 6,
+  "all_code_cells_ast_parse": "passed",
+  "embedded_helper_ast_parse": "passed",
+  "embedded_helper_matches_current_source": true,
+  "recipe": "Fresh-runtime isolated environment: resolve/hash-lock only globally; install encoder packages in venv; reuse runtime GPU Torch dependency directories.",
+  "worker_python": "/content/ssl-isolated-v1/bin/python",
+  "model_bundle_unchanged": true,
+  "encoder_feature_rules_unchanged": true,
+  "training_started": false,
+  "downloads_started_by_this_preparation": false,
+  "historical_session": "Actual session used v1 global installation and failed global pip check. The first isolation probe expected incorrect sum 16; the corrected helper expects 8. This clean recipe does not overwrite or claim reproduction of those attempts.",
+  "limitations": [
+    "Notebook has not been executed end-to-end.",
+    "Shared namespace directories may expose additional runtime files; runtime distribution versions and metadata are recorded on execution.",
+    "Dependency transfer budget requires review; dry-run may fetch wheels into pip cache."
+  ]
+}

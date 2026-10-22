@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="720" height="235" preserveAspectRatio="xMinYMin meet" viewBox="0 0 720 235" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="720" height="235"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-235)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="720" height="235" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="25" y="215" style="font-family: Helvetica-Bold; font-size: 14px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,430) scale(1,-1)">One fixed context experiment</text>
+			<text x="25" y="196" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,392) scale(1,-1)">Custom 20 ms duration EER (%) | same 64 dev recordings | lower is better</text>
+			<path d="M 80,42 L 670,42 Z" style="stroke: rgb(93%,93%,93%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="65.5" y="39.0" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,78) scale(1,-1)">0</text>
+			<path d="M 80,68 L 670,68 Z" style="stroke: rgb(93%,93%,93%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="61.0" y="65.0" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,130) scale(1,-1)">10</text>
+			<path d="M 80,94 L 670,94 Z" style="stroke: rgb(93%,93%,93%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="61.0" y="91.0" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,182) scale(1,-1)">20</text>
+			<path d="M 80,120 L 670,120 Z" style="stroke: rgb(93%,93%,93%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="61.0" y="117.0" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,234) scale(1,-1)">30</text>
+			<path d="M 80,146 L 670,146 Z" style="stroke: rgb(93%,93%,93%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="61.0" y="143.0" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,286) scale(1,-1)">40</text>
+			<path d="M 80,172 L 670,172 Z" style="stroke: rgb(93%,93%,93%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="61.0" y="169.0" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,338) scale(1,-1)">50</text>
+			<rect x="210" y="42" width="70" height="102.70045229428459" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<text x="231.239" y="154.7004522942846" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,309) scale(1,-1)">39.50</text>
+			<text x="214.86" y="22" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,44) scale(1,-1)">LFCC baseline</text>
+			<rect x="475" y="42" width="70" height="111.60190456376318" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<text x="496.239" y="163.60190456376318" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,327) scale(1,-1)">42.92</text>
+			<text x="460.145" y="22" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,44) scale(1,-1)">Recording median/MAD</text>
+		</g>
+	</g>
+</svg>

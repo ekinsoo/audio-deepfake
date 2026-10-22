@@ -1,0 +1,90 @@
+{
+  "status": "complete_derived_reference_diagnostic",
+  "created_utc": "2026-10-10T20:07:27.812331+00:00",
+  "scope": "Custom 64dev pilot: bounded patched upstream RangeEER, derived native10ms reference",
+  "official_benchmark": false,
+  "publisher_reference_gate_passed": false,
+  "prediction_step_seconds": 0.02,
+  "reference_step_seconds": 0.01,
+  "tie_rule": "upstream score <= threshold predicts spoof; project timelines use <",
+  "source_sha256": {
+    "scripts/evaluate_localization_ranges.py": "a7d4bbb7161efd01c236842e3f1df98163b2d0a4eacae66afec6183c3502ffee",
+    "scripts/prepare_partial_references.py": "0fb8f991a6e9caa86a982f7ea1d73deb8a519b527c1dac693fd3b00cf0879ad6",
+    "scripts/full_run_job.py": "36d8389fe042b9e882af5df19e3336396c838d24b1f893d9db5d1c945f57504a",
+    "scripts/localization_pilot_job.py": "0ebbab0ea11725a1db101674d708d77168ec4b3e4555b3d48008b9df054430e6",
+    "docs/validation/localization_references_v1.json": "4bbe02a7856eb1ab62c43dd7f5f03fb558751ee21391c87f86412028f55f6405",
+    "data/partialspoof/selected_labels_v1.json": "9c29d4eb387ca9b0ff2a7f524a03e73dfe592165b6969c6134a6274b184a0a4f",
+    ".cache/partial-metric-env/upstream/RangeEER.bounded.py": "f2736d6bef242970e0f73849a94eace6aed17bf3a4b65e587266b68814513677",
+    ".cache/partial-metric-env/upstream/sandbox/eval_asvspoof.py": "a7441cac67be01b1cd3322ec4319b850d761803bfd1f4b693fbb1e823f9944ca",
+    ".cache/partial-metric-env/upstream/core_scripts/data_io/io_tools.py": "56ec6fca200a5d1a03a57f0eae16a71f0d71e36f8a052edfb82ae65eaa70fb3c"
+  },
+  "variants": {
+    "baseline": {
+      "range_eer_fraction": 0.39379866352211756,
+      "selected_row": [
+        -0.12456131373773607,
+        0.3937115703028338,
+        0.39388575674140125,
+        0.00017418643856742522
+      ],
+      "independent_duration_check": {
+        "fpr": 0.39371157030285614,
+        "fnr": 0.39388575674143284,
+        "spoof_seconds": 57.20249999999677,
+        "bonafide_seconds": 175.94018749998466,
+        "missed_spoof_seconds": 22.53125000000054,
+        "false_alarm_seconds": 69.2696874999979
+      },
+      "upstream_iterations": 55,
+      "stop_reason": "repeated_full_state",
+      "score_sha256": "fb98f3be73b8c4ef7a0a7b2b7b0d78c2895880f6f272ed0a81efc350f5d79e27",
+      "worker_elapsed_seconds": 12.046999999991385,
+      "sampled_peak_rss_bytes": 134443008,
+      "stdout_sha256": "7bc52187c34d6b74623afa524f8b8db6cedc095c93b3b3fd01a4024fd9b3d219",
+      "stderr_sha256": "9cd9fa250a3129ce97685d7301ca232090d8290d3d07f27dc8231337762ade96",
+      "packages": {
+        "numpy": "1.26.4",
+        "pandas": "2.2.3",
+        "scipy": "1.13.1",
+        "pyannote.metrics": "3.2.1",
+        "pyannote.core": "5.0.0",
+        "pyannote.database": "5.1.0",
+        "python-rle": "0.0.3"
+      }
+    },
+    "context": {
+      "range_eer_fraction": 0.42969703453636177,
+      "selected_row": [
+        -0.07600474791410172,
+        0.4297493857109822,
+        0.4296446833617414,
+        0.00010470234924081501
+      ],
+      "independent_duration_check": {
+        "fpr": 0.42974938571102583,
+        "fnr": 0.4296446833617797,
+        "spoof_seconds": 57.20249999999677,
+        "bonafide_seconds": 175.94018749998466,
+        "missed_spoof_seconds": 24.576750000000814,
+        "false_alarm_seconds": 75.61018750000112
+      },
+      "upstream_iterations": 55,
+      "stop_reason": "repeated_full_state",
+      "score_sha256": "bc12c45ad5780c20856ea224ae1a57940c9491ab0983c972de1d96be7bc6b22b",
+      "worker_elapsed_seconds": 8.530999999988126,
+      "sampled_peak_rss_bytes": 134279168,
+      "stdout_sha256": "a6516836cbff2958eb1a46ed632ce0f6e944ddf120af9cac74ba4ea1ee031f21",
+      "stderr_sha256": "9cd9fa250a3129ce97685d7301ca232090d8290d3d07f27dc8231337762ade96",
+      "packages": {
+        "numpy": "1.26.4",
+        "pandas": "2.2.3",
+        "scipy": "1.13.1",
+        "pyannote.metrics": "3.2.1",
+        "pyannote.core": "5.0.0",
+        "pyannote.database": "5.1.0",
+        "python-rle": "0.0.3"
+      }
+    }
+  },
+  "eval_enabled": false
+}

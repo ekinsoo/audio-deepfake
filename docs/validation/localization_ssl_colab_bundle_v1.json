@@ -1,0 +1,39 @@
+{
+  "status": "prepared_locally_upload_not_authorized_by_auto_review",
+  "created_utc": "2026-10-10T21:04:15.487402+00:00",
+  "bundle_path": "outputs\\colab\\ssl_colab_smoke_v1.zip",
+  "bundle_bytes": 381663715,
+  "bundle_sha256": "b5afe76002c17d9c7db4c0627aa255a13ed8f80fa15ff6e96ea8f2859108c0c9",
+  "notebook_path": "notebooks/ssl_colab_smoke.ipynb",
+  "notebook_sha256": "f64d1c28686a16397d674ef28632e39f7796f8323b5c45bad27522c07aa1c3d2",
+  "manifest": {
+    "smoke_id": "LA_T_1963829",
+    "sample_count": 118059,
+    "audio_file": "LA_T_1963829.wav",
+    "audio_sha256": "a9e12df4f477580c27b1be39104317654dde668ab1cdca2b84509f82a4656e31",
+    "checkpoint_dir": "model",
+    "files_sha256": {
+      "LA_T_1963829.wav": "a9e12df4f477580c27b1be39104317654dde668ab1cdca2b84509f82a4656e31",
+      "cpu_reference.npy": "61afc89b7d6eceb1d767631867034fca77b318835ad91a6ae3e54c98c4a88ebb",
+      "localization_ssl_geometry.py": "ddd6e4fe0de0111560281a3f7281220799f16a24554b9b11a4ea27618480cfe5",
+      "ssl_colab_smoke.py": "c3c38b21e0d1b3a672831bff57cd8fec33d9dc7f2d91e2227176b11528e21337",
+      "model/config.json": "4937977e24d12d1bba70cdce8709c3c04807a8e4ae8ddac4229c48c436ae99ae",
+      "model/preprocessor_config.json": "b225d617c025463b9e157e06afea8b90dc7078fc70b013c533328423e0486b4a",
+      "model/README.md": "d633aeaaec1046af8cbacd21039f819304017e1ab6a369c5aff8668f3c35a127",
+      "model/pytorch_model.bin": "3249fe98bfc62fcbc26067f724716a6ec49d12c4728a2af1df659013905dff21"
+    },
+    "cpu_reference_file": "cpu_reference.npy",
+    "cpu_reference_sha256": "61afc89b7d6eceb1d767631867034fca77b318835ad91a6ae3e54c98c4a88ebb",
+    "cpu_reference_caveat": "Preliminary CPU smoke v1 completed but lacked the immediate pre-load 4 GiB guard. Corrected v2 stopped before model load. This reference is a numerical comparison artifact, not a resource-gate pass.",
+    "checkpoint_license": "Apache-2.0 declared by official model card",
+    "public_audio_source": "PartialSpoof v1.2, Zenodo 5766198, official train split",
+    "audio_terms": "PartialSpoof CC BY 4.0 and underlying ASVspoof ODC-By attribution; see project protocol.",
+    "expected_destination": "Google Colab; upload awaits explicit user confirmation",
+    "labels_included": false,
+    "dev_audio_included": false,
+    "eval_included": false
+  },
+  "uploaded": false,
+  "colab_executed": false,
+  "notice": "Google Colab notebook upload was rejected by automatic approval review: general Colab authorization did not specifically authorize sending local project payload. Request explicit approval before uploading notebook and bundle."
+}

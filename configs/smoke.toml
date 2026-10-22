@@ -1,0 +1,36 @@
+# Mechanical end-to-end check, not the 2,000/1,000-record pilot.
+[experiment]
+name = "la2019-lfcc-gmm-smoke100"
+seed = 42
+stage = "smoke"
+
+[data]
+dataset = "ASVspoof2019-LA"
+version = "Zenodo-6906306-v1"
+sample_rate = 16000
+train_limit = 50
+dev_limit = 50
+eval_enabled = false
+
+[model]
+family = "lfcc-gmm"
+n_components = 8
+covariance_type = "diag"
+max_total_training_frames = 20000
+max_iter = 50
+
+[features]
+sample_rate = 16000
+window_ms = 20.0
+hop_ms = 10.0
+n_fft = 512
+n_filters = 20
+n_coeffs = 20
+pre_emphasis = 0.97
+delta_order = 2
+
+[paths]
+audio_root = "data/asvspoof2019/LA"
+selection_manifest = "outputs/audio-pilot/selected100.csv"
+selection_sha256 = "157be4623939c4faf94566a1f4c56fa2626610b97085bafb7981aec2e8164209"
+audio_journal = "outputs/audio-pilot/download_report.json"

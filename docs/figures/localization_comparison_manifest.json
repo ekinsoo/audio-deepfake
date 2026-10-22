@@ -1,0 +1,13 @@
+{
+  "generator_sha256": "49670c61466b3078e112b092ff1f58a32c20bc92448688422f2b2d8b8dc2efd2",
+  "audits_sha256": {
+    "localization_pilot_v1.json": "d15ab66b987db6841eaa702e2e2649404baf51b003a6261a35c151d752e64318",
+    "localization_context_v1.json": "1ada4d85975357109611def59b8c730811a9274ac958c614b779f7fac01e6066",
+    "localization_context_review_v1.json": "bb754a638c369c23b3f1dbd7ffb3d123140ba504b90432765bbf9558668c823e"
+  },
+  "outputs": {
+    "docs\\figures\\localization_comparison.svg": "b1f0f97ca7e2103b1742f995be791dc81e97d7ecf8d6e97324362e9925cfb9c1",
+    "docs\\figures\\localization_comparison.pdf": "600a3f5e2ad39e5e693f885e7d82b88c0276ca45cda7da8cab2d079c68674c10",
+    "docs\\figures\\localization_comparison.png": "871a9b6215ccc25496bfafb50a4701f7b172312110918e863d973ff4fabceb4b"
+  }
+}

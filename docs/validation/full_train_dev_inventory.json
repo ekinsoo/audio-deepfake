@@ -1,0 +1,98 @@
+{
+  "measured_utc": "2026-10-09T23:08:38.584062+00:00",
+  "method": "Read ZIP central directory and official CM protocol text only; no FLAC member opened, decoded or extracted. No download.",
+  "archive": {
+    "relative_path": "data/archives/LA.zip",
+    "size_bytes": 7640952520,
+    "published_md5": "30c98f11d8b2bc21f2c257bfd78bb5c5",
+    "verified_audit": "docs/validation/pilot_data_seed42.json",
+    "checksum_note": "Published checksum independently verified by existing audit; inventory does not reread complete archive bytes."
+  },
+  "resources": {
+    "memory": {
+      "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+      "rss_bytes": 21458944,
+      "peak_rss_bytes": 21458944,
+      "system_total_ram_bytes": 16872415232,
+      "system_available_ram_bytes": 3906646016
+    },
+    "disk": {
+      "total_bytes": 492098809856,
+      "used_bytes": 427138400256,
+      "free_bytes": 64960409600
+    }
+  },
+  "splits": {
+    "train": {
+      "official_protocol_count": 25380,
+      "keyed_flac_count": 25380,
+      "all_directory_flac_count": 25380,
+      "unkeyed_flac_count": 0,
+      "unkeyed_original_flac_bytes": 0,
+      "unkeyed_example_member_names": [],
+      "missing_keyed_files": 0,
+      "duplicate_member_names": 0,
+      "keyed_zip_compressed_bytes": 1580895670,
+      "keyed_original_flac_bytes": 1585048649,
+      "largest_keyed_original_flac_bytes": 259867,
+      "largest_keyed_member": "LA/ASVspoof2019_LA_train/flac/LA_T_4111439.flac",
+      "zip_compression_methods": [
+        8
+      ]
+    },
+    "dev": {
+      "official_protocol_count": 24844,
+      "keyed_flac_count": 24844,
+      "all_directory_flac_count": 24986,
+      "unkeyed_flac_count": 142,
+      "unkeyed_original_flac_bytes": 17131301,
+      "unkeyed_example_member_names": [
+        "LA/ASVspoof2019_LA_dev/flac/LA_D_A1045602.flac",
+        "LA/ASVspoof2019_LA_dev/flac/LA_D_A1046944.flac",
+        "LA/ASVspoof2019_LA_dev/flac/LA_D_A1146342.flac",
+        "LA/ASVspoof2019_LA_dev/flac/LA_D_A1225110.flac",
+        "LA/ASVspoof2019_LA_dev/flac/LA_D_A1305336.flac",
+        "LA/ASVspoof2019_LA_dev/flac/LA_D_A1339494.flac",
+        "LA/ASVspoof2019_LA_dev/flac/LA_D_A1425742.flac",
+        "LA/ASVspoof2019_LA_dev/flac/LA_D_A1510649.flac",
+        "LA/ASVspoof2019_LA_dev/flac/LA_D_A1519783.flac",
+        "LA/ASVspoof2019_LA_dev/flac/LA_D_A1600475.flac"
+      ],
+      "missing_keyed_files": 0,
+      "duplicate_member_names": 0,
+      "keyed_zip_compressed_bytes": 1570716362,
+      "keyed_original_flac_bytes": 1574517152,
+      "largest_keyed_original_flac_bytes": 228142,
+      "largest_keyed_member": "LA/ASVspoof2019_LA_dev/flac/LA_D_7431097.flac",
+      "zip_compression_methods": [
+        8
+      ]
+    }
+  },
+  "combined": {
+    "keyed_count": 50224,
+    "keyed_zip_compressed_bytes": 3151612032,
+    "keyed_original_flac_bytes": 3159565801,
+    "unkeyed_flac_count": 142,
+    "eval_audio_members_opened": 0
+  },
+  "disk_after_separate_new_full_train_dev_copy_bytes": 61800843799,
+  "pilot_linear_record_count_projections_seconds": {
+    "train": 497.7018,
+    "clean_dev": 217.88187999999997,
+    "train_plus_clean_dev": 715.58368
+  },
+  "suggested_cpu_budget_minutes": {
+    "fit_and_clean_dev": 30,
+    "fit_clean_dev_and_fixed_narrowband_diagnostics": 45,
+    "separate_extraction_validation_allowance": 20
+  },
+  "limitations": [
+    "Use official protocol IDs, never a folder glob: the dev archive contains 142 extra unkeyed LA_D_A*.flac files; exclude these from training/evaluation.",
+    "Count-ratio projection is not a benchmark or upper bound. It includes fixed-cost GMM fitting that need not scale with recording count if 100000 retained training frames stay fixed.",
+    "Full train is strongly spoof-heavy whereas the pilot is label-balanced; duration, per-file overhead, file-cache state and CPU contention may differ.",
+    "No decoded duration or full-set waveform validity is inferred from ZIP metadata. Largest FLAC means encoded size, not maximum waveform RAM.",
+    "Suggested 30/45/20-minute allowances are conservative planning budgets, not guarantees. Reassess early measured throughput and available RAM before proceeding.",
+    "Streaming feature extraction and the fixed training-frame reservoir must remain enabled; do not cache all full-set LFCC features or decode all audio at once."
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "status": "ok",
+  "scope": "full-dev-literal-threshold-diagnostic",
+  "seed": 42,
+  "eval_enabled": false,
+  "source_summary_sha256": "c3076b4ab41a8c4bb1a2572d537bcb71ae87aa569a47a6983bdb8497dd17f7ef",
+  "scores_sha256": "bdc3cd64a218eaa2e56db225d06a696bb3049cb7e556d5e8672d548c80d5915e",
+  "protocol_sha256": "2fedaebf1ba3ae1a9bb7d3ec916804ac237b4eee063a27fa92e6549f03d129c7",
+  "analysis_source_sha256": "346f3d18f72024d1d6fa0cd84362a14f598533ac2d1109a0b58cc192ce162c9b",
+  "threshold": 0.670067310333252,
+  "decision": "bonafide iff score >= threshold",
+  "threshold_source": "Reference EER threshold selected on the same dev labels; diagnostic only.",
+  "threshold_ties": 1,
+  "by_attack": {
+    "-": {
+      "count": 2548,
+      "errors": 150,
+      "error_rate": 0.05886970172684458
+    },
+    "A01": {
+      "count": 3716,
+      "errors": 0,
+      "error_rate": 0.0
+    },
+    "A02": {
+      "count": 3716,
+      "errors": 0,
+      "error_rate": 0.0
+    },
+    "A03": {
+      "count": 3716,
+      "errors": 0,
+      "error_rate": 0.0
+    },
+    "A04": {
+      "count": 3716,
+      "errors": 366,
+      "error_rate": 0.0984930032292788
+    },
+    "A05": {
+      "count": 3716,
+      "errors": 0,
+      "error_rate": 0.0
+    },
+    "A06": {
+      "count": 3716,
+      "errors": 949,
+      "error_rate": 0.2553821313240043
+    }
+  },
+  "total_errors": 1465,
+  "total_records": 24844,
+  "failure_selection": "Largest absolute wrong margin per attack, then fill to ten by absolute wrong margin; ties by ID. Illustrative, not a random sample.",
+  "failure_examples": [
+    {
+      "utterance_id": "LA_D_8778186",
+      "split": "dev",
+      "label": "bonafide",
+      "attack_id": "-",
+      "score": -0.2371901124715805,
+      "error": "bonafide_rejected"
+    },
+    {
+      "utterance_id": "LA_D_7439452",
+      "split": "dev",
+      "label": "spoof",
+      "attack_id": "A04",
+      "score": 1.8828275203704834,
+      "error": "spoof_accepted"
+    },
+    {
+      "utterance_id": "LA_D_7038933",
+      "split": "dev",
+      "label": "spoof",
+      "attack_id": "A06",
+      "score": 1.5900352001190186,
+      "error": "spoof_accepted"
+    },
+    {
+      "utterance_id": "LA_D_5068271",
+      "split": "dev",
+      "label": "spoof",
+      "attack_id": "A04",
+      "score": 1.7856215238571167,
+      "error": "spoof_accepted"
+    },
+    {
+      "utterance_id": "LA_D_8704256",
+      "split": "dev",
+      "label": "spoof",
+      "attack_id": "A04",
+      "score": 1.689958095550537,
+      "error": "spoof_accepted"
+    },
+    {
+      "utterance_id": "LA_D_5369918",
+      "split": "dev",
+      "label": "spoof",
+      "attack_id": "A04",
+      "score": 1.663037657737732,
+      "error": "spoof_accepted"
+    },
+    {
+      "utterance_id": "LA_D_5323165",
+      "split": "dev",
+      "label": "spoof",
+      "attack_id": "A04",
+      "score": 1.6575340032577515,
+      "error": "spoof_accepted"
+    },
+    {
+      "utterance_id": "LA_D_2389247",
+      "split": "dev",
+      "label": "spoof",
+      "attack_id": "A06",
+      "score": 1.5488834381103516,
+      "error": "spoof_accepted"
+    },
+    {
+      "utterance_id": "LA_D_6006490",
+      "split": "dev",
+      "label": "spoof",
+      "attack_id": "A04",
+      "score": 1.543154239654541,
+      "error": "spoof_accepted"
+    },
+    {
+      "utterance_id": "LA_D_2521725",
+      "split": "dev",
+      "label": "spoof",
+      "attack_id": "A04",
+      "score": 1.5341883897781372,
+      "error": "spoof_accepted"
+    }
+  ],
+  "limitation": "Literal threshold counts can differ from the reference EER grid at ties. No unseen-attack or deployment claim."
+}

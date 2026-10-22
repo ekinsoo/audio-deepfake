@@ -1,0 +1,155 @@
+{
+  "status": "ok",
+  "records": 100,
+  "started_utc": "2026-10-09T18:00:58.558928+00:00",
+  "finished_utc": "2026-10-09T18:00:59.196925+00:00",
+  "cpu_identifier": "11th Gen Intel(R) Core(TM) i7-1195G7 @ 2.90GHz",
+  "logical_cpu_count": 8,
+  "manifest_sha256": "157be4623939c4faf94566a1f4c56fa2626610b97085bafb7981aec2e8164209",
+  "download_journal_sha256": "ef5f4df6349bcfd7be469839c0ec6c1dec4aa63903f62b21152bc379d1347f35",
+  "config_sha256": "5877b4fb28025671cdcdaefdb8e17da060038a993c9cff16bfddc985baae31aa",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "packages": {
+      "audio-deepfake": "0.1.0",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "soundfile": "0.13.1",
+      "scikit-learn": "1.9.1"
+    },
+    "libsndfile": "1.2.2"
+  },
+  "lfcc_config": {
+    "sample_rate": 16000,
+    "window_ms": 20.0,
+    "hop_ms": 10.0,
+    "n_fft": 512,
+    "n_filters": 20,
+    "n_coeffs": 20,
+    "pre_emphasis": 0.97,
+    "delta_order": 2
+  },
+  "source_sha256": {
+    "src/audio_deepfake/features.py": "22152cdcb7c118fd168dc9c4e11a20f100f959d4f2e4e1cb6f16fdfbe83cbfb3",
+    "src/audio_deepfake/audio.py": "aa3b33b4e5512f26202019b7f44d92c4bb4389bb2ae9d0c256cb822b54ad424c",
+    "src/audio_deepfake/resources.py": "ebc6d201f0cc9203d9d935ab712054fce809bbd73c274be3961b5941ddefc615",
+    "scripts/profile_audio.py": "a0f87b2962e8cff67cbca9e1b6aec6d0b997416a090ace696c6e6c63750dc75f"
+  },
+  "workers": 1,
+  "thread_limit": 1,
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "version": "0.3.34.106.0",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "vcomp",
+      "version": null
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "version": "0.3.31.dev",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    }
+  ],
+  "memory_before": {
+    "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+    "rss_bytes": 111394816,
+    "peak_rss_bytes": 111521792,
+    "system_total_ram_bytes": 16872415232,
+    "system_available_ram_bytes": 2702835712
+  },
+  "memory_after": {
+    "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+    "rss_bytes": 116256768,
+    "peak_rss_bytes": 123863040,
+    "system_total_ram_bytes": 16872415232,
+    "system_available_ram_bytes": 2697535488
+  },
+  "free_disk_bytes_after": 81528414208,
+  "processing_wall_seconds": 0.3832992999814451,
+  "processing_cpu_seconds": 0.359375,
+  "audio_duration_seconds": 366.9934375,
+  "audio_bytes": 6654382,
+  "feature_bytes_if_cached": 8796240,
+  "feature_seconds": 0.260829099919647,
+  "feature_rtf": 0.0007107187030276174,
+  "load_seconds": 0.09316330004367046,
+  "per_file_feature_seconds_p50": 0.0023011499870335683,
+  "per_file_feature_seconds_p95": 0.005254285004048142,
+  "first_record_feature_seconds": 0.006533599982503802,
+  "splits": {
+    "train": {
+      "count": 50,
+      "labels": {
+        "bonafide": 25,
+        "spoof": 25
+      },
+      "attacks": {
+        "-": 25,
+        "A01": 5,
+        "A02": 4,
+        "A03": 4,
+        "A04": 4,
+        "A05": 4,
+        "A06": 4
+      },
+      "speakers": 18
+    },
+    "dev": {
+      "count": 50,
+      "labels": {
+        "bonafide": 25,
+        "spoof": 25
+      },
+      "attacks": {
+        "-": 25,
+        "A01": 5,
+        "A02": 4,
+        "A03": 4,
+        "A04": 4,
+        "A05": 4,
+        "A06": 4
+      },
+      "speakers": 16
+    }
+  },
+  "limitations": [
+    "No model training, inference score, EER or t-DCF was measured.",
+    "Filesystem cache was not controlled; imports and preflight hash checks are outside processing time.",
+    "Peak RSS is a process-lifetime high-water mark including imports and preflight, not training RAM.",
+    "Feature arrays were discarded per recording; storage is estimated from array sizes, not written caches.",
+    "Hashes were observed during member download; the full LA.zip checksum was not verified.",
+    "Threadpool library paths are omitted from this public summary."
+  ],
+  "rough_pilot_projection": {
+    "train": {
+      "target_records": 2000,
+      "sample_records": 50,
+      "feature_seconds": 5.23269199533388,
+      "feature_bytes_if_cached": 178099200.0,
+      "audio_bytes": 135625680.0
+    },
+    "dev": {
+      "target_records": 1000,
+      "sample_records": 50,
+      "feature_seconds": 2.6002360007259995,
+      "feature_bytes_if_cached": 86875200.0,
+      "audio_bytes": 65274800.0
+    }
+  },
+  "projection_note": "Split-weighted sample means, not a training-time/RAM estimate or download-time guarantee."
+}

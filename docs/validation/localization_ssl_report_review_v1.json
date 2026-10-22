@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "pdf_pages": 13,
+  "latex_compiler_status": "success",
+  "visual_checks": [
+    "All13 pages rendered; contact sheet inspected",
+    "New SSL pages11 and12 inspected at full render resolution",
+    "No clipped text, table overflow or overlapping timeline tracks",
+    "Author encoding and13-page text extraction checked"
+  ],
+  "frozen_experiment_caveats_present": true,
+  "original_300_failure_preserved": true,
+  "eval_enabled": false,
+  "source_sha256": {
+    "docs/report/audio_deepfake_report.pdf": "565dc62f6a8afcbd8135fb69846b719349cd62171c64d7440434a3c3d7326b72",
+    "docs/report/audio_deepfake_report.tex": "3304aab2bcafa4308b3b4332b9b14e0178652a301381b5d7e6a85503acdae585",
+    "docs/report/manifest.json": "324611ea185182cd607e72a63ab0f952fa87d35dbb2c9228ab6030af8ac48e92",
+    "scripts/ssl_report_content.py": "1653aa0fa5ecadbac4ab3ead3949fce65beac603c8e01541fd1c8018c4495216",
+    "scripts/build_project_report.py": "21b05773940dc83e5c6dbe648011aeea0c1355000ca2a161d32d006ca5185dbd",
+    "docs/validation/localization_ssl_convergence_dev_v1.json": "994373b0abdc41c8af7fff2490d7279bb2e5a7a3395819fb1ebea9824d8a0960",
+    "docs/validation/localization_ssl_final_checks_v1.json": "c5df4a1500157e581e8241322da0c85e41ce6b3a2bd3f849049211be42a3f7d2"
+  }
+}

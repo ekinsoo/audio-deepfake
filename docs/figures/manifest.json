@@ -1,0 +1,33 @@
+{
+  "source": "full_robustness_results_v1.json",
+  "source_sha256": "329c6bd5b772c63dce309b6047102f415291583dee7a072d65aa705e19ba3b1b",
+  "generator": "scripts/build_report_figures.py",
+  "generator_sha256": "c2a098af621f6b07e0312cb5236f6e5ba73cfd218dae6339d997f6b976bc1e16",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "std_ddof": 0,
+  "display": "summary_bars_only",
+  "summary": "Arithmetic mean across three seeds; per-seed values and population SD remain in report tables",
+  "overlays": "None: no whiskers, seed dots, or reference lines",
+  "error_figure": "Seed 42 analysis partition; frozen calibration threshold, not EER threshold",
+  "artifacts_sha256": {
+    "detection_comparison": {
+      "svg": "21bd655684aded4b2b3c3823b3c2230be7861c3455d419615593fb2a458b29e3",
+      "png": "470c9d217acd66e0dee85c79d308ae5fe5567673d99fad64e20e88f140ec5fa8",
+      "pdf": "236025de306e4082f879f87fc21162f4bcb3331d151b18b9065dbcb725934065"
+    },
+    "reliability_comparison": {
+      "svg": "e97814133c141c201ab84094cc71918d91b2b0d0f29868b8214b8cc9e984638b",
+      "png": "790d26e4359638276ae04b55609d800a5da409bc326879d32aefc8b825139d2c",
+      "pdf": "d1034c98aaa2c35a1c95f2323e7ca7520dc8a049c7515eed9ae1e7dd07e24daa"
+    },
+    "error_concentration": {
+      "svg": "1d397ce1e8588d1d917901cacbae83e2d945e4c440aacaaff74b116337a56216",
+      "png": "5492ec518441df8670f720235f4f3121a66b0c009a2413bd8ea69daabd814460",
+      "pdf": "49a32fbd781a52874e00c65a90d83507b06bb7a468679db7609338895824a7cb"
+    }
+  }
+}

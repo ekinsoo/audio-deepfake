@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="230" viewBox="0 0 960 230" role="img">
+<title>CON_D_0003229 â€” SSL convergence follow-up custom dev</title>
+<desc>Reference and predicted spoof intervals. Higher scores support bona fide.</desc>
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="Arial, sans-serif" font-size="13" fill="#222">
+<text x="24.000" y="30.000" font-size="18">CON_D_0003229 â€” SSL convergence follow-up custom dev</text>
+<text x="24.000" y="53.000" font-size="12">Dark spans indicate spoof speech</text>
+<text x="24.000" y="97.000" >Reference</text>
+<rect x="140.000" y="78.000" width="785.000" height="28" fill="#eee"/>
+<rect data-track="reference" data-start="0" data-end="0.52" x="140.000" y="78.000" width="150.222" height="28" fill="#555"><title>0–0.52 seconds</title></rect>
+<rect data-track="reference" data-start="1.16" data-end="1.2" x="475.111" y="78.000" width="11.556" height="28" fill="#555"><title>1.16–1.2 seconds</title></rect>
+<rect data-track="reference" data-start="2.46" data-end="2.7173125" x="850.665" y="78.000" width="74.335" height="28" fill="#555"><title>2.46–2.71731 seconds</title></rect>
+<text x="24.000" y="144.000" >Prediction</text>
+<rect x="140.000" y="125.000" width="785.000" height="28" fill="#eee"/>
+<rect data-track="prediction" data-start="0" data-end="0.52" x="140.000" y="125.000" width="150.222" height="28" fill="#222"><title>0–0.52 seconds</title></rect>
+<rect data-track="prediction" data-start="0.54" data-end="0.6" x="296.000" y="125.000" width="17.333" height="28" fill="#222"><title>0.54–0.6 seconds</title></rect>
+<rect data-track="prediction" data-start="0.64" data-end="0.94" x="324.889" y="125.000" width="86.667" height="28" fill="#222"><title>0.64–0.94 seconds</title></rect>
+<rect data-track="prediction" data-start="0.96" data-end="1.1" x="417.333" y="125.000" width="40.444" height="28" fill="#222"><title>0.96–1.1 seconds</title></rect>
+<rect data-track="prediction" data-start="1.12" data-end="1.26" x="463.555" y="125.000" width="40.444" height="28" fill="#222"><title>1.12–1.26 seconds</title></rect>
+<rect data-track="prediction" data-start="1.28" data-end="1.38" x="509.777" y="125.000" width="28.889" height="28" fill="#222"><title>1.28–1.38 seconds</title></rect>
+<rect data-track="prediction" data-start="1.4" data-end="1.68" x="544.444" y="125.000" width="80.889" height="28" fill="#222"><title>1.4–1.68 seconds</title></rect>
+<rect data-track="prediction" data-start="1.74" data-end="1.76" x="642.666" y="125.000" width="5.778" height="28" fill="#222"><title>1.74–1.76 seconds</title></rect>
+<rect data-track="prediction" data-start="1.78" data-end="2.04" x="654.221" y="125.000" width="75.111" height="28" fill="#222"><title>1.78–2.04 seconds</title></rect>
+<rect data-track="prediction" data-start="2.08" data-end="2.7173125" x="740.888" y="125.000" width="184.112" height="28" fill="#222"><title>2.08–2.71731 seconds</title></rect>
+<line x1="140.000" y1="166.000" x2="925.000" y2="166.000" stroke="#555"/>
+<line x1="140.000" y1="166.000" x2="140.000" y2="171.000" stroke="#555"/>
+<text x="140.000" y="186.000" text-anchor="middle">0</text>
+<line x1="336.250" y1="166.000" x2="336.250" y2="171.000" stroke="#555"/>
+<text x="336.250" y="186.000" text-anchor="middle">0.6793</text>
+<line x1="532.500" y1="166.000" x2="532.500" y2="171.000" stroke="#555"/>
+<text x="532.500" y="186.000" text-anchor="middle">1.359</text>
+<line x1="728.750" y1="166.000" x2="728.750" y2="171.000" stroke="#555"/>
+<text x="728.750" y="186.000" text-anchor="middle">2.038</text>
+<line x1="925.000" y1="166.000" x2="925.000" y2="171.000" stroke="#555"/>
+<text x="925.000" y="186.000" text-anchor="middle">2.717</text>
+<text x="532.500" y="205.000" text-anchor="middle">Time (seconds)</text>
+<text x="24.000" y="215.000" font-size="11">Higher score supports bona fide. Spoof prediction: score &lt; threshold; ties are bona fide.</text>
+</g></svg>

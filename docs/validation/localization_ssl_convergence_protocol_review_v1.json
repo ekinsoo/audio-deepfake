@@ -1,0 +1,33 @@
+{
+  "status": "reviewed_before_train_execution",
+  "reviewer": "root reviewing separately agent-authored scripts",
+  "protocol_id": "localization_ssl_convergence_v1",
+  "user_choice": "separate_train_only_budget_increase_preserve_original",
+  "checks": [
+    "Original config SHA pinned and max_iter300 failure preserved",
+    "Only optimizer change max_iter3000, no adaptive retries",
+    "Train-only loader rejects dev; shared label JSON parsing disclosed",
+    "Full cache and input identity validation before and after fit",
+    "Actual base Python -S process supervised by owned PID/handle",
+    "300s/3GiB peak/2GiB available/20GiB disk caps unchanged",
+    "Fatal fit warnings and no model accepted on failure",
+    "Independent train audit required before separate fixed64 dev scoring",
+    "Scorer schema reconciled with actual train result and supervisor schemas",
+    "36 SSL tests including real Windows64MiB monitor passed"
+  ],
+  "source_sha256": {
+    "scripts/run_ssl_convergence_train.py": "7bffd2ef07ef227f828e39346b2f1c3a27e8f8382d7c275fc2c8fb909f1f2436",
+    "scripts/score_ssl_convergence_dev.py": "faa1578671799ac6bbcaeb57a38bb3a738546f092d8966666fe5c6227282b3c7",
+    "scripts/run_localization_ssl_head.py": "fa0d11334c8e788aea088781eae292b7beccb984b40bd70eeb56e089466b2c4c",
+    "scripts/evaluate_localization_ssl.py": "b54219f051bafba17ffd28d0799d5b72ab28890c8ea45560901d5a09f7dcb9ac",
+    "scripts/full_run_job.py": "36d8389fe042b9e882af5df19e3336396c838d24b1f893d9db5d1c945f57504a",
+    "src/audio_deepfake/localization_ssl_head.py": "367acdf02086394d00c8d08c76103ece1113fc0afeb20bfad9c362ccb5d2eb5b",
+    "configs/localization_ssl_convergence_v1.json": "b7972ccd7d78c347cb09ad0a1850331deb493ff04f2ff2c4f1311d0e6a500968",
+    "docs/LOCALIZATION_SSL_CONVERGENCE_PLAN.md": "c5b9f5d36b4ce52037fd132356eb8469e6c54b7d36925aa27dbfb69c2d8e4376"
+  },
+  "prelaunch_resources": {
+    "system_available_ram_bytes": 4859645952
+  },
+  "eval_enabled": false,
+  "training_started": false
+}

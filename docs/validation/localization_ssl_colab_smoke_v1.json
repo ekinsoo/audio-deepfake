@@ -1,0 +1,419 @@
+{
+  "client_date": "2026-10-11",
+  "recorded_utc": "2026-10-10T21:30:56.400115+00:00",
+  "status": "worker_complete_supervisor_stopped",
+  "strict_resource_gate_pass": false,
+  "worker": {
+    "status": "complete",
+    "created_utc": "2026-10-10T21:22:42.315670+00:00",
+    "recording_id": "LA_T_1963829",
+    "training_started": false,
+    "labels_opened": false,
+    "dev_audio_accessed": false,
+    "eval_accessed": false,
+    "downloaded_by_worker": false,
+    "official_benchmark": false,
+    "warnings": [
+      {
+        "category": "UserWarning",
+        "message": "Passing `gradient_checkpointing` to a config initialization is deprecated and will be removed in v5 Transformers. Using `model.gradient_checkpointing_enable()` instead, or if you are using the `Trainer` API, pass `gradient_checkpointing=True` in your `TrainingArguments`."
+      }
+    ],
+    "source_sha256": "c3c38b21e0d1b3a672831bff57cd8fec33d9dc7f2d91e2227176b11528e21337",
+    "manifest_sha256": "0f4df17c238c3df1b369239342c86fd4552011cd3e4c8c745fbf8e65048f5c7c",
+    "resources_before_import": {
+      "system_available_ram_bytes": 11557580800,
+      "rss_bytes": 21336064,
+      "peak_rss_bytes": 21336064
+    },
+    "environment": {
+      "torch": "2.11.0+cu130",
+      "transformers": "4.57.6",
+      "numpy": "2.2.6",
+      "soundfile": "0.13.1",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "0.36.2"
+    },
+    "hardware": {
+      "device": "cuda:0",
+      "gpu_name": "Tesla T4",
+      "gpu_free_bytes_before_load": 15420162048,
+      "gpu_total_bytes": 15637086208,
+      "cuda_version": "13.0",
+      "cpu_threads": 2,
+      "tf32": false,
+      "dtype": "float32"
+    },
+    "resources_before_model_load": {
+      "system_available_ram_bytes": 11064823808,
+      "rss_bytes": 776531968,
+      "peak_rss_bytes": 776531968
+    },
+    "model_load_seconds": 0.25372300399999403,
+    "model_loading_info": {
+      "missing_keys": [],
+      "unexpected_keys": [
+        "project_hid.bias",
+        "project_hid.weight",
+        "project_q.bias",
+        "project_q.weight",
+        "quantizer.codevectors",
+        "quantizer.weight_proj.bias",
+        "quantizer.weight_proj.weight"
+      ],
+      "mismatched_keys": [],
+      "error_msgs": []
+    },
+    "resources_after_load": {
+      "system_available_ram_bytes": 11065491456,
+      "rss_bytes": 784560128,
+      "peak_rss_bytes": 1162043392
+    },
+    "extraction_seconds": 2.105796310999949,
+    "resources_after_extraction": {
+      "system_available_ram_bytes": 10786779136,
+      "rss_bytes": 1243369472,
+      "peak_rss_bytes": 1243369472
+    },
+    "gpu_peak_allocated_bytes": 474936320,
+    "gpu_peak_reserved_bytes": 522190848,
+    "cpu_reference_comparison": {
+      "reference_sha256": "61afc89b7d6eceb1d767631867034fca77b318835ad91a6ae3e54c98c4a88ebb",
+      "maximum_absolute_difference": 0.00012731552124023438,
+      "root_mean_square_difference": 1.4250690121122746e-06,
+      "interpretation": "Numerical diagnostic only; no result-dependent tuning or performance claim"
+    },
+    "resources_before_completion": {
+      "system_available_ram_bytes": 10780254208,
+      "rss_bytes": 1250238464,
+      "peak_rss_bytes": 1250238464
+    },
+    "source_frame_count": 368,
+    "aligned_shape": [
+      369,
+      768
+    ],
+    "features_sha256": "7ac0e98cc02389644521cdc346744a5881f14a37c189f71ef849c448fdfca076",
+    "features_bytes": 1133696,
+    "audio_sha256": "a9e12df4f477580c27b1be39104317654dde668ab1cdca2b84509f82a4656e31",
+    "audio_seconds": 7.3786875,
+    "real_time_factor": 0.2853890086820927,
+    "offline_whole_recording_context": true,
+    "elapsed_seconds": 8.144148266000002,
+    "finished_utc": "2026-10-10T21:22:50.459820+00:00"
+  },
+  "supervisor": {
+    "status": "stopped",
+    "created_utc": "2026-10-10T21:22:42.253234+00:00",
+    "training_started": false,
+    "worker_seconds": 180,
+    "peak_rss_bytes": 1356595200,
+    "source_sha256": "c3c38b21e0d1b3a672831bff57cd8fec33d9dc7f2d91e2227176b11528e21337",
+    "manifest_sha256": "0f4df17c238c3df1b369239342c86fd4552011cd3e4c8c745fbf8e65048f5c7c",
+    "worker_pid": null,
+    "last_memory": {
+      "system_available_ram_bytes": 10780209152,
+      "rss_bytes": 1356595200,
+      "peak_rss_bytes": 1356595200
+    },
+    "elapsed_seconds": 11.11369997099996,
+    "error": "",
+    "finished_utc": "2026-10-10T21:22:53.367155+00:00"
+  },
+  "local_feature_validation": {
+    "sha256_matches": true,
+    "shape": [
+      369,
+      768
+    ],
+    "dtype": "float32",
+    "finite": true,
+    "independent_cpu_comparison_matches": true
+  },
+  "archive": {
+    "path": "outputs/colab/session-v1/ssl_colab_smoke_result_v1.zip",
+    "bytes": 1180419,
+    "sha256": "1f4123b554be32eaf22a4dfb59a39d25f2d6769a4cdd045c67358e1bd64fe498"
+  },
+  "checkpoint_transfer": {
+    "url": "https://huggingface.co/facebook/wav2vec2-base/resolve/0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8/pytorch_model.bin",
+    "status": "verified",
+    "bytes": 380267417,
+    "automatic_retry": false,
+    "sha256": "3249fe98bfc62fcbc26067f724716a6ec49d12c4728a2af1df659013905dff21",
+    "elapsed_seconds": 4.646523137000031
+  },
+  "isolation": {
+    "runtime_torch_packages": {
+      "torch": "2.11.0+cu130",
+      "triton": "3.6.0",
+      "nvidia-nvshmem-cu13": "3.4.5",
+      "nvidia-nccl-cu13": "2.28.9",
+      "nvidia-cusparselt-cu13": "0.8.0",
+      "nvidia-cudnn-cu13": "9.19.0.56",
+      "nvidia-cublas": "13.1.0.3",
+      "cuda-bindings": "13.0.3",
+      "cuda-pathfinder": "1.8.2",
+      "cuda-toolkit": "13.0.2",
+      "jinja2": "3.1.6",
+      "markupsafe": "3.0.3",
+      "networkx": "3.7",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "setuptools": "80.10.2"
+    },
+    "provenance": {
+      "cuda-bindings": {
+        "version": "13.0.3",
+        "root": "/usr/local/lib/python3.13/dist-packages",
+        "metadata_hashes": {
+          "cuda_bindings-13.0.3.dist-info/METADATA": "5659a955aa1bc509a7c06b939502271fe49acaf4f79adb58c0f73b3f0791a235",
+          "cuda_bindings-13.0.3.dist-info/RECORD": "683e8ce786997520c53dafbc838ff3af85ebe3c6d819d51a2cfb3d6de25dc9aa"
+        }
+      },
+      "cuda-pathfinder": {
+        "version": "1.8.2",
+        "root": "/usr/local/lib/python3.13/dist-packages",
+        "metadata_hashes": {
+          "cuda_pathfinder-1.8.2.dist-info/METADATA": "19df13cc87ea2247807ab83827a2594584fe38bc4a860ce318a0feccaba2b742",
+          "cuda_pathfinder-1.8.2.dist-info/RECORD": "2d0e4dc34aad0d0def87481fc7ba68ab509688e92385a4bfa7305ff40fd923dc"
+        }
+      },
+      "cuda-toolkit": {
+        "version": "13.0.2",
+        "root": "/usr/local/lib/python3.13/dist-packages",
+        "metadata_hashes": {
+          "cuda_toolkit-13.0.2.dist-info/METADATA": "711ac5eb7ce4c56f087d843816fc463c1dcd08443f8cc1e63aa916d3dc84abbf",
+          "cuda_toolkit-13.0.2.dist-info/RECORD": "ba7ea990322466927bc38f98590d2f1926ea218dfd15282f489f3a1a88deae84"
+        }
+      },
+      "jinja2": {
+        "version": "3.1.6",
+        "root": "/usr/local/lib/python3.13/dist-packages",
+        "metadata_hashes": {
+          "jinja2-3.1.6.dist-info/METADATA": "68c5548fb67c4132a13898d9b31ec50c6bea2abdd915d921f214355c3a6499c8",
+          "jinja2-3.1.6.dist-info/RECORD": "4551b3fb657b85a9f01e961c0f8a235da65d758149b619400211964b3ac02bdc"
+        }
+      },
+      "markupsafe": {
+        "version": "3.0.3",
+        "root": "/usr/local/lib/python3.13/dist-packages",
+        "metadata_hashes": {
+          "markupsafe-3.0.3.dist-info/METADATA": "12b4cc61a7fa288cf7667ee3f213786d9619db57fb33ff6f934afbcb5c12ec81",
+          "markupsafe-3.0.3.dist-info/RECORD": "cf0b1a3aae7a0861eb593b6cdecf50b10759fd8de07e3565cfb557dd43ad3977"
+        }
+      },
+      "mpmath": {
+        "version": "1.3.0",
+        "root": "/usr/local/lib/python3.13/dist-packages",
+        "metadata_hashes": {
+          "mpmath-1.3.0.dist-info/METADATA": "44b66ea444b9c0d19ae94815d356bf047ae6b680c19268b5c265687cd6a81406",
+          "mpmath-1.3.0.dist-info/RECORD": "09cbd04e87d0c5ab64aab08291b31883e4ea27e8d2c640710e0beb1995e86b9b"
+        }
+      },
+      "networkx": {
+        "version": "3.7",
+        "root": "/usr/local/lib/python3.13/dist-packages",
+        "metadata_hashes": {
+          "networkx-3.7.dist-info/METADATA": "ffcf42a343af6ffc54ff9cc4c09cf9638cd73b131370f395abd11b630186c90c",
+          "networkx-3.7.dist-info/RECORD": "0403c7ac1516dc6dc03a4f0d8256c3b5d333c5721e6ab116c9f2b37fdeb6eb30"
+        }
+      },
+      "nvidia-cublas": {
+        "version": "13.1.0.3",
+        "root": "/usr/local/lib/python3.13/dist-packages",
+        "metadata_hashes": {
+          "nvidia_cublas-13.1.0.3.dist-info/METADATA": "561b0e547a2da463a0a6e4f7715fb4965c578627faa5790be12db26e5c7c9b03",
+          "nvidia_cublas-13.1.0.3.dist-info/RECORD": "15725374d9870ae9931fcd335f723275769136f9ec0cacc4b063f7ed2ee71121"
+        }
+      },
+      "nvidia-cudnn-cu13": {
+        "version": "9.19.0.56",
+        "root": "/usr/local/lib/python3.13/dist-packages",
+        "metadata_hashes": {
+          "nvidia_cudnn_cu13-9.19.0.56.dist-info/METADATA": "6f751e0e3c731f631a01dc06769d131fda17c702291ab1575f18da57745ae3b2",
+          "nvidia_cudnn_cu13-9.19.0.56.dist-info/RECORD": "0b532fd2ab3f0315f900640c8d317890a12ffd2868785841c83aa866e3f373c5"
+        }
+      },
+      "nvidia-cusparselt-cu13": {
+        "version": "0.8.0",
+        "root": "/usr/local/lib/python3.13/dist-packages",
+        "metadata_hashes": {
+          "nvidia_cusparselt_cu13-0.8.0.dist-info/METADATA": "72e9b5bb91a38047d99145a1a802ad947ff555431e3bf33751cb31a5fa91f6e2",
+          "nvidia_cusparselt_cu13-0.8.0.dist-info/RECORD": "399e2c79a09207ed7f78108cee329cf0bec2b50c6a684dccb8bcf6e94afb2c64"
+        }
+      },
+      "nvidia-nccl-cu13": {
+        "version": "2.28.9",
+        "root": "/usr/local/lib/python3.13/dist-packages",
+        "metadata_hashes": {
+          "nvidia_nccl_cu13-2.28.9.dist-info/METADATA": "9fbf54b4aa156fef26145838fc99abb2024046e98a2776efbf4f5bc6bd242cb0",
+          "nvidia_nccl_cu13-2.28.9.dist-info/RECORD": "3deb9da162f76cec0dd2ae963eca162535b9a8bfcea08ec76d44685a94854b7e"
+        }
+      },
+      "nvidia-nvshmem-cu13": {
+        "version": "3.4.5",
+        "root": "/usr/local/lib/python3.13/dist-packages",
+        "metadata_hashes": {
+          "nvidia_nvshmem_cu13-3.4.5.dist-info/METADATA": "825ae32b105cfd50f7b375b9132e551f24dc32896c67c425349f6565d3b3fe46",
+          "nvidia_nvshmem_cu13-3.4.5.dist-info/RECORD": "705796134389c62bd3ae5751752144d7e6d6b16fe44e23bdcc2ee5559cedf489"
+        }
+      },
+      "setuptools": {
+        "version": "80.10.2",
+        "root": "/usr/local/lib/python3.13/dist-packages",
+        "metadata_hashes": {
+          "setuptools-80.10.2.dist-info/METADATA": "dbcc9841388b7fb55c2190288fd683b183b0fb557f57a338d86553ef471d287d",
+          "setuptools-80.10.2.dist-info/RECORD": "d984a1b86350cdd490649392a383082371f551378ef8e40949deef54342d2b3e",
+          "setuptools/_vendor/autocommand-2.2.2.dist-info/METADATA": "3800d9b91dceea2065a6ed6279383362e97ac38b8e56b9343f404ee531860099",
+          "setuptools/_vendor/autocommand-2.2.2.dist-info/RECORD": "2bee6072cbcec6390c57107c8dfcb0422918a98ecdb5a2cc362187f13d42e96f",
+          "setuptools/_vendor/backports.tarfile-1.2.0.dist-info/METADATA": "8215c54ead77d9dc5a108a25c6bdc72b5999aa6f62c9499a440359412afa5a51",
+          "setuptools/_vendor/backports.tarfile-1.2.0.dist-info/RECORD": "0f69db719b54220d6a4adff8bfb04ac98affea3dc8b54054a1a787a17567f4d1",
+          "setuptools/_vendor/importlib_metadata-8.7.1.dist-info/METADATA": "a3e38b9ee4326289d4864704f30e299ee769e2309ce9f4a75f0de1a50ad0a356",
+          "setuptools/_vendor/importlib_metadata-8.7.1.dist-info/RECORD": "52a6b8ee0de15cf7fd99625f43b97cd2e3942ac86f16054ea90de48e66f29355",
+          "setuptools/_vendor/jaraco.text-4.0.0.dist-info/METADATA": "5c2fd09012c954f139b10624978d5335a654c34014cd06f6f466ca683dbc9c56",
+          "setuptools/_vendor/jaraco.text-4.0.0.dist-info/RECORD": "63b936c308d0fcbe1390e824567cc007536c32a849adb02278e95f1d4c736c31",
+          "setuptools/_vendor/jaraco_context-6.1.0.dist-info/METADATA": "0435ebfc52055c5a9974ed20c171b6454383eaf9dbb1508814ba7ad97c59d712",
+          "setuptools/_vendor/jaraco_context-6.1.0.dist-info/RECORD": "4599d876ceb42b7eef03aa39e235c4ebeab6aea2409dbe634496852393d1f837",
+          "setuptools/_vendor/jaraco_functools-4.4.0.dist-info/METADATA": "2e79da8dc3469924abe3ac8b22a3feb5692a79bf9f47bbc86b6535d618641849",
+          "setuptools/_vendor/jaraco_functools-4.4.0.dist-info/RECORD": "baafd2d6d94c1bde453e4c805ac05511dc53986e0a63b02f674ef0f788bec146",
+          "setuptools/_vendor/more_itertools-10.8.0.dist-info/METADATA": "6ab3515145abe58b067f087c867631cf4cf5d653fed81b9642ee12086c3904b8",
+          "setuptools/_vendor/more_itertools-10.8.0.dist-info/RECORD": "9ed1b134c0aa83722f36e99f3918aa9610ce3a0a514d793bbb74a368d441a01d",
+          "setuptools/_vendor/packaging-26.0.dist-info/METADATA": "3362bb7d6a26da2962ba8daaa4785cd0bacac21aba908a1195cc8f59580a265a",
+          "setuptools/_vendor/packaging-26.0.dist-info/RECORD": "f50503333aae9517807d2fb4d81fc27cb60aa644666f50176812626d6224ce5d",
+          "setuptools/_vendor/platformdirs-4.4.0.dist-info/METADATA": "bbc5216d5f4c77bfbc57227264d52e66bccde71ccf79e75e1a6046d029d30223",
+          "setuptools/_vendor/platformdirs-4.4.0.dist-info/RECORD": "3d0d2f1cc018593c4d8baa2395baf0b1c1c645bbd8c18cd064f49cb4e4c95ea0",
+          "setuptools/_vendor/tomli-2.4.0.dist-info/METADATA": "f5ac0a1f8fba908b4646cd655309e91aad969b6787616ac571ca462a3832ffce",
+          "setuptools/_vendor/tomli-2.4.0.dist-info/RECORD": "225430ce95640e8d4fcdb93cdae2fc38d685aec016d0e293d5fb99a695886fed",
+          "setuptools/_vendor/wheel-0.46.3.dist-info/METADATA": "22910aa97ca89cbcc20a019e27fe31360b7929a4bd66ca0d310f99a44f6ccd35",
+          "setuptools/_vendor/wheel-0.46.3.dist-info/RECORD": "b0297c3ada17b8727e15ddd6d1e38c8a90a997f779fcf978996f6fec62ecb702",
+          "setuptools/_vendor/zipp-3.23.0.dist-info/METADATA": "bdd67d4d16cf0bf3b893e7d18cd3d2d774adb82f37ed985bc7770c607226b35b",
+          "setuptools/_vendor/zipp-3.23.0.dist-info/RECORD": "3bfab660a24704f84228e4bb1ce1f0e3fa9ff80e5c806352a626b2f460ead836"
+        }
+      },
+      "sympy": {
+        "version": "1.14.0",
+        "root": "/usr/local/lib/python3.13/dist-packages",
+        "metadata_hashes": {
+          "sympy-1.14.0.dist-info/METADATA": "b756c2fbfd5be05ac5bdb0ebca61f55618f30f633ed92d88a5687429313a7595",
+          "sympy-1.14.0.dist-info/RECORD": "a97f0958392c4e9c63c517d96da08bacd1e7614bf141a3de9a7a2b15a272a5d1"
+        }
+      },
+      "torch": {
+        "version": "2.11.0+cu130",
+        "root": "/usr/local/lib/python3.13/dist-packages",
+        "metadata_hashes": {
+          "torch-2.11.0+cu130.dist-info/METADATA": "3f58d2a0bbf02637643e6bb9b9d5926a0e577b38b37bf82ca930145529e3aafe",
+          "torch-2.11.0+cu130.dist-info/RECORD": "a21f1e60b372cf3d7b148aa87f6bb2b8a224f4de2585c4bf82720618c76bc896"
+        }
+      },
+      "triton": {
+        "version": "3.6.0",
+        "root": "/usr/local/lib/python3.13/dist-packages",
+        "metadata_hashes": {
+          "triton-3.6.0.dist-info/METADATA": "5c9071db9b057bec89cd6d7f76f61e5f28a5e8d3717ff6c85420cf8015ee0321",
+          "triton-3.6.0.dist-info/RECORD": "8e6b455d45e6ac5b3845ff08dfdc42567ddb458b36b669d16230580584a152d7"
+        }
+      }
+    },
+    "shared_paths": {
+      "lib/python3.13/site-packages/cuda": "/usr/local/lib/python3.13/dist-packages/cuda",
+      "lib/python3.13/site-packages/cuda_bindings-13.0.3.dist-info": "/usr/local/lib/python3.13/dist-packages/cuda_bindings-13.0.3.dist-info",
+      "lib/python3.13/site-packages/cuda_pathfinder-1.8.2.dist-info": "/usr/local/lib/python3.13/dist-packages/cuda_pathfinder-1.8.2.dist-info",
+      "lib/python3.13/site-packages/cuda_toolkit-13.0.2.dist-info": "/usr/local/lib/python3.13/dist-packages/cuda_toolkit-13.0.2.dist-info",
+      "lib/python3.13/site-packages/jinja2-3.1.6.dist-info": "/usr/local/lib/python3.13/dist-packages/jinja2-3.1.6.dist-info",
+      "lib/python3.13/site-packages/jinja2": "/usr/local/lib/python3.13/dist-packages/jinja2",
+      "lib/python3.13/site-packages/markupsafe-3.0.3.dist-info": "/usr/local/lib/python3.13/dist-packages/markupsafe-3.0.3.dist-info",
+      "lib/python3.13/site-packages/markupsafe": "/usr/local/lib/python3.13/dist-packages/markupsafe",
+      "lib/python3.13/site-packages/mpmath-1.3.0.dist-info": "/usr/local/lib/python3.13/dist-packages/mpmath-1.3.0.dist-info",
+      "lib/python3.13/site-packages/mpmath": "/usr/local/lib/python3.13/dist-packages/mpmath",
+      "lib/python3.13/site-packages/networkx-3.7.dist-info": "/usr/local/lib/python3.13/dist-packages/networkx-3.7.dist-info",
+      "lib/python3.13/site-packages/networkx": "/usr/local/lib/python3.13/dist-packages/networkx",
+      "lib/python3.13/site-packages/nvidia": "/usr/local/lib/python3.13/dist-packages/nvidia",
+      "lib/python3.13/site-packages/nvidia_cublas-13.1.0.3.dist-info": "/usr/local/lib/python3.13/dist-packages/nvidia_cublas-13.1.0.3.dist-info",
+      "lib/python3.13/site-packages/nvidia_cudnn_cu13-9.19.0.56.dist-info": "/usr/local/lib/python3.13/dist-packages/nvidia_cudnn_cu13-9.19.0.56.dist-info",
+      "lib/python3.13/site-packages/nvidia_cusparselt_cu13-0.8.0.dist-info": "/usr/local/lib/python3.13/dist-packages/nvidia_cusparselt_cu13-0.8.0.dist-info",
+      "lib/python3.13/site-packages/nvidia_nccl_cu13-2.28.9.dist-info": "/usr/local/lib/python3.13/dist-packages/nvidia_nccl_cu13-2.28.9.dist-info",
+      "lib/python3.13/site-packages/nvidia_nvshmem_cu13-3.4.5.dist-info": "/usr/local/lib/python3.13/dist-packages/nvidia_nvshmem_cu13-3.4.5.dist-info",
+      "lib/python3.13/site-packages/_distutils_hack": "/usr/local/lib/python3.13/dist-packages/_distutils_hack",
+      "lib/python3.13/site-packages/distutils-precedence.pth": "/usr/local/lib/python3.13/dist-packages/distutils-precedence.pth",
+      "lib/python3.13/site-packages/pkg_resources": "/usr/local/lib/python3.13/dist-packages/pkg_resources",
+      "lib/python3.13/site-packages/setuptools-80.10.2.dist-info": "/usr/local/lib/python3.13/dist-packages/setuptools-80.10.2.dist-info",
+      "lib/python3.13/site-packages/setuptools": "/usr/local/lib/python3.13/dist-packages/setuptools",
+      "lib/python3.13/site-packages/isympy.py": "/usr/local/lib/python3.13/dist-packages/isympy.py",
+      "lib/python3.13/site-packages/sympy-1.14.0.dist-info": "/usr/local/lib/python3.13/dist-packages/sympy-1.14.0.dist-info",
+      "lib/python3.13/site-packages/sympy": "/usr/local/lib/python3.13/dist-packages/sympy",
+      "lib/python3.13/site-packages/functorch": "/usr/local/lib/python3.13/dist-packages/functorch",
+      "lib/python3.13/site-packages/torch-2.11.0+cu130.dist-info": "/usr/local/lib/python3.13/dist-packages/torch-2.11.0+cu130.dist-info",
+      "lib/python3.13/site-packages/torch": "/usr/local/lib/python3.13/dist-packages/torch",
+      "lib/python3.13/site-packages/torchgen": "/usr/local/lib/python3.13/dist-packages/torchgen",
+      "lib/python3.13/site-packages/triton-3.6.0.dist-info": "/usr/local/lib/python3.13/dist-packages/triton-3.6.0.dist-info",
+      "lib/python3.13/site-packages/triton": "/usr/local/lib/python3.13/dist-packages/triton"
+    },
+    "system_site_packages": false,
+    "lock_sha256": "fe010d9bf8b1b012c5807731cb734202769d7937484298a30769042224ecb5d4"
+  },
+  "failed_global_pip_check": "ipython 7.34.0 requires jedi, which is not installed.\ngoogle-colab 1.0.0 has requirement requests==2.32.4, but you have requests 2.34.2.\ngcsfs 2025.12.0 has requirement fsspec==2025.12.0, but you have fsspec 2026.9.0.\ndiffusers 0.40.0 has requirement huggingface-hub<2.0,>=1.23.0, but you have huggingface-hub 0.36.2.\ngradio 6.29.0 has requirement huggingface-hub<3.0,>=1.16.0, but you have huggingface-hub 0.36.2.\ndatasets 4.8.5 has requirement fsspec[http]<=2026.2.0,>=2023.1.0, but you have fsspec 2026.9.0.\n",
+  "failed_probe": "Traceback (most recent call last):\n  File \"<string>\", line 6, in <module>\n    assert (x @ x).sum().item() == 16\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "corrected_probe": {
+    "versions": {
+      "torch": "2.11.0+cu130",
+      "nvidia-cudnn-cu13": "9.19.0.56",
+      "triton": "3.6.0",
+      "regex": "2026.9.29",
+      "tokenizers": "0.22.2",
+      "fsspec": "2026.9.0",
+      "Jinja2": "3.1.6",
+      "urllib3": "2.8.0",
+      "certifi": "2026.7.22",
+      "soundfile": "0.13.1",
+      "nvidia-cusparselt-cu13": "0.8.0",
+      "nvidia-cublas": "13.1.0.3",
+      "MarkupSafe": "3.0.3",
+      "setuptools": "80.10.2",
+      "sympy": "1.14.0",
+      "networkx": "3.7",
+      "nvidia-nccl-cu13": "2.28.9",
+      "mpmath": "1.3.0",
+      "safetensors": "0.8.0",
+      "nvidia-nvshmem-cu13": "3.4.5",
+      "tqdm": "4.70.1",
+      "pycparser": "3.11",
+      "charset-normalizer": "3.5.2",
+      "cuda-bindings": "13.0.3",
+      "transformers": "4.57.6",
+      "typing_extensions": "4.16.0",
+      "cffi": "2.1.1",
+      "cuda-toolkit": "13.0.2",
+      "numpy": "2.2.6",
+      "huggingface_hub": "0.36.2",
+      "PyYAML": "6.0.3",
+      "requests": "2.34.2",
+      "packaging": "26.3",
+      "cuda-pathfinder": "1.8.2",
+      "hf-xet": "1.7.0",
+      "idna": "3.20",
+      "filelock": "4.1.0"
+    },
+    "gpu": "Tesla T4",
+    "cuda_matmul_sum": 8.0
+  },
+  "failure_interpretation": "Missing /proc process memory fields during worker exit is consistent with StopIteration and empty error text. Parent traceback was not captured, so the exact exception is not proven. Preserve stopped status; review separate supervisor before a fresh attempt.",
+  "transport_history": [
+    "Notebook uploaded with explicit authorization.",
+    "Iframe file chooser failed; file panel transfer worked.",
+    "Full 382 MB upload remained partial (47 MiB observed in file panel); page reload ended the client transfer. Partial file retained.",
+    "Small 1,214,355-byte subset uploaded; identical public checkpoint fetched directly from pinned official revision.",
+    "Browser download events failed twice; same archive recovered from visible notebook output and verified locally."
+  ],
+  "source_hashes": {
+    "scripts\\ssl_colab_smoke.py": "c3c38b21e0d1b3a672831bff57cd8fec33d9dc7f2d91e2227176b11528e21337",
+    "scripts\\prepare_colab_ssl_env.py": "23f95211fd8990bb363b2e65e612f64ec5d8e9933fa50353d0ce0f36d831c428",
+    "scripts\\probe_colab_ssl_env.py": "f5e0b502fd6b9aa6e0a61859517759a92622125c8c6162ea817fd7a969ef7365",
+    "scripts\\prepare_colab_ssl_payload.py": "911c34c19e2f20e74acedfb35bce4da8d31b5c2e537e0854eeb9836599566963",
+    "outputs\\colab\\session-v1\\prepare_colab_ssl_env_attempt1.py": "84a132ebf3f81839fa9a5af96cbfc6f7bcc1cdf24518b2eb1ba2fd17b02ad6e8"
+  },
+  "source_cells_archive": "outputs/colab/session-v1/result-v1/ssl_session_cells.json",
+  "training_started": false,
+  "full_192_extraction_started": false
+}

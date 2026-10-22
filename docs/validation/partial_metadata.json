@@ -1,0 +1,248 @@
+{
+  "dataset": "PartialSpoof v1.2",
+  "record": "5766198",
+  "checked_utc": "2026-10-10T15:01:44.414629+00:00",
+  "transfer_budget_bytes": 110000000,
+  "transferred_bytes": 92230352,
+  "preflight": {
+    "memory": {
+      "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+      "rss_bytes": 24002560,
+      "peak_rss_bytes": 24002560,
+      "system_total_ram_bytes": 16872415232,
+      "system_available_ram_bytes": 3343609856
+    },
+    "disk_free_bytes": 63515025408
+  },
+  "artifacts": {
+    "README_v1.2": {
+      "size_bytes": 17948,
+      "published_md5": "4fec0742e2a606d1b1186067d79862d6",
+      "verified_md5": "4fec0742e2a606d1b1186067d79862d6",
+      "sha256": "5d0ea8337a8945dfa73ed709a6e308c9b5df30670d67e7edfb79606a5b735573",
+      "url": "https://zenodo.org/records/5766198/files/README_v1.2?download=1"
+    },
+    "database_protocols.tar.gz": {
+      "size_bytes": 5389040,
+      "published_md5": "699d81f020e4b7fa8f33747010e1cba8",
+      "verified_md5": "699d81f020e4b7fa8f33747010e1cba8",
+      "sha256": "00cdede56868570857b342e568f12172328dd68d08c8f8826c77d80075053715",
+      "url": "https://zenodo.org/records/5766198/files/database_protocols.tar.gz?download=1"
+    },
+    "database_segment_labels_v1.2.tar.gz": {
+      "size_bytes": 76583019,
+      "published_md5": "c2bf6638e59ec7a5cf93c4a510fe4efe",
+      "verified_md5": "c2bf6638e59ec7a5cf93c4a510fe4efe",
+      "sha256": "714975e4d7b943ce665caec11d6f48726d39652b9441dfcbeb327240459602b2",
+      "url": "https://zenodo.org/records/5766198/files/database_segment_labels_v1.2.tar.gz?download=1"
+    },
+    "database_vad.tar.gz": {
+      "size_bytes": 10240345,
+      "published_md5": "95e77e19a1bb4f2e79ed138fd35621ad",
+      "verified_md5": "95e77e19a1bb4f2e79ed138fd35621ad",
+      "sha256": "2027efef64c2d3e27cab677454443137b00f8f607b23d774c805505f8b2eb118",
+      "url": "https://zenodo.org/records/5766198/files/database_vad.tar.gz?download=1"
+    }
+  },
+  "status": "metadata_verified_selection_annotated_audio_alignment_pending",
+  "audio_downloaded": false,
+  "inventory": {
+    "database_protocols.tar.gz": {
+      "member_count": 34,
+      "first_names": [
+        "database/protocols",
+        "database/protocols/ASVspoof2019_LA_cm_protocols",
+        "database/protocols/ASVspoof2019_LA_cm_protocols/ASVspoof2019.LA.cm.dev.trl.txt",
+        "database/protocols/ASVspoof2019_LA_cm_protocols/ASVspoof2019.LA.cm.eval.trl.txt",
+        "database/protocols/ASVspoof2019_LA_cm_protocols/ASVspoof2019.LA.cm.train.trl.txt",
+        "database/protocols/ASVspoof2019_LA_cm_protocols/ASVspoof2019.LA.cm.train.trn.txt",
+        "database/protocols/ASVspoof2019_LA_asv_protocols",
+        "database/protocols/ASVspoof2019_LA_asv_protocols/ASVspoof2019.LA.asv.dev.female.trl.txt",
+        "database/protocols/ASVspoof2019_LA_asv_protocols/ASVspoof2019.LA.asv.dev.female.trn.txt",
+        "database/protocols/ASVspoof2019_LA_asv_protocols/ASVspoof2019.LA.asv.dev.gi.trl.txt",
+        "database/protocols/ASVspoof2019_LA_asv_protocols/ASVspoof2019.LA.asv.dev.male.trl.txt",
+        "database/protocols/ASVspoof2019_LA_asv_protocols/ASVspoof2019.LA.asv.dev.male.trn.txt",
+        "database/protocols/ASVspoof2019_LA_asv_protocols/ASVspoof2019.LA.asv.eval.female.trl.txt",
+        "database/protocols/ASVspoof2019_LA_asv_protocols/ASVspoof2019.LA.asv.eval.female.trn.txt",
+        "database/protocols/ASVspoof2019_LA_asv_protocols/ASVspoof2019.LA.asv.eval.gi.trl.txt",
+        "database/protocols/ASVspoof2019_LA_asv_protocols/ASVspoof2019.LA.asv.eval.male.trl.txt",
+        "database/protocols/ASVspoof2019_LA_asv_protocols/ASVspoof2019.LA.asv.eval.male.trn.txt",
+        "database/protocols/ASVspoof2019_LA_asv_scores",
+        "database/protocols/ASVspoof2019_LA_asv_scores/ASVspoof2019.LA.asv.dev.gi.trl.scores.txt",
+        "database/protocols/ASVspoof2019_LA_asv_scores/ASVspoof2019.LA.asv.eval.gi.trl.scores.txt",
+        "database/protocols/PartialSpoof_LA_cm_protocols",
+        "database/protocols/PartialSpoof_LA_cm_protocols/PartialSpoof.LA.cm.train.trl.txt",
+        "database/protocols/PartialSpoof_LA_cm_protocols/PartialSpoof.LA.cm.dev.trl.txt",
+        "database/protocols/PartialSpoof_LA_cm_protocols/PartialSpoof.LA.cm.eval.trl.txt",
+        "database/protocols/PartialSpoof_LA_asv_protocols"
+      ],
+      "allowed_member_count": 2,
+      "allowed_names_sample": [
+        "database/protocols/PartialSpoof_LA_cm_protocols/PartialSpoof.LA.cm.train.trl.txt",
+        "database/protocols/PartialSpoof_LA_cm_protocols/PartialSpoof.LA.cm.dev.trl.txt"
+      ],
+      "eval_payload_parsed": false
+    },
+    "database_segment_labels_v1.2.tar.gz": {
+      "member_count": 22,
+      "first_names": [
+        "database/segment_labels",
+        "database/segment_labels/dev_seglab_0.01.npy",
+        "database/segment_labels/eval_seglab_0.01.npy",
+        "database/segment_labels/train_seglab_0.01.npy",
+        "database/segment_labels/train_seglab_0.16.npy",
+        "database/segment_labels/dev_seglab_0.16.npy",
+        "database/segment_labels/eval_seglab_0.16.npy",
+        "database/segment_labels/train_seglab_0.02.npy",
+        "database/segment_labels/train_seglab_0.04.npy",
+        "database/segment_labels/train_seglab_0.08.npy",
+        "database/segment_labels/train_seglab_0.32.npy",
+        "database/segment_labels/dev_seglab_0.02.npy",
+        "database/segment_labels/dev_seglab_0.04.npy",
+        "database/segment_labels/dev_seglab_0.08.npy",
+        "database/segment_labels/dev_seglab_0.32.npy",
+        "database/segment_labels/eval_seglab_0.02.npy",
+        "database/segment_labels/eval_seglab_0.04.npy",
+        "database/segment_labels/eval_seglab_0.08.npy",
+        "database/segment_labels/eval_seglab_0.32.npy",
+        "database/segment_labels/train_seglab_0.64.npy",
+        "database/segment_labels/dev_seglab_0.64.npy",
+        "database/segment_labels/eval_seglab_0.64.npy"
+      ],
+      "allowed_member_count": 2,
+      "allowed_names_sample": [
+        "database/segment_labels/dev_seglab_0.01.npy",
+        "database/segment_labels/train_seglab_0.01.npy"
+      ],
+      "eval_payload_parsed": false
+    },
+    "database_vad.tar.gz": {
+      "member_count": 121465,
+      "first_names": [
+        "database/vad",
+        "database/vad/train",
+        "database/vad/train/CON_T_0000282.vad",
+        "database/vad/train/CON_T_0001107.vad",
+        "database/vad/train/CON_T_0001251.vad",
+        "database/vad/train/CON_T_0001461.vad",
+        "database/vad/train/CON_T_0001640.vad",
+        "database/vad/train/CON_T_0001922.vad",
+        "database/vad/train/CON_T_0002441.vad",
+        "database/vad/train/CON_T_0003190.vad",
+        "database/vad/train/CON_T_0004219.vad",
+        "database/vad/train/CON_T_0004290.vad",
+        "database/vad/train/CON_T_0004296.vad",
+        "database/vad/train/CON_T_0005345.vad",
+        "database/vad/train/CON_T_0005419.vad",
+        "database/vad/train/CON_T_0006077.vad",
+        "database/vad/train/CON_T_0006162.vad",
+        "database/vad/train/CON_T_0006833.vad",
+        "database/vad/train/CON_T_0007360.vad",
+        "database/vad/train/CON_T_0007491.vad",
+        "database/vad/train/CON_T_0007520.vad",
+        "database/vad/train/CON_T_0007642.vad",
+        "database/vad/train/CON_T_0008127.vad",
+        "database/vad/train/CON_T_0008523.vad",
+        "database/vad/train/CON_T_0008615.vad"
+      ],
+      "allowed_member_count": 50224,
+      "allowed_names_sample": [
+        "database/vad/train/CON_T_0000282.vad",
+        "database/vad/train/CON_T_0001107.vad",
+        "database/vad/train/CON_T_0001251.vad",
+        "database/vad/train/CON_T_0001461.vad",
+        "database/vad/train/CON_T_0001640.vad",
+        "database/vad/train/CON_T_0001922.vad",
+        "database/vad/train/CON_T_0002441.vad",
+        "database/vad/train/CON_T_0003190.vad",
+        "database/vad/train/CON_T_0004219.vad",
+        "database/vad/train/CON_T_0004290.vad",
+        "database/vad/train/CON_T_0004296.vad",
+        "database/vad/train/CON_T_0005345.vad",
+        "database/vad/train/CON_T_0005419.vad",
+        "database/vad/train/CON_T_0006077.vad",
+        "database/vad/train/CON_T_0006162.vad",
+        "database/vad/train/CON_T_0006833.vad",
+        "database/vad/train/CON_T_0007360.vad",
+        "database/vad/train/CON_T_0007491.vad",
+        "database/vad/train/CON_T_0007520.vad",
+        "database/vad/train/CON_T_0007642.vad",
+        "database/vad/train/CON_T_0008127.vad",
+        "database/vad/train/CON_T_0008523.vad",
+        "database/vad/train/CON_T_0008615.vad",
+        "database/vad/train/CON_T_0010058.vad",
+        "database/vad/train/CON_T_0010293.vad"
+      ],
+      "eval_payload_parsed": false
+    }
+  },
+  "selection_sha256": "c7efeacc6a19e80557fed89183131ebbc64e476ce5c240b0a02fe151b6cfc374",
+  "parse_memory_snapshots": [
+    {
+      "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+      "rss_bytes": 75362304,
+      "peak_rss_bytes": 815906816,
+      "system_total_ram_bytes": 16872415232,
+      "system_available_ram_bytes": 2986913792
+    },
+    {
+      "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+      "rss_bytes": 76775424,
+      "peak_rss_bytes": 819851264,
+      "system_total_ram_bytes": 16872415232,
+      "system_available_ram_bytes": 3075334144
+    }
+  ],
+  "native_metadata_parsed": {
+    "train": true,
+    "dev": true,
+    "eval": false
+  },
+  "source_sha256": "12e95fa2a1c0aeb429479a0348e412035b2a32aa416e947beee995a8b41b3623",
+  "finished_utc": "2026-10-10T15:02:17.354185+00:00",
+  "selected_labels_export": {
+    "path": "data/partialspoof/selected_labels_v1.json",
+    "sha256": "9c29d4eb387ca9b0ff2a7f524a03e73dfe592165b6969c6134a6274b184a0a4f",
+    "size_bytes": 134126,
+    "pickle_required": false
+  },
+  "alignment_metadata_findings": {
+    "train": {
+      "selected_count": 128,
+      "native_count_differs_from_ceil_vad_duration_ids": [
+        "CON_T_0001032",
+        "CON_T_0007273",
+        "CON_T_0014689",
+        "CON_T_0022266",
+        "LA_T_1504888",
+        "LA_T_4565832",
+        "LA_T_6078217",
+        "LA_T_6442486",
+        "LA_T_7027837",
+        "LA_T_7877019",
+        "LA_T_9901878"
+      ],
+      "native_nonspeech_bin_spoof_count": 3557,
+      "native_nonspeech_bin_bonafide_count": 11528,
+      "vad_minus_native_grid_min_seconds": -0.010625000000000107,
+      "vad_minus_native_grid_max_seconds": -0.00043750000000031264
+    },
+    "dev": {
+      "selected_count": 64,
+      "native_count_differs_from_ceil_vad_duration_ids": [
+        "CON_D_0018799",
+        "LA_D_2035158",
+        "LA_D_6023315",
+        "LA_D_6900009"
+      ],
+      "native_nonspeech_bin_spoof_count": 2212,
+      "native_nonspeech_bin_bonafide_count": 6051,
+      "vad_minus_native_grid_min_seconds": -0.010062500000000085,
+      "vad_minus_native_grid_max_seconds": -0.0006250000000000977
+    }
+  },
+  "binary_reference_rule": "Use published native binary vectors; VAD label2 bins can be native0 or1. VAD0-only references do not reproduce native binary truth.",
+  "eval_payload_parsed": false,
+  "eval_metadata_extracted": false,
+  "archive_scan_note": "Published metadata containers include eval members. Gzip scans may decompress bytes while skipping them; eval member payloads are never extracted, deserialized or interpreted."
+}

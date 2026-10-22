@@ -1,0 +1,42 @@
+{
+  "dataset": {
+    "dataset": "ASVspoof2019-LA",
+    "version": "Zenodo-6906306-v1",
+    "sample_rate": 16000,
+    "train_count": 25380,
+    "dev_count": 24844,
+    "eval_enabled": false
+  },
+  "audit_path": "docs/validation/full_robustness_results_v1.json",
+  "audit_sha256": "329c6bd5b772c63dce309b6047102f415291583dee7a072d65aa705e19ba3b1b",
+  "generator_sha256": "21b05773940dc83e5c6dbe648011aeea0c1355000ca2a161d32d006ca5185dbd",
+  "figure_generator_sha256": "c2a098af621f6b07e0312cb5236f6e5ba73cfd218dae6339d997f6b976bc1e16",
+  "content_pages": 13,
+  "author": "\u00d6zg\u00fcr Ekin S\u00f6nmez",
+  "latency_audit_sha256": "525e17a7e4ddac07be85a32f7d7ded951c67669f59be688c7dbe9edd19b9896e",
+  "pdf_renderer": "ReportLab; same report text/data, separate from LaTeX preview",
+  "localization_content_sha256": "49670c61466b3078e112b092ff1f58a32c20bc92448688422f2b2d8b8dc2efd2",
+  "ssl_content_sha256": "1653aa0fa5ecadbac4ab3ead3949fce65beac603c8e01541fd1c8018c4495216",
+  "ssl_audit_sha256": {
+    "localization_ssl_convergence_train_v1.json": "05c53e567e4de82c116fff01515e40c5ecb3bfaae562f9e660f6e2767c7ec922",
+    "localization_ssl_convergence_dev_v1.json": "994373b0abdc41c8af7fff2490d7279bb2e5a7a3395819fb1ebea9824d8a0960"
+  },
+  "localization_audit_sha256": "d15ab66b987db6841eaa702e2e2649404baf51b003a6261a35c151d752e64318",
+  "localization_review_sha256": "be7fe5be39450a0c45fc22e07453c53125839d7041e3c259ba7da3bb85e6a6c4",
+  "localization_inputs_sha256": {
+    "localization_context_v1.json": "1ada4d85975357109611def59b8c730811a9274ac958c614b779f7fac01e6066",
+    "localization_context_review_v1.json": "bb754a638c369c23b3f1dbd7ffb3d123140ba504b90432765bbf9558668c823e",
+    "localization_errors_v1.json": "dee76b1ac1061e7197d113e71128de3d8544f3571d9cb4bb27d95b974ac15c9b",
+    "localization_references_v1.json": "4bbe02a7856eb1ab62c43dd7f5f03fb558751ee21391c87f86412028f55f6405",
+    "localization_range_results_v1.json": "be612b4df87acc13f53f45a43d844a44b33b3cd765efb19bcae26b3a74afc002"
+  },
+  "localization_timeline_inputs_sha256": {
+    "CON_D_0000586": "0e4a97a2f4f441458a81e38de4bda00c60f73dde997f5460c893b8a8a19ae655",
+    "CON_D_0003090": "6da102b93ef9bf67007a105b57cc052b134312dcb043675605619ca819ca13d2"
+  },
+  "latex": "Standalone native vector charts; no external assets",
+  "outputs": {
+    "audio_deepfake_report.tex": "3304aab2bcafa4308b3b4332b9b14e0178652a301381b5d7e6a85503acdae585",
+    "audio_deepfake_report.pdf": "565dc62f6a8afcbd8135fb69846b719349cd62171c64d7440434a3c3d7326b72"
+  }
+}

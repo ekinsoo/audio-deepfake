@@ -1,0 +1,253 @@
+{
+  "status": "frozen",
+  "protocol": "full-narrowband-confirmation-v1",
+  "created_utc": "2026-10-10T09:39:32.882691+00:00",
+  "eval_enabled": false,
+  "model_seeds": [
+    42,
+    43,
+    44
+  ],
+  "retraining": false,
+  "transform": {
+    "name": "narrowband-roundtrip-v1",
+    "input_sample_rate": 16000,
+    "intermediate_sample_rate": 8000,
+    "output_sample_rate": 16000,
+    "method": "scipy.signal.resample_poly",
+    "down_up": 1,
+    "down_down": 2,
+    "restore_up": 2,
+    "restore_down": 1,
+    "window": [
+      "kaiser",
+      5.0
+    ],
+    "padtype": "constant",
+    "cval": 0.0,
+    "processing_dtype": "float64",
+    "output_dtype": "float32",
+    "length_policy": "trim-to-original-sample-count",
+    "normalization": "none",
+    "clipping": false,
+    "codec": "none"
+  },
+  "partition_helper_protocol": "narrowband-reliability-v1",
+  "partition": {
+    "calibration": {
+      "count": 9609,
+      "labels": {
+        "bonafide": 945,
+        "spoof": 8664
+      },
+      "attacks": {
+        "-": 945,
+        "A01": 1444,
+        "A02": 1444,
+        "A03": 1444,
+        "A04": 1444,
+        "A05": 1444,
+        "A06": 1444
+      },
+      "speakers": 8,
+      "speaker_ids": [
+        "LA_0073",
+        "LA_0075",
+        "LA_0076",
+        "LA_0078",
+        "LA_0099",
+        "LA_0100",
+        "LA_0105",
+        "LA_0106"
+      ],
+      "manifest_sha256": "817cf13ed60924dc1e25c9d16ccebb7f2c9487dcd17560517ae446b47d346820"
+    },
+    "analysis": {
+      "count": 15235,
+      "labels": {
+        "bonafide": 1603,
+        "spoof": 13632
+      },
+      "attacks": {
+        "-": 1603,
+        "A01": 2272,
+        "A02": 2272,
+        "A03": 2272,
+        "A04": 2272,
+        "A05": 2272,
+        "A06": 2272
+      },
+      "speakers": 12,
+      "speaker_ids": [
+        "LA_0069",
+        "LA_0070",
+        "LA_0071",
+        "LA_0072",
+        "LA_0074",
+        "LA_0077",
+        "LA_0101",
+        "LA_0102",
+        "LA_0103",
+        "LA_0104",
+        "LA_0107",
+        "LA_0108"
+      ],
+      "manifest_sha256": "edf7182c6dbceefc133ecede894b5959cbc2fa00bc97a56b67fb731bee809136"
+    }
+  },
+  "train_manifest_sha256": "a61d66f66d03d799b3941a99f74204654a5f6216f9a400b00e278cf6295b66ab",
+  "official_input_sha256": {
+    "selection_manifest": "37da16080ddbf0c0253b1f093a11917e1c463f12b2f88d322c270587abf17458",
+    "train_protocol": "65a289e4009400b42bb4f1e47ac60938d93f7f595452d1f220d35defc3de8ab8",
+    "dev_protocol": "2fedaebf1ba3ae1a9bb7d3ec916804ac237b4eee063a27fa92e6549f03d129c7",
+    "audio_journal": "cb80fcc2a80b26542178e87cb985ec81f51e7bd1efe60ab203ddfa53fe123440",
+    "asv_scores": "fe8114cf608c3062c141df5979892eba9664aa37a8c99e97157f129d679d3389",
+    "reference_evaluator": "93ea505282d329ed14537d977a74b2d1a25d161ac6767a16e0216a1a18391049"
+  },
+  "selection_sha256": "37da16080ddbf0c0253b1f093a11917e1c463f12b2f88d322c270587abf17458",
+  "seeds": {
+    "42": {
+      "model_path": "outputs/baseline-full-seed42/model.joblib",
+      "model_sha256": "701fc3d8107cc8b2696b5552dd9e1b4751e44d2d197cfd5d1dfe7e4814add101",
+      "clean_scores_path": "outputs/scoring-recovery-seed42/scores.csv",
+      "clean_scores_sha256": "bdc3cd64a218eaa2e56db225d06a696bb3049cb7e556d5e8672d548c80d5915e",
+      "summary_sha256": "c3076b4ab41a8c4bb1a2572d537bcb71ae87aa569a47a6983bdb8497dd17f7ef",
+      "config_sha256": "e1775a7f886fbf4dc641f04d5ec0f73f64c9ae2bfffb3e2e611151bfe2596d22",
+      "packages": {
+        "numpy": "2.5.3",
+        "scipy": "1.18.1",
+        "scikit-learn": "1.9.1",
+        "joblib": "1.6.0",
+        "soundfile": "0.13.1"
+      },
+      "calibration": {
+        "threshold": 0.7167018055915833,
+        "rule": "ascending clean calibration BF[n//20]; accept bona fide iff score >= threshold",
+        "bonafide_count": 945,
+        "ascending_index": 47,
+        "accepted_count": 898,
+        "rejected_count": 47,
+        "acceptance_fraction": 0.9502645502645503,
+        "target_acceptance": 0.95
+      }
+    },
+    "43": {
+      "model_path": "outputs/baseline-full-seed43/model.joblib",
+      "model_sha256": "08b77256906a546d5eabbe9fa2cc5bbef0430d7d5dc7b10fc5b9f9e8449a19d0",
+      "clean_scores_path": "outputs/baseline-full-seed43/scores.csv",
+      "clean_scores_sha256": "495b43938850d18ae391cf23f4d9047ef2851e440cba07024f27fa6fc388a069",
+      "summary_sha256": "83e54764eb6f042bcf061ea386add55068cde0db70daf0fa300db7f78b7370d7",
+      "config_sha256": "9b01550be7eb1f9fefcde7807150a4999f5a47aabc58ab315fb90eddf66931bf",
+      "packages": {
+        "numpy": "2.5.3",
+        "scipy": "1.18.1",
+        "scikit-learn": "1.9.1",
+        "joblib": "1.6.0",
+        "soundfile": "0.13.1"
+      },
+      "calibration": {
+        "threshold": 0.7260986566543579,
+        "rule": "ascending clean calibration BF[n//20]; accept bona fide iff score >= threshold",
+        "bonafide_count": 945,
+        "ascending_index": 47,
+        "accepted_count": 898,
+        "rejected_count": 47,
+        "acceptance_fraction": 0.9502645502645503,
+        "target_acceptance": 0.95
+      }
+    },
+    "44": {
+      "model_path": "outputs/baseline-full-seed44/model.joblib",
+      "model_sha256": "bf35822b7514034d75c8bb4373636bb78bad03abce03a6ac8f00bf6f468d6e10",
+      "clean_scores_path": "outputs/baseline-full-seed44/scores.csv",
+      "clean_scores_sha256": "075c3a1dd993431cebc3e8d7c9e433498cf817dba88f0e6db91e50e9d0b277e6",
+      "summary_sha256": "f740bb9f103e1d0d6d9e6c53a75687f82ec0152d42a2c50e42f24455a6336da4",
+      "config_sha256": "849a3c4472efac39327330cee0f3dc98b91120c57948b862a43a5f9be5d13e06",
+      "packages": {
+        "numpy": "2.5.3",
+        "scipy": "1.18.1",
+        "scikit-learn": "1.9.1",
+        "joblib": "1.6.0",
+        "soundfile": "0.13.1"
+      },
+      "calibration": {
+        "threshold": 0.7200403809547424,
+        "rule": "ascending clean calibration BF[n//20]; accept bona fide iff score >= threshold",
+        "bonafide_count": 945,
+        "ascending_index": 47,
+        "accepted_count": 898,
+        "rejected_count": 47,
+        "acceptance_fraction": 0.9502645502645503,
+        "target_acceptance": 0.95
+      }
+    }
+  },
+  "protocol_text_sha256": "5250a2038d9e3f7217b2e11166ecf7d950cd515c9a3227d58ebc106f6b230564",
+  "source_sha256": {
+    "scripts/freeze_full_robustness.py": "cf695b4a3934ae96492d8ff8702dbb3562adc48e99ed866b426f24868fb3b5f7",
+    "scripts/run_robustness.py": "2aca1c03801257259a46bbc5c5f61ba31114bef6d45d22a74f3696ca8b5fcc2f",
+    "scripts/full_multiseed_job.py": "977d267fea9da61ae096a80de417834dcee5244130da7fc3ca7c25a2f9623c6f",
+    "scripts/run_full_baseline.py": "8f12ca300b69492fe24930521b010cd3274c56ccfe32aaedee6c3db18bc61fd2",
+    "scripts/recover_full_scoring.py": "f5d0d5f3109e75451d409e81d4058d25652fc3ae61cdbf5f0b6a943c671b3d6c",
+    "scripts/scoring_recovery_job.py": "9b88ec37719c89bf8c267b91c22cb1841506228f92e6b3181837f44b6ad3c2cb",
+    "scripts/full_run_job.py": "36d8389fe042b9e882af5df19e3336396c838d24b1f893d9db5d1c945f57504a",
+    "src/audio_deepfake/cli.py": "194579347d6a5af0b4f707247baecffab24ed83fc18867e2f62febe30683b4ee",
+    "src/audio_deepfake/transforms.py": "bcddcb3d7538b239b11e64fb4d8d3dca568dcc2fd2ca9766b0fda772a41ee2c3",
+    "src/audio_deepfake/reliability.py": "84aab82cf96013d45f5d53c32c767fac821f547af36ec17f2d14a2ed5c2d050a",
+    "src/audio_deepfake/baseline.py": "2cf5b7d030bb9926d5e0aa3ed4089298f79a50038f1da5c8a41171f7a4d29c2f",
+    "src/audio_deepfake/features.py": "22152cdcb7c118fd168dc9c4e11a20f100f959d4f2e4e1cb6f16fdfbe83cbfb3",
+    "src/audio_deepfake/audio.py": "aa3b33b4e5512f26202019b7f44d92c4bb4389bb2ae9d0c256cb822b54ad424c",
+    "src/audio_deepfake/manifests.py": "6cad5d8f7bd1c6b3ffd8f530108a9dfc0c727fa17f01d8ec7579178ba05d96b6",
+    "src/audio_deepfake/metrics.py": "2fc3adf0eb821d99a8d774bea8a6fe9cfbc2c9b96d41db4df057c84b5ffd7b93",
+    "src/audio_deepfake/resources.py": "9d68202f7335b17e83f2138600f0f1c7312adab46c3d73609d61751800282e7a"
+  },
+  "parent_audit_sha256": "fb148d089a28665731396d625075f9baa220cba8a4be3d8390230db6f80b4298",
+  "parent_review_sha256": "53e404179e2230a305e9c5cd831e261917175d501f45eaead0b9a7c83c301d88",
+  "comparisons": [
+    "clean",
+    "narrowband",
+    "average = clean/2 + narrowband/2"
+  ],
+  "ranking_scores": [
+    "abs(narrowband-clean)",
+    "-abs(clean-calibration_threshold)"
+  ],
+  "reporting": {
+    "detection": [
+      "EER",
+      "minimum normalized t-DCF"
+    ],
+    "error_ranking": [
+      "AUROC",
+      "non-interpolated average precision",
+      "error prevalence"
+    ],
+    "aggregate": "Report each fixed seed, mean and population std ddof=0; no seed selection.",
+    "ranking_aggregate": "Report defined-seed count; if any seed is undefined mark three-seed aggregate incomplete.",
+    "undefined": "One-class ranking returns null with a reason; never substitute 0.5."
+  },
+  "resources": {
+    "workers": 1,
+    "numeric_threads": 1,
+    "max_worker_seconds": 1800,
+    "max_processing_seconds_per_seed": 1800,
+    "max_process_peak_gib": 2,
+    "min_start_available_ram_gib": 3.5,
+    "min_running_available_ram_gib": 1,
+    "min_free_disk_gib": 20
+  },
+  "execution_status": "Not started; metadata freeze only. A separate guarded full runner is required.",
+  "limitations": [
+    "Clean full-dev labels/results and pilot stress results were inspected before this freeze.",
+    "Pre-transformation protocol, not blind preregistration or independent validation.",
+    "Full dev includes the earlier pilot subset and the same attack taxonomy.",
+    "Speaker separation is internal to dev; the three model seeds are not independent datasets.",
+    "Approximate bandwidth stress, not a codec; official ASV scores remain fixed."
+  ],
+  "local_partition_dir": "outputs/full-robustness-protocol-v1",
+  "partition_file_sha256": {
+    "calibration.csv": "6fae9d75c606dfbef0ab658c454e4765b695b9598bb4b2a4195430eac7e902b2",
+    "analysis.csv": "14448edd3335de2535f45e5057fe36c8c5465a4eb67f151f2bd9b6b32769bf84",
+    "partition.json": "480a2365c197aecbcbf46981fadaa5cfa3a2c5047486b136ae73fbd9bdab07f6"
+  }
+}

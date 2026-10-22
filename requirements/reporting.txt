@@ -1,0 +1,4 @@
+# Reporting only; install into a separate environment from the trained models.
+reportlab==4.4.9
+pypdfium2==5.13.0
+pypdf==6.10.0

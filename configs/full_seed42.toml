@@ -1,0 +1,47 @@
+# Full official train/dev confirmation. Eval remains closed.
+[experiment]
+name = "la2019-lfcc-gmm-full-confirmation"
+stage = "full-train-dev"
+seed = 42
+
+[data]
+dataset = "ASVspoof2019-LA"
+version = "Zenodo-6906306-v1"
+sample_rate = 16000
+train_count = 25380
+dev_count = 24844
+eval_enabled = false
+
+[model]
+family = "lfcc-gmm"
+n_components = 32
+covariance_type = "diag"
+max_total_training_frames = 100000
+max_iter = 50
+reg_covar = 0.000001
+tol = 0.001
+
+[features]
+sample_rate = 16000
+window_ms = 20.0
+hop_ms = 10.0
+n_fft = 512
+n_filters = 20
+n_coeffs = 20
+pre_emphasis = 0.97
+delta_order = 2
+
+[resources]
+workers = 1
+min_start_ram_gib = 3
+min_free_disk_gib = 20
+min_running_ram_gib = 1
+max_process_peak_gib = 2
+max_processing_seconds = 1800
+
+[paths]
+audio_root = "data/asvspoof2019/LA"
+protocol_dir = "data/metadata/asvspoof2019"
+selection_manifest = "outputs/full-data/full_train_dev.csv"
+selection_sha256 = "37da16080ddbf0c0253b1f093a11917e1c463f12b2f88d322c270587abf17458"
+audio_journal = "outputs/full-data/prepare_report.json"

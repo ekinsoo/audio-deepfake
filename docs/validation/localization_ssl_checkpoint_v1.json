@@ -1,0 +1,19 @@
+{
+  "status": "verified",
+  "source_url": "https://huggingface.co/facebook/wav2vec2-base/resolve/0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8/pytorch_model.bin",
+  "revision": "0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8",
+  "started_utc": "2026-10-10T20:57:30.521221+00:00",
+  "received_bytes": 380267417,
+  "training_started": false,
+  "checkpoint_sha256_expected": "3249fe98bfc62fcbc26067f724716a6ec49d12c4728a2af1df659013905dff21",
+  "memory_before": {
+    "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+    "rss_bytes": 23552000,
+    "peak_rss_bytes": 23552000,
+    "system_total_ram_bytes": 16872415232,
+    "system_available_ram_bytes": 4662636544
+  },
+  "sha256": "3249fe98bfc62fcbc26067f724716a6ec49d12c4728a2af1df659013905dff21",
+  "elapsed_seconds": 45.437999999994645,
+  "finished_utc": "2026-10-10T20:58:15.953092+00:00"
+}

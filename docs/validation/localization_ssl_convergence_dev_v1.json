@@ -1,0 +1,76 @@
+{
+  "status": "verified_fixed_dev_followup",
+  "protocol_id": "localization_ssl_convergence_v1",
+  "training_started": false,
+  "eval_enabled": false,
+  "official_benchmark": false,
+  "source_sha256": {
+    "scripts\\verify_ssl_convergence_dev.py": "76e05d752d971e533355d9fac7349f4fbba14cddaa82d63a79526062dd31c8df",
+    "outputs\\localization\\ssl-convergence-dev-v1\\results.json": "46078d8b81bfcf9b91b0ac5e7138cdafb44b578cd5290d5d241b021832cdb74b",
+    "outputs\\localization\\ssl-convergence-dev-v1\\status.json": "2b30119a0902a3f1fa347035844bba0271740f6bd5a023bcaa0174c61a167ec7",
+    "outputs\\localization\\ssl-convergence-diagnostics-v1\\results.json": "8e5f98fee23a881a81d21b2bd82b39ec2fa1648abd48438c851c03e772d5a592"
+  },
+  "independent_checks": [
+    "All64 saved scores reproduced exactly from verified model/caches without fit",
+    "Native min-pooled labels and clipped audio-duration grids recomputed",
+    "Weighted sklearn ROC independently matches custom duration EER",
+    "Fixed-zero error durations recomputed",
+    "All10 timeline prediction spans checked against saved scores",
+    "Diagnostic source pins and actual worker PID/resource receipts checked"
+  ],
+  "ssl": {
+    "custom_duration_eer_fraction": 0.28570644418778257,
+    "derived_reference_range_eer_fraction": 0.2875351912616139,
+    "fixed_zero_pooled20ms": {
+      "spoof_seconds": 58.05250000000328,
+      "bonafide_seconds": 175.0901875000155,
+      "missed_spoof_seconds": 23.086124999999605,
+      "false_alarm_seconds": 32.86793749999954,
+      "miss_fraction": 0.3976766719779217,
+      "false_alarm_fraction": 0.1877200428493266
+    },
+    "fragmentation20ms": {
+      "reference_runs": 109,
+      "predicted_runs": 720,
+      "reference_runs_with_no_overlap": 13,
+      "reference_runs_with_one_prediction_run": 50,
+      "reference_runs_split_over_multiple_predictions": 46,
+      "predicted_runs_with_no_reference_overlap": 423
+    }
+  },
+  "frozen_lfcc": {
+    "custom_duration_eer_fraction": 0.39500173959340223,
+    "derived_reference_range_eer_fraction": 0.39379866352211756,
+    "fixed_zero_pooled20ms": {
+      "spoof_seconds": 58.05250000000328,
+      "bonafide_seconds": 175.0901875000155,
+      "missed_spoof_seconds": 18.285812499999718,
+      "false_alarm_seconds": 84.19831250000017,
+      "miss_fraction": 0.31498751130440006,
+      "false_alarm_fraction": 0.48088538656680985
+    },
+    "fragmentation20ms": {
+      "reference_runs": 109,
+      "predicted_runs": 1349,
+      "reference_runs_with_no_overlap": 15,
+      "reference_runs_with_one_prediction_run": 35,
+      "reference_runs_split_over_multiple_predictions": 59,
+      "predicted_runs_with_no_reference_overlap": 989
+    }
+  },
+  "timeline_sha256": {
+    "outputs/localization/ssl-convergence-dev-v1/timelines/CON_D_0000586.svg": "a02e4dbfdfe6e08a5c7f5b35dd642e06f055cdfa9dc419a1cf8eb40d855878ae",
+    "outputs/localization/ssl-convergence-dev-v1/timelines/CON_D_0000734.svg": "2bcfa1a2780c610bcd08ba0bf37972384c2768083656b99806c8e08ab2079744",
+    "outputs/localization/ssl-convergence-dev-v1/timelines/CON_D_0002058.svg": "ecd48bc72525b924bcd2d5d17e944c5938aa264b965c89a86e993b9ff18e8dc0",
+    "outputs/localization/ssl-convergence-dev-v1/timelines/CON_D_0003090.svg": "39c4493bcc5b86eb5edcdd68dfe0293cda5ca184f2644c8fedf2bb469eba9fbd",
+    "outputs/localization/ssl-convergence-dev-v1/timelines/CON_D_0003229.svg": "e8e44b37c5dcdeceaf413087d62ccc65faf9df214c9257175dd9dc0fbcc6f437",
+    "outputs/localization/ssl-convergence-dev-v1/timelines/LA_D_1161800.svg": "e177362790cf65147f17b8e9b7560d4e1105193894365990ca032573e117abbb",
+    "outputs/localization/ssl-convergence-dev-v1/timelines/LA_D_1323454.svg": "1017b1786f0f08629b0461012442bfae50f6fa14c032418f8764502ce4ec1ca8",
+    "outputs/localization/ssl-convergence-dev-v1/timelines/LA_D_1469404.svg": "95a215b4b1d17b9ccb7868813ffc6b1e46514fce1eb227ed4bab466d3c510461",
+    "outputs/localization/ssl-convergence-dev-v1/timelines/LA_D_1494418.svg": "bd6b9674efb10715f638ff8cdcc2346dabb1c79271fa59e10030321ee093893f",
+    "outputs/localization/ssl-convergence-dev-v1/timelines/LA_D_1796445.svg": "5e0d10918b79a4a86da30262d5aa2f680f553e7db96bffee525324e152e1ca14"
+  },
+  "score_elapsed_seconds": 2.514999999955762,
+  "score_peak_rss_bytes": 133255168,
+  "comparison_caveat": "Separate max3000 followup; original SSL300 failed; LFCC uses max300. Repeatedly inspected custom64dev, whole-recording context, unknown pretraining overlap."
+}

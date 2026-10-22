@@ -1,0 +1,33 @@
+{
+  "status": "ok",
+  "pdf_pages": 8,
+  "pdf_visual_review": "All eight final pages rendered at 90dpi and inspected; no overlaps, clipping or missing author glyphs observed. Grayscale mean bars only.",
+  "report_rebuild_exact": true,
+  "independent_evidence_review_sha256": "bf154f64f030daee74b2a6d0bf75c5ef6a4f0ca42aa881c70a4dc403da2bb2e3",
+  "report_manifest_sha256": "c3068d61f1c9cf16a216e01456c244d44ea111149ad39bbb15b44d0fceaa8afe",
+  "report_outputs_sha256": {
+    "audio_deepfake_report.pdf": "242370819611d98ef47c79837023062f965e4f1346c3a906384e3cebbde045f6",
+    "audio_deepfake_report.tex": "9cc4f491a768a546e53ebc79906428307fc9716290e7190f7dddf1d09b4a0538"
+  },
+  "latex_plot_review": "Native mean bars with numeric labels; seed dots, SD whiskers and dashed reference overlays removed.",
+  "latex_compilation": {
+    "status": "success",
+    "compiler": "Codex desktop standalone LaTeX compiler",
+    "source_sha256": "9cc4f491a768a546e53ebc79906428307fc9716290e7190f7dddf1d09b4a0538",
+    "external_assets_required": false
+  },
+  "demo_tests_passed": 13,
+  "demo_live_http_upload": "Official public dev file LA_D_1047731 matched saved score; loopback server verified after hidden launcher exited.",
+  "latency_audit_sha256": "525e17a7e4ddac07be85a32f7d7ded951c67669f59be688c7dbe9edd19b9896e",
+  "frozen_sources_unchanged": true,
+  "new_markdown_links_valid": true,
+  "independent_final_review": {
+    "frozen_protocol_sources_checked": 16,
+    "execution_sources_checked": 4,
+    "benchmark_sources_checked": 6,
+    "report_numeric_tokens_checked": 34,
+    "numeric_mismatches": 0,
+    "timing_summary_recomputed_exactly": true,
+    "model_load_verified": true
+  }
+}

@@ -1,0 +1,805 @@
+{
+  "version": 1,
+  "job_dir": "outputs/jobs/localization-pilot-20261010T163921940Z",
+  "alignment_audit_sha256": "87adda47fee58c4f367e26f6731469e8c5041f5df2c29a692aefd34e5106caaa",
+  "config": {
+    "status": "frozen_before_fit",
+    "created_utc": "2026-10-10T16:39:23.933168+00:00",
+    "dataset": "PartialSpoof v1.2",
+    "scope": "custom 128train/64dev localization pilot",
+    "official_benchmark": false,
+    "eval_enabled": false,
+    "model": {
+      "seed": 45,
+      "frames_per_class": 50000,
+      "max_iter": 300,
+      "regularization_c": 1.0
+    },
+    "lfcc": {
+      "sample_rate": 16000,
+      "window_ms": 20.0,
+      "hop_ms": 10.0,
+      "n_fft": 512,
+      "n_filters": 20,
+      "n_coeffs": 20,
+      "pre_emphasis": 0.97,
+      "delta_order": 2
+    },
+    "source_sha256": {
+      "scripts/run_localization_pilot.py": "a38cc7f5be3b8dec828e5d6024927b5015e3b234fafdb9d924fd6c12708f3ba1",
+      "scripts/audit_partial_alignment.py": "8845ff49b6650a22620791b52c2fb5ab5cf3463a94f2492203995f7d1f68d726",
+      "src/audio_deepfake/audio.py": "aa3b33b4e5512f26202019b7f44d92c4bb4389bb2ae9d0c256cb822b54ad424c",
+      "src/audio_deepfake/features.py": "22152cdcb7c118fd168dc9c4e11a20f100f959d4f2e4e1cb6f16fdfbe83cbfb3",
+      "src/audio_deepfake/localization.py": "9574564b39d6109524cd38e6b499c2753a811b42c736e730cd2ea18fd4f75efa",
+      "src/audio_deepfake/localization_features.py": "e402c7bacb4745dcfb79fbcbc8b56fb7e7cf88eaf3f8f9656f20790729be7d4c",
+      "src/audio_deepfake/localization_model.py": "85205d4d576b89c2a7b0956d390569fa1afd9e7c5eabee5e28148d53003b0c2b",
+      "src/audio_deepfake/localization_timeline.py": "dc1a2a0ba94bf9a6ffe0429b3a8640cb3233d6d0218be3eb40f859198727e6bd",
+      "src/audio_deepfake/partialspoof.py": "5fe41c67a56a043da4714c697b1e15f96c61130e8b528e06a18f09e462e5d6cf",
+      "src/audio_deepfake/resources.py": "9d68202f7335b17e83f2138600f0f1c7312adab46c3d73609d61751800282e7a",
+      "docs/validation/partial_selection_v1.json": "c7efeacc6a19e80557fed89183131ebbc64e476ce5c240b0a02fe151b6cfc374",
+      "data/partialspoof/selected_labels_v1.json": "9c29d4eb387ca9b0ff2a7f524a03e73dfe592165b6969c6134a6274b184a0a4f",
+      "outputs/jobs/localization-pilot-20261010T163921940Z/alignment.json": "87adda47fee58c4f367e26f6731469e8c5041f5df2c29a692aefd34e5106caaa"
+    },
+    "selected_ids": {
+      "train": [
+        "CON_T_0000106",
+        "CON_T_0000356",
+        "CON_T_0000811",
+        "CON_T_0000985",
+        "CON_T_0001032",
+        "CON_T_0001766",
+        "CON_T_0002189",
+        "CON_T_0002235",
+        "CON_T_0002303",
+        "CON_T_0002951",
+        "CON_T_0003089",
+        "CON_T_0003296",
+        "CON_T_0003420",
+        "CON_T_0003692",
+        "CON_T_0004784",
+        "CON_T_0005370",
+        "CON_T_0005932",
+        "CON_T_0006098",
+        "CON_T_0006345",
+        "CON_T_0006631",
+        "CON_T_0007273",
+        "CON_T_0007789",
+        "CON_T_0008177",
+        "CON_T_0008811",
+        "CON_T_0009544",
+        "CON_T_0009848",
+        "CON_T_0010123",
+        "CON_T_0010171",
+        "CON_T_0010503",
+        "CON_T_0010950",
+        "CON_T_0011612",
+        "CON_T_0012029",
+        "CON_T_0013234",
+        "CON_T_0014061",
+        "CON_T_0014359",
+        "CON_T_0014689",
+        "CON_T_0016089",
+        "CON_T_0016662",
+        "CON_T_0016681",
+        "CON_T_0017531",
+        "CON_T_0018056",
+        "CON_T_0018808",
+        "CON_T_0018926",
+        "CON_T_0018997",
+        "CON_T_0019831",
+        "CON_T_0020251",
+        "CON_T_0020453",
+        "CON_T_0021039",
+        "CON_T_0021335",
+        "CON_T_0021797",
+        "CON_T_0021983",
+        "CON_T_0022266",
+        "CON_T_0022330",
+        "CON_T_0022580",
+        "CON_T_0022684",
+        "CON_T_0022757",
+        "CON_T_0022764",
+        "CON_T_0022885",
+        "CON_T_0022991",
+        "CON_T_0023533",
+        "CON_T_0024033",
+        "CON_T_0024216",
+        "CON_T_0024275",
+        "CON_T_0025260",
+        "LA_T_1203196",
+        "LA_T_1271820",
+        "LA_T_1325649",
+        "LA_T_1335486",
+        "LA_T_1470659",
+        "LA_T_1504888",
+        "LA_T_1749681",
+        "LA_T_1787169",
+        "LA_T_1859956",
+        "LA_T_1931571",
+        "LA_T_1963829",
+        "LA_T_2092466",
+        "LA_T_2202252",
+        "LA_T_2272655",
+        "LA_T_2580639",
+        "LA_T_2616885",
+        "LA_T_2936703",
+        "LA_T_3058432",
+        "LA_T_3060760",
+        "LA_T_3208992",
+        "LA_T_3226167",
+        "LA_T_3449995",
+        "LA_T_3967178",
+        "LA_T_3968554",
+        "LA_T_3978678",
+        "LA_T_4565832",
+        "LA_T_4610869",
+        "LA_T_4642103",
+        "LA_T_4673290",
+        "LA_T_4871078",
+        "LA_T_4877664",
+        "LA_T_5051764",
+        "LA_T_5187822",
+        "LA_T_5337549",
+        "LA_T_5469120",
+        "LA_T_5572362",
+        "LA_T_5621967",
+        "LA_T_5633732",
+        "LA_T_5765844",
+        "LA_T_5891808",
+        "LA_T_6078217",
+        "LA_T_6129228",
+        "LA_T_6368265",
+        "LA_T_6442486",
+        "LA_T_6499936",
+        "LA_T_6533322",
+        "LA_T_6767811",
+        "LA_T_6807168",
+        "LA_T_6856715",
+        "LA_T_6903114",
+        "LA_T_6992885",
+        "LA_T_7027837",
+        "LA_T_7877019",
+        "LA_T_7944475",
+        "LA_T_7988057",
+        "LA_T_8105444",
+        "LA_T_8522600",
+        "LA_T_8621866",
+        "LA_T_9456128",
+        "LA_T_9740938",
+        "LA_T_9863654",
+        "LA_T_9901878",
+        "LA_T_9919874",
+        "LA_T_9946390"
+      ],
+      "dev": [
+        "CON_D_0000586",
+        "CON_D_0000734",
+        "CON_D_0002058",
+        "CON_D_0003090",
+        "CON_D_0003229",
+        "CON_D_0005417",
+        "CON_D_0007306",
+        "CON_D_0007314",
+        "CON_D_0008727",
+        "CON_D_0008895",
+        "CON_D_0010275",
+        "CON_D_0011093",
+        "CON_D_0011199",
+        "CON_D_0011498",
+        "CON_D_0012291",
+        "CON_D_0013088",
+        "CON_D_0013550",
+        "CON_D_0014412",
+        "CON_D_0014522",
+        "CON_D_0014853",
+        "CON_D_0017259",
+        "CON_D_0017506",
+        "CON_D_0018582",
+        "CON_D_0018799",
+        "CON_D_0020736",
+        "CON_D_0021704",
+        "CON_D_0021788",
+        "CON_D_0021890",
+        "CON_D_0022095",
+        "CON_D_0022484",
+        "CON_D_0023089",
+        "CON_D_0023180",
+        "LA_D_1161800",
+        "LA_D_1323454",
+        "LA_D_1469404",
+        "LA_D_1494418",
+        "LA_D_1796445",
+        "LA_D_1902645",
+        "LA_D_2002365",
+        "LA_D_2035158",
+        "LA_D_2156985",
+        "LA_D_2748583",
+        "LA_D_2812544",
+        "LA_D_3056969",
+        "LA_D_3170323",
+        "LA_D_3323539",
+        "LA_D_3559270",
+        "LA_D_4148603",
+        "LA_D_4771667",
+        "LA_D_4828901",
+        "LA_D_5026692",
+        "LA_D_5029338",
+        "LA_D_5226379",
+        "LA_D_5513082",
+        "LA_D_5651240",
+        "LA_D_5774989",
+        "LA_D_6023315",
+        "LA_D_6258471",
+        "LA_D_6900009",
+        "LA_D_7050071",
+        "LA_D_7179593",
+        "LA_D_7944625",
+        "LA_D_8003563",
+        "LA_D_9851827"
+      ]
+    },
+    "timeline_ids": [
+      "CON_D_0000586",
+      "CON_D_0000734",
+      "CON_D_0002058",
+      "CON_D_0003090",
+      "CON_D_0003229",
+      "LA_D_1161800",
+      "LA_D_1323454",
+      "LA_D_1469404",
+      "LA_D_1494418",
+      "LA_D_1796445"
+    ],
+    "alignment": "exact ceil(N/160) native binary 10ms; minimum over adjacent pairs; final clipped 20ms bin",
+    "masking": "none; keep publisher binary labels including nonspeech",
+    "features": "nearest LFCC window midpoint to output-bin center; ties earlier; offline future context",
+    "threshold": "fixed decision_function threshold 0 for timelines/duration diagnostics; EER sweep separate",
+    "limits": {
+      "worker_seconds": 300,
+      "numerical_threads": 1,
+      "peak_rss_bytes": 1073741824,
+      "minimum_available_ram_bytes": 2147483648
+    },
+    "preflight": {
+      "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+      "rss_bytes": 119508992,
+      "peak_rss_bytes": 119508992,
+      "system_total_ram_bytes": 16872415232,
+      "system_available_ram_bytes": 5562122240
+    }
+  },
+  "results": {
+    "status": "complete",
+    "config_sha256": "44a8a664b4a0f53875e23ef8821b26bfddad560f74c95648ad1cf81294a31921",
+    "model_sha256": "5ba73c19d48db238ce5627b470b31427c5c4deddeb84c4bef05d84a3dff38ee0",
+    "dev_scores_sha256": "fb98f3be73b8c4ef7a0a7b2b7b0d78c2895880f6f272ed0a81efc350f5d79e27",
+    "training": {
+      "implementation": "lfcc-standardscaler-logistic-temporal-v1",
+      "training_ids": [
+        "CON_T_0000106",
+        "CON_T_0000356",
+        "CON_T_0000811",
+        "CON_T_0000985",
+        "CON_T_0001032",
+        "CON_T_0001766",
+        "CON_T_0002189",
+        "CON_T_0002235",
+        "CON_T_0002303",
+        "CON_T_0002951",
+        "CON_T_0003089",
+        "CON_T_0003296",
+        "CON_T_0003420",
+        "CON_T_0003692",
+        "CON_T_0004784",
+        "CON_T_0005370",
+        "CON_T_0005932",
+        "CON_T_0006098",
+        "CON_T_0006345",
+        "CON_T_0006631",
+        "CON_T_0007273",
+        "CON_T_0007789",
+        "CON_T_0008177",
+        "CON_T_0008811",
+        "CON_T_0009544",
+        "CON_T_0009848",
+        "CON_T_0010123",
+        "CON_T_0010171",
+        "CON_T_0010503",
+        "CON_T_0010950",
+        "CON_T_0011612",
+        "CON_T_0012029",
+        "CON_T_0013234",
+        "CON_T_0014061",
+        "CON_T_0014359",
+        "CON_T_0014689",
+        "CON_T_0016089",
+        "CON_T_0016662",
+        "CON_T_0016681",
+        "CON_T_0017531",
+        "CON_T_0018056",
+        "CON_T_0018808",
+        "CON_T_0018926",
+        "CON_T_0018997",
+        "CON_T_0019831",
+        "CON_T_0020251",
+        "CON_T_0020453",
+        "CON_T_0021039",
+        "CON_T_0021335",
+        "CON_T_0021797",
+        "CON_T_0021983",
+        "CON_T_0022266",
+        "CON_T_0022330",
+        "CON_T_0022580",
+        "CON_T_0022684",
+        "CON_T_0022757",
+        "CON_T_0022764",
+        "CON_T_0022885",
+        "CON_T_0022991",
+        "CON_T_0023533",
+        "CON_T_0024033",
+        "CON_T_0024216",
+        "CON_T_0024275",
+        "CON_T_0025260",
+        "LA_T_1203196",
+        "LA_T_1271820",
+        "LA_T_1325649",
+        "LA_T_1335486",
+        "LA_T_1470659",
+        "LA_T_1504888",
+        "LA_T_1749681",
+        "LA_T_1787169",
+        "LA_T_1859956",
+        "LA_T_1931571",
+        "LA_T_1963829",
+        "LA_T_2092466",
+        "LA_T_2202252",
+        "LA_T_2272655",
+        "LA_T_2580639",
+        "LA_T_2616885",
+        "LA_T_2936703",
+        "LA_T_3058432",
+        "LA_T_3060760",
+        "LA_T_3208992",
+        "LA_T_3226167",
+        "LA_T_3449995",
+        "LA_T_3967178",
+        "LA_T_3968554",
+        "LA_T_3978678",
+        "LA_T_4565832",
+        "LA_T_4610869",
+        "LA_T_4642103",
+        "LA_T_4673290",
+        "LA_T_4871078",
+        "LA_T_4877664",
+        "LA_T_5051764",
+        "LA_T_5187822",
+        "LA_T_5337549",
+        "LA_T_5469120",
+        "LA_T_5572362",
+        "LA_T_5621967",
+        "LA_T_5633732",
+        "LA_T_5765844",
+        "LA_T_5891808",
+        "LA_T_6078217",
+        "LA_T_6129228",
+        "LA_T_6368265",
+        "LA_T_6442486",
+        "LA_T_6499936",
+        "LA_T_6533322",
+        "LA_T_6767811",
+        "LA_T_6807168",
+        "LA_T_6856715",
+        "LA_T_6903114",
+        "LA_T_6992885",
+        "LA_T_7027837",
+        "LA_T_7877019",
+        "LA_T_7944475",
+        "LA_T_7988057",
+        "LA_T_8105444",
+        "LA_T_8522600",
+        "LA_T_8621866",
+        "LA_T_9456128",
+        "LA_T_9740938",
+        "LA_T_9863654",
+        "LA_T_9901878",
+        "LA_T_9919874",
+        "LA_T_9946390"
+      ],
+      "seed": 45,
+      "config": {
+        "seed": 45,
+        "frames_per_class": 50000,
+        "max_iter": 300,
+        "regularization_c": 1.0
+      },
+      "frames_seen_by_native_class": [
+        4524,
+        16497
+      ],
+      "frames_retained_per_class": 4524,
+      "retained_feature_bytes_sha256": "1ab4e744db9684827492c59b2bb5f64fc9ab63956fc3ee03fdfa228160b5adfd",
+      "frame_cap_per_class": 50000,
+      "sampling": "uniform random priority, sorted IDs; balance to smaller retained class",
+      "normalization": "StandardScaler fitted only on retained training frames",
+      "score_direction": "higher supports bona fide; uncalibrated decision_function",
+      "numerical_threads": 1,
+      "iterations": [
+        14
+      ],
+      "warnings": [],
+      "versions": {
+        "numpy": "2.5.3",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "threadpoolctl": "3.7.0"
+      }
+    },
+    "custom_duration_eer": {
+      "eer_fraction": 0.39500173959340223,
+      "threshold": -0.12246589362621306,
+      "missed_spoof_fraction": 0.39500882821584116,
+      "false_alarm_fraction": 0.3949946509709633,
+      "spoof_seconds": 58.0525,
+      "bonafide_seconds": 175.0901875,
+      "definition": "custom 20ms min-pooled, clipped-duration weighted closest-grid EER; no interpolation",
+      "official_segment_eer": false,
+      "official_range_eer": false,
+      "threshold_scope": "selected on the same dev subset; optimistic diagnostic, not held-out evaluation",
+      "tie_rule": "score < threshold predicts spoof; equality bona fide"
+    },
+    "display_threshold": 0.0,
+    "display_threshold_selection": "fixed before fitting; classifier boundary zero",
+    "per_record": [
+      {
+        "utterance_id": "CON_D_0000586",
+        "missed_spoof_seconds": 0.8599999999999999,
+        "false_alarm_seconds": 0.39999999999999986
+      },
+      {
+        "utterance_id": "CON_D_0000734",
+        "missed_spoof_seconds": 0.6599999999999999,
+        "false_alarm_seconds": 0.654375
+      },
+      {
+        "utterance_id": "CON_D_0002058",
+        "missed_spoof_seconds": 0.525062500000001,
+        "false_alarm_seconds": 0.9600000000000003
+      },
+      {
+        "utterance_id": "CON_D_0003090",
+        "missed_spoof_seconds": 0.06,
+        "false_alarm_seconds": 0.42000000000000026
+      },
+      {
+        "utterance_id": "CON_D_0003229",
+        "missed_spoof_seconds": 0.3400000000000002,
+        "false_alarm_seconds": 0.52
+      },
+      {
+        "utterance_id": "CON_D_0005417",
+        "missed_spoof_seconds": 0.17643749999999997,
+        "false_alarm_seconds": 2.04
+      },
+      {
+        "utterance_id": "CON_D_0007306",
+        "missed_spoof_seconds": 0.8793124999999999,
+        "false_alarm_seconds": 0.019999999999999962
+      },
+      {
+        "utterance_id": "CON_D_0007314",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 0.28000000000000025
+      },
+      {
+        "utterance_id": "CON_D_0008727",
+        "missed_spoof_seconds": 0.6399999999999997,
+        "false_alarm_seconds": 0.45999999999999996
+      },
+      {
+        "utterance_id": "CON_D_0008895",
+        "missed_spoof_seconds": 0.5399999999999999,
+        "false_alarm_seconds": 0.9200000000000004
+      },
+      {
+        "utterance_id": "CON_D_0010275",
+        "missed_spoof_seconds": 0.21999999999999997,
+        "false_alarm_seconds": 0.7999999999999998
+      },
+      {
+        "utterance_id": "CON_D_0011093",
+        "missed_spoof_seconds": 0.22000000000000064,
+        "false_alarm_seconds": 2.1599999999999984
+      },
+      {
+        "utterance_id": "CON_D_0011199",
+        "missed_spoof_seconds": 1.2400000000000007,
+        "false_alarm_seconds": 0.27999999999999997
+      },
+      {
+        "utterance_id": "CON_D_0011498",
+        "missed_spoof_seconds": 0.2599999999999997,
+        "false_alarm_seconds": 1.0600000000000003
+      },
+      {
+        "utterance_id": "CON_D_0012291",
+        "missed_spoof_seconds": 1.2200000000000002,
+        "false_alarm_seconds": 0.7399999999999989
+      },
+      {
+        "utterance_id": "CON_D_0013088",
+        "missed_spoof_seconds": 0.38000000000000006,
+        "false_alarm_seconds": 1.3600000000000005
+      },
+      {
+        "utterance_id": "CON_D_0013550",
+        "missed_spoof_seconds": 0.8400000000000001,
+        "false_alarm_seconds": 0.07999999999999996
+      },
+      {
+        "utterance_id": "CON_D_0014412",
+        "missed_spoof_seconds": 0.04962499999999992,
+        "false_alarm_seconds": 0.26
+      },
+      {
+        "utterance_id": "CON_D_0014522",
+        "missed_spoof_seconds": 0.7237499999999997,
+        "false_alarm_seconds": 0.30000000000000016
+      },
+      {
+        "utterance_id": "CON_D_0014853",
+        "missed_spoof_seconds": 0.4400000000000003,
+        "false_alarm_seconds": 1.3000000000000003
+      },
+      {
+        "utterance_id": "CON_D_0017259",
+        "missed_spoof_seconds": 0.52,
+        "false_alarm_seconds": 0.7199999999999998
+      },
+      {
+        "utterance_id": "CON_D_0017506",
+        "missed_spoof_seconds": 0.56,
+        "false_alarm_seconds": 0.12000000000000005
+      },
+      {
+        "utterance_id": "CON_D_0018582",
+        "missed_spoof_seconds": 0.8400000000000014,
+        "false_alarm_seconds": 0.6000000000000003
+      },
+      {
+        "utterance_id": "CON_D_0018799",
+        "missed_spoof_seconds": 0.8202499999999993,
+        "false_alarm_seconds": 0.54
+      },
+      {
+        "utterance_id": "CON_D_0020736",
+        "missed_spoof_seconds": 1.3799999999999994,
+        "false_alarm_seconds": 0.24000000000000005
+      },
+      {
+        "utterance_id": "CON_D_0021704",
+        "missed_spoof_seconds": 0.34000000000000025,
+        "false_alarm_seconds": 0.26000000000000023
+      },
+      {
+        "utterance_id": "CON_D_0021788",
+        "missed_spoof_seconds": 0.2599999999999995,
+        "false_alarm_seconds": 0.4200000000000004
+      },
+      {
+        "utterance_id": "CON_D_0021890",
+        "missed_spoof_seconds": 0.9399999999999997,
+        "false_alarm_seconds": 0.2599999999999999
+      },
+      {
+        "utterance_id": "CON_D_0022095",
+        "missed_spoof_seconds": 0.20000000000000018,
+        "false_alarm_seconds": 0.3199999999999999
+      },
+      {
+        "utterance_id": "CON_D_0022484",
+        "missed_spoof_seconds": 1.3999999999999995,
+        "false_alarm_seconds": 0.0
+      },
+      {
+        "utterance_id": "CON_D_0023089",
+        "missed_spoof_seconds": 0.5513749999999985,
+        "false_alarm_seconds": 2.46
+      },
+      {
+        "utterance_id": "CON_D_0023180",
+        "missed_spoof_seconds": 0.20000000000000098,
+        "false_alarm_seconds": 4.3000000000000025
+      },
+      {
+        "utterance_id": "LA_D_1161800",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.4123750000000004
+      },
+      {
+        "utterance_id": "LA_D_1323454",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 3.745625000000001
+      },
+      {
+        "utterance_id": "LA_D_1469404",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.7599999999999998
+      },
+      {
+        "utterance_id": "LA_D_1494418",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.3200000000000003
+      },
+      {
+        "utterance_id": "LA_D_1796445",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.5477499999999997
+      },
+      {
+        "utterance_id": "LA_D_1902645",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.26
+      },
+      {
+        "utterance_id": "LA_D_2002365",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 0.9287500000000001
+      },
+      {
+        "utterance_id": "LA_D_2035158",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.24
+      },
+      {
+        "utterance_id": "LA_D_2156985",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.2999999999999998
+      },
+      {
+        "utterance_id": "LA_D_2748583",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 0.7200000000000002
+      },
+      {
+        "utterance_id": "LA_D_2812544",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.7000000000000002
+      },
+      {
+        "utterance_id": "LA_D_3056969",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 4.040000000000001
+      },
+      {
+        "utterance_id": "LA_D_3170323",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.6599999999999997
+      },
+      {
+        "utterance_id": "LA_D_3323539",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 0.24
+      },
+      {
+        "utterance_id": "LA_D_3559270",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.16
+      },
+      {
+        "utterance_id": "LA_D_4148603",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.878625
+      },
+      {
+        "utterance_id": "LA_D_4771667",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.8056249999999998
+      },
+      {
+        "utterance_id": "LA_D_4828901",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.380000000000001
+      },
+      {
+        "utterance_id": "LA_D_5026692",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.7544375000000008
+      },
+      {
+        "utterance_id": "LA_D_5029338",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.18
+      },
+      {
+        "utterance_id": "LA_D_5226379",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.4400000000000004
+      },
+      {
+        "utterance_id": "LA_D_5513082",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.4599999999999995
+      },
+      {
+        "utterance_id": "LA_D_5651240",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 0.96
+      },
+      {
+        "utterance_id": "LA_D_5774989",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.6600000000000015
+      },
+      {
+        "utterance_id": "LA_D_6023315",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 3.190750000000001
+      },
+      {
+        "utterance_id": "LA_D_6258471",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.3999999999999995
+      },
+      {
+        "utterance_id": "LA_D_6900009",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.0200000000000002
+      },
+      {
+        "utterance_id": "LA_D_7050071",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.960000000000002
+      },
+      {
+        "utterance_id": "LA_D_7179593",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.5600000000000005
+      },
+      {
+        "utterance_id": "LA_D_7944625",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.3600000000000003
+      },
+      {
+        "utterance_id": "LA_D_8003563",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 0.62
+      },
+      {
+        "utterance_id": "LA_D_9851827",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.2799999999999994
+      }
+    ],
+    "elapsed_seconds": 1.2809999999881256,
+    "memory": {
+      "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+      "rss_bytes": 129024000,
+      "peak_rss_bytes": 143302656,
+      "system_total_ram_bytes": 16872415232,
+      "system_available_ram_bytes": 5535399936
+    },
+    "limitations": [
+      "Small balanced utterance subset; not an official benchmark result",
+      "EER sweeps the same dev subset; fixed-zero displayed diagnostics are separate",
+      "No native RTTM RangeEER or official SegmentEER reported",
+      "LFCC delta context uses future audio; not streaming"
+    ]
+  },
+  "supervisor": {
+    "status": "complete",
+    "training_started": true,
+    "stages": [
+      {
+        "name": "pilot",
+        "started_utc": "2026-10-10T16:39:22.341235+00:00",
+        "budget_seconds": 300,
+        "peak_rss_bytes": 138911744,
+        "status": "complete",
+        "pid": 12836,
+        "exit_code": 0,
+        "finished_utc": "2026-10-10T16:39:25.370811+00:00"
+      }
+    ]
+  }
+}

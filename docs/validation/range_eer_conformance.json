@@ -1,0 +1,236 @@
+{
+  "status": "bounded_patched_upstream_synthetic_conformance_passed",
+  "date": "2026-10-10",
+  "upstream_commit": "847347aaec6f65c3c6d2f17c63515b826b94feb3",
+  "original_failure": {
+    "type": "NameError",
+    "message": "name 'frr' is not defined"
+  },
+  "original_finalization_failure": {
+    "type": "UnboundLocalError",
+    "message": "cannot access local variable 'eer_ary' where it is not associated with a value"
+  },
+  "nontrivial_search_probe": {
+    "status": "timeout",
+    "timeout_seconds": 8,
+    "diagnostic": "Upstream discrete percentile search did not terminate on this mixed synthetic fixture.",
+    "final_saved_rows": [
+      [
+        0.4,
+        0.7499999999999998,
+        0.6666666666666666,
+        0.08333333333333315
+      ],
+      [
+        0.4,
+        0.7499999999999998,
+        0.6666666666666666,
+        0.08333333333333315
+      ],
+      [
+        0.4,
+        0.7499999999999998,
+        0.6666666666666666,
+        0.08333333333333315
+      ],
+      [
+        0.4,
+        0.7499999999999998,
+        0.6666666666666666,
+        0.08333333333333315
+      ]
+    ],
+    "fixture": {
+      "score_1": [
+        0.1,
+        0.9,
+        0.8,
+        0.2,
+        0.3,
+        0.4,
+        0.7
+      ],
+      "spoof_reference_seconds": [
+        [
+          0.0,
+          0.06
+        ]
+      ],
+      "duration_seconds": 0.14
+    }
+  },
+  "bounded_search_variant": {
+    "status": "passed",
+    "stop_reason": "repeated_full_state",
+    "iterations": 54,
+    "selected_row": [
+      0.4,
+      0.7499999999999998,
+      0.6666666666666666,
+      0.08333333333333315
+    ],
+    "range_eer": 0.7083333333333333,
+    "hand_derived_fpr": 0.75,
+    "hand_derived_fnr": 0.6666666666666666,
+    "threshold_repeat_count": 2
+  },
+  "bounded_source_sha256": "f2736d6bef242970e0f73849a94eace6aed17bf3a4b65e587266b68814513677",
+  "bounded_patch_sha256": "d9dec5bcd312ec08fd965da25304c0828e8aa32a32fc756f78cd87a952352152",
+  "bounded_patch_unified_diff": "--- RangeEER.original.py\n+++ RangeEER.bounded.py\n@@ -91,13 +91,13 @@\n \n     fpr, fnr, thresholds = eval_asvspoof.compute_det_curve(gen, spf)\n \n-    abs_diffs = np.abs(frr - fpr)\n+    abs_diffs = np.abs(fnr - fpr)\n     min_index = np.argmin(abs_diffs)\n \n     if(return_fpr_fnr):\n-        return frr[min_index], fpr[min_index], thresholds[min_index]\n+        return fnr[min_index], fpr[min_index], thresholds[min_index]\n     else:\n-        eer = np.mean((frr[min_index], fpr[min_index]))\n+        eer = np.mean((fnr[min_index], fpr[min_index]))\n         return eer, thresholds[min_index]\n \n \n@@ -302,7 +302,15 @@\n \n     #2. bisect\n     #early_tag = True #we'd like to start with the point fpr < fnr.\n+    search_states = set()\n+    search_iterations = 0\n     while(th_left < th_right and abs(fpr_mid-fnr_mid) > args.prec ):\n+        search_state = (th_left, th_right, th_left_per, th_right_per, th_mid, th_mid_per)\n+        if search_state in search_states or search_iterations >= 128:\n+            print(\"BoundedSearch stop={}\".format(\"repeated_full_state\" if search_state in search_states else \"iteration_cap\"))\n+            break\n+        search_states.add(search_state)\n+        search_iterations += 1\n \n         if((fpr_left - fnr_left) * (fpr_mid - fnr_mid) < 0 ):\n             th_right, th_right_per = th_mid, th_mid_per\n@@ -321,10 +329,11 @@\n             np.savetxt( f, np.array([th_mid, fpr_mid, fnr_mid, abs(fpr_mid - fnr_mid)]).reshape(-1,4))\n         print(np.array([th_mid, fpr_mid, fnr_mid, abs(fpr_mid-fnr_mid)]).reshape(-1, 4))    \n \n-    if(os.path.exists(save_file)):\n-        eer_ary = np.loadtxt(save_file).reshape(-1, 4)\n+    print(\"BoundedSearch iterations={}\".format(search_iterations))\n+    eer_ary = np.asarray(eer_res).reshape(-1, 4)\n     eer_res = np.unique(eer_ary[(-eer_ary[:, -1]).argsort()[:]], axis=0)\n     min_idx = np.argmin(eer_res[:,3])\n+    print(\"BoundedSearch selected_row={}\".format(eer_res[min_idx].tolist()))\n \n     print(\"RangeEER={}, with threshold = {}\".format(np.mean(eer_res[min_idx][1:3]), th_mid))\n \n",
+  "sources": {
+    "RangeEER.original.py": {
+      "repository_path": "metric/RangeEER.py",
+      "sha256": "8b9c65c20c89443dc36aa77c4862ce9e89f62a2fb48227096f37d44e22dee194",
+      "bytes": 13523
+    },
+    "sandbox/eval_asvspoof.py": {
+      "repository_path": "project-NN-Pytorch-scripts.202102/sandbox/eval_asvspoof.py",
+      "sha256": "a7441cac67be01b1cd3322ec4319b850d761803bfd1f4b693fbb1e823f9944ca",
+      "bytes": 32349
+    },
+    "core_scripts/data_io/io_tools.py": {
+      "repository_path": "project-NN-Pytorch-scripts.202102/core_scripts/data_io/io_tools.py",
+      "sha256": "56ec6fca200a5d1a03a57f0eae16a71f0d71e36f8a052edfb82ae65eaa70fb3c",
+      "bytes": 10072
+    }
+  },
+  "patched_source_sha256": "660693b4fad948ce1927366e3a65ff666561887cafdf61c6dad01fa65f46757e",
+  "patch_sha256": "c85a0a20cee02e17e291e7fdaf85bcb2cb1f9a2581add619771b86a1635ee506",
+  "patch_unified_diff": "--- RangeEER.original.py\n+++ RangeEER.patched.py\n@@ -91,13 +91,13 @@\n \n     fpr, fnr, thresholds = eval_asvspoof.compute_det_curve(gen, spf)\n \n-    abs_diffs = np.abs(frr - fpr)\n+    abs_diffs = np.abs(fnr - fpr)\n     min_index = np.argmin(abs_diffs)\n \n     if(return_fpr_fnr):\n-        return frr[min_index], fpr[min_index], thresholds[min_index]\n+        return fnr[min_index], fpr[min_index], thresholds[min_index]\n     else:\n-        eer = np.mean((frr[min_index], fpr[min_index]))\n+        eer = np.mean((fnr[min_index], fpr[min_index]))\n         return eer, thresholds[min_index]\n \n \n@@ -323,6 +323,8 @@\n \n     if(os.path.exists(save_file)):\n         eer_ary = np.loadtxt(save_file).reshape(-1, 4)\n+    else:\n+        eer_ary = np.asarray(eer_res).reshape(-1, 4)\n     eer_res = np.unique(eer_ary[(-eer_ary[:, -1]).argsort()[:]], axis=0)\n     min_idx = np.argmin(eer_res[:,3])\n \n",
+  "dependency_bridge": "none; full pinned eval_asvspoof and io_tools modules",
+  "python": "3.12.14",
+  "packages": {
+    "PyYAML": "6.0.3",
+    "Pygments": "2.21.0",
+    "annotated-doc": "0.0.5",
+    "cloudpickle": "3.1.2",
+    "colorama": "0.4.6",
+    "contourpy": "1.3.3",
+    "cycler": "0.12.1",
+    "docopt": "0.6.2",
+    "fonttools": "4.66.1",
+    "joblib": "1.6.0",
+    "kiwisolver": "1.5.1",
+    "markdown-it-py": "4.2.0",
+    "matplotlib": "3.11.2",
+    "mdurl": "0.1.2",
+    "mpmath": "1.3.0",
+    "narwhals": "2.27.1",
+    "numpy": "1.26.4",
+    "packaging": "26.3",
+    "pandas": "2.2.3",
+    "pillow": "12.3.0",
+    "pip": "25.0.1",
+    "pyannote.core": "5.0.0",
+    "pyannote.database": "5.1.0",
+    "pyannote.metrics": "3.2.1",
+    "pyparsing": "3.3.3",
+    "python-dateutil": "2.9.0.post0",
+    "python-rle": "0.0.3",
+    "pytz": "2026.5",
+    "rich": "15.0.0",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.13.1",
+    "setuptools": "80.9.0",
+    "shellingham": "1.5.4",
+    "six": "1.17.0",
+    "sortedcontainers": "2.4.0",
+    "sympy": "1.14.0",
+    "tabulate": "0.10.0",
+    "threadpoolctl": "3.7.0",
+    "tqdm": "4.67.1",
+    "typer": "0.27.3",
+    "typing_extensions": "4.16.0",
+    "tzdata": "2026.5"
+  },
+  "harness_sha256": "12630a31bebb86c05ed6663b7bfa4661c35309573df9130f218aaf32fc077f13",
+  "downloaded_dependency_archive_bytes": 113309312,
+  "cases": [
+    {
+      "case": "perfect",
+      "fpr": 0.0,
+      "fnr": 0.0,
+      "status": "passed"
+    },
+    {
+      "case": "inverted",
+      "fpr": 1.0,
+      "fnr": 1.0,
+      "status": "passed"
+    },
+    {
+      "case": "mixed",
+      "fpr": 0.4999999999999999,
+      "fnr": 0.5,
+      "status": "passed"
+    },
+    {
+      "case": "no_spoof",
+      "fpr": 0.0,
+      "fnr": 0.0,
+      "status": "passed"
+    },
+    {
+      "case": "no_spoof_false_alarm",
+      "fpr": 0.5,
+      "fnr": 0.0,
+      "status": "passed"
+    },
+    {
+      "case": "all_spoof",
+      "fpr": 0.0,
+      "fnr": 0.0,
+      "status": "passed"
+    },
+    {
+      "case": "threshold_ties_predict_spoof",
+      "fpr": 1.0,
+      "fnr": 0.0,
+      "status": "passed"
+    },
+    {
+      "case": "duration_clipping",
+      "fpr": 0.33333333333333337,
+      "fnr": 0.0,
+      "status": "passed"
+    },
+    {
+      "case": "scale2_is_20ms",
+      "fpr": 0.0,
+      "fnr": 0.0,
+      "status": "passed"
+    },
+    {
+      "case": "actual_main_perfect_no_search_rows",
+      "range_eer": 0.0,
+      "status": "passed"
+    },
+    {
+      "case": "actual_main_inverted_no_search_rows",
+      "range_eer": 1.0,
+      "status": "passed"
+    },
+    {
+      "case": "actual_main_mixed_no_search_rows",
+      "range_eer": 0.49999999999999994,
+      "status": "passed"
+    },
+    {
+      "case": "actual_main_ties_no_search_rows",
+      "range_eer": 0.5,
+      "status": "passed"
+    }
+  ],
+  "scale": 2,
+  "prediction_resolution_seconds": 0.02,
+  "limitations": [
+    "Synthetic checks only; no dataset accuracy result.",
+    "Single-class duration rates follow upstream zero-denominator convention; EER is not meaningful without both classes.",
+    "Discrete threshold ties need not yield equal FPR/FNR. No interpolation added.",
+    "The typo-only upstream bisection timed out; the bounded compatibility variant is distinct from an unmodified official evaluator.",
+    "Bounded variant uses original closest-observed-gap selection, including its initial row; no interpolated equal-rate point or exhaustive threshold sweep is introduced.",
+    "Native official reference RTTM and real audio/label alignment are not verified by these synthetic checks.",
+    "The --hyp_rttm branch remains unimplemented upstream.",
+    "Trusted locally generated NumPy score files only: upstream uses allow_pickle=True."
+  ]
+}

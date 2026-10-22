@@ -1,0 +1,890 @@
+{
+  "version": 1,
+  "job_dir": "outputs/jobs/localization-context-20261010-v2",
+  "frozen_plan": "docs/validation/localization_context_frozen_v2.json",
+  "frozen_plan_sha256": "b6b671b60737930cd6ba69b4cafd1d87958ab314682a1883100d0dfb1364d034",
+  "config": {
+    "status": "frozen_before_fit",
+    "created_utc": "2026-10-10T16:55:53.076285+00:00",
+    "dataset": "PartialSpoof v1.2",
+    "scope": "single custom 128train/64dev offline recording-context ablation",
+    "context": {
+      "formula": "(x - median(x,axis=0)) / maximum(1.4826 * median(abs(x - median(x,axis=0)),axis=0), 0.001)",
+      "scope": "one complete unlabelled recording, aligned 20ms bins; no pooling across recordings",
+      "dimensions": "all 60 LFCC static, delta, double-delta dimensions independently",
+      "dtype": "float64",
+      "final_partial_bin_weight": "equal",
+      "clipping": "none",
+      "future_audio": true,
+      "streaming": false
+    },
+    "baseline_comparison": {
+      "directory": "outputs/jobs/localization-pilot-20261010T163921940Z/pilot",
+      "custom_duration_eer_fraction": 0.39500173959340223
+    },
+    "official_benchmark": false,
+    "eval_enabled": false,
+    "model": {
+      "seed": 45,
+      "frames_per_class": 50000,
+      "max_iter": 300,
+      "regularization_c": 1.0
+    },
+    "lfcc": {
+      "sample_rate": 16000,
+      "window_ms": 20.0,
+      "hop_ms": 10.0,
+      "n_fft": 512,
+      "n_filters": 20,
+      "n_coeffs": 20,
+      "pre_emphasis": 0.97,
+      "delta_order": 2
+    },
+    "source_sha256": {
+      "scripts/run_localization_context.py": "738de650d98b5f91c7f566bed93400d101847979d91828a181db69e510652b02",
+      "scripts/localization_context_job.py": "7bd28fa0c5951fa7dfbe0ed622222b540268fff88da41dfe3cf536fa299b4311",
+      "scripts/run_localization_pilot.py": "a38cc7f5be3b8dec828e5d6024927b5015e3b234fafdb9d924fd6c12708f3ba1",
+      "scripts/audit_partial_alignment.py": "8845ff49b6650a22620791b52c2fb5ab5cf3463a94f2492203995f7d1f68d726",
+      "docs/validation/localization_context_frozen_v2.json": "b6b671b60737930cd6ba69b4cafd1d87958ab314682a1883100d0dfb1364d034",
+      "src/audio_deepfake/localization_context.py": "bc9bd273bb91a24a4cde3b021a6a904b17d2bed1b9e0a05b1f852e66e8ae36cc",
+      "src/audio_deepfake/audio.py": "aa3b33b4e5512f26202019b7f44d92c4bb4389bb2ae9d0c256cb822b54ad424c",
+      "src/audio_deepfake/features.py": "22152cdcb7c118fd168dc9c4e11a20f100f959d4f2e4e1cb6f16fdfbe83cbfb3",
+      "src/audio_deepfake/localization.py": "9574564b39d6109524cd38e6b499c2753a811b42c736e730cd2ea18fd4f75efa",
+      "src/audio_deepfake/localization_features.py": "e402c7bacb4745dcfb79fbcbc8b56fb7e7cf88eaf3f8f9656f20790729be7d4c",
+      "src/audio_deepfake/localization_model.py": "85205d4d576b89c2a7b0956d390569fa1afd9e7c5eabee5e28148d53003b0c2b",
+      "src/audio_deepfake/localization_timeline.py": "dc1a2a0ba94bf9a6ffe0429b3a8640cb3233d6d0218be3eb40f859198727e6bd",
+      "src/audio_deepfake/partialspoof.py": "5fe41c67a56a043da4714c697b1e15f96c61130e8b528e06a18f09e462e5d6cf",
+      "src/audio_deepfake/resources.py": "9d68202f7335b17e83f2138600f0f1c7312adab46c3d73609d61751800282e7a",
+      "docs/validation/partial_selection_v1.json": "c7efeacc6a19e80557fed89183131ebbc64e476ce5c240b0a02fe151b6cfc374",
+      "data/partialspoof/selected_labels_v1.json": "9c29d4eb387ca9b0ff2a7f524a03e73dfe592165b6969c6134a6274b184a0a4f",
+      "docs/validation/localization_alignment.json": "87adda47fee58c4f367e26f6731469e8c5041f5df2c29a692aefd34e5106caaa"
+    },
+    "selected_ids": {
+      "train": [
+        "CON_T_0000106",
+        "CON_T_0000356",
+        "CON_T_0000811",
+        "CON_T_0000985",
+        "CON_T_0001032",
+        "CON_T_0001766",
+        "CON_T_0002189",
+        "CON_T_0002235",
+        "CON_T_0002303",
+        "CON_T_0002951",
+        "CON_T_0003089",
+        "CON_T_0003296",
+        "CON_T_0003420",
+        "CON_T_0003692",
+        "CON_T_0004784",
+        "CON_T_0005370",
+        "CON_T_0005932",
+        "CON_T_0006098",
+        "CON_T_0006345",
+        "CON_T_0006631",
+        "CON_T_0007273",
+        "CON_T_0007789",
+        "CON_T_0008177",
+        "CON_T_0008811",
+        "CON_T_0009544",
+        "CON_T_0009848",
+        "CON_T_0010123",
+        "CON_T_0010171",
+        "CON_T_0010503",
+        "CON_T_0010950",
+        "CON_T_0011612",
+        "CON_T_0012029",
+        "CON_T_0013234",
+        "CON_T_0014061",
+        "CON_T_0014359",
+        "CON_T_0014689",
+        "CON_T_0016089",
+        "CON_T_0016662",
+        "CON_T_0016681",
+        "CON_T_0017531",
+        "CON_T_0018056",
+        "CON_T_0018808",
+        "CON_T_0018926",
+        "CON_T_0018997",
+        "CON_T_0019831",
+        "CON_T_0020251",
+        "CON_T_0020453",
+        "CON_T_0021039",
+        "CON_T_0021335",
+        "CON_T_0021797",
+        "CON_T_0021983",
+        "CON_T_0022266",
+        "CON_T_0022330",
+        "CON_T_0022580",
+        "CON_T_0022684",
+        "CON_T_0022757",
+        "CON_T_0022764",
+        "CON_T_0022885",
+        "CON_T_0022991",
+        "CON_T_0023533",
+        "CON_T_0024033",
+        "CON_T_0024216",
+        "CON_T_0024275",
+        "CON_T_0025260",
+        "LA_T_1203196",
+        "LA_T_1271820",
+        "LA_T_1325649",
+        "LA_T_1335486",
+        "LA_T_1470659",
+        "LA_T_1504888",
+        "LA_T_1749681",
+        "LA_T_1787169",
+        "LA_T_1859956",
+        "LA_T_1931571",
+        "LA_T_1963829",
+        "LA_T_2092466",
+        "LA_T_2202252",
+        "LA_T_2272655",
+        "LA_T_2580639",
+        "LA_T_2616885",
+        "LA_T_2936703",
+        "LA_T_3058432",
+        "LA_T_3060760",
+        "LA_T_3208992",
+        "LA_T_3226167",
+        "LA_T_3449995",
+        "LA_T_3967178",
+        "LA_T_3968554",
+        "LA_T_3978678",
+        "LA_T_4565832",
+        "LA_T_4610869",
+        "LA_T_4642103",
+        "LA_T_4673290",
+        "LA_T_4871078",
+        "LA_T_4877664",
+        "LA_T_5051764",
+        "LA_T_5187822",
+        "LA_T_5337549",
+        "LA_T_5469120",
+        "LA_T_5572362",
+        "LA_T_5621967",
+        "LA_T_5633732",
+        "LA_T_5765844",
+        "LA_T_5891808",
+        "LA_T_6078217",
+        "LA_T_6129228",
+        "LA_T_6368265",
+        "LA_T_6442486",
+        "LA_T_6499936",
+        "LA_T_6533322",
+        "LA_T_6767811",
+        "LA_T_6807168",
+        "LA_T_6856715",
+        "LA_T_6903114",
+        "LA_T_6992885",
+        "LA_T_7027837",
+        "LA_T_7877019",
+        "LA_T_7944475",
+        "LA_T_7988057",
+        "LA_T_8105444",
+        "LA_T_8522600",
+        "LA_T_8621866",
+        "LA_T_9456128",
+        "LA_T_9740938",
+        "LA_T_9863654",
+        "LA_T_9901878",
+        "LA_T_9919874",
+        "LA_T_9946390"
+      ],
+      "dev": [
+        "CON_D_0000586",
+        "CON_D_0000734",
+        "CON_D_0002058",
+        "CON_D_0003090",
+        "CON_D_0003229",
+        "CON_D_0005417",
+        "CON_D_0007306",
+        "CON_D_0007314",
+        "CON_D_0008727",
+        "CON_D_0008895",
+        "CON_D_0010275",
+        "CON_D_0011093",
+        "CON_D_0011199",
+        "CON_D_0011498",
+        "CON_D_0012291",
+        "CON_D_0013088",
+        "CON_D_0013550",
+        "CON_D_0014412",
+        "CON_D_0014522",
+        "CON_D_0014853",
+        "CON_D_0017259",
+        "CON_D_0017506",
+        "CON_D_0018582",
+        "CON_D_0018799",
+        "CON_D_0020736",
+        "CON_D_0021704",
+        "CON_D_0021788",
+        "CON_D_0021890",
+        "CON_D_0022095",
+        "CON_D_0022484",
+        "CON_D_0023089",
+        "CON_D_0023180",
+        "LA_D_1161800",
+        "LA_D_1323454",
+        "LA_D_1469404",
+        "LA_D_1494418",
+        "LA_D_1796445",
+        "LA_D_1902645",
+        "LA_D_2002365",
+        "LA_D_2035158",
+        "LA_D_2156985",
+        "LA_D_2748583",
+        "LA_D_2812544",
+        "LA_D_3056969",
+        "LA_D_3170323",
+        "LA_D_3323539",
+        "LA_D_3559270",
+        "LA_D_4148603",
+        "LA_D_4771667",
+        "LA_D_4828901",
+        "LA_D_5026692",
+        "LA_D_5029338",
+        "LA_D_5226379",
+        "LA_D_5513082",
+        "LA_D_5651240",
+        "LA_D_5774989",
+        "LA_D_6023315",
+        "LA_D_6258471",
+        "LA_D_6900009",
+        "LA_D_7050071",
+        "LA_D_7179593",
+        "LA_D_7944625",
+        "LA_D_8003563",
+        "LA_D_9851827"
+      ]
+    },
+    "timeline_ids": [
+      "CON_D_0000586",
+      "CON_D_0000734",
+      "CON_D_0002058",
+      "CON_D_0003090",
+      "CON_D_0003229",
+      "LA_D_1161800",
+      "LA_D_1323454",
+      "LA_D_1469404",
+      "LA_D_1494418",
+      "LA_D_1796445"
+    ],
+    "alignment": "exact ceil(N/160) native binary 10ms; minimum over adjacent pairs; final clipped 20ms bin",
+    "masking": "none; keep publisher binary labels including nonspeech",
+    "features": "same aligned 60D LFCC, then independent full-recording per-feature median/MAD; offline future context",
+    "threshold": "fixed decision_function threshold 0 for timelines/duration diagnostics; EER sweep separate",
+    "limits": {
+      "worker_seconds": 300,
+      "numerical_threads": 1,
+      "peak_rss_bytes": 1073741824,
+      "minimum_available_ram_bytes": 2147483648
+    },
+    "preflight": {
+      "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+      "rss_bytes": 120717312,
+      "peak_rss_bytes": 120717312,
+      "system_total_ram_bytes": 16872415232,
+      "system_available_ram_bytes": 5747998720
+    }
+  },
+  "results": {
+    "status": "complete",
+    "config_sha256": "70912eda5403dae803eec1290fc00645caae792ac828ea028937c84ce208b5b4",
+    "model_sha256": "e5376a33df059e77c5152357e731db2a9ea747b9e7459f67448c7714f88ad0c6",
+    "dev_scores_sha256": "bc12c45ad5780c20856ea224ae1a57940c9491ab0983c972de1d96be7bc6b22b",
+    "training": {
+      "implementation": "lfcc-standardscaler-logistic-temporal-v1",
+      "training_ids": [
+        "CON_T_0000106",
+        "CON_T_0000356",
+        "CON_T_0000811",
+        "CON_T_0000985",
+        "CON_T_0001032",
+        "CON_T_0001766",
+        "CON_T_0002189",
+        "CON_T_0002235",
+        "CON_T_0002303",
+        "CON_T_0002951",
+        "CON_T_0003089",
+        "CON_T_0003296",
+        "CON_T_0003420",
+        "CON_T_0003692",
+        "CON_T_0004784",
+        "CON_T_0005370",
+        "CON_T_0005932",
+        "CON_T_0006098",
+        "CON_T_0006345",
+        "CON_T_0006631",
+        "CON_T_0007273",
+        "CON_T_0007789",
+        "CON_T_0008177",
+        "CON_T_0008811",
+        "CON_T_0009544",
+        "CON_T_0009848",
+        "CON_T_0010123",
+        "CON_T_0010171",
+        "CON_T_0010503",
+        "CON_T_0010950",
+        "CON_T_0011612",
+        "CON_T_0012029",
+        "CON_T_0013234",
+        "CON_T_0014061",
+        "CON_T_0014359",
+        "CON_T_0014689",
+        "CON_T_0016089",
+        "CON_T_0016662",
+        "CON_T_0016681",
+        "CON_T_0017531",
+        "CON_T_0018056",
+        "CON_T_0018808",
+        "CON_T_0018926",
+        "CON_T_0018997",
+        "CON_T_0019831",
+        "CON_T_0020251",
+        "CON_T_0020453",
+        "CON_T_0021039",
+        "CON_T_0021335",
+        "CON_T_0021797",
+        "CON_T_0021983",
+        "CON_T_0022266",
+        "CON_T_0022330",
+        "CON_T_0022580",
+        "CON_T_0022684",
+        "CON_T_0022757",
+        "CON_T_0022764",
+        "CON_T_0022885",
+        "CON_T_0022991",
+        "CON_T_0023533",
+        "CON_T_0024033",
+        "CON_T_0024216",
+        "CON_T_0024275",
+        "CON_T_0025260",
+        "LA_T_1203196",
+        "LA_T_1271820",
+        "LA_T_1325649",
+        "LA_T_1335486",
+        "LA_T_1470659",
+        "LA_T_1504888",
+        "LA_T_1749681",
+        "LA_T_1787169",
+        "LA_T_1859956",
+        "LA_T_1931571",
+        "LA_T_1963829",
+        "LA_T_2092466",
+        "LA_T_2202252",
+        "LA_T_2272655",
+        "LA_T_2580639",
+        "LA_T_2616885",
+        "LA_T_2936703",
+        "LA_T_3058432",
+        "LA_T_3060760",
+        "LA_T_3208992",
+        "LA_T_3226167",
+        "LA_T_3449995",
+        "LA_T_3967178",
+        "LA_T_3968554",
+        "LA_T_3978678",
+        "LA_T_4565832",
+        "LA_T_4610869",
+        "LA_T_4642103",
+        "LA_T_4673290",
+        "LA_T_4871078",
+        "LA_T_4877664",
+        "LA_T_5051764",
+        "LA_T_5187822",
+        "LA_T_5337549",
+        "LA_T_5469120",
+        "LA_T_5572362",
+        "LA_T_5621967",
+        "LA_T_5633732",
+        "LA_T_5765844",
+        "LA_T_5891808",
+        "LA_T_6078217",
+        "LA_T_6129228",
+        "LA_T_6368265",
+        "LA_T_6442486",
+        "LA_T_6499936",
+        "LA_T_6533322",
+        "LA_T_6767811",
+        "LA_T_6807168",
+        "LA_T_6856715",
+        "LA_T_6903114",
+        "LA_T_6992885",
+        "LA_T_7027837",
+        "LA_T_7877019",
+        "LA_T_7944475",
+        "LA_T_7988057",
+        "LA_T_8105444",
+        "LA_T_8522600",
+        "LA_T_8621866",
+        "LA_T_9456128",
+        "LA_T_9740938",
+        "LA_T_9863654",
+        "LA_T_9901878",
+        "LA_T_9919874",
+        "LA_T_9946390"
+      ],
+      "seed": 45,
+      "config": {
+        "seed": 45,
+        "frames_per_class": 50000,
+        "max_iter": 300,
+        "regularization_c": 1.0
+      },
+      "frames_seen_by_native_class": [
+        4524,
+        16497
+      ],
+      "frames_retained_per_class": 4524,
+      "retained_feature_bytes_sha256": "ce7052c6416c5f8543ab4354ddd64a6cbde8545a9019bc346c971f2fda961b00",
+      "frame_cap_per_class": 50000,
+      "sampling": "uniform random priority, sorted IDs; balance to smaller retained class",
+      "normalization": "StandardScaler fitted only on retained training frames",
+      "score_direction": "higher supports bona fide; uncalibrated decision_function",
+      "numerical_threads": 1,
+      "iterations": [
+        13
+      ],
+      "warnings": [],
+      "versions": {
+        "numpy": "2.5.3",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "threadpoolctl": "3.7.0"
+      }
+    },
+    "custom_duration_eer": {
+      "eer_fraction": 0.42923809447601224,
+      "threshold": -0.07550676897410076,
+      "missed_spoof_fraction": 0.42921062831058765,
+      "false_alarm_fraction": 0.4292655606414369,
+      "spoof_seconds": 58.0525,
+      "bonafide_seconds": 175.0901875,
+      "definition": "custom 20ms min-pooled, clipped-duration weighted closest-grid EER; no interpolation",
+      "official_segment_eer": false,
+      "official_range_eer": false,
+      "threshold_scope": "selected on the same dev subset; optimistic diagnostic, not held-out evaluation",
+      "tie_rule": "score < threshold predicts spoof; equality bona fide"
+    },
+    "display_threshold": 0.0,
+    "display_threshold_selection": "fixed before fitting; classifier boundary zero",
+    "per_record": [
+      {
+        "utterance_id": "CON_D_0000586",
+        "missed_spoof_seconds": 0.76,
+        "false_alarm_seconds": 0.6834374999999995
+      },
+      {
+        "utterance_id": "CON_D_0000734",
+        "missed_spoof_seconds": 0.64,
+        "false_alarm_seconds": 0.8943749999999997
+      },
+      {
+        "utterance_id": "CON_D_0002058",
+        "missed_spoof_seconds": 0.20000000000000018,
+        "false_alarm_seconds": 0.6000000000000002
+      },
+      {
+        "utterance_id": "CON_D_0003090",
+        "missed_spoof_seconds": 0.14000000000000007,
+        "false_alarm_seconds": 0.28000000000000014
+      },
+      {
+        "utterance_id": "CON_D_0003229",
+        "missed_spoof_seconds": 0.08000000000000002,
+        "false_alarm_seconds": 0.6599999999999998
+      },
+      {
+        "utterance_id": "CON_D_0005417",
+        "missed_spoof_seconds": 0.040000000000000036,
+        "false_alarm_seconds": 2.3800000000000003
+      },
+      {
+        "utterance_id": "CON_D_0007306",
+        "missed_spoof_seconds": 0.7993124999999999,
+        "false_alarm_seconds": 0.18000000000000005
+      },
+      {
+        "utterance_id": "CON_D_0007314",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 0.30000000000000004
+      },
+      {
+        "utterance_id": "CON_D_0008727",
+        "missed_spoof_seconds": 2.240000000000001,
+        "false_alarm_seconds": 0.48
+      },
+      {
+        "utterance_id": "CON_D_0008895",
+        "missed_spoof_seconds": 0.3999999999999999,
+        "false_alarm_seconds": 1.0200000000000005
+      },
+      {
+        "utterance_id": "CON_D_0010275",
+        "missed_spoof_seconds": 0.21999999999999995,
+        "false_alarm_seconds": 0.3600000000000001
+      },
+      {
+        "utterance_id": "CON_D_0011093",
+        "missed_spoof_seconds": 0.44000000000000083,
+        "false_alarm_seconds": 2.0000000000000004
+      },
+      {
+        "utterance_id": "CON_D_0011199",
+        "missed_spoof_seconds": 1.46,
+        "false_alarm_seconds": 0.12000000000000004
+      },
+      {
+        "utterance_id": "CON_D_0011498",
+        "missed_spoof_seconds": 0.18000000000000013,
+        "false_alarm_seconds": 0.9399999999999998
+      },
+      {
+        "utterance_id": "CON_D_0012291",
+        "missed_spoof_seconds": 0.9400000000000006,
+        "false_alarm_seconds": 1.0199999999999987
+      },
+      {
+        "utterance_id": "CON_D_0013088",
+        "missed_spoof_seconds": 0.42,
+        "false_alarm_seconds": 1.300000000000001
+      },
+      {
+        "utterance_id": "CON_D_0013550",
+        "missed_spoof_seconds": 1.0800000000000003,
+        "false_alarm_seconds": 0.07999999999999996
+      },
+      {
+        "utterance_id": "CON_D_0014412",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 0.5
+      },
+      {
+        "utterance_id": "CON_D_0014522",
+        "missed_spoof_seconds": 0.4399999999999997,
+        "false_alarm_seconds": 0.28
+      },
+      {
+        "utterance_id": "CON_D_0014853",
+        "missed_spoof_seconds": 0.20000000000000012,
+        "false_alarm_seconds": 1.04
+      },
+      {
+        "utterance_id": "CON_D_0017259",
+        "missed_spoof_seconds": 0.6199999999999997,
+        "false_alarm_seconds": 0.6599999999999993
+      },
+      {
+        "utterance_id": "CON_D_0017506",
+        "missed_spoof_seconds": 0.7000000000000001,
+        "false_alarm_seconds": 0.1200000000000001
+      },
+      {
+        "utterance_id": "CON_D_0018582",
+        "missed_spoof_seconds": 1.1400000000000006,
+        "false_alarm_seconds": 0.3400000000000001
+      },
+      {
+        "utterance_id": "CON_D_0018799",
+        "missed_spoof_seconds": 1.0999999999999996,
+        "false_alarm_seconds": 0.9999999999999999
+      },
+      {
+        "utterance_id": "CON_D_0020736",
+        "missed_spoof_seconds": 1.1999999999999993,
+        "false_alarm_seconds": 0.5
+      },
+      {
+        "utterance_id": "CON_D_0021704",
+        "missed_spoof_seconds": 0.74,
+        "false_alarm_seconds": 0.16000000000000014
+      },
+      {
+        "utterance_id": "CON_D_0021788",
+        "missed_spoof_seconds": 0.020000000000000018,
+        "false_alarm_seconds": 0.8200000000000005
+      },
+      {
+        "utterance_id": "CON_D_0021890",
+        "missed_spoof_seconds": 0.9999999999999998,
+        "false_alarm_seconds": 0.5000000000000001
+      },
+      {
+        "utterance_id": "CON_D_0022095",
+        "missed_spoof_seconds": 0.4800000000000002,
+        "false_alarm_seconds": 0.19999999999999987
+      },
+      {
+        "utterance_id": "CON_D_0022484",
+        "missed_spoof_seconds": 2.0999999999999996,
+        "false_alarm_seconds": 0.0
+      },
+      {
+        "utterance_id": "CON_D_0023089",
+        "missed_spoof_seconds": 0.5199999999999994,
+        "false_alarm_seconds": 1.8800000000000003
+      },
+      {
+        "utterance_id": "CON_D_0023180",
+        "missed_spoof_seconds": 0.09999999999999962,
+        "false_alarm_seconds": 3.920000000000001
+      },
+      {
+        "utterance_id": "LA_D_1161800",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.112375000000001
+      },
+      {
+        "utterance_id": "LA_D_1323454",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.785625000000002
+      },
+      {
+        "utterance_id": "LA_D_1469404",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.0799999999999998
+      },
+      {
+        "utterance_id": "LA_D_1494418",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.7718749999999996
+      },
+      {
+        "utterance_id": "LA_D_1796445",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.5677500000000002
+      },
+      {
+        "utterance_id": "LA_D_1902645",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.1800000000000002
+      },
+      {
+        "utterance_id": "LA_D_2002365",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 0.8887500000000002
+      },
+      {
+        "utterance_id": "LA_D_2035158",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.8999999999999995
+      },
+      {
+        "utterance_id": "LA_D_2156985",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.68925
+      },
+      {
+        "utterance_id": "LA_D_2748583",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.06375
+      },
+      {
+        "utterance_id": "LA_D_2812544",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.898
+      },
+      {
+        "utterance_id": "LA_D_3056969",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 3.3999999999999977
+      },
+      {
+        "utterance_id": "LA_D_3170323",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.76
+      },
+      {
+        "utterance_id": "LA_D_3323539",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 0.8463750000000001
+      },
+      {
+        "utterance_id": "LA_D_3559270",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.8933124999999997
+      },
+      {
+        "utterance_id": "LA_D_4148603",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.9586250000000003
+      },
+      {
+        "utterance_id": "LA_D_4771667",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 0.9400000000000001
+      },
+      {
+        "utterance_id": "LA_D_4828901",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.979812499999999
+      },
+      {
+        "utterance_id": "LA_D_5026692",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.4144375
+      },
+      {
+        "utterance_id": "LA_D_5029338",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.9719999999999998
+      },
+      {
+        "utterance_id": "LA_D_5226379",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 3.080000000000001
+      },
+      {
+        "utterance_id": "LA_D_5513082",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.7399999999999998
+      },
+      {
+        "utterance_id": "LA_D_5651240",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.4356250000000004
+      },
+      {
+        "utterance_id": "LA_D_5774989",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.5200000000000005
+      },
+      {
+        "utterance_id": "LA_D_6023315",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.97075
+      },
+      {
+        "utterance_id": "LA_D_6258471",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.7999999999999994
+      },
+      {
+        "utterance_id": "LA_D_6900009",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.1001874999999997
+      },
+      {
+        "utterance_id": "LA_D_7050071",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 2.620000000000001
+      },
+      {
+        "utterance_id": "LA_D_7179593",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 0.8800000000000002
+      },
+      {
+        "utterance_id": "LA_D_7944625",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 3.085812500000001
+      },
+      {
+        "utterance_id": "LA_D_8003563",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.4600000000000002
+      },
+      {
+        "utterance_id": "LA_D_9851827",
+        "missed_spoof_seconds": 0.0,
+        "false_alarm_seconds": 1.7480624999999996
+      }
+    ],
+    "elapsed_seconds": 1.2809999999881256,
+    "memory": {
+      "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+      "rss_bytes": 130514944,
+      "peak_rss_bytes": 144019456,
+      "system_total_ram_bytes": 16872415232,
+      "system_available_ram_bytes": 5742977024
+    },
+    "limitations": [
+      "Small balanced utterance subset; not an official benchmark result",
+      "EER sweeps the same dev subset; fixed-zero displayed diagnostics are separate",
+      "No native RTTM RangeEER or official SegmentEER reported",
+      "LFCC deltas and full-recording normalization use future audio; not streaming",
+      "Per-recording context statistics use unlabelled dev audio; no dev labels or cross-record statistics",
+      "One exploratory ablation, no parameter search or novelty claim"
+    ]
+  },
+  "supervisor": {
+    "status": "complete",
+    "started_utc": "2026-10-10T16:55:50.901481+00:00",
+    "training_started": true,
+    "preflight": {
+      "system_available_ram_bytes": 5889224704
+    },
+    "peak_rss_bytes": 144019456,
+    "worker_seconds": 300,
+    "eval_enabled": false,
+    "source_sha256": {
+      "scripts/run_localization_context.py": "738de650d98b5f91c7f566bed93400d101847979d91828a181db69e510652b02",
+      "scripts/localization_context_job.py": "7bd28fa0c5951fa7dfbe0ed622222b540268fff88da41dfe3cf536fa299b4311",
+      "scripts/localization_pilot_job.py": "0ebbab0ea11725a1db101674d708d77168ec4b3e4555b3d48008b9df054430e6",
+      "scripts/full_run_job.py": "36d8389fe042b9e882af5df19e3336396c838d24b1f893d9db5d1c945f57504a",
+      "scripts/run_localization_pilot.py": "a38cc7f5be3b8dec828e5d6024927b5015e3b234fafdb9d924fd6c12708f3ba1",
+      "scripts/audit_partial_alignment.py": "8845ff49b6650a22620791b52c2fb5ab5cf3463a94f2492203995f7d1f68d726",
+      "docs/LOCALIZATION_CONTEXT_PLAN.md": "62044d52791b0a4c40f746eccaf23a8d5e806a6cfa9b12073c79a7a96fbc55d6",
+      "tests/test_localization_context.py": "1250e545c0b64a44b33c7883c07a225dabf6207499c6c0a23b0db0199314f173",
+      "docs/validation/partial_selection_v1.json": "c7efeacc6a19e80557fed89183131ebbc64e476ce5c240b0a02fe151b6cfc374",
+      "docs/validation/localization_alignment.json": "87adda47fee58c4f367e26f6731469e8c5041f5df2c29a692aefd34e5106caaa",
+      "data/partialspoof/selected_labels_v1.json": "9c29d4eb387ca9b0ff2a7f524a03e73dfe592165b6969c6134a6274b184a0a4f",
+      "outputs/jobs/localization-pilot-20261010T163921940Z/pilot/config.json": "44a8a664b4a0f53875e23ef8821b26bfddad560f74c95648ad1cf81294a31921",
+      "outputs/jobs/localization-pilot-20261010T163921940Z/pilot/results.json": "9aaea4f1e9e9e333e83466ec9b5896c91a1d378468dd5eafa2a870805cf0b00c",
+      "src/audio_deepfake/audio.py": "aa3b33b4e5512f26202019b7f44d92c4bb4389bb2ae9d0c256cb822b54ad424c",
+      "src/audio_deepfake/features.py": "22152cdcb7c118fd168dc9c4e11a20f100f959d4f2e4e1cb6f16fdfbe83cbfb3",
+      "src/audio_deepfake/localization.py": "9574564b39d6109524cd38e6b499c2753a811b42c736e730cd2ea18fd4f75efa",
+      "src/audio_deepfake/localization_features.py": "e402c7bacb4745dcfb79fbcbc8b56fb7e7cf88eaf3f8f9656f20790729be7d4c",
+      "src/audio_deepfake/localization_model.py": "85205d4d576b89c2a7b0956d390569fa1afd9e7c5eabee5e28148d53003b0c2b",
+      "src/audio_deepfake/localization_timeline.py": "dc1a2a0ba94bf9a6ffe0429b3a8640cb3233d6d0218be3eb40f859198727e6bd",
+      "src/audio_deepfake/partialspoof.py": "5fe41c67a56a043da4714c697b1e15f96c61130e8b528e06a18f09e462e5d6cf",
+      "src/audio_deepfake/resources.py": "9d68202f7335b17e83f2138600f0f1c7312adab46c3d73609d61751800282e7a",
+      "src/audio_deepfake/localization_context.py": "bc9bd273bb91a24a4cde3b021a6a904b17d2bed1b9e0a05b1f852e66e8ae36cc",
+      "docs/validation/localization_context_frozen.json": "d56e41c438f03933b3bbbee0c60cead405a724256c0fb784ccf817994dc2294e"
+    },
+    "child_pid": null,
+    "runner_phase": "complete",
+    "exit_code": 0,
+    "finished_utc": "2026-10-10T16:55:54.502006+00:00",
+    "elapsed_seconds": 3.610000000015134
+  },
+  "figures_sha256": {
+    "docs/figures/localization_context_v1/CON_D_0000586.svg": "d4e16bdd10796da62fbab9c4fb2a15f74e58835bdaf90849f97ab4f40e723b1b",
+    "docs/figures/localization_context_v1/CON_D_0000734.svg": "2a6de9c724840c55a97a6c6f1f01d2c25b1d7e3144684cccb67a610be1d750af",
+    "docs/figures/localization_context_v1/CON_D_0002058.svg": "d5c8830285c05dad6fb3e279bae4368be853e5e5b8f5b71778cab25500168783",
+    "docs/figures/localization_context_v1/CON_D_0003090.svg": "e11e6826f4204121cd492d63638b7010e100b01f6a8639546265d740b6b2075f",
+    "docs/figures/localization_context_v1/CON_D_0003229.svg": "3ef3f989b9dd491c8dfd738e688aa1d5d173775a5c47701865558d5d878d8fd7",
+    "docs/figures/localization_context_v1/LA_D_1161800.svg": "a609ad327df77077cfaccacad4e6d2b2490c1697fd7e923c186e8ea841e16a65",
+    "docs/figures/localization_context_v1/LA_D_1323454.svg": "77d3fb14587f454be2bf90f546ef58cb766704a34c5dd133e3de7f5da597166c",
+    "docs/figures/localization_context_v1/LA_D_1469404.svg": "c5ec89868d376fc932d3e9b26df4a1567cd9131cf76ba9eb03615e1b13c727eb",
+    "docs/figures/localization_context_v1/LA_D_1494418.svg": "0fe107c9e44e0911d50b068309a384e7b68ef30ecc18e4364d72b7f72c219807",
+    "docs/figures/localization_context_v1/LA_D_1796445.svg": "afe29851af1f42acb8049a7c8d75106bff5297b5d0a6edbc1feceea2a9cf96b4"
+  },
+  "baseline_comparison": {
+    "job_dir": "outputs/jobs/localization-pilot-20261010T163921940Z",
+    "baseline_custom_duration_eer": {
+      "eer_fraction": 0.39500173959340223,
+      "threshold": -0.12246589362621306,
+      "missed_spoof_fraction": 0.39500882821584116,
+      "false_alarm_fraction": 0.3949946509709633,
+      "spoof_seconds": 58.0525,
+      "bonafide_seconds": 175.0901875,
+      "definition": "custom 20ms min-pooled, clipped-duration weighted closest-grid EER; no interpolation",
+      "official_segment_eer": false,
+      "official_range_eer": false,
+      "threshold_scope": "selected on the same dev subset; optimistic diagnostic, not held-out evaluation",
+      "tie_rule": "score < threshold predicts spoof; equality bona fide"
+    },
+    "baseline_fixed_zero_missed_spoof_seconds": 18.2858125,
+    "baseline_fixed_zero_false_alarm_seconds": 84.19831250000001,
+    "context_fixed_zero_missed_spoof_seconds": 20.3993125,
+    "context_fixed_zero_false_alarm_seconds": 87.7601875,
+    "eer_change_percentage_points": 3.423635488261001,
+    "interpretation": "Negative result on this fixed small dev subset; no parameter search; retain baseline as better of the two custom pilots"
+  },
+  "infrastructure_attempts": {
+    "first": "outputs/jobs/localization-context-20261010-v1",
+    "first_status": "stopped Windows status-file replace sharing violation after fit; no dev scores saved",
+    "retry": "same frozenmodel/context with bounded status I/O retry only; original freeze and failedjob preserved"
+  }
+}

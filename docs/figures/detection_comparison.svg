@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="720" height="340" preserveAspectRatio="xMinYMin meet" viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="720" height="340"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-340)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="720" height="340" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="28" y="312" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(14%,14%,14%); stroke:none;" transform="translate(0,624) scale(1,-1)">Detection results</text>
+			<text x="28" y="293" style="font-family: Helvetica; font-size: 10px;fill: rgb(40%,40%,40%); stroke:none;" transform="translate(0,586) scale(1,-1)">ASVspoof 2019 LA dev | 24,844 recordings per seed | seeds 42, 43, 44</text>
+			<text x="58" y="272" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(14%,14%,14%); stroke:none;" transform="translate(0,544) scale(1,-1)">EER (%) | lower is better</text>
+			<path d="M 58,88 L 328,88 Z" style="stroke: rgb(90%,90%,90%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="44.996" y="85.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(40%,40%,40%); stroke:none;" transform="translate(0,170) scale(1,-1)">0</text>
+			<path d="M 58,144 L 328,144 Z" style="stroke: rgb(90%,90%,90%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="39.992" y="141.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(40%,40%,40%); stroke:none;" transform="translate(0,282) scale(1,-1)">10</text>
+			<path d="M 58,200 L 328,200 Z" style="stroke: rgb(90%,90%,90%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="39.992" y="197.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(40%,40%,40%); stroke:none;" transform="translate(0,394) scale(1,-1)">20</text>
+			<path d="M 58,256 L 328,256 Z" style="stroke: rgb(90%,90%,90%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="39.992" y="253.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(40%,40%,40%); stroke:none;" transform="translate(0,506) scale(1,-1)">30</text>
+			<path d="M 58,88 L 58,256 Z" style="stroke: rgb(40%,40%,40%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<path d="M 58,88 L 328,88 Z" style="stroke: rgb(40%,40%,40%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<rect x="82" y="88" width="42" height="35.52719914937353" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<text x="92.297" y="133.52719914937353" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(14%,14%,14%); stroke:none;" transform="translate(0,267) scale(1,-1)">6.34</text>
+			<text x="89.94" y="70" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,14%,14%); stroke:none;" transform="translate(0,140) scale(1,-1)">Clean</text>
+			<rect x="170" y="88" width="42" height="124.16780683734396" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<text x="177.239" y="222.16780683734396" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(14%,14%,14%); stroke:none;" transform="translate(0,444) scale(1,-1)">22.17</text>
+			<text x="163.77" y="70" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,14%,14%); stroke:none;" transform="translate(0,140) scale(1,-1)">Narrowband</text>
+			<rect x="258" y="88" width="42" height="50.54203779715081" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<text x="268.297" y="148.5420377971508" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(14%,14%,14%); stroke:none;" transform="translate(0,297) scale(1,-1)">9.03</text>
+			<text x="246.485" y="70" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,14%,14%); stroke:none;" transform="translate(0,140) scale(1,-1)">Score average</text>
+			<text x="402" y="272" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(14%,14%,14%); stroke:none;" transform="translate(0,544) scale(1,-1)">min t-DCF | lower is better</text>
+			<path d="M 402,88 L 672,88 Z" style="stroke: rgb(90%,90%,90%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="388.996" y="85.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(40%,40%,40%); stroke:none;" transform="translate(0,170) scale(1,-1)">0</text>
+			<path d="M 402,136 L 672,136 Z" style="stroke: rgb(90%,90%,90%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="381.49" y="133.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(40%,40%,40%); stroke:none;" transform="translate(0,266) scale(1,-1)">0.2</text>
+			<path d="M 402,184 L 672,184 Z" style="stroke: rgb(90%,90%,90%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="381.49" y="181.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(40%,40%,40%); stroke:none;" transform="translate(0,362) scale(1,-1)">0.4</text>
+			<path d="M 402,232 L 672,232 Z" style="stroke: rgb(90%,90%,90%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="381.49" y="229.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(40%,40%,40%); stroke:none;" transform="translate(0,458) scale(1,-1)">0.6</text>
+			<path d="M 402,88 L 402,256 Z" style="stroke: rgb(40%,40%,40%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<path d="M 402,88 L 672,88 Z" style="stroke: rgb(40%,40%,40%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<rect x="426" y="88" width="42" height="41.368016752962376" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<text x="433.239" y="139.36801675296238" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(14%,14%,14%); stroke:none;" transform="translate(0,278) scale(1,-1)">0.172</text>
+			<text x="433.94" y="70" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,14%,14%); stroke:none;" transform="translate(0,140) scale(1,-1)">Clean</text>
+			<rect x="514" y="88" width="42" height="127.15782857298709" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<text x="521.239" y="225.15782857298709" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(14%,14%,14%); stroke:none;" transform="translate(0,450) scale(1,-1)">0.530</text>
+			<text x="507.77" y="70" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,14%,14%); stroke:none;" transform="translate(0,140) scale(1,-1)">Narrowband</text>
+			<rect x="602" y="88" width="42" height="48.29590850689249" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<text x="609.239" y="146.2959085068925" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(14%,14%,14%); stroke:none;" transform="translate(0,292) scale(1,-1)">0.201</text>
+			<text x="590.485" y="70" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,14%,14%); stroke:none;" transform="translate(0,140) scale(1,-1)">Score average</text>
+			<text x="28" y="43" style="font-family: Helvetica; font-size: 10px;fill: rgb(40%,40%,40%); stroke:none;" transform="translate(0,86) scale(1,-1)">Bars show the mean across seeds 42, 43 and 44. Per-seed values and SD are in the report tables.</text>
+			<text x="28" y="26" style="font-family: Helvetica; font-size: 9px;fill: rgb(40%,40%,40%); stroke:none;" transform="translate(0,52) scale(1,-1)">Clean: official dev Python adaptation. Narrowband / average: custom stress with unchanged ASV scores.</text>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,60 @@
+{
+  "status": "frozen_before_fit",
+  "created_utc": "2026-10-10T16:54:36.860671+00:00",
+  "dataset": "PartialSpoof v1.2",
+  "seed": 45,
+  "train_recordings": 128,
+  "dev_recordings": 64,
+  "eval_enabled": false,
+  "parameter_search": false,
+  "context": {
+    "formula": "(x - median(x,axis=0)) / maximum(1.4826 * median(abs(x - median(x,axis=0)),axis=0), 0.001)",
+    "scope": "one complete unlabelled recording, aligned 20ms bins; no pooling across recordings",
+    "dimensions": "all 60 LFCC static, delta, double-delta dimensions independently",
+    "dtype": "float64",
+    "final_partial_bin_weight": "equal",
+    "clipping": "none",
+    "future_audio": true,
+    "streaming": false
+  },
+  "model": "same TemporalConfig(), train-only reservoir/scaler, fixed threshold zero",
+  "baseline": {
+    "directory": "outputs/jobs/localization-pilot-20261010T163921940Z/pilot",
+    "custom_duration_eer_fraction": 0.39500173959340223
+  },
+  "limits": {
+    "worker_seconds": 300,
+    "peak_rss_bytes": 1073741824,
+    "minimum_available_ram_bytes": 2147483648,
+    "minimum_disk_bytes": 21474836480
+  },
+  "preflight": {
+    "system_available_ram_bytes": 5882626048,
+    "free_disk_bytes": 61548630016
+  },
+  "source_sha256": {
+    "scripts/run_localization_context.py": "bf300ccf510f32494880ba7ffd7c2369c033a8ce4885a415586737b2ce50262b",
+    "scripts/localization_context_job.py": "6fe01260ba54b0b51cb0d9269b12d11a9d1df4aa201cd9a254be3e6c172ee9ab",
+    "scripts/localization_pilot_job.py": "0ebbab0ea11725a1db101674d708d77168ec4b3e4555b3d48008b9df054430e6",
+    "scripts/full_run_job.py": "36d8389fe042b9e882af5df19e3336396c838d24b1f893d9db5d1c945f57504a",
+    "scripts/run_localization_pilot.py": "a38cc7f5be3b8dec828e5d6024927b5015e3b234fafdb9d924fd6c12708f3ba1",
+    "scripts/audit_partial_alignment.py": "8845ff49b6650a22620791b52c2fb5ab5cf3463a94f2492203995f7d1f68d726",
+    "docs/LOCALIZATION_CONTEXT_PLAN.md": "62044d52791b0a4c40f746eccaf23a8d5e806a6cfa9b12073c79a7a96fbc55d6",
+    "tests/test_localization_context.py": "ddd6dce44bc6baba5025c5f79ec08853dd43ef1ccc95a5797f2ff7b67543a167",
+    "docs/validation/partial_selection_v1.json": "c7efeacc6a19e80557fed89183131ebbc64e476ce5c240b0a02fe151b6cfc374",
+    "docs/validation/localization_alignment.json": "87adda47fee58c4f367e26f6731469e8c5041f5df2c29a692aefd34e5106caaa",
+    "data/partialspoof/selected_labels_v1.json": "9c29d4eb387ca9b0ff2a7f524a03e73dfe592165b6969c6134a6274b184a0a4f",
+    "outputs/jobs/localization-pilot-20261010T163921940Z/pilot/config.json": "44a8a664b4a0f53875e23ef8821b26bfddad560f74c95648ad1cf81294a31921",
+    "outputs/jobs/localization-pilot-20261010T163921940Z/pilot/results.json": "9aaea4f1e9e9e333e83466ec9b5896c91a1d378468dd5eafa2a870805cf0b00c",
+    "src/audio_deepfake/audio.py": "aa3b33b4e5512f26202019b7f44d92c4bb4389bb2ae9d0c256cb822b54ad424c",
+    "src/audio_deepfake/features.py": "22152cdcb7c118fd168dc9c4e11a20f100f959d4f2e4e1cb6f16fdfbe83cbfb3",
+    "src/audio_deepfake/localization.py": "9574564b39d6109524cd38e6b499c2753a811b42c736e730cd2ea18fd4f75efa",
+    "src/audio_deepfake/localization_features.py": "e402c7bacb4745dcfb79fbcbc8b56fb7e7cf88eaf3f8f9656f20790729be7d4c",
+    "src/audio_deepfake/localization_model.py": "85205d4d576b89c2a7b0956d390569fa1afd9e7c5eabee5e28148d53003b0c2b",
+    "src/audio_deepfake/localization_timeline.py": "dc1a2a0ba94bf9a6ffe0429b3a8640cb3233d6d0218be3eb40f859198727e6bd",
+    "src/audio_deepfake/partialspoof.py": "5fe41c67a56a043da4714c697b1e15f96c61130e8b528e06a18f09e462e5d6cf",
+    "src/audio_deepfake/resources.py": "9d68202f7335b17e83f2138600f0f1c7312adab46c3d73609d61751800282e7a",
+    "src/audio_deepfake/localization_context.py": "bc9bd273bb91a24a4cde3b021a6a904b17d2bed1b9e0a05b1f852e66e8ae36cc"
+  },
+  "tests": "5 recording-context unit tests passed before freeze"
+}

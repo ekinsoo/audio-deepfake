@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "main_environment_tests": 347,
+  "failures": 0,
+  "errors": 0,
+  "isolated_range_tests": 3,
+  "isolated_range_tests_status": "passed",
+  "total_tests": 350,
+  "note": "Initial naive discovery ran isolated RangeEER in detection environment and failed on absent pandas. Its3 tests passed under the existing separate pinned metric environment; no dependency or frozen source change.",
+  "ssl_focused_tests": 36,
+  "training_started_by_validation": false,
+  "eval_enabled": false
+}

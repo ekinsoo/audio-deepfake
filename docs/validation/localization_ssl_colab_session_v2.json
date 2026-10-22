@@ -1,0 +1,19 @@
+{
+  "client_date": "2026-10-11",
+  "status": "fresh_supervisor_v2_smoke_passed",
+  "notebook_url": "https://colab.research.google.com/drive/1TP5Pyib95cAlYdLHTamyK5ZS7-uIhZ1r",
+  "browser_access": "succeeded in current chat; no permission-file edits or bypass",
+  "google_session": "signed in",
+  "runtime": "fresh free Tesla T4; old VM paths absent",
+  "supervisor_v2_uploaded": true,
+  "supervisor_v2_executed": true,
+  "strict_resource_gate_pass": true,
+  "training_started": false,
+  "full_192_extraction_started": false,
+  "smoke_audit": "docs/validation/localization_ssl_colab_smoke_v2.json",
+  "prior_session_audit_preserved": "docs/validation/localization_ssl_colab_session_v1.json",
+  "environment_recipe": "Fresh isolated environment; no global encoder install",
+  "download_event": "timed out; same archive recovered from visible notebook output",
+  "notebook_changes": "Fresh preflight/setup/supervisor/archive/summary cells appended; previous failure outputs preserved",
+  "runtime_lifetime": "Tab retained for continuation; VM availability must be rechecked next time"
+}

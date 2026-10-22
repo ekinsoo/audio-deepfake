@@ -1,0 +1,37 @@
+{
+  "source_record": "https://zenodo.org/records/6906306",
+  "selection_sha256": "157be4623939c4faf94566a1f4c56fa2626610b97085bafb7981aec2e8164209",
+  "source_manifest_sha256": {
+    "pilot_train.csv": "aa7a1ae65fbf02b99e587a57b53ee3ce1814649c9e3927290a25a6c7cafadc17",
+    "pilot_dev.csv": "449228652db5c402522ae951aab6f84342e59f6d785049f7f00278a13d2ac6c8"
+  },
+  "records": 100,
+  "saved_audio_bytes": 6654382,
+  "all_validated": true,
+  "hash_provenance": "Locally observed member SHA-256; no independently published member checksum.",
+  "initial_network_errors": [
+    {
+      "audio_path": "ASVspoof2019_LA_train/flac/LA_T_1054176.flac",
+      "attempt": 1,
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+    },
+    {
+      "audio_path": "ASVspoof2019_LA_train/flac/LA_T_1054176.flac",
+      "attempt": 2,
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+    },
+    {
+      "audio_path": "ASVspoof2019_LA_train/flac/LA_T_1054176.flac",
+      "attempt": 3,
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+    },
+    {
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
+      "stage": "run"
+    }
+  ],
+  "limitations": {
+    "timing_limitation": "An earlier sequential process was hard-interrupted. elapsed_seconds includes recorded sessions only and is a lower bound, not exact total download wall time.",
+    "network_accounting_limitation": "network_bytes can omit unjournaled partial traffic from the earlier hard interruption. Saved verified file bytes are exact; no partial files remain."
+  }
+}

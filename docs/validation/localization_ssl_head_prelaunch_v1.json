@@ -1,0 +1,31 @@
+{
+  "status": "stopped_before_worker_launch",
+  "training_started": false,
+  "classifier_fitted": false,
+  "eval_accessed": false,
+  "created_utc": "2026-10-10T22:37:01.405258+00:00",
+  "observed_available_ram_bytes_before_invocation": 2004860928,
+  "required_available_ram_bytes": 2147483648,
+  "disk_free_bytes_before_invocation": 59943407616,
+  "worker_launched": false,
+  "output_directory": "outputs/localization/ssl-head-v1",
+  "status_sha256": "c27a7997c3803108f0044c14e7e97b0456794133f2f2e3adb80ba80816243ca7",
+  "supervisor_status": {
+    "status": "stopped",
+    "training_started": "consult worker config/log",
+    "timeout_seconds": 300,
+    "peak_rss_bytes": 0,
+    "source_sha256": {
+      "scripts/run_localization_ssl_head.py": "5d8010f94ac3f0e9cd978c3fc374480023fecdb66d831b2ca63a0959b08a818f",
+      "scripts/full_run_job.py": "36d8389fe042b9e882af5df19e3336396c838d24b1f893d9db5d1c945f57504a"
+    },
+    "error_type": "RuntimeError",
+    "error": "Head pre-launch RAM/disk guard failed",
+    "elapsed_seconds": 0.046999999991385266
+  },
+  "evidence": [
+    "Pre-launch RAM guard failed before subprocess.Popen",
+    "No worker config, stdout, stderr, model or scores were created"
+  ],
+  "next_step": "Keep stopped v1. Inspect fresh available RAM; a separately reviewed explicit fresh head attempt is required. Do not change limits or rerun encoder extraction."
+}

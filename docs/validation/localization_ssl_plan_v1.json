@@ -1,0 +1,75 @@
+{
+  "status": "offline_plan_geometry_passed_execution_not_implemented",
+  "created_utc": "2026-10-10T20:29:42.163159+00:00",
+  "model_downloaded": false,
+  "training_started": false,
+  "eval_accessed": false,
+  "official_benchmark": false,
+  "checkpoint": {
+    "repo_id": "facebook/wav2vec2-base",
+    "revision": "0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8",
+    "license_declared": "Apache-2.0",
+    "file": "pytorch_model.bin",
+    "size_bytes": 380267417,
+    "sha256": "3249fe98bfc62fcbc26067f724716a6ec49d12c4728a2af1df659013905dff21",
+    "metadata_sha256": {
+      "model-api.json": "568b4794c31d6111f0a1ba98dd4824398015da8d971c4d159b9e94f7cf41ee32",
+      "README.md": "d633aeaaec1046af8cbacd21039f819304017e1ab6a369c5aff8668f3c35a127",
+      "config.json": "4937977e24d12d1bba70cdce8709c3c04807a8e4ae8ddac4229c48c436ae99ae",
+      "preprocessor_config.json": "b225d617c025463b9e157e06afea8b90dc7078fc70b013c533328423e0486b4a"
+    }
+  },
+  "source_sha256": {
+    "scripts/plan_localization_ssl.py": "9c78642e30fad7b6ebdf7045a3e0b6f19af32e3c8b6144bf54edda6cce80661f",
+    "src/audio_deepfake/localization_ssl_geometry.py": "ddd6e4fe0de0111560281a3f7281220799f16a24554b9b11a4ea27618480cfe5",
+    "docs/LOCALIZATION_SSL_PLAN.md": "3315ea41aa07f926d0b48b2537e384fa17a289c3d89f62d91955ac01aac12cb5",
+    "configs/localization_ssl_v1.json": "44b1e5d8ae54a9f259fa64051b4ef7ca7267c476454116dc80cb7acaedd9e264"
+  },
+  "input_sha256": {
+    "docs/validation/partial_selection_v1.json": "c7efeacc6a19e80557fed89183131ebbc64e476ce5c240b0a02fe151b6cfc374",
+    "docs/validation/localization_alignment.json": "87adda47fee58c4f367e26f6731469e8c5041f5df2c29a692aefd34e5106caaa",
+    "data/partialspoof/selected_labels_v1.json": "9c29d4eb387ca9b0ff2a7f524a03e73dfe592165b6969c6134a6274b184a0a4f",
+    "docs/validation/localization_pilot_v1.json": "d15ab66b987db6841eaa702e2e2649404baf51b003a6261a35c151d752e64318"
+  },
+  "splits": {
+    "train": {
+      "recordings": 128,
+      "unaligned_encoder_frames": 20858,
+      "aligned_bins": 21021,
+      "raw_float32_cache_bytes": 64576512,
+      "audio_seconds": 419.0175625
+    },
+    "dev": {
+      "recordings": 64,
+      "unaligned_encoder_frames": 11610,
+      "aligned_bins": 11689,
+      "raw_float32_cache_bytes": 35908608,
+      "audio_seconds": 233.1426875
+    }
+  },
+  "smoke_train_id": "LA_T_1963829",
+  "smoke_sample_count": 118059,
+  "resources": {
+    "memory": {
+      "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+      "rss_bytes": 32342016,
+      "peak_rss_bytes": 32342016,
+      "system_total_ram_bytes": 16872415232,
+      "system_available_ram_bytes": 4419756032
+    },
+    "disk_free_bytes": 61751762944,
+    "gpu": "CIM unavailable; previous Intel Iris Xe inventory, no CUDA assumed"
+  },
+  "resource_start_gate_passed_at_probe": true,
+  "execution_gates_pending": [
+    "Isolated version-locked encoder environment",
+    "Restricted weights-only loader and checkpoint hash verification",
+    "Externally supervised single-recording shape/resource smoke",
+    "Separate 768-dimensional head with matching sampled frame ID digest"
+  ],
+  "limitations": [
+    "Geometry is calculated from config, not validated on actual encoder output yet.",
+    "Pretraining recording overlap is unverified.",
+    "Small repeatedly inspected dev subset; no independent generalization claim."
+  ]
+}

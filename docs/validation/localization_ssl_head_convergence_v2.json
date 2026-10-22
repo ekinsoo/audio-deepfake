@@ -1,0 +1,43 @@
+{
+  "status": "stopped_at_convergence_gate",
+  "created_utc": "2026-10-10T22:42:07.427258+00:00",
+  "training_started": true,
+  "classifier_fitted_successfully": false,
+  "dev_scores_produced": false,
+  "eval_accessed": false,
+  "original_experiment_config": "configs/localization_ssl_v1.json",
+  "attempt_directory": "outputs/localization/ssl-head-v2",
+  "attempt_files_sha256": {
+    "config.json": "99d00268ff7372af0003bc62ce30b0243af783600d8315a39461d52729a0ebcd",
+    "status.json": "52a39e6fed8752099d76d1a4d428042a9e2e3e560c1eabd8f580172868d85bf6",
+    "stderr.log": "8302a17013f4deca11b73ed1ed696ae6fd202b89d210652df12dc262dab1e274",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "frozen_head": {
+    "seed": 45,
+    "frames_per_class_cap": 50000,
+    "expected_retained_per_class": 4524,
+    "scaler": "StandardScaler fitted on retained train frames only",
+    "classifier": "LogisticRegression",
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 300,
+    "numerical_threads": 1,
+    "convergence_warning": "stop"
+  },
+  "lfcc_sampling_reference": {
+    "retained_sample_ids_sha256": "0fb814aa3cf8be436f199a2f971e1ccc31eb616a617b097767e93730aeabc82a",
+    "frames_retained_per_class": 4524,
+    "frames_seen_by_native_class": [
+      4524,
+      16497
+    ]
+  },
+  "failure": "lbfgs did not converge within fixed max_iter300; ConvergenceWarning raised as error. No model or dev score accepted.",
+  "resource_supervision_limitation": "External reported4648960B peak belongs to Windows venv redirector, not actual numerical interpreter. Do not report it as training RSS or a strict resource-gate pass. New SSL launcher bootstrap repair pending; frozen baseline helpers untouched.",
+  "available_ram_bytes_before_invocation": 5269901312,
+  "disk_free_bytes_before_invocation": 60061753344,
+  "prior_prelaunch_attempt_preserved": "outputs/localization/ssl-head-v1",
+  "automatic_retry": false,
+  "followup": "Separate train-only convergence protocol decision pending; do not silently change frozen max_iter300."
+}

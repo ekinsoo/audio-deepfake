@@ -1,0 +1,734 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=18mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor,booktabs,array,hyperref}
+\definecolor{navy}{HTML}{222222}
+\definecolor{teal}{HTML}{444444}
+\definecolor{lightgrid}{HTML}{EEEEEE}
+\hypersetup{colorlinks=true,urlcolor=teal,linkcolor=teal,pdftitle={Audio Deepfake Detection and Localization},pdfauthor={Özgür Ekin Sönmez}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\renewcommand{\arraystretch}{1.2}
+\newcommand{\reporttitle}[1]{{\color{navy}\Large\bfseries #1}\par\vspace{5pt}}
+\begin{document}
+
+
+{\small Özgür Ekin Sönmez / Independent ML project / 11 October 2026}\par
+
+\reporttitle{A small detector, and a test of its errors}
+
+{\small AUDIO DEEPFAKE DETECTION / DEVELOPMENT REPORT}\par
+
+{\color{navy}\large I tested whether a simple bandwidth change can reveal when a small speech detector is wrong. It did not work well in this experiment. The original score's distance from a fixed decision threshold was a much better error-ranking signal.}\par
+
+\vspace{4pt}{\color{navy}\bfseries What I built}\par
+
+This is an independent portfolio project using public ASVspoof 2019 Logical Access (LA) data [1, 2]. The first milestone is full-recording detection: one score for an entire recording. A separate small PartialSpoof localization pilot now adds scores for time ranges inside a recording; it is covered later in this report.\par
+
+I chose LFCC features [3] and a Gaussian mixture model (GMM) [6] as a small, inspectable baseline. Running on a laptop CPU is an engineering choice; the research question concerns detection errors. I trained three fixed model seeds, then reused those models for a narrowband stress test. The useful result is a clear failure of the proposed diagnostic, with the data and checks needed to repeat it.\par
+
+\begin{center}\small
+
+\begin{tabular}{@{}llll@{}}\toprule
+
+Official split & Recordings & Bona fide & Spoof \\
+
+\midrule
+
+Train & 25,380 & 2,580 & 22,800 \\
+
+Development & 24,844 & 2,548 & 22,296 \\
+
+\bottomrule\end{tabular}\end{center}
+
+{\small Only official keyed train/dev records are used. The 142 unkeyed dev archive members are excluded. Evaluation audio was not extracted, decoded or scored.}\par
+
+\vspace{4pt}{\color{navy}\bfseries Baseline in one pass}\par
+
+The reader requires finite, nonempty, mono 16 kHz audio. Features use a 20 ms window, 10 ms hop, 512-point FFT, 20 linear filters, 20 coefficients, pre-emphasis 0.97, and first- and second-order deltas: 60 dimensions per frame. There is no VAD, CMVN or implicit input resampling.\par
+
+Each class has a 32-component diagonal-covariance GMM. All train recordings are visited; a fixed random-priority reservoir retains at most 50,000 frames per class. This is 100,000 retained frames in total, not every training frame. Seeds are 42, 43 and 44; all six fitted mixtures converged without warnings.\par
+
+{\small\ttfamily score = mean over frames [log p(frame | bona fide) - log p(frame | spoof)]}\par
+
+{\small Larger scores support bona fide speech. This is a Python adaptation; feature parity with the official MATLAB baseline has not been established.}\par
+
+\clearpage
+
+\reporttitle{The experiment and its boundaries}
+
+\vspace{4pt}{\color{navy}\bfseries One fixed transformation}\par
+
+For each dev recording, I resampled 16 kHz to 8 kHz and back to 16 kHz. The implementation uses scipy.signal.resample\_poly [7] with a Kaiser window (beta 5), constant zero padding, float64 intermediate samples and float32 output trimmed to the original length. No gain, clipping, noise or codec is added. Original audio stays unchanged.\par
+
+This is an approximate bandwidth stress test, not a telephone channel simulation. The clean and transformed versions are scored by the same saved model. I keep both scores, their fixed average, their signed difference and its absolute value.\par
+
+{\small\ttfamily average = clean / 2 + narrow / 2;  delta = narrow - clean}\par
+
+\vspace{4pt}{\color{navy}\bfseries Detection metrics}\par
+
+EER balances false rejection and false acceptance. Minimum normalized t-DCF is the challenge's ASV-oriented detection cost. Both are calculated using the hash-pinned official 2019 v1 Python evaluator and matching dev ASV scores [4, 5]. Lower is better. Diagnostic thresholds are selected using dev labels.\par
+
+Original scores are official-dev adaptation results. Narrowband and average scores are custom diagnostics. The ASV reference is kept unchanged, so their t-DCF does not model a transformed channel for both systems.\par
+
+\vspace{4pt}{\color{navy}\bfseries Calibration and error analysis}\par
+
+\begin{center}\small
+
+\begin{tabular}{@{}llll@{}}\toprule
+
+Dev group & Speaker IDs & Recordings & Bona fide / spoof \\
+
+\midrule
+
+Calibration & 8 & 9,609 & 945 / 8,664 \\
+
+Analysis & 12 & 15,235 & 1,603 / 13,632 \\
+
+\bottomrule\end{tabular}\end{center}
+
+The CM manifest contains 20 distinct dev speaker IDs. A fixed hash ranking assigns eight IDs to calibration and twelve to analysis. Groups share no speakers or records and are disjoint from train. All six attacks occur in each group. The partition uses the IDs recorded in the CM key, including those attached to spoof recordings.\par
+
+For each model I sort the 945 clean calibration bona fide scores and use zero-based index 47 as the threshold. A clean score at or above it is accepted as bona fide. Each threshold accepts 898/945 calibration bona fide recordings (95.03\%). An analysis error means disagreement between this clean prediction and the label.\par
+
+\begin{center}\small
+
+\begin{tabular}{@{}lll@{}}\toprule
+
+Seed & Frozen threshold & Calibration accepted \\
+
+\midrule
+
+42 & 0.7167018056 & 898 / 945 \\
+
+43 & 0.7260986567 & 898 / 945 \\
+
+44 & 0.7200403810 & 898 / 945 \\
+
+\bottomrule\end{tabular}\end{center}
+
+{\small The protocol was frozen before full transformed scoring, after clean dev and pilot results were seen. This is not a blind test or independent validation.}\par
+
+\clearpage
+
+\reporttitle{Detection under a bandwidth change}
+
+\begin{center}\setlength{\unitlength}{1pt}\begin{picture}(480,220)
+\put(127.000,206.000){\makebox(0,0)[c]{\scriptsize EER (\%)}}
+\put(32,48.000){\color{lightgrid}\line(1,0){190}}
+\put(26.000,48.000){\makebox(0,0)[r]{\scriptsize 0}}
+\put(32,94.667){\color{lightgrid}\line(1,0){190}}
+\put(26.000,94.667){\makebox(0,0)[r]{\scriptsize 10}}
+\put(32,141.333){\color{lightgrid}\line(1,0){190}}
+\put(26.000,141.333){\makebox(0,0)[r]{\scriptsize 20}}
+\put(32,188.000){\color{lightgrid}\line(1,0){190}}
+\put(26.000,188.000){\makebox(0,0)[r]{\scriptsize 30}}
+\put(46.667,48){\color[HTML]{666666}\rule{34.000pt}{29.606pt}}
+\put(63.667,33.000){\makebox(0,0)[c]{\scriptsize Original}}
+\put(63.667,87.606){\makebox(0,0)[c]{\scriptsize 6.34}}
+\put(110.000,48){\color[HTML]{999999}\rule{34.000pt}{103.473pt}}
+\put(127.000,33.000){\makebox(0,0)[c]{\scriptsize Narrow}}
+\put(127.000,161.473){\makebox(0,0)[c]{\scriptsize 22.17}}
+\put(173.333,48){\color[HTML]{BBBBBB}\rule{34.000pt}{42.118pt}}
+\put(190.333,33.000){\makebox(0,0)[c]{\scriptsize Average}}
+\put(190.333,100.118){\makebox(0,0)[c]{\scriptsize 9.03}}
+\put(369.000,206.000){\makebox(0,0)[c]{\scriptsize Minimum normalized t-DCF}}
+\put(274,48.000){\color{lightgrid}\line(1,0){190}}
+\put(268.000,48.000){\makebox(0,0)[r]{\scriptsize 0}}
+\put(274,91.077){\color{lightgrid}\line(1,0){190}}
+\put(268.000,91.077){\makebox(0,0)[r]{\scriptsize 0.2}}
+\put(274,134.154){\color{lightgrid}\line(1,0){190}}
+\put(268.000,134.154){\makebox(0,0)[r]{\scriptsize 0.4}}
+\put(274,177.231){\color{lightgrid}\line(1,0){190}}
+\put(268.000,177.231){\makebox(0,0)[r]{\scriptsize 0.6}}
+\put(288.667,48){\color[HTML]{666666}\rule{34.000pt}{37.125pt}}
+\put(305.667,33.000){\makebox(0,0)[c]{\scriptsize Original}}
+\put(305.667,95.125){\makebox(0,0)[c]{\scriptsize 0.172}}
+\put(352.000,48){\color[HTML]{999999}\rule{34.000pt}{114.116pt}}
+\put(369.000,33.000){\makebox(0,0)[c]{\scriptsize Narrow}}
+\put(369.000,172.116){\makebox(0,0)[c]{\scriptsize 0.530}}
+\put(415.333,48){\color[HTML]{BBBBBB}\rule{34.000pt}{43.342pt}}
+\put(432.333,33.000){\makebox(0,0)[c]{\scriptsize Average}}
+\put(432.333,101.342){\makebox(0,0)[c]{\scriptsize 0.201}}
+\end{picture}\end{center}
+
+{\small Bars show means only. Individual seeds and population standard deviation (ddof=0) are retained in the tables; SD is not a confidence interval. All conditions use the same 24,844 dev recordings.}\par
+
+\begin{center}\small
+
+\begin{tabular}{@{}llll@{}}\toprule
+
+Seed & Original EER & Narrow EER & Average EER \\
+
+\midrule
+
+42 & 5.89\% & 18.56\% & 8.59\% \\
+
+43 & 6.67\% & 24.96\% & 9.30\% \\
+
+44 & 6.47\% & 22.99\% & 9.19\% \\
+
+Mean +/- SD & 6.34 +/- 0.33\% & 22.17 +/- 2.68\% & 9.03 +/- 0.31\% \\
+
+\bottomrule\end{tabular}\end{center}
+
+\begin{center}\small
+
+\begin{tabular}{@{}llll@{}}\toprule
+
+Seed & Original t-DCF & Narrow t-DCF & Average t-DCF \\
+
+\midrule
+
+42 & 0.1527 & 0.4700 & 0.1923 \\
+
+43 & 0.1794 & 0.5680 & 0.2112 \\
+
+44 & 0.1850 & 0.5515 & 0.2003 \\
+
+Mean +/- SD & 0.1724 +/- 0.0141 & 0.5298 +/- 0.0428 & 0.2012 +/- 0.0078 \\
+
+\bottomrule\end{tabular}\end{center}
+
+Narrowband scoring increased mean EER from 6.34\% to 22.17\%. The fixed average reached 9.03\%, also worse than the original score. Minimum t-DCF followed the same pattern: 0.1724 for original, 0.5298 for narrowband and 0.2012 for the average. I kept all three seeds; no run was replaced based on its result.\par
+
+\vspace{4pt}{\color{navy}\bfseries What changed from the pilot?}\par
+
+The balanced pilot used 2,000 train and 1,000 dev recordings with seed 42. Its original EER was 8.8\%; the fixed average gave 8.4\%. That small apparent benefit did not carry over to the full experiment. Both experiments retained at most 50,000 frames per class, but training recordings, sampled frame contents, dev population, class balance and the number of seeds differ. This comparison does not isolate one cause.\par
+
+{\small The pilot is part of the full dev population. It is not an independent dataset, and the full experiment is not a new held-out benchmark.}\par
+
+\clearpage
+
+\reporttitle{Can score change rank clean prediction errors?}
+
+I compared two fixed signals on the 15,235 analysis recordings: absolute clean-to-narrow score change, and negative absolute distance from the clean decision threshold. A larger signal ranks a recording as more likely to be an error. Neither signal was fitted to the analysis labels.\par
+
+\begin{center}\setlength{\unitlength}{1pt}\begin{picture}(480,220)
+\put(127.000,206.000){\makebox(0,0)[c]{\scriptsize Error-ranking AUROC}}
+\put(32,48.000){\color{lightgrid}\line(1,0){190}}
+\put(26.000,48.000){\makebox(0,0)[r]{\scriptsize 0}}
+\put(32,83.000){\color{lightgrid}\line(1,0){190}}
+\put(26.000,83.000){\makebox(0,0)[r]{\scriptsize 0.25}}
+\put(32,118.000){\color{lightgrid}\line(1,0){190}}
+\put(26.000,118.000){\makebox(0,0)[r]{\scriptsize 0.5}}
+\put(32,153.000){\color{lightgrid}\line(1,0){190}}
+\put(26.000,153.000){\makebox(0,0)[r]{\scriptsize 0.75}}
+\put(32,188.000){\color{lightgrid}\line(1,0){190}}
+\put(26.000,188.000){\makebox(0,0)[r]{\scriptsize 1}}
+\put(62.500,48){\color[HTML]{666666}\rule{34.000pt}{53.911pt}}
+\put(79.500,33.000){\makebox(0,0)[c]{\scriptsize Score change}}
+\put(79.500,111.911){\makebox(0,0)[c]{\scriptsize 0.385}}
+\put(157.500,48){\color[HTML]{AAAAAA}\rule{34.000pt}{131.072pt}}
+\put(174.500,33.000){\makebox(0,0)[c]{\scriptsize Score margin}}
+\put(174.500,189.072){\makebox(0,0)[c]{\scriptsize 0.936}}
+\put(369.000,206.000){\makebox(0,0)[c]{\scriptsize Average precision}}
+\put(274,48.000){\color{lightgrid}\line(1,0){190}}
+\put(268.000,48.000){\makebox(0,0)[r]{\scriptsize 0}}
+\put(274,83.000){\color{lightgrid}\line(1,0){190}}
+\put(268.000,83.000){\makebox(0,0)[r]{\scriptsize 0.25}}
+\put(274,118.000){\color{lightgrid}\line(1,0){190}}
+\put(268.000,118.000){\makebox(0,0)[r]{\scriptsize 0.5}}
+\put(274,153.000){\color{lightgrid}\line(1,0){190}}
+\put(268.000,153.000){\makebox(0,0)[r]{\scriptsize 0.75}}
+\put(274,188.000){\color{lightgrid}\line(1,0){190}}
+\put(268.000,188.000){\makebox(0,0)[r]{\scriptsize 1}}
+\put(304.500,48){\color[HTML]{666666}\rule{34.000pt}{5.693pt}}
+\put(321.500,33.000){\makebox(0,0)[c]{\scriptsize Score change}}
+\put(321.500,63.693){\makebox(0,0)[c]{\scriptsize 0.041}}
+\put(399.500,48){\color[HTML]{AAAAAA}\rule{34.000pt}{53.672pt}}
+\put(416.500,33.000){\makebox(0,0)[c]{\scriptsize Score margin}}
+\put(416.500,111.672){\makebox(0,0)[c]{\scriptsize 0.383}}
+\end{picture}\end{center}
+
+{\small Higher is better. AUROC 0.5 is the no-ranking reference. Mean error prevalence is 5.41\%; each seed has its own prevalence. Bars show means only; the table retains each seed.}\par
+
+\begin{center}\small
+
+\begin{tabular}{@{}llll@{}}\toprule
+
+Seed / ranking & AUROC & Average precision & Error prevalence \\
+
+\midrule
+
+42 / Score change & 0.5036 & 0.0464 & 5.08\% \\
+
+42 / Score margin & 0.9379 & 0.3695 & 5.08\% \\
+
+43 / Score change & 0.3382 & 0.0382 & 5.54\% \\
+
+43 / Score margin & 0.9369 & 0.3911 & 5.54\% \\
+
+44 / Score change & 0.3134 & 0.0374 & 5.60\% \\
+
+44 / Score margin & 0.9339 & 0.3894 & 5.60\% \\
+
+\bottomrule\end{tabular}\end{center}
+
+Across seeds, absolute score change gave AUROC 0.385 and average precision 0.041. The margin baseline gave AUROC 0.936 and AP 0.383. Mean error prevalence was 5.41\%.\par
+
+In this setup, a large response to bandwidth change is not a useful warning that the original prediction is wrong. The simple margin is much more informative. I did not invert the change signal, search averaging weights or tune a new rejection threshold after seeing this result. This is error ranking, not calibrated probability or a validated abstention policy.\par
+
+\clearpage
+
+\reporttitle{What the errors look like}
+
+\begin{center}\setlength{\unitlength}{1pt}\begin{picture}(480,220)
+\put(243.000,206.000){\makebox(0,0)[c]{\scriptsize Seed 42 analysis errors}}
+\put(43,48.000){\color{lightgrid}\line(1,0){400}}
+\put(37.000,48.000){\makebox(0,0)[r]{\scriptsize 0}}
+\put(43,76.000){\color{lightgrid}\line(1,0){400}}
+\put(37.000,76.000){\makebox(0,0)[r]{\scriptsize 100}}
+\put(43,104.000){\color{lightgrid}\line(1,0){400}}
+\put(37.000,104.000){\makebox(0,0)[r]{\scriptsize 200}}
+\put(43,132.000){\color{lightgrid}\line(1,0){400}}
+\put(37.000,132.000){\makebox(0,0)[r]{\scriptsize 300}}
+\put(43,160.000){\color{lightgrid}\line(1,0){400}}
+\put(37.000,160.000){\makebox(0,0)[r]{\scriptsize 400}}
+\put(43,188.000){\color{lightgrid}\line(1,0){400}}
+\put(37.000,188.000){\makebox(0,0)[r]{\scriptsize 500}}
+\put(55.857,48){\color[HTML]{666666}\rule{31.429pt}{40.320pt}}
+\put(71.571,33.000){\makebox(0,0)[c]{\scriptsize Bona fide}}
+\put(71.571,97.320){\makebox(0,0)[c]{\scriptsize 144}}
+\put(113.000,48){\color[HTML]{999999}\rule{31.429pt}{0.000pt}}
+\put(128.714,33.000){\makebox(0,0)[c]{\scriptsize A01}}
+\put(128.714,57.000){\makebox(0,0)[c]{\scriptsize 0}}
+\put(170.143,48){\color[HTML]{999999}\rule{31.429pt}{0.000pt}}
+\put(185.857,33.000){\makebox(0,0)[c]{\scriptsize A02}}
+\put(185.857,57.000){\makebox(0,0)[c]{\scriptsize 0}}
+\put(227.286,48){\color[HTML]{999999}\rule{31.429pt}{0.000pt}}
+\put(243.000,33.000){\makebox(0,0)[c]{\scriptsize A03}}
+\put(243.000,57.000){\makebox(0,0)[c]{\scriptsize 0}}
+\put(284.429,48){\color[HTML]{999999}\rule{31.429pt}{50.680pt}}
+\put(300.143,33.000){\makebox(0,0)[c]{\scriptsize A04}}
+\put(300.143,107.680){\makebox(0,0)[c]{\scriptsize 181}}
+\put(341.571,48){\color[HTML]{999999}\rule{31.429pt}{0.000pt}}
+\put(357.286,33.000){\makebox(0,0)[c]{\scriptsize A05}}
+\put(357.286,57.000){\makebox(0,0)[c]{\scriptsize 0}}
+\put(398.714,48){\color[HTML]{999999}\rule{31.429pt}{125.720pt}}
+\put(414.429,33.000){\makebox(0,0)[c]{\scriptsize A06}}
+\put(414.429,182.720){\makebox(0,0)[c]{\scriptsize 449}}
+\end{picture}\end{center}
+
+{\small Seed 42, analysis speakers only, at its frozen calibration threshold. Bona fide errors are rejected genuine recordings; spoof errors are accepted spoof recordings. Each attack has 2,272 analysis recordings; bona fide has 1,603.}\par
+
+Seed 42 made 774 analysis errors: 144 bona fide rejections, 181 A04 acceptances and 449 A06 acceptances. There were no observed errors for A01, A02, A03 or A05 at this threshold. These counts use the calibration threshold, so they differ from the separate full-dev EER-threshold diagnostic.\par
+
+\vspace{4pt}{\color{navy}\bfseries Three selected examples}\par
+
+\begin{center}\small
+
+\begin{tabular}{@{}llll@{}}\toprule
+
+Recording ID & Attack & Signed change & Distance to threshold \\
+
+\midrule
+
+LA\_D\_1012227 & A06 & -1.2318 & 0.3462 \\
+
+LA\_D\_1402046 & A06 & +0.1553 & 0.0121 \\
+
+LA\_D\_5369918 & A04 & -2.5769 & 0.9463 \\
+
+\bottomrule\end{tabular}\end{center}
+
+All three examples are spoof recordings accepted by the original model. LA\_D\_1402046 is close to the threshold but changes little after resampling. LA\_D\_5369918 changes much more, yet is farther from the threshold. These examples illustrate why transformation response and clean-score margin measure different things; they do not establish a causal explanation for the errors.\par
+
+Examples follow the frozen deterministic rule: first ID in each delta-sign and top-quarter disagreement stratum, then fill to ten by descending absolute change and ID. The full audit saves ten examples per seed. This is an illustrative selection, not a random sample.\par
+
+\vspace{4pt}{\color{navy}\bfseries What I would inspect next}\par
+
+A04 and A06 are useful starting points for listening and feature inspection. The current results do not show that the model detects new synthesis systems, real telephone recordings or partially manipulated clips. The local demo shows a raw score and measured latency. It cannot establish that a recording is authentic.\par
+
+\clearpage
+
+\reporttitle{Reproduction, limitations and next work}
+
+\vspace{4pt}{\color{navy}\bfseries What is saved}\par
+
+Configs, seeds, dataset version, official splits, frame-sampling rules, model and source hashes, paired scores, partitions, thresholds, package versions, metrics and failure examples are recorded. Public summaries stay in Git; downloaded audio, reference evaluator code, local score tables and models are ignored. Only public data was used.\par
+
+Environment: Python 3.12.14; NumPy 2.5.3; SciPy 1.18.1; scikit-learn 1.9.1; Joblib 1.6.0; SoundFile 0.13.1. The local machine has about 16 GiB RAM and Intel Iris Xe graphics. The experiments use CPU inference and one numerical thread.\par
+
+Two interruptions are preserved. The first clean run exposed a memory-probe bug; a scoring-only recovery reused its saved model. Later, narrowband seed 44 stopped when system available RAM fell below 1 GiB, with worker peak memory about 207 MiB. Recovery kept seeds 42/43, counted the failed attempt against the same seed budget and finished all remaining chunks. These runs are not an uninterrupted end-to-end timing benchmark.\par
+
+\vspace{4pt}{\color{navy}\bfseries Limits of this result}\par
+
+All reported metrics are development diagnostics. Train/dev use the same attack taxonomy. Clean dev and pilot outcomes were already inspected; speaker separation inside dev does not remove that reuse. Three seeds measure variation on one population, not statistical independence or a significance test. The stress test changes only the countermeasure input. LFCC parity with the official MATLAB baseline has not been checked.\par
+
+The project does not yet demonstrate unseen-generator generalization, calibrated confidence, real-world channel robustness, reliable partial manipulation localization or production deployment. A negative result here applies to this transformation, model and diagnostic, not to all transformation-based methods.\par
+
+\vspace{4pt}{\color{navy}\bfseries Next milestone}\par
+
+The local scoring demo, timing study and first PartialSpoof localization pilot are complete. The later pages cover its alignment checks, first errors and one fixed context experiment. A stronger representation and genuinely external data would need a separate protocol and measured compute budget.\par
+
+\clearpage
+
+\reporttitle{Local demo and processing time}
+
+The demo loads the saved seed-43 detector and scores one WAV or FLAC recording. Seed 43 was fixed before timing, without choosing the best detector seed. The model hash, configuration, package versions and training metadata are checked before use.\par
+
+\vspace{4pt}{\color{navy}\bfseries What the demo shows}\par
+
+The interface runs at http://127.0.0.1:8765. It shows a raw model score, audio duration and processing time. Higher scores support bona fide speech in this model; the value is not a probability. Uploads stay in memory. Inputs must be finite mono 16 kHz WAV/FLAC, at most 60 seconds and 8 MiB. The server listens only on the local computer.\par
+
+\vspace{4pt}{\color{navy}\bfseries A small, fixed timing study}\par
+
+I selected the first 20 official development protocol rows in their original order before timing. After one explicit warm-up, I made three measured passes: 60 observations. All 60 scores matched the saved seed-43 clean scores exactly. Measurement covers validation, audio decoding, LFCC extraction and GMM scoring through the Python scoring function; browser and HTTP overhead are excluded.\par
+
+\begin{center}\small
+
+\begin{tabular}{@{}ll@{}}\toprule
+
+Measurement & Observed value \\
+
+\midrule
+
+Mean per recording & 12.40 ms \\
+
+Median (p50) & 11.64 ms \\
+
+p95 & 16.92 ms \\
+
+Total processing / audio duration & 0.00312 RTF \\
+
+Model load and verification (separate) & 0.211 s \\
+
+Process peak memory & 189 MiB \\
+
+\bottomrule\end{tabular}\end{center}
+
+Hardware: Intel Core i7-1195G7, four cores and eight logical threads; one numerical thread was used. The GPU was unused. A ratio of 0.00312 means the measured processing took about 0.31\% of the combined audio duration. Model loading is outside the per-recording timer.\par
+
+\vspace{4pt}{\color{navy}\bfseries Limits of this measurement}\par
+
+These 20 recordings happen to be bona fide speech from one speaker (LA\_0069), lasting 2.555-5.927 seconds. Repeated measurements share the same model and warm operating-system file cache. They are dependent observations. This is a limited engineering check, not a claim about all audio, attack diversity, cold starts, streaming or production performance.\par
+
+{\small Evidence: docs/validation/demo\_latency\_plan.json and demo\_latency.json. The plan was written before measurement and records selection, source/model hashes, resource limits and timing scope. No new training or large download was needed.}\par
+
+\clearpage
+
+\reporttitle{Finding manipulated time ranges}
+
+The second part of this project asks where fake audio occurs inside a recording. I used PartialSpoof v1.2 [8, 9], keeping its official splits. This first pilot uses 128 train and 64 dev recordings, balanced by utterance class and selected with seed 45 before fitting. Eval stays closed. PartialSpoof shares source material with ASVspoof, so this is not independent cross-dataset validation.\par
+
+\vspace{4pt}{\color{navy}\bfseries Checking the time labels}\par
+
+All 192 selected WAVs passed individual hash and header checks. Each native binary vector has exactly ceil(N/160) labels for N samples at 16 kHz. No label was trimmed or padded. VAD timestamps can end up to 15 samples early, and VAD nonspeech can carry either binary class. I kept the publisher's binary truth and used VAD only for diagnostics.\par
+
+\vspace{4pt}{\color{navy}\bfseries A small temporal model}\par
+
+I mapped the existing 60-dimensional LFCC features to 20 ms output intervals using the nearest window centre, choosing the earlier frame on ties. Native 10 ms labels are minimum-pooled in adjacent pairs; a final interval is clipped to the actual recording length. The model is StandardScaler plus logistic regression [11] (C=1, lbfgs, maximum 300 iterations). This is a new small baseline, not a reproduction of the authors' neural model.\par
+
+Normalization uses retained training frames only. The seed-45 reservoir is capped at 50,000 frames per binary class and balances to the smaller class. This pilot retained 4,524 frames per class and converged in 14 solver iterations without warnings. Output scores are uncalibrated and higher means bona fide. The classifier boundary zero was fixed for the displayed timelines.\par
+
+\begin{center}\small
+
+\begin{tabular}{@{}ll@{}}\toprule
+
+Pilot measurement & Observed value \\
+
+\midrule
+
+Custom duration-weighted 20 ms EER & 39.50\% \\
+
+Missed spoof at threshold zero & 18.29 / 58.05 s \\
+
+False alarm at threshold zero & 84.20 / 175.09 s \\
+
+Computation / peak process RAM & 1.28 s / 136.7 MiB \\
+
+\bottomrule\end{tabular}\end{center}
+
+{\small The EER is our closest-grid duration diagnostic on pooled 20 ms labels, without interpolation. It is not official 10 ms SegmentEER or RangeEER. The threshold sweep uses this same small dev set. Computation excludes imports and data preparation. Independent output review reproduced the metric, durations, IDs, hashes and ten saved timelines.}\par
+
+\clearpage
+
+\reporttitle{What the first timelines show}
+
+\begin{center}\setlength{\unitlength}{1pt}\begin{picture}(480,190)
+\put(0,178){\makebox(0,0)[l]{\small\bfseries CON\_D\_0000586}}
+\put(0,161){\makebox(0,0)[l]{\scriptsize Native binary}}
+\put(83,158){\color{lightgrid}\rule{377pt}{10pt}}
+\put(141.4134,158){\color[HTML]{555555}\rule{51.9231pt}{10pt}}
+\put(251.7500,158){\color[HTML]{555555}\rule{87.6202pt}{10pt}}
+\put(368.5769,158){\color[HTML]{555555}\rule{77.8846pt}{10pt}}
+\put(0,143){\makebox(0,0)[l]{\scriptsize Baseline}}
+\put(83,140){\color{lightgrid}\rule{377pt}{10pt}}
+\put(89.4904,140){\color[HTML]{555555}\rule{12.9808pt}{10pt}}
+\put(108.9615,140){\color[HTML]{555555}\rule{3.2452pt}{10pt}}
+\put(115.4519,140){\color[HTML]{555555}\rule{3.2452pt}{10pt}}
+\put(121.9423,140){\color[HTML]{555555}\rule{6.4904pt}{10pt}}
+\put(134.9231,140){\color[HTML]{555555}\rule{9.7356pt}{10pt}}
+\put(154.3942,140){\color[HTML]{555555}\rule{3.2452pt}{10pt}}
+\put(160.8846,140){\color[HTML]{555555}\rule{3.2452pt}{10pt}}
+\put(180.3557,140){\color[HTML]{555555}\rule{16.2260pt}{10pt}}
+\put(238.7692,140){\color[HTML]{555555}\rule{16.2260pt}{10pt}}
+\put(280.9567,140){\color[HTML]{555555}\rule{12.9808pt}{10pt}}
+\put(310.1634,140){\color[HTML]{555555}\rule{3.2452pt}{10pt}}
+\put(336.1249,140){\color[HTML]{555555}\rule{3.2452pt}{10pt}}
+\put(342.6153,140){\color[HTML]{555555}\rule{6.4904pt}{10pt}}
+\put(365.3317,140){\color[HTML]{555555}\rule{19.4711pt}{10pt}}
+\put(388.0480,140){\color[HTML]{555555}\rule{12.9808pt}{10pt}}
+\put(404.2740,140){\color[HTML]{555555}\rule{3.2452pt}{10pt}}
+\put(452.9518,140){\color[HTML]{555555}\rule{6.4904pt}{10pt}}
+\put(83.000,123){\makebox(0,0){\scriptsize 0.00}}
+\put(177.250,123){\makebox(0,0){\scriptsize 0.58}}
+\put(271.500,123){\makebox(0,0){\scriptsize 1.16}}
+\put(365.750,123){\makebox(0,0){\scriptsize 1.74}}
+\put(460.000,123){\makebox(0,0){\scriptsize 2.32}}
+\put(0,90){\makebox(0,0)[l]{\small\bfseries CON\_D\_0003090}}
+\put(0,73){\makebox(0,0)[l]{\scriptsize Native binary}}
+\put(83,70){\color{lightgrid}\rule{377pt}{10pt}}
+\put(83.0000,70){\color[HTML]{555555}\rule{111.8807pt}{10pt}}
+\put(330.0698,70){\color[HTML]{555555}\rule{9.3234pt}{10pt}}
+\put(395.3336,70){\color[HTML]{555555}\rule{64.6664pt}{10pt}}
+\put(0,55){\makebox(0,0)[l]{\scriptsize Baseline}}
+\put(83,52){\color{lightgrid}\rule{377pt}{10pt}}
+\put(83.0000,52){\color[HTML]{555555}\rule{107.2190pt}{10pt}}
+\put(199.5424,52){\color[HTML]{555555}\rule{4.6617pt}{10pt}}
+\put(250.8210,52){\color[HTML]{555555}\rule{37.2936pt}{10pt}}
+\put(306.7614,52){\color[HTML]{555555}\rule{27.9702pt}{10pt}}
+\put(348.7166,52){\color[HTML]{555555}\rule{32.6319pt}{10pt}}
+\put(399.9952,52){\color[HTML]{555555}\rule{60.0048pt}{10pt}}
+\put(83.000,35){\makebox(0,0){\scriptsize 0.00}}
+\put(177.250,35){\makebox(0,0){\scriptsize 0.40}}
+\put(271.500,35){\makebox(0,0){\scriptsize 0.81}}
+\put(365.750,35){\makebox(0,0){\scriptsize 1.21}}
+\put(460.000,35){\makebox(0,0){\scriptsize 1.62}}
+\end{picture}\end{center}
+
+{\small Two of ten dev examples fixed before scoring. The top recording contains substantial spoof; the second includes binary-spoof nonspeech. Gray background means the remaining duration, not a confidence interval. Predictions use the fixed zero threshold, with no smoothing.}\par
+
+The first model makes many errors. At threshold zero, it marks a large part of bona fide duration as spoof and still misses real spoof ranges. The timelines are useful for inspecting those failures; they do not prove authenticity. Binary spoof reference spans include nonspeech where the publisher labelled it spoof.\par
+
+\vspace{4pt}{\color{navy}\bfseries Limits of the pilot}\par
+
+There is one model seed and a deliberately small balanced utterance sample. Per-frame data are correlated within a recording, and there is no independent threshold test. The 20 ms output grid does not imply 20 ms acoustic context or streaming latency: LFCC windows and deltas use adjacent and future audio.\par
+
+\vspace{4pt}{\color{navy}\bfseries Fragmented false alarms}\par
+
+At threshold zero, 109 pooled-reference spoof runs produce 1,349 prediction runs; 989 predictions have no reference overlap. The median predicted run lasts 60 ms. False alarms occur in speech as well as nonspeech. A VAD mask would change the reference target and would not solve the speech errors.\par
+
+{\small Evidence: docs/validation/localization\_alignment.json; localization\_pilot\_v1.json; localization\_pilot\_review\_v1.json; localization\_errors\_v1.json. Native and pooled reference resolutions are kept separate in the error analysis.}\par
+
+\clearpage
+
+\reporttitle{One context change, and the reference limits}
+
+I tested one idea from the pilot plan: compare each frame with its own recording context. For every LFCC dimension, I subtracted the recording median and divided by max(1.4826 times MAD, 0.001). The full unlabelled recording supplies these statistics, including future audio. No dev labels enter the transform; train-only scaling and the classifier remain unchanged. This is offline and is not a new-method claim.\par
+
+\begin{center}\setlength{\unitlength}{1pt}\begin{picture}(480,160)
+\put(50,25.000){\color{lightgrid}\line(1,0){400}}
+\put(43,25.000){\makebox(0,0)[r]{\scriptsize 0}}
+\put(50,46.000){\color{lightgrid}\line(1,0){400}}
+\put(43,46.000){\makebox(0,0)[r]{\scriptsize 10}}
+\put(50,67.000){\color{lightgrid}\line(1,0){400}}
+\put(43,67.000){\makebox(0,0)[r]{\scriptsize 20}}
+\put(50,88.000){\color{lightgrid}\line(1,0){400}}
+\put(43,88.000){\makebox(0,0)[r]{\scriptsize 30}}
+\put(50,109.000){\color{lightgrid}\line(1,0){400}}
+\put(43,109.000){\makebox(0,0)[r]{\scriptsize 40}}
+\put(50,130.000){\color{lightgrid}\line(1,0){400}}
+\put(43,130.000){\makebox(0,0)[r]{\scriptsize 50}}
+\put(137,25){\color[HTML]{555555}\rule{46pt}{82.9504pt}}
+\put(160,117.9504){\makebox(0,0){\small 39.50}}
+\put(160,10){\makebox(0,0){\scriptsize LFCC baseline}}
+\put(317,25){\color[HTML]{555555}\rule{46pt}{90.1400pt}}
+\put(340,125.1400){\makebox(0,0){\small 42.92}}
+\put(340,10){\makebox(0,0){\scriptsize Recording median/MAD}}
+\end{picture}\end{center}
+
+{\small One seed and the same small dev subset. Bars use a zero-based axis; no confidence interval or generalization claim.}\par
+
+\begin{center}\small
+
+\begin{tabular}{@{}lll@{}}\toprule
+
+Diagnostic & LFCC baseline & With context \\
+
+\midrule
+
+Custom 20 ms duration EER & 39.50\% & 42.92\% \\
+
+Derived-reference RangeEER & 39.38\% & 42.97\% \\
+
+Missed spoof at zero & 18.29 s & 20.40 s \\
+
+False alarm at zero & 84.20 s & 87.76 s \\
+
+\bottomrule\end{tabular}\end{center}
+
+Context normalization made the custom EER worse by 3.42 percentage points and increased both fixed-zero error durations. I kept the negative result and did not search for another MAD floor, seed or threshold. The first attempt stopped on a Windows status-file sharing error; an infrastructure-only retry used the same model and transform. Both attempts and pre-fit freezes are retained.\par
+
+\vspace{4pt}{\color{navy}\bfseries Why the range result is a diagnostic}\par
+
+The checked public train/dev archives contain no publisher RTTM reference. I converted the unchanged native 10 ms binary labels into contiguous spoof ranges and clipped the final interval to the actual WAV length. This is explicitly a derived reference; sub-bin boundaries and publisher silence treatment are unverified. I used the hash-pinned bounded patched upstream RangeEER [10] and pyannote.metrics [12], with separate dependencies and a 120-second external timeout. Independent duration arithmetic reproduced its selected operating point. It is not an unmodified official evaluator or paper reproduction.\par
+
+{\small Range scoring uses the upstream rule score <= threshold for spoof; project timelines use score < threshold. The range metric uses native 10 ms truth, while the earlier custom metric uses pooled 20 ms truth. References, source hashes, solver state and failure logs are saved in the audits. These results support keeping the original baseline for now; a stronger representation needs a separately planned experiment.}\par
+
+\clearpage
+
+\reporttitle{A frozen encoder, with a separate convergence follow-up}
+
+I extracted pinned wav2vec2-base features [13] for the same 128 train and 64 dev recordings. Its 768-dimensional final states were aligned to the existing 20 ms output bins. All 192 caches, source/checkpoint hashes and resource receipts passed verification. T4 extraction took 18.27 seconds, with 1.394 GiB externally measured peak RAM. No encoder fine-tuning was performed.\par
+
+\vspace{4pt}{\color{navy}\bfseries Preserving the failed experiment}\par
+
+The original SSL head used the same maximum 300 iterations as LFCC. It emitted a convergence warning and produced no accepted model or dev result. Its Windows monitor measured a launcher instead of the numerical child, so its reported RAM is invalid. I preserved that failure, repaired process supervision and tested the actual worker with a 64 MiB allocation.\par
+
+Before any SSL dev scores, I recorded a separate train-only maximum of 3,000 iterations. C=1, lbfgs, tolerance 0.0001, seed 45, one thread, features and ordered training samples stayed fixed. The new fit converged in 303 iterations. External duration was 7.67 seconds and peak RAM 316.9 MiB. An independent no-fit replay checked retained feature bytes, scaler statistics, parameters and real worker PID before dev scoring.\par
+
+\begin{center}\small
+
+\begin{tabular}{@{}lll@{}}\toprule
+
+Same custom 64-dev diagnostic & LFCC max 300 & SSL max 3000 follow-up \\
+
+\midrule
+
+Pooled 20 ms duration EER & 39.50\% & 28.57\% \\
+
+Derived native RangeEER & 39.38\% & 28.75\% \\
+
+Missed spoof at zero & 18.29 s & 23.09 s \\
+
+False alarm at zero & 84.20 s & 32.87 s \\
+
+Predicted spoof runs & 1349 & 720 \\
+
+\bottomrule\end{tabular}\end{center}
+
+The custom duration EER decreased by 10.93 percentage points. At the fixed zero boundary, false-alarm duration decreased but missed spoof increased. This is a useful error trade-off, not evidence that every operating point improved. The SSL follow-up has a different optimization budget from LFCC 300; it is not an equal-training-budget comparison.\par
+
+{\small Evidence: docs/validation/localization\_ssl\_convergence\_train\_v1.json and localization\_ssl\_convergence\_dev\_v1.json. All 64 saved scores were reproduced exactly without fitting; a separate weighted ROC calculation reproduced EER. The original fixed 300 failure remains in localization\_ssl\_head\_convergence\_v2.json.}\par
+
+\clearpage
+
+\reporttitle{SSL timelines and what the result cannot establish}
+
+\begin{center}\setlength{\unitlength}{1pt}\begin{picture}(480,220)
+\put(0,208){\makebox(0,0)[l]{\small\bfseries CON\_D\_0000586}}
+\put(0,188){\makebox(0,0)[l]{\scriptsize Native binary}}
+\put(83,185){\color{lightgrid}\rule{377pt}{10pt}}
+\put(141.4134,185){\color[HTML]{555555}\rule{51.9231pt}{10pt}}
+\put(251.7500,185){\color[HTML]{555555}\rule{87.6202pt}{10pt}}
+\put(368.5769,185){\color[HTML]{555555}\rule{77.8846pt}{10pt}}
+\put(0,170){\makebox(0,0)[l]{\scriptsize LFCC baseline}}
+\put(83,167){\color{lightgrid}\rule{377pt}{10pt}}
+\put(89.4904,167){\color[HTML]{555555}\rule{12.9808pt}{10pt}}
+\put(108.9615,167){\color[HTML]{555555}\rule{3.2452pt}{10pt}}
+\put(115.4519,167){\color[HTML]{555555}\rule{3.2452pt}{10pt}}
+\put(121.9423,167){\color[HTML]{555555}\rule{6.4904pt}{10pt}}
+\put(134.9231,167){\color[HTML]{555555}\rule{9.7356pt}{10pt}}
+\put(154.3942,167){\color[HTML]{555555}\rule{3.2452pt}{10pt}}
+\put(160.8846,167){\color[HTML]{555555}\rule{3.2452pt}{10pt}}
+\put(180.3557,167){\color[HTML]{555555}\rule{16.2260pt}{10pt}}
+\put(238.7692,167){\color[HTML]{555555}\rule{16.2260pt}{10pt}}
+\put(280.9567,167){\color[HTML]{555555}\rule{12.9808pt}{10pt}}
+\put(310.1634,167){\color[HTML]{555555}\rule{3.2452pt}{10pt}}
+\put(336.1249,167){\color[HTML]{555555}\rule{3.2452pt}{10pt}}
+\put(342.6153,167){\color[HTML]{555555}\rule{6.4904pt}{10pt}}
+\put(365.3317,167){\color[HTML]{555555}\rule{19.4711pt}{10pt}}
+\put(388.0480,167){\color[HTML]{555555}\rule{12.9808pt}{10pt}}
+\put(404.2740,167){\color[HTML]{555555}\rule{3.2452pt}{10pt}}
+\put(452.9518,167){\color[HTML]{555555}\rule{6.4904pt}{10pt}}
+\put(0,152){\makebox(0,0)[l]{\scriptsize SSL follow-up}}
+\put(83,149){\color{lightgrid}\rule{377pt}{10pt}}
+\put(83.0000,149){\color[HTML]{555555}\rule{6.4904pt}{10pt}}
+\put(92.7356,149){\color[HTML]{555555}\rule{48.6779pt}{10pt}}
+\put(144.6586,149){\color[HTML]{555555}\rule{38.9423pt}{10pt}}
+\put(186.8461,149){\color[HTML]{555555}\rule{12.9808pt}{10pt}}
+\put(203.0721,149){\color[HTML]{555555}\rule{25.9615pt}{10pt}}
+\put(232.2788,149){\color[HTML]{555555}\rule{227.7212pt}{10pt}}
+\put(83.0000,132){\makebox(0,0){\scriptsize 0.00}}
+\put(177.2500,132){\makebox(0,0){\scriptsize 0.58}}
+\put(271.5000,132){\makebox(0,0){\scriptsize 1.16}}
+\put(365.7500,132){\makebox(0,0){\scriptsize 1.74}}
+\put(460.0000,132){\makebox(0,0){\scriptsize 2.32}}
+\put(0,100){\makebox(0,0)[l]{\small\bfseries CON\_D\_0003090}}
+\put(0,80){\makebox(0,0)[l]{\scriptsize Native binary}}
+\put(83,77){\color{lightgrid}\rule{377pt}{10pt}}
+\put(83.0000,77){\color[HTML]{555555}\rule{111.8807pt}{10pt}}
+\put(330.0698,77){\color[HTML]{555555}\rule{9.3234pt}{10pt}}
+\put(395.3336,77){\color[HTML]{555555}\rule{64.6664pt}{10pt}}
+\put(0,62){\makebox(0,0)[l]{\scriptsize LFCC baseline}}
+\put(83,59){\color{lightgrid}\rule{377pt}{10pt}}
+\put(83.0000,59){\color[HTML]{555555}\rule{107.2190pt}{10pt}}
+\put(199.5424,59){\color[HTML]{555555}\rule{4.6617pt}{10pt}}
+\put(250.8210,59){\color[HTML]{555555}\rule{37.2936pt}{10pt}}
+\put(306.7614,59){\color[HTML]{555555}\rule{27.9702pt}{10pt}}
+\put(348.7166,59){\color[HTML]{555555}\rule{32.6319pt}{10pt}}
+\put(399.9952,59){\color[HTML]{555555}\rule{60.0048pt}{10pt}}
+\put(0,44){\makebox(0,0)[l]{\scriptsize SSL follow-up}}
+\put(83,41){\color{lightgrid}\rule{377pt}{10pt}}
+\put(83.0000,41){\color[HTML]{555555}\rule{149.1742pt}{10pt}}
+\put(241.4976,41){\color[HTML]{555555}\rule{83.9105pt}{10pt}}
+\put(330.0698,41){\color[HTML]{555555}\rule{4.6617pt}{10pt}}
+\put(339.3932,41){\color[HTML]{555555}\rule{60.6020pt}{10pt}}
+\put(404.6569,41){\color[HTML]{555555}\rule{55.3431pt}{10pt}}
+\put(83.0000,24){\makebox(0,0){\scriptsize 0.00}}
+\put(177.2500,24){\makebox(0,0){\scriptsize 0.40}}
+\put(271.5000,24){\makebox(0,0){\scriptsize 0.81}}
+\put(365.7500,24){\makebox(0,0){\scriptsize 1.21}}
+\put(460.0000,24){\makebox(0,0){\scriptsize 1.62}}
+\end{picture}\end{center}
+
+{\small The same two examples selected before scoring, with native reference, LFCC and SSL predictions. Dark spans indicate spoof. Both models use the fixed boundary zero; there is no smoothing or threshold selection for these tracks. Time is in seconds.}\par
+
+SSL still produces 720 predicted runs for 109 pooled-reference runs; 423 predictions have no reference overlap. Thirteen reference runs have no prediction overlap, and 46 are split across multiple predictions. These examples and aggregate counts show remaining localization errors despite the lower EER.\par
+
+\vspace{4pt}{\color{navy}\bfseries Development evidence, not a benchmark claim}\par
+
+The same small dev subset has been inspected repeatedly. There is one model seed, no independent threshold test, and correlated frames within recordings. The whole-recording encoder uses future audio; a 20 ms score grid does not imply streaming latency. Encoder pretraining overlap is unknown, and PartialSpoof shares source material with ASVspoof.\par
+
+The range diagnostic still uses derived native 10 ms reference ranges and the same bounded patched upstream evaluator. Publisher RTTM parity is unverified. Its score <= threshold rule differs from the displayed score < 0 rule. Evaluation data remains closed. No further solver, seed or threshold search was performed.\par
+
+{\small Next validation should use a separately fixed protocol and adequate independent data before making generalization or deployment claims. Public data only; no company data or internal results were used.}\par
+
+\clearpage
+
+\reporttitle{References and acknowledgment}
+
+{\small
+
+\href{https://zenodo.org/records/6906306}{[1] ASVspoof 2019 LA v1. Public dataset, Zenodo record 6906306.}\par
+
+\href{https://www.isca-archive.org/interspeech_2019/todisco19_interspeech.html}{[2] Todisco et al. (2019). ASVspoof 2019: Future Horizons in Spoofed and Fake Audio Detection. Interspeech, 1008-1012.}\par
+
+\href{https://www.asvspoof.org/index2019.html}{[3] Sahidullah, Kinnunen and Hanilci (2015). A comparison of features for synthetic speech detection. Interspeech, 2087-2091. Linked from the official baseline page.}\par
+
+\href{https://www.asvspoof.org/asvspoof2019/asvspoof2019_evaluation_plan.pdf}{[4] ASVspoof 2019 Evaluation Plan, v0.4.}\par
+
+\href{https://www.asvspoof.org/asvspoof2019/tDCF_python_v1.zip}{[5] Official ASVspoof 2019 v1 Python evaluator. Pinned locally for EER and normalized t-DCF.}\par
+
+\href{https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html}{[6] scikit-learn documentation: GaussianMixture.}\par
+
+\href{https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.resample_poly.html}{[7] SciPy documentation: scipy.signal.resample\_poly.}\par
+
+\href{https://zenodo.org/records/5766198}{[8] PartialSpoof v1.2 public data. Zenodo record 5766198.}\par
+
+\href{https://arxiv.org/abs/2204.05177}{[9] Zhang et al. The PartialSpoof Database and Countermeasures for the Detection of Short Fake Speech Segments Embedded in an Utterance.}\par
+
+\href{https://www.isca-archive.org/interspeech_2023/zhang23v_interspeech.html}{[10] Zhang et al. Range-Based Equal Error Rate for Spoof Localization. Interspeech 2023.}\par
+
+\href{https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html}{[11] scikit-learn documentation: LogisticRegression.}\par
+
+\href{https://pyannote.github.io/pyannote-metrics/}{[12] Bredin (2017). pyannote.metrics: A Toolkit for Reproducible Evaluation, Diagnostic, and Error Analysis of Speaker Diarization Systems.}\par
+
+\href{https://huggingface.co/facebook/wav2vec2-base/tree/0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8}{[13] Meta AI. wav2vec2-base model card, pinned revision 0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8.}\par
+
+}
+
+\vspace{4pt}{\color{navy}\bfseries Acknowledgment}\par
+
+{\small I used an AI coding assistant for implementation support, debugging, tests and report editing. Parallel agents helped review code and result tables. Reported metrics were calculated from saved experiment outputs.}\par
+
+{\small Repository evidence: docs/validation/full\_robustness\_results\_v1.json; docs/FULL\_ROBUSTNESS\_PLAN.md; docs/REPORT\_EVIDENCE.md; configs/full\_seed42.toml (and seeds 43/44); scripts/build\_report\_figures.py; scripts/build\_project\_report.py. The report and figure manifests record input and output SHA-256 hashes.}\par
+
+{\small Dataset: Zenodo-6906306-v1, ODC-By 1.0. The official evaluator has a separate CC BY-NC-SA 4.0 license and stays outside Git. Public data attribution and source/license checks are in docs/DATA\_PROTOCOL.md and docs/METRICS.md.}\par
+
+{\small PartialSpoof v1.2 has separate CC BY 4.0 attribution requirements; its ASVspoof source has ODC-By terms. See docs/PARTIALSPOOF\_PROTOCOL.md. Localization audit sources and derived references are documented separately from official benchmark results.}\par
+
+\end{document}

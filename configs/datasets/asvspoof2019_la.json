@@ -1,0 +1,117 @@
+{
+  "dataset_id": "asvspoof2019_la",
+  "version": "v1",
+  "verified_on": "2026-10-09",
+  "record_url": "https://zenodo.org/records/6906306",
+  "license": "ODC-By-1.0",
+  "license_url": "https://opendatacommons.org/licenses/by/1.0/",
+  "protocol_dir": "data/metadata/asvspoof2019",
+  "archive": {
+    "filename": "LA.zip",
+    "url": "https://zenodo.org/records/6906306/files/LA.zip?download=1",
+    "md5": "30c98f11d8b2bc21f2c257bfd78bb5c5",
+    "downloaded": true,
+    "local_verification_audit": "docs/validation/pilot_data_seed42.json",
+    "local_state_note": "Archive verified locally on 2026-10-09; a fresh clone still needs data preparation. Only fixed pilot audio extracted."
+  },
+  "protocol_columns": [
+    "speaker_id",
+    "utterance_id",
+    "unused",
+    "attack_id",
+    "label"
+  ],
+  "sample_rate_hz": 16000,
+  "splits": {
+    "train": {
+      "filename": "ASVspoof2019.LA.cm.train.trn.txt",
+      "url": "https://zenodo.org/api/records/6906306/files/LA.zip/container/LA/ASVspoof2019_LA_cm_protocols/ASVspoof2019.LA.cm.train.trn.txt",
+      "sha256": "65a289e4009400b42bb4f1e47ac60938d93f7f595452d1f220d35defc3de8ab8",
+      "size_bytes": 840120,
+      "rows": 25380,
+      "bonafide": 2580,
+      "spoof": 22800,
+      "speakers": 20,
+      "bonafide_speakers": 20,
+      "spoof_speakers": 20,
+      "attacks": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06"
+      ],
+      "audio_subdir": "ASVspoof2019_LA_train/flac"
+    },
+    "dev": {
+      "filename": "ASVspoof2019.LA.cm.dev.trl.txt",
+      "url": "https://zenodo.org/api/records/6906306/files/LA.zip/container/LA/ASVspoof2019_LA_cm_protocols/ASVspoof2019.LA.cm.dev.trl.txt",
+      "sha256": "2fedaebf1ba3ae1a9bb7d3ec916804ac237b4eee063a27fa92e6549f03d129c7",
+      "size_bytes": 822400,
+      "rows": 24844,
+      "bonafide": 2548,
+      "spoof": 22296,
+      "speakers": 20,
+      "bonafide_speakers": 20,
+      "spoof_speakers": 10,
+      "attacks": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06"
+      ],
+      "audio_subdir": "ASVspoof2019_LA_dev/flac"
+    },
+    "eval": {
+      "filename": "ASVspoof2019.LA.cm.eval.trl.txt",
+      "url": "https://zenodo.org/api/records/6906306/files/LA.zip/container/LA/ASVspoof2019_LA_cm_protocols/ASVspoof2019.LA.cm.eval.trl.txt",
+      "sha256": "84fce576efff092269a0a6ad247d2e9f2f7b4d4e25a4545efb2518da92708036",
+      "size_bytes": 2358176,
+      "rows": 71237,
+      "bonafide": 7355,
+      "spoof": 63882,
+      "speakers": 67,
+      "bonafide_speakers": 67,
+      "spoof_speakers": 48,
+      "attacks": [
+        "A07",
+        "A08",
+        "A09",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A17",
+        "A18",
+        "A19"
+      ],
+      "audio_subdir": "ASVspoof2019_LA_eval/flac"
+    }
+  },
+  "metadata": {
+    "README.txt": {
+      "filename": "README.txt",
+      "url": "https://zenodo.org/records/6906306/files/README.txt?download=1",
+      "sha256": "aa72c9527424585688697d18d51dfcab1828040e48d2aed5d12f190333935207",
+      "size_bytes": 13139
+    },
+    "LICENSE_text.txt": {
+      "filename": "LICENSE_text.txt",
+      "url": "https://zenodo.org/records/6906306/files/LICENSE_text.txt?download=1",
+      "sha256": "99a4d3e0db6f9a5cd8871f9737b207af01de333f57c6269a11ce755227c1555d",
+      "size_bytes": 19941
+    },
+    "README.LA.txt": {
+      "filename": "README.LA.txt",
+      "url": "https://zenodo.org/api/records/6906306/files/LA.zip/container/LA/README.LA.txt",
+      "sha256": "c99a875d94d91734c2468eff13a1d3a60991eb308335caa1750be1020c2748fe",
+      "size_bytes": 4517
+    }
+  }
+}

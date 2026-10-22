@@ -1,0 +1,241 @@
+{
+  "status": "ok",
+  "scope": "full-official-train-dev-adaptation-scoring-recovery",
+  "seed": 42,
+  "eval_enabled": false,
+  "finished_utc": "2026-10-10T00:44:03.079639+00:00",
+  "splits": {
+    "train": {
+      "count": 25380,
+      "labels": {
+        "bonafide": 2580,
+        "spoof": 22800
+      },
+      "attacks": {
+        "-": 2580,
+        "A01": 3800,
+        "A02": 3800,
+        "A03": 3800,
+        "A04": 3800,
+        "A05": 3800,
+        "A06": 3800
+      },
+      "speakers": 20
+    },
+    "dev": {
+      "count": 24844,
+      "labels": {
+        "bonafide": 2548,
+        "spoof": 22296
+      },
+      "attacks": {
+        "-": 2548,
+        "A01": 3716,
+        "A02": 3716,
+        "A03": 3716,
+        "A04": 3716,
+        "A05": 3716,
+        "A06": 3716
+      },
+      "speakers": 20
+    }
+  },
+  "metrics": {
+    "evaluation_scope": "full",
+    "split": "dev",
+    "scope_note": "Caller-supplied manifest; pilot/full label does not certify official benchmark completeness.",
+    "reference_version": "ASVspoof2019 tDCF_python_v1",
+    "reference_sha256": "93ea505282d329ed14537d977a74b2d1a25d161ac6767a16e0216a1a18391049",
+    "asv_score_sha256": "fe8114cf608c3062c141df5979892eba9664aa37a8c99e97157f129d679d3389",
+    "score_direction": "higher_is_bonafide",
+    "rate_units": "fraction",
+    "cm_counts": {
+      "bonafide": 2548,
+      "spoof": 22296
+    },
+    "eer": 0.05890201986234586,
+    "eer_threshold": 0.670067310333252,
+    "min_tDCF": 0.15267840463196913,
+    "min_tDCF_threshold": 0.479202002286911,
+    "asv": {
+      "eer": 0.02426530238400544,
+      "eer_threshold": -3.548998,
+      "Pfa": 0.02444521497919556,
+      "Pmiss": 0.02425876010781671,
+      "Pmiss_spoof": 0.23972909939002512,
+      "counts": {
+        "target": 1484,
+        "nontarget": 5768,
+        "spoof": 22296
+      }
+    },
+    "cost_model": {
+      "Pspoof": 0.05,
+      "Ptar": 0.9405,
+      "Pnon": 0.0095,
+      "Cmiss_asv": 1,
+      "Cfa_asv": 10,
+      "Cmiss_cm": 1,
+      "Cfa_cm": 10
+    }
+  },
+  "model_sha256": "701fc3d8107cc8b2696b5552dd9e1b4751e44d2d197cfd5d1dfe7e4814add101",
+  "input_sha256": {
+    "selection_manifest": "37da16080ddbf0c0253b1f093a11917e1c463f12b2f88d322c270587abf17458",
+    "train_protocol": "65a289e4009400b42bb4f1e47ac60938d93f7f595452d1f220d35defc3de8ab8",
+    "dev_protocol": "2fedaebf1ba3ae1a9bb7d3ec916804ac237b4eee063a27fa92e6549f03d129c7",
+    "audio_journal": "cb80fcc2a80b26542178e87cb985ec81f51e7bd1efe60ab203ddfa53fe123440",
+    "asv_scores": "fe8114cf608c3062c141df5979892eba9664aa37a8c99e97157f129d679d3389",
+    "reference_evaluator": "93ea505282d329ed14537d977a74b2d1a25d161ac6767a16e0216a1a18391049"
+  },
+  "output_sha256": {
+    "scores.csv": "bdc3cd64a218eaa2e56db225d06a696bb3049cb7e556d5e8672d548c80d5915e",
+    "plan.json": "e3102c6f21de742c84bc4ca4a52e985fbaf0293c34c79d5ba0d2991b9492ce38"
+  },
+  "source_sha256": {
+    "scripts/run_full_baseline.py": "8f12ca300b69492fe24930521b010cd3274c56ccfe32aaedee6c3db18bc61fd2",
+    "src/audio_deepfake/baseline.py": "2cf5b7d030bb9926d5e0aa3ed4089298f79a50038f1da5c8a41171f7a4d29c2f",
+    "src/audio_deepfake/features.py": "22152cdcb7c118fd168dc9c4e11a20f100f959d4f2e4e1cb6f16fdfbe83cbfb3",
+    "src/audio_deepfake/audio.py": "aa3b33b4e5512f26202019b7f44d92c4bb4389bb2ae9d0c256cb822b54ad424c",
+    "src/audio_deepfake/manifests.py": "6cad5d8f7bd1c6b3ffd8f530108a9dfc0c727fa17f01d8ec7579178ba05d96b6",
+    "src/audio_deepfake/metrics.py": "2fc3adf0eb821d99a8d774bea8a6fe9cfbc2c9b96d41db4df057c84b5ffd7b93",
+    "src/audio_deepfake/resources.py": "9d68202f7335b17e83f2138600f0f1c7312adab46c3d73609d61751800282e7a",
+    "src/audio_deepfake/cli.py": "194579347d6a5af0b4f707247baecffab24ed83fc18867e2f62febe30683b4ee",
+    "configs/full_seed42.toml": "e1775a7f886fbf4dc641f04d5ec0f73f64c9ae2bfffb3e2e611151bfe2596d22",
+    "scripts/recover_full_scoring.py": "f5d0d5f3109e75451d409e81d4058d25652fc3ae61cdbf5f0b6a943c671b3d6c"
+  },
+  "supervisor_source_sha256": {
+    "scripts/scoring_recovery_job.py": "9b88ec37719c89bf8c267b91c22cb1841506228f92e6b3181837f44b6ad3c2cb",
+    "scripts/start_scoring_recovery.ps1": "2e0125df55cb632841db7026cde6ffad4c3d2e58a0a1327ef6403c8fae74791b",
+    "scripts/recover_full_scoring.py": "f5d0d5f3109e75451d409e81d4058d25652fc3ae61cdbf5f0b6a943c671b3d6c",
+    "scripts/full_run_job.py": "36d8389fe042b9e882af5df19e3336396c838d24b1f893d9db5d1c945f57504a",
+    "scripts/run_full_baseline.py": "8f12ca300b69492fe24930521b010cd3274c56ccfe32aaedee6c3db18bc61fd2",
+    "src/audio_deepfake/resources.py": "9d68202f7335b17e83f2138600f0f1c7312adab46c3d73609d61751800282e7a",
+    "src/audio_deepfake/baseline.py": "2cf5b7d030bb9926d5e0aa3ed4089298f79a50038f1da5c8a41171f7a4d29c2f",
+    "src/audio_deepfake/audio.py": "aa3b33b4e5512f26202019b7f44d92c4bb4389bb2ae9d0c256cb822b54ad424c",
+    "src/audio_deepfake/features.py": "22152cdcb7c118fd168dc9c4e11a20f100f959d4f2e4e1cb6f16fdfbe83cbfb3",
+    "src/audio_deepfake/manifests.py": "6cad5d8f7bd1c6b3ffd8f530108a9dfc0c727fa17f01d8ec7579178ba05d96b6",
+    "src/audio_deepfake/metrics.py": "2fc3adf0eb821d99a8d774bea8a6fe9cfbc2c9b96d41db4df057c84b5ffd7b93",
+    "src/audio_deepfake/cli.py": "194579347d6a5af0b4f707247baecffab24ed83fc18867e2f62febe30683b4ee",
+    "configs/full_seed42.toml": "e1775a7f886fbf4dc641f04d5ec0f73f64c9ae2bfffb3e2e611151bfe2596d22"
+  },
+  "recovery": {
+    "original_prefix_count": 22815,
+    "newly_scored_count": 2029,
+    "chunks": [
+      {
+        "status": "ok",
+        "start": 22815,
+        "stop": 23815,
+        "count": 1000,
+        "model_sha256": "701fc3d8107cc8b2696b5552dd9e1b4751e44d2d197cfd5d1dfe7e4814add101",
+        "score_sha256": "3463f0dd839ebb8172aedcb07ebc8331ead5cc03b0378267006776010323b1aa",
+        "plan_sha256": "e3102c6f21de742c84bc4ca4a52e985fbaf0293c34c79d5ba0d2991b9492ce38",
+        "finished_utc": "2026-10-10T00:42:50.424057+00:00",
+        "recovery_seconds": 8.436334199999692,
+        "memory_start": {
+          "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+          "rss_bytes": 157061120,
+          "peak_rss_bytes": 187932672,
+          "system_total_ram_bytes": 16872415232,
+          "system_available_ram_bytes": 4912361472
+        },
+        "memory_after": {
+          "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+          "rss_bytes": 192045056,
+          "peak_rss_bytes": 205131776,
+          "system_total_ram_bytes": 16872415232,
+          "system_available_ram_bytes": 4874899456
+        }
+      },
+      {
+        "status": "ok",
+        "start": 23815,
+        "stop": 24815,
+        "count": 1000,
+        "model_sha256": "701fc3d8107cc8b2696b5552dd9e1b4751e44d2d197cfd5d1dfe7e4814add101",
+        "score_sha256": "03b3e619e1900e2f4519dfe1b559859e9ea590b57d36b8370a49a55fef6eacb3",
+        "plan_sha256": "e3102c6f21de742c84bc4ca4a52e985fbaf0293c34c79d5ba0d2991b9492ce38",
+        "finished_utc": "2026-10-10T00:43:05.227833+00:00",
+        "recovery_seconds": 8.269213399995351,
+        "memory_start": {
+          "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+          "rss_bytes": 155029504,
+          "peak_rss_bytes": 187035648,
+          "system_total_ram_bytes": 16872415232,
+          "system_available_ram_bytes": 4919537664
+        },
+        "memory_after": {
+          "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+          "rss_bytes": 188628992,
+          "peak_rss_bytes": 205733888,
+          "system_total_ram_bytes": 16872415232,
+          "system_available_ram_bytes": 4874141696
+        }
+      },
+      {
+        "status": "ok",
+        "start": 24815,
+        "stop": 24844,
+        "count": 29,
+        "model_sha256": "701fc3d8107cc8b2696b5552dd9e1b4751e44d2d197cfd5d1dfe7e4814add101",
+        "score_sha256": "1bffa64316a3bc89334742e88ba0a9e2f48505147ec0d9c11e99e8150d1c57b9",
+        "plan_sha256": "e3102c6f21de742c84bc4ca4a52e985fbaf0293c34c79d5ba0d2991b9492ce38",
+        "finished_utc": "2026-10-10T00:43:13.166609+00:00",
+        "recovery_seconds": 1.176530400000047,
+        "memory_start": {
+          "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+          "rss_bytes": 155246592,
+          "peak_rss_bytes": 188112896,
+          "system_total_ram_bytes": 16872415232,
+          "system_available_ram_bytes": 4919865344
+        },
+        "memory_after": {
+          "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+          "rss_bytes": 188407808,
+          "peak_rss_bytes": 202280960,
+          "system_total_ram_bytes": 16872415232,
+          "system_available_ram_bytes": 4884463616
+        }
+      }
+    ],
+    "overlap_validation": [
+      {
+        "index": 0,
+        "utterance_id": "LA_D_1047731",
+        "original_score": 1.2489408254623413,
+        "recovered_score": 1.2489408254623413,
+        "absolute_difference": 0.0
+      },
+      {
+        "index": 11407,
+        "utterance_id": "LA_D_9596640",
+        "original_score": -4.57781457901001,
+        "recovered_score": -4.57781457901001,
+        "absolute_difference": 0.0
+      },
+      {
+        "index": 22814,
+        "utterance_id": "LA_D_7985250",
+        "original_score": 0.5275694727897644,
+        "recovered_score": 0.5275694727897644,
+        "absolute_difference": 0.0
+      }
+    ],
+    "preflight_seconds": 72.54774789998191,
+    "chunk_seconds": 17.88207799999509,
+    "finalize_seconds": 43.128600399999414,
+    "timing_scope": "Recovery stages only; original training/scoring runtime is not reconstructed."
+  },
+  "limitations": [
+    "Official development split only; eval remains closed.",
+    "Fixed sklearn adaptation, not exact official MATLAB reproduction.",
+    "Dev thresholds use dev labels; no deployment or held-out eval claim.",
+    "Original run exceeded its 2 GiB memory limit after saving the model.",
+    "Fresh scoring processes preserve the same model and score definition.",
+    "Original artifacts remain unchanged; recovery timing excludes the original run."
+  ],
+  "completion_check": "Separate supervisor verified score hashes, exact official dev order, metadata and finite scores.",
+  "local_summary": "outputs/scoring-recovery-seed42/summary.json",
+  "local_job": "outputs/jobs/scoring-recovery-seed42-20261010T004116241Z"
+}

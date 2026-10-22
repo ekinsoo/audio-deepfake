@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "status": "planned_before_download_or_fit",
+  "dataset": "PartialSpoof v1.2",
+  "eval_enabled": false,
+  "official_benchmark": false,
+  "checkpoint": {
+    "repo_id": "facebook/wav2vec2-base",
+    "revision": "0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8",
+    "license_declared": "Apache-2.0",
+    "file": "pytorch_model.bin",
+    "size_bytes": 380267417,
+    "sha256": "3249fe98bfc62fcbc26067f724716a6ec49d12c4728a2af1df659013905dff21",
+    "metadata_sha256": {
+      "model-api.json": "568b4794c31d6111f0a1ba98dd4824398015da8d971c4d159b9e94f7cf41ee32",
+      "README.md": "d633aeaaec1046af8cbacd21039f819304017e1ab6a369c5aff8668f3c35a127",
+      "config.json": "4937977e24d12d1bba70cdce8709c3c04807a8e4ae8ddac4229c48c436ae99ae",
+      "preprocessor_config.json": "b225d617c025463b9e157e06afea8b90dc7078fc70b013c533328423e0486b4a"
+    }
+  },
+  "representation": {
+    "output": "last_hidden_state",
+    "dimensions": 768,
+    "encoder_frozen": true,
+    "sample_rate": 16000,
+    "dtype": "float32",
+    "batch_size": 1,
+    "cpu_threads": 2,
+    "padding": false,
+    "waveform_normalization": "pinned processor do_normalize=true",
+    "receptive_samples": 400,
+    "hop_samples": 320,
+    "mapping": "nearest convolution center, earlier ties, clipped final bin midpoint",
+    "offline": true
+  },
+  "head": {
+    "seed": 45,
+    "frames_per_class_cap": 50000,
+    "expected_retained_per_class": 4524,
+    "scaler": "StandardScaler fitted on retained train frames only",
+    "classifier": "LogisticRegression",
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 300,
+    "numerical_threads": 1,
+    "convergence_warning": "stop"
+  },
+  "budgets": {
+    "checkpoint_transfer_bytes": 500000000,
+    "dependency_transfer_bytes": 2147483648,
+    "feature_cache_bytes": 1073741824,
+    "minimum_start_available_ram_bytes": 4294967296,
+    "minimum_runtime_available_ram_bytes": 2147483648,
+    "worker_peak_bytes": 3221225472,
+    "minimum_free_disk_bytes": 21474836480,
+    "smoke_timeout_seconds": 180,
+    "all_extraction_timeout_seconds": 1800,
+    "head_fit_timeout_seconds": 300
+  },
+  "input_sha256": {
+    "docs/validation/partial_selection_v1.json": "c7efeacc6a19e80557fed89183131ebbc64e476ce5c240b0a02fe151b6cfc374",
+    "docs/validation/localization_alignment.json": "87adda47fee58c4f367e26f6731469e8c5041f5df2c29a692aefd34e5106caaa",
+    "data/partialspoof/selected_labels_v1.json": "9c29d4eb387ca9b0ff2a7f524a03e73dfe592165b6969c6134a6274b184a0a4f",
+    "docs/validation/localization_pilot_v1.json": "d15ab66b987db6841eaa702e2e2649404baf51b003a6261a35c151d752e64318"
+  }
+}

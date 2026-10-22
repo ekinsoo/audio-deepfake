@@ -1,0 +1,28 @@
+{
+  "client_date": "2026-10-11",
+  "status": "reviewed_ready_for_colab_extraction",
+  "source_sha256": {
+    "scripts/ssl_extract_job.py": "a84b397133474d4235ac3d0d0a6ab38b7efe4899386fca20b707fea2130a40a8",
+    "scripts/ssl_extract_worker.py": "8d279c4fd7327cd08a5a1d409456e858bc77fc8c41b2a5fa453f1be80b517dd2",
+    "scripts/build_ssl_extraction_bundle.py": "c02686aae8b778f44c4320c2ba6a095ec549318249608f15271a6ed6ec388f6f",
+    "scripts/run_localization_ssl_head.py": "5d8010f94ac3f0e9cd978c3fc374480023fecdb66d831b2ca63a0959b08a818f",
+    "src/audio_deepfake/localization_ssl_head.py": "367acdf02086394d00c8d08c76103ece1113fc0afeb20bfad9c362ccb5d2eb5b",
+    "tests/test_ssl_extract_job.py": "788599d0b01a6eca1cd2d0f922321f1961f4af36cb4eb895e60cab6910702968",
+    "tests/test_localization_ssl_head.py": "8970225faee44ca8178b49bc9e86d454792258a7d18c7e1ea7ac60014de5c562"
+  },
+  "tests": {
+    "command": ".venv/Scripts/python.exe -m unittest discover -s tests -p *ssl*.py -v",
+    "passed": 32,
+    "failed": 0,
+    "optimizer_used_in_new_head_tests": false
+  },
+  "baseline_sources_unchanged": true,
+  "independent_source_review": "passed; no remaining blocker",
+  "real_sampling_preflight": "docs/validation/localization_ssl_sampling_preflight_v1.json",
+  "bundle": "docs/validation/localization_ssl_extraction_bundle_v2.json",
+  "superseded_bundle_preserved": "docs/validation/localization_ssl_extraction_bundle_v1.json",
+  "superseded_reason": "Final reviewed exit-race stop handling entered extraction job after initial packaging; final bundle freezes same data and final source. No extraction used v1.",
+  "training_started": false,
+  "full_192_extraction_started": false,
+  "explicit_upload_authorization": "User approved new 192-recording public payload upload and <=30 minute T4 extraction in current chat."
+}

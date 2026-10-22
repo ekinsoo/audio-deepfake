@@ -1,0 +1,40 @@
+{
+  "status": "metadata_verified_audio_preparation_started",
+  "checked_utc": "2026-10-10T15:13:15.478817+00:00",
+  "focused_project_tests_passed": 40,
+  "separate_metric_tests_passed": 3,
+  "metric_scope": "Synthetic compatibility checks of documented bounded patched upstream; no real-data RangeEER",
+  "real_data_localization_training_started": false,
+  "frozen_detection_demo_sources_unchanged": true,
+  "local_links_checked": true,
+  "metadata_diagnostic_figure_visually_checked": true,
+  "static_sha256": {
+    "src/audio_deepfake/localization.py": "9574564b39d6109524cd38e6b499c2753a811b42c736e730cd2ea18fd4f75efa",
+    "src/audio_deepfake/localization_features.py": "e402c7bacb4745dcfb79fbcbc8b56fb7e7cf88eaf3f8f9656f20790729be7d4c",
+    "src/audio_deepfake/localization_model.py": "85205d4d576b89c2a7b0956d390569fa1afd9e7c5eabee5e28148d53003b0c2b",
+    "src/audio_deepfake/localization_timeline.py": "dc1a2a0ba94bf9a6ffe0429b3a8640cb3233d6d0218be3eb40f859198727e6bd",
+    "src/audio_deepfake/partialspoof.py": "5fe41c67a56a043da4714c697b1e15f96c61130e8b528e06a18f09e462e5d6cf",
+    "scripts/prepare_partial_metadata.py": "12e95fa2a1c0aeb429479a0348e412035b2a32aa416e947beee995a8b41b3623",
+    "scripts/prepare_partial_audio.py": "fc2b59d1a90bbbb2d2f9d5c52e7ff68ea984ffc84a573a413466872bdd23212d",
+    "scripts/check_range_eer.py": "12630a31bebb86c05ed6663b7bfa4661c35309573df9130f218aaf32fc077f13",
+    "scripts/partial_audio_job.py": "eb1fc030ae656cb64c722724544c431f6060d53176755c2902832d2c0278deca",
+    "scripts/start_partial_audio.ps1": "895d5cc738015b1c629a7fe79682802253b69cbf6c16a4261f62a3e6e1db914b",
+    "scripts/build_partial_label_figure.py": "078ca199a19d2e35a2ba0a3d95fa4c93b1c6c0aae763022ece7d86c771accdde",
+    "docs/LOCALIZATION_RUN.md": "79d7d979cfe117da78c9cf2e5f1912792bb2b876a26bd66743dffb4531f16852",
+    "docs/LOCALIZATION_PILOT_PLAN.md": "33ae1843158e98b63e4d0adbdfb0a239ceabaa4c0f4b662746932aeead7dd847",
+    "docs/PARTIALSPOOF_PROTOCOL.md": "60606a2f1170b3bf5be4f58c0126268bd90f426b8ba3dd73782e820701dd2fab",
+    "docs/RANGE_EER_CONFORMANCE.md": "4db527cf22e757ad3d8d32cdf9d8066ed63d86244c6ed67e582d91999f5a906e",
+    "docs/validation/partial_metadata.json": "1dd5f3394f076f5226891d9a89511c11b891c6470ab03b6f1a800dae69c44469",
+    "docs/validation/partial_selection_v1.json": "c7efeacc6a19e80557fed89183131ebbc64e476ce5c240b0a02fe151b6cfc374",
+    "docs/validation/partial_transfer_probe.json": "bb4a92d2e213c5969e9881d0f1dc8b6b63c2745335988d690b8738ba16136941",
+    "docs/validation/range_eer_conformance.json": "28d2cdbabfb4f8830509291203058410f849f0047ef4335920ba6960bcc40e16"
+  },
+  "active_job_status": "outputs/jobs/partial-audio-20261010T150830073Z/status.json",
+  "live_transfer_audit": "docs/validation/partial_audio.json",
+  "open_gates": [
+    "Complete and verify train/dev audio archives",
+    "Audit actual sample counts and native binary RTTM against selected labels",
+    "Freeze terminal-bin mapping and full model configuration",
+    "Fit bounded pilot and evaluate with named compatibility variant"
+  ]
+}

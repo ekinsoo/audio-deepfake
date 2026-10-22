@@ -1,0 +1,13 @@
+# Tested runtime snapshot: Windows 11, Python 3.12.14, 2026-10-09.
+# This is not a cross-platform lock or a Colab environment guarantee.
+# Install these first, then: python -m pip install --no-deps -e .
+cffi==2.1.1
+cloudpickle==3.1.2
+joblib==1.6.0
+narwhals==2.26.0
+numpy==2.5.3
+pycparser==3.1
+scikit-learn==1.9.1
+scipy==1.18.1
+soundfile==0.13.1
+threadpoolctl==3.7.0

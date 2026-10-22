@@ -1,0 +1,12 @@
+{
+  "kind": "metadata diagnostic, not predictions",
+  "utterance_id": "CON_D_0003090",
+  "selection_sha256": "c7efeacc6a19e80557fed89183131ebbc64e476ce5c240b0a02fe151b6cfc374",
+  "selected_labels_sha256": "9c29d4eb387ca9b0ff2a7f524a03e73dfe592165b6969c6134a6274b184a0a4f",
+  "vad_sha256": "3c75d6d7a5234ca0946800ea7016c0cba120c888e757a0c4f46309a8a150ca9c",
+  "generator_sha256": "078ca199a19d2e35a2ba0a3d95fa4c93b1c6c0aae763022ece7d86c771accdde",
+  "figure_sha256": "8772a13fc05e70ac21f409f977394e8b7e68c38fefe1c4bd428eaec1411044e2",
+  "native_spoof_bins_10ms": 77,
+  "vad_spoof_seconds": 0,
+  "audio_duration_verified": false
+}

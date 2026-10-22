@@ -1,0 +1,26 @@
+{
+  "status": "verified_train_only",
+  "protocol_id": "localization_ssl_convergence_v1",
+  "train_dir": "outputs/localization/ssl-convergence-train-v1",
+  "train_results_sha256": "03af4bfb1078276b6959c412b2695927a06d2f6077707a72585d761b63a0063b",
+  "train_status_sha256": "d4ac4eb96dcd38deb2bce28b307316133f7eb74a379dcb417da4c324760ffd4d",
+  "train_config_sha256": "b86a291491d1a3ca127f797b1952294d7e99430f58cb641164a7022ebe897ac5",
+  "model_sha256": "201796c4a02cad5c7e327635aa7b3e8fcd56b47f8f387145a87c8c9adef3abc9",
+  "cache_identity_sha256": "93a5ee49123949554a27c4acced1f75f4742425bde9c0ca866103018241568fa",
+  "convergence_verified": true,
+  "dev_scores_absent": true,
+  "eval_enabled": false,
+  "independent_checks": [
+    "source/input hashes",
+    "real worker PID and resource limits",
+    "ordered retained train feature bytes reconstructed",
+    "scaler mean/variance independently recomputed",
+    "model optimizer, iterations and finite coefficients; no fit or decision_function"
+  ],
+  "iterations": [
+    303
+  ],
+  "peak_rss_bytes": 332316672,
+  "elapsed_seconds": 7.672000000020489,
+  "verifier_sha256": "f75dd26dd56cae7d351c210355a1ba44ba9238b1f6fcd079deb4de9827be4a1c"
+}

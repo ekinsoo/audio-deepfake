@@ -1,0 +1,163 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-10T16:57:41.771453+00:00",
+  "scope": "Independent review of one fixed offline recording-context normalization ablation; no fitting or dev tuning in review",
+  "checks": [
+    {
+      "name": "Complete v2 job and worker",
+      "passed": true
+    },
+    {
+      "name": "All v2 pre-fit source hashes match current files",
+      "passed": true
+    },
+    {
+      "name": "All worker source hashes match current files",
+      "passed": true
+    },
+    {
+      "name": "Result/config/model/score hash chain",
+      "passed": true
+    },
+    {
+      "name": "Freeze timestamp precedes worker configuration",
+      "passed": true
+    },
+    {
+      "name": "Same fixed128train64dev, seed45 model and LFCC",
+      "passed": true
+    },
+    {
+      "name": "Same ten preselected timelines",
+      "passed": true
+    },
+    {
+      "name": "No eval or parameter search",
+      "passed": true
+    },
+    {
+      "name": "Context/model fixed between v1/v2 freeze",
+      "passed": true
+    },
+    {
+      "name": "Retry changes confined to runner supervisor and status test",
+      "passed": true
+    },
+    {
+      "name": "Initial stop was status replacement; no result or dev scores saved",
+      "passed": true
+    },
+    {
+      "name": "Scores exact same dev IDs labels and actual-duration grid",
+      "passed": true
+    },
+    {
+      "name": "Independent score-group weighted EER matches both runs",
+      "passed": true
+    },
+    {
+      "name": "Independent EER thresholds match both runs",
+      "passed": true
+    },
+    {
+      "name": "Independent fixed-zero per-record errors match",
+      "passed": true
+    },
+    {
+      "name": "All 192 checked WAV hashes; all64 scores reproduced from independent MAD and linear classifier",
+      "passed": true
+    },
+    {
+      "name": "Same deterministic seed45/46 train-only reservoir; feature hash reproduced",
+      "passed": true
+    },
+    {
+      "name": "Training IDs exact train subset; no dev IDs in training",
+      "passed": true
+    },
+    {
+      "name": "Scaler independently matches retained training-only mean/variance",
+      "passed": true
+    },
+    {
+      "name": "No fit warnings, fixed-zero display threshold",
+      "passed": true
+    }
+  ],
+  "checks_passed": 20,
+  "baseline_independent_metrics": {
+    "eer_fraction": 0.39500173959340223,
+    "threshold": -0.12246589362621306,
+    "false_alarm_fraction_at_eer": 0.3949946509709633,
+    "miss_fraction_at_eer": 0.39500882821584116,
+    "spoof_seconds": 58.0525,
+    "bonafide_seconds": 175.0901875,
+    "zero_missed_spoof_seconds": 18.2858125,
+    "zero_false_alarm_seconds": 84.19831250000001,
+    "zero_miss_fraction": 0.3149875113044227,
+    "zero_false_alarm_fraction": 0.4808853865668515
+  },
+  "context_independent_metrics": {
+    "eer_fraction": 0.42923809447601224,
+    "threshold": -0.07550676897410076,
+    "false_alarm_fraction_at_eer": 0.4292655606414369,
+    "miss_fraction_at_eer": 0.42921062831058765,
+    "spoof_seconds": 58.0525,
+    "bonafide_seconds": 175.0901875,
+    "zero_missed_spoof_seconds": 20.3993125,
+    "zero_false_alarm_seconds": 87.7601875,
+    "zero_miss_fraction": 0.35139421213556693,
+    "zero_false_alarm_fraction": 0.5012284740399858
+  },
+  "context_minus_baseline_eer_percentage_points": 3.423635488261001,
+  "maximum_independent_score_difference": 0.0,
+  "train_reservoir": {
+    "seen_by_class": [
+      4524,
+      16497
+    ],
+    "retained_per_class": 4524,
+    "retained_feature_bytes_sha256": "ce7052c6416c5f8543ab4354ddd64a6cbde8545a9019bc346c971f2fda961b00"
+  },
+  "infrastructure_retry": {
+    "changed_files": [
+      "scripts/run_localization_context.py",
+      "scripts/localization_context_job.py",
+      "tests/test_localization_context.py"
+    ],
+    "failed_job": "outputs/jobs/localization-context-20261010-v1",
+    "completed_job": "outputs/jobs/localization-context-20261010-v2",
+    "initial_failure": "Windows status-file replacement denial after fit; no dev result artifacts",
+    "no_hyperparameter_change": true
+  },
+  "method": "Independent stdlib duration integration and score-group EER sweep, not runner.duration_eer; independent median/MAD formula per recording; regenerate fixed train random priorities and scaler statistics without fitting; manual linear-model dev score reproduction. Saved local model was unpickled only after verifying its result hash.",
+  "code_review": {
+    "context_API_accepts_only_features": true,
+    "context_calls_with_one_recording_matrix": true,
+    "context_has_no_persistent_statistics": true,
+    "training_scaler_fit_on_retained_train_only": true,
+    "per_dev_recording_unlabelled_statistics_used": true,
+    "streaming": false
+  },
+  "evidence_sha256": {
+    "docs/validation/localization_context_frozen.json": "d56e41c438f03933b3bbbee0c60cead405a724256c0fb784ccf817994dc2294e",
+    "docs/validation/localization_context_frozen_v2.json": "b6b671b60737930cd6ba69b4cafd1d87958ab314682a1883100d0dfb1364d034",
+    "outputs/jobs/localization-context-20261010-v2/pilot/config.json": "70912eda5403dae803eec1290fc00645caae792ac828ea028937c84ce208b5b4",
+    "outputs/jobs/localization-context-20261010-v2/pilot/results.json": "e92c146898ac0a3c13159623a3dc2961e17a83fd84cb2761be3dc4f7070e7c76",
+    "outputs/jobs/localization-context-20261010-v2/pilot/dev_scores.json": "bc12c45ad5780c20856ea224ae1a57940c9491ab0983c972de1d96be7bc6b22b",
+    "outputs/jobs/localization-context-20261010-v2/pilot/model.pkl": "e5376a33df059e77c5152357e731db2a9ea747b9e7459f67448c7714f88ad0c6",
+    "src/audio_deepfake/localization_context.py": "bc9bd273bb91a24a4cde3b021a6a904b17d2bed1b9e0a05b1f852e66e8ae36cc",
+    "src/audio_deepfake/localization_model.py": "85205d4d576b89c2a7b0956d390569fa1afd9e7c5eabee5e28148d53003b0c2b",
+    "outputs/jobs/localization-context-20261010-v1/stderr.log": "eed9955311af2d3841b440553596f58e04e2a9013da0a01672814134180aa45e",
+    "outputs/jobs/localization-context-20261010-v1/status.json": "838ea9cbb147aa74238e4c96060c7572dff59629d95417f6442395d38c7a26fe",
+    "outputs/jobs/localization-context-20261010-v2/status.json": "9cd032d43d8f7b5a523c56f72bafb5e09af85ff0a3c9761345544087a5994a52"
+  },
+  "limitations": [
+    "Negative exploratory result on same64 repeatedly inspected dev recordings; not independent generalization or an official benchmark",
+    "Full recording median/MAD uses unlabelled future dev audio, not dev labels; method is offline and no streaming-latency claim is valid",
+    "Data shares ASVspoof source material; no external validation",
+    "Custom EER threshold is selected on same dev scores; fixed-zero error durations are a separate operating point",
+    "Retry diff scope verified by source hashes and code inspection; first runner/supervisor source bytes were not archived, so exact line-by-line v1/v2 diff cannot be reconstructed from hashes alone",
+    "No exact official RangeEER reproduction claim in this review"
+  ]
+}

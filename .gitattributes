@@ -1,0 +1,4 @@
+# Preserve exact bytes: recorded experiment SHA-256 hashes include line endings.
+* -text
+*.png binary
+*.pdf binary

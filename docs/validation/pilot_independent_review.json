@@ -1,0 +1,84 @@
+{
+  "status": "passed",
+  "reviewed_utc": "2026-10-09T19:18:07.102204+00:00",
+  "baseline_summary_sha256": "34f8d97f27bee90ea6e68ed9c5911bccf81dea9b32a05d1757f1a90edeaad09d",
+  "baseline": {
+    "audio_hashes_verified": 3000,
+    "train_count": 2000,
+    "dev_score_ids_verified": 1000,
+    "source_and_artifact_hashes_verified": true,
+    "split_speaker_separation_verified": true,
+    "official_metric_dictionary_exact_match": true,
+    "eer": 0.088,
+    "min_tDCF": 0.20060773847582586,
+    "convergence": {
+      "bonafide": {
+        "frames_seen": 343761,
+        "frames_sampled": 50000,
+        "iterations": 43,
+        "converged": true,
+        "lower_bound": -33.83265686035156,
+        "fit_seconds": 5.083794200007105,
+        "warnings": []
+      },
+      "spoof": {
+        "frames_seen": 346389,
+        "frames_sampled": 50000,
+        "iterations": 30,
+        "converged": true,
+        "lower_bound": -32.956878662109375,
+        "fit_seconds": 3.730986500013387,
+        "warnings": []
+      }
+    },
+    "peak_rss_bytes": 199155712
+  },
+  "robustness": {
+    "summary_sha256": "4483c1b5842809f0df7ee27aa94c90b58c33c19e0786b94c4b7c06925440a88f",
+    "paired_ids_verified": 1000,
+    "all_three_official_metric_dictionaries_exact_match": true,
+    "independent_speaker_partition_exact_match": true,
+    "calibration_bonafide_count": 167,
+    "threshold": 0.7592377066612244,
+    "calibration_bonafide_acceptance": 0.9520958083832335,
+    "analysis_count": 629,
+    "analysis_errors": 63,
+    "independent_sklearn_rankings_exact_match": true,
+    "rankings": {
+      "abs_delta": {
+        "auroc": 0.4199618598911885,
+        "average_precision": 0.08020745752971674,
+        "undefined_reason": null
+      },
+      "negative_margin": {
+        "auroc": 0.9081832968758764,
+        "average_precision": 0.508570154819862,
+        "undefined_reason": null
+      }
+    },
+    "failure_example_selection_exact_match": true,
+    "waveform_score_spotchecks": [
+      {
+        "utterance_id": "LA_D_1028589",
+        "clean_exact_match": true,
+        "narrow_exact_match": true
+      },
+      {
+        "utterance_id": "LA_D_5774240",
+        "clean_exact_match": true,
+        "narrow_exact_match": true
+      },
+      {
+        "utterance_id": "LA_D_9996570",
+        "clean_exact_match": true,
+        "narrow_exact_match": true
+      }
+    ]
+  },
+  "limitations": [
+    "Custom train/dev pilot, not official benchmark completeness or held-out eval.",
+    "Offline score/metric audit does not retrain models or repeat every waveform transform.",
+    "Calibration-before-analysis order checked in runner source; artifact timestamps alone do not prove causality.",
+    "Reported processing times exclude preflight checks and output writing; peak RSS is process lifetime."
+  ]
+}

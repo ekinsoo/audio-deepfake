@@ -1,0 +1,151 @@
+{
+  "checked_utc": "2026-10-10T15:04:39.449791+00:00",
+  "purpose": "Read-only HTTP range/resume capability probe; no audio decoding",
+  "max_body_bytes": 4096,
+  "body_bytes_read": 3,
+  "requests": [
+    {
+      "split": "train",
+      "route": "website",
+      "method": "HEAD",
+      "url": "https://zenodo.org/records/5766198/files/database_train.tar.gz?download=1",
+      "requested_range": null,
+      "status": 200,
+      "final_url": "https://zenodo.org/records/5766198/files/database_train.tar.gz?download=1",
+      "headers": {
+        "Content-Length": "2027101056",
+        "Content-Range": null,
+        "Accept-Ranges": null,
+        "Content-Type": "application/octet-stream",
+        "ETag": null,
+        "Last-Modified": "Sun, 19 Apr 2026 02:34:00 GMT"
+      },
+      "body_bytes_read": 0,
+      "resume_supported": false
+    },
+    {
+      "split": "train",
+      "route": "website",
+      "method": "GET",
+      "url": "https://zenodo.org/records/5766198/files/database_train.tar.gz?download=1",
+      "requested_range": "bytes=0-0",
+      "status": 206,
+      "final_url": "https://zenodo.org/records/5766198/files/database_train.tar.gz?download=1",
+      "headers": {
+        "Content-Length": "1",
+        "Content-Range": "bytes 0-0/2027101056",
+        "Accept-Ranges": "bytes",
+        "Content-Type": "application/octet-stream",
+        "ETag": null,
+        "Last-Modified": null
+      },
+      "body_bytes_read": 1,
+      "resume_supported": true
+    },
+    {
+      "split": "train",
+      "route": "api",
+      "method": "HEAD",
+      "url": "https://zenodo.org/api/records/5766198/files/database_train.tar.gz/content",
+      "requested_range": null,
+      "status": 200,
+      "final_url": "https://zenodo.org/api/records/5766198/files/database_train.tar.gz/content",
+      "headers": {
+        "Content-Length": "2027101056",
+        "Content-Range": null,
+        "Accept-Ranges": null,
+        "Content-Type": "application/octet-stream",
+        "ETag": null,
+        "Last-Modified": "Sun, 19 Apr 2026 02:34:00 GMT"
+      },
+      "body_bytes_read": 0,
+      "resume_supported": false
+    },
+    {
+      "split": "train",
+      "route": "api",
+      "method": "GET",
+      "url": "https://zenodo.org/api/records/5766198/files/database_train.tar.gz/content",
+      "requested_range": "bytes=0-0",
+      "status": 206,
+      "final_url": "https://zenodo.org/api/records/5766198/files/database_train.tar.gz/content",
+      "headers": {
+        "Content-Length": "1",
+        "Content-Range": "bytes 0-0/2027101056",
+        "Accept-Ranges": "bytes",
+        "Content-Type": "application/octet-stream",
+        "ETag": null,
+        "Last-Modified": null
+      },
+      "body_bytes_read": 1,
+      "resume_supported": true
+    },
+    {
+      "split": "dev",
+      "route": "website",
+      "method": "HEAD",
+      "url": "https://zenodo.org/records/5766198/files/database_dev.tar.gz?download=1",
+      "requested_range": null,
+      "status": 200,
+      "final_url": "https://zenodo.org/records/5766198/files/database_dev.tar.gz?download=1",
+      "headers": {
+        "Content-Length": "2027972850",
+        "Content-Range": null,
+        "Accept-Ranges": null,
+        "Content-Type": "application/octet-stream",
+        "ETag": null,
+        "Last-Modified": "Sun, 19 Apr 2026 02:33:59 GMT"
+      },
+      "body_bytes_read": 0,
+      "resume_supported": false
+    },
+    {
+      "split": "dev",
+      "route": "website",
+      "method": "GET",
+      "url": "https://zenodo.org/records/5766198/files/database_dev.tar.gz?download=1",
+      "requested_range": "bytes=0-0",
+      "status": 206,
+      "final_url": "https://zenodo.org/records/5766198/files/database_dev.tar.gz?download=1",
+      "headers": {
+        "Content-Length": "1",
+        "Content-Range": "bytes 0-0/2027972850",
+        "Accept-Ranges": "bytes",
+        "Content-Type": "application/octet-stream",
+        "ETag": null,
+        "Last-Modified": null
+      },
+      "body_bytes_read": 1,
+      "resume_supported": true
+    },
+    {
+      "split": "dev",
+      "route": "api",
+      "method": "HEAD",
+      "url": "https://zenodo.org/api/records/5766198/files/database_dev.tar.gz/content",
+      "requested_range": null,
+      "status": 200,
+      "final_url": "https://zenodo.org/api/records/5766198/files/database_dev.tar.gz/content",
+      "headers": {
+        "Content-Length": "2027972850",
+        "Content-Range": null,
+        "Accept-Ranges": null,
+        "Content-Type": "application/octet-stream",
+        "ETag": null,
+        "Last-Modified": "Sun, 19 Apr 2026 02:33:59 GMT"
+      },
+      "body_bytes_read": 0,
+      "resume_supported": false
+    },
+    {
+      "split": "dev",
+      "route": "api",
+      "method": "GET",
+      "url": "https://zenodo.org/api/records/5766198/files/database_dev.tar.gz/content",
+      "requested_range": "bytes=0-0",
+      "error": "The read operation timed out",
+      "resume_supported": false
+    }
+  ],
+  "resume_supported_both_splits": true
+}

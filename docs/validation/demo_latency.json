@@ -1,0 +1,685 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "completed_utc": "2026-10-10T12:09:45.117416+00:00",
+  "plan_path": "docs/validation/demo_latency_plan.json",
+  "plan_sha256": "ca648a46789451db30bcb3c73ef735a5dda4049b373527476267e56062134156",
+  "model_seed": 43,
+  "model_sha256": "08b77256906a546d5eabbe9fa2cc5bbef0430d7d5dc7b10fc5b9f9e8449a19d0",
+  "machine": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "machine": "AMD64",
+    "processor": "Intel Core i7-1195G7 @ 2.90GHz; 4 physical cores, 8 logical threads; Iris Xe GPU unused",
+    "python": "3.12.14"
+  },
+  "model_load_seconds": 0.21133660001214594,
+  "summary": {
+    "observations": 60,
+    "mean_ms": 12.3973333320464,
+    "p50_ms": 11.635300004854798,
+    "p95_ms": 16.9183500111103,
+    "mean_record_rtf": 0.0032350644892758683,
+    "p95_record_rtf": 0.005019717467893766,
+    "total_measured_seconds": 0.743839999922784,
+    "total_audio_seconds_with_repetitions": 238.6790625,
+    "aggregate_rtf": 0.003116486180780034,
+    "percentile_method": "NumPy percentile, linear interpolation"
+  },
+  "observations": [
+    {
+      "utterance_id": "LA_D_1047731",
+      "repetition": 1,
+      "duration_seconds": 5.4140625,
+      "wall_seconds": 0.014785500010475516,
+      "decode_seconds": 0.0030079999996814877,
+      "inference_seconds": 0.011572299990803003,
+      "score": 1.0246808528900146,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1105538",
+      "repetition": 1,
+      "duration_seconds": 3.278625,
+      "wall_seconds": 0.01645490000373684,
+      "decode_seconds": 0.0027837999805342406,
+      "inference_seconds": 0.013517800020053983,
+      "score": 0.856620192527771,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1125976",
+      "repetition": 1,
+      "duration_seconds": 3.279625,
+      "wall_seconds": 0.013382699980866164,
+      "decode_seconds": 0.003292900015367195,
+      "inference_seconds": 0.010010199999669567,
+      "score": 1.7360981702804565,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1293230",
+      "repetition": 1,
+      "duration_seconds": 5.5013125,
+      "wall_seconds": 0.014969499985454604,
+      "decode_seconds": 0.0033611999824643135,
+      "inference_seconds": 0.011546499998075888,
+      "score": 0.53663569688797,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1340209",
+      "repetition": 1,
+      "duration_seconds": 4.38675,
+      "wall_seconds": 0.011369100015144795,
+      "decode_seconds": 0.0023147000174503773,
+      "inference_seconds": 0.008890099998097867,
+      "score": 1.267417073249817,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1376638",
+      "repetition": 1,
+      "duration_seconds": 4.3881875,
+      "wall_seconds": 0.011084099998697639,
+      "decode_seconds": 0.0023618999985046685,
+      "inference_seconds": 0.008668599999509752,
+      "score": 1.268405556678772,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1377420",
+      "repetition": 1,
+      "duration_seconds": 4.3895625,
+      "wall_seconds": 0.011121100018499419,
+      "decode_seconds": 0.002589600015198812,
+      "inference_seconds": 0.008478199975797907,
+      "score": 1.1086516380310059,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1403371",
+      "repetition": 1,
+      "duration_seconds": 3.580125,
+      "wall_seconds": 0.010467699990840629,
+      "decode_seconds": 0.00225349998800084,
+      "inference_seconds": 0.008160199999110773,
+      "score": 0.7305324077606201,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1590530",
+      "repetition": 1,
+      "duration_seconds": 3.3246875,
+      "wall_seconds": 0.010015600011684,
+      "decode_seconds": 0.002217800007201731,
+      "inference_seconds": 0.007747800002107397,
+      "score": 0.7959258556365967,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1595036",
+      "repetition": 1,
+      "duration_seconds": 2.555,
+      "wall_seconds": 0.00917850001133047,
+      "decode_seconds": 0.0021145000064279884,
+      "inference_seconds": 0.007013299997197464,
+      "score": 1.1098744869232178,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1618135",
+      "repetition": 1,
+      "duration_seconds": 4.38975,
+      "wall_seconds": 0.011249600007431582,
+      "decode_seconds": 0.0024754000187385827,
+      "inference_seconds": 0.00872069998877123,
+      "score": 1.3679152727127075,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1624385",
+      "repetition": 1,
+      "duration_seconds": 2.945375,
+      "wall_seconds": 0.009578800003509969,
+      "decode_seconds": 0.0021284999966155738,
+      "inference_seconds": 0.007400300004519522,
+      "score": 1.0194172859191895,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1766721",
+      "repetition": 1,
+      "duration_seconds": 4.3879375,
+      "wall_seconds": 0.01120380000793375,
+      "decode_seconds": 0.0024797999940346926,
+      "inference_seconds": 0.008669200004078448,
+      "score": 1.174749732017517,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1833136",
+      "repetition": 1,
+      "duration_seconds": 5.92725,
+      "wall_seconds": 0.012956399994436651,
+      "decode_seconds": 0.0026455000042915344,
+      "inference_seconds": 0.01025269998353906,
+      "score": 1.0219303369522095,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1837988",
+      "repetition": 1,
+      "duration_seconds": 2.9759375,
+      "wall_seconds": 0.010283099982189015,
+      "decode_seconds": 0.0021835000079590827,
+      "inference_seconds": 0.007975200016517192,
+      "score": 1.21718430519104,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1849134",
+      "repetition": 1,
+      "duration_seconds": 4.9041875,
+      "wall_seconds": 0.011678300012135878,
+      "decode_seconds": 0.0024754000187385827,
+      "inference_seconds": 0.008894500002497807,
+      "score": 0.7864648103713989,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1865278",
+      "repetition": 1,
+      "duration_seconds": 3.3215625,
+      "wall_seconds": 0.011807299975771457,
+      "decode_seconds": 0.002913399977842346,
+      "inference_seconds": 0.00883930001873523,
+      "score": 1.3720715045928955,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1896334",
+      "repetition": 1,
+      "duration_seconds": 4.0915,
+      "wall_seconds": 0.011518299987073988,
+      "decode_seconds": 0.0024056999827735126,
+      "inference_seconds": 0.009057300019776449,
+      "score": 1.380746841430664,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1911275",
+      "repetition": 1,
+      "duration_seconds": 2.81325,
+      "wall_seconds": 0.009361699980217963,
+      "decode_seconds": 0.0021262000082060695,
+      "inference_seconds": 0.007173599995439872,
+      "score": 1.576585054397583,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_2112837",
+      "repetition": 1,
+      "duration_seconds": 3.705,
+      "wall_seconds": 0.009981999988667667,
+      "decode_seconds": 0.0024748999858275056,
+      "inference_seconds": 0.0074551000143401325,
+      "score": 1.2976990938186646,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1047731",
+      "repetition": 2,
+      "duration_seconds": 5.4140625,
+      "wall_seconds": 0.012021300004562363,
+      "decode_seconds": 0.002513999992515892,
+      "inference_seconds": 0.009449900011532009,
+      "score": 1.0246808528900146,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1105538",
+      "repetition": 2,
+      "duration_seconds": 3.278625,
+      "wall_seconds": 0.009865700005320832,
+      "decode_seconds": 0.002292199991643429,
+      "inference_seconds": 0.007522300002165139,
+      "score": 0.856620192527771,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1125976",
+      "repetition": 2,
+      "duration_seconds": 3.279625,
+      "wall_seconds": 0.009508099989034235,
+      "decode_seconds": 0.002231899998150766,
+      "inference_seconds": 0.007225999986985698,
+      "score": 1.7360981702804565,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1293230",
+      "repetition": 2,
+      "duration_seconds": 5.5013125,
+      "wall_seconds": 0.015330999973230064,
+      "decode_seconds": 0.0024618000024929643,
+      "inference_seconds": 0.01278469999670051,
+      "score": 0.53663569688797,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1340209",
+      "repetition": 2,
+      "duration_seconds": 4.38675,
+      "wall_seconds": 0.012628199998289347,
+      "decode_seconds": 0.003173699980834499,
+      "inference_seconds": 0.009397300018463284,
+      "score": 1.267417073249817,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1376638",
+      "repetition": 2,
+      "duration_seconds": 4.3881875,
+      "wall_seconds": 0.011123699980089441,
+      "decode_seconds": 0.00237800000468269,
+      "inference_seconds": 0.008690100017702207,
+      "score": 1.268405556678772,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1377420",
+      "repetition": 2,
+      "duration_seconds": 4.3895625,
+      "wall_seconds": 0.01129269998637028,
+      "decode_seconds": 0.0024919000279624015,
+      "inference_seconds": 0.008746699983021244,
+      "score": 1.1086516380310059,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1403371",
+      "repetition": 2,
+      "duration_seconds": 3.580125,
+      "wall_seconds": 0.010251400002744049,
+      "decode_seconds": 0.002408500004094094,
+      "inference_seconds": 0.007789900002535433,
+      "score": 0.7305324077606201,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1590530",
+      "repetition": 2,
+      "duration_seconds": 3.3246875,
+      "wall_seconds": 0.009731400001328439,
+      "decode_seconds": 0.00217500000144355,
+      "inference_seconds": 0.007503399974666536,
+      "score": 0.7959258556365967,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1595036",
+      "repetition": 2,
+      "duration_seconds": 2.555,
+      "wall_seconds": 0.009855999989667907,
+      "decode_seconds": 0.0026464999828021973,
+      "inference_seconds": 0.007157200016081333,
+      "score": 1.1098744869232178,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1618135",
+      "repetition": 2,
+      "duration_seconds": 4.38975,
+      "wall_seconds": 0.011524100002134219,
+      "decode_seconds": 0.002428800013149157,
+      "inference_seconds": 0.009035199997015297,
+      "score": 1.3679152727127075,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1624385",
+      "repetition": 2,
+      "duration_seconds": 2.945375,
+      "wall_seconds": 0.009764899994479492,
+      "decode_seconds": 0.0021760000090580434,
+      "inference_seconds": 0.007539499987615272,
+      "score": 1.0194172859191895,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1766721",
+      "repetition": 2,
+      "duration_seconds": 4.3879375,
+      "wall_seconds": 0.010967199981678277,
+      "decode_seconds": 0.0023216000117827207,
+      "inference_seconds": 0.008592199999839067,
+      "score": 1.174749732017517,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1833136",
+      "repetition": 2,
+      "duration_seconds": 5.92725,
+      "wall_seconds": 0.01953619997948408,
+      "decode_seconds": 0.0037481000181287527,
+      "inference_seconds": 0.015686700004152954,
+      "score": 1.0219303369522095,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1837988",
+      "repetition": 2,
+      "duration_seconds": 2.9759375,
+      "wall_seconds": 0.014517100004013628,
+      "decode_seconds": 0.0028086999955121428,
+      "inference_seconds": 0.011641899996902794,
+      "score": 1.21718430519104,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1849134",
+      "repetition": 2,
+      "duration_seconds": 4.9041875,
+      "wall_seconds": 0.01259520000894554,
+      "decode_seconds": 0.002586999995401129,
+      "inference_seconds": 0.009947400016244501,
+      "score": 0.7864648103713989,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1865278",
+      "repetition": 2,
+      "duration_seconds": 3.3215625,
+      "wall_seconds": 0.015784100018208846,
+      "decode_seconds": 0.0030132000101730227,
+      "inference_seconds": 0.012687699985690415,
+      "score": 1.3720715045928955,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1896334",
+      "repetition": 2,
+      "duration_seconds": 4.0915,
+      "wall_seconds": 0.012689800001680851,
+      "decode_seconds": 0.0031688999733887613,
+      "inference_seconds": 0.009458900021854788,
+      "score": 1.380746841430664,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1911275",
+      "repetition": 2,
+      "duration_seconds": 2.81325,
+      "wall_seconds": 0.011592299997573718,
+      "decode_seconds": 0.002199200011091307,
+      "inference_seconds": 0.009335099981399253,
+      "score": 1.576585054397583,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_2112837",
+      "repetition": 2,
+      "duration_seconds": 3.705,
+      "wall_seconds": 0.013434199994662777,
+      "decode_seconds": 0.003883600002154708,
+      "inference_seconds": 0.00949120000586845,
+      "score": 1.2976990938186646,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1047731",
+      "repetition": 3,
+      "duration_seconds": 5.4140625,
+      "wall_seconds": 0.013993400003528222,
+      "decode_seconds": 0.00261799999861978,
+      "inference_seconds": 0.011311799986287951,
+      "score": 1.0246808528900146,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1105538",
+      "repetition": 3,
+      "duration_seconds": 3.278625,
+      "wall_seconds": 0.011553799995454028,
+      "decode_seconds": 0.0023985000152606517,
+      "inference_seconds": 0.009094699984416366,
+      "score": 0.856620192527771,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1125976",
+      "repetition": 3,
+      "duration_seconds": 3.279625,
+      "wall_seconds": 0.010499399999389425,
+      "decode_seconds": 0.0023922999971546233,
+      "inference_seconds": 0.008049399999435991,
+      "score": 1.7360981702804565,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1293230",
+      "repetition": 3,
+      "duration_seconds": 5.5013125,
+      "wall_seconds": 0.013135599991073832,
+      "decode_seconds": 0.0027261000068392605,
+      "inference_seconds": 0.010345299990149215,
+      "score": 0.53663569688797,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1340209",
+      "repetition": 3,
+      "duration_seconds": 4.38675,
+      "wall_seconds": 0.01227220002328977,
+      "decode_seconds": 0.002593900018837303,
+      "inference_seconds": 0.009559999976772815,
+      "score": 1.267417073249817,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1376638",
+      "repetition": 3,
+      "duration_seconds": 4.3881875,
+      "wall_seconds": 0.012940799992065877,
+      "decode_seconds": 0.0025963999796658754,
+      "inference_seconds": 0.010287100012646988,
+      "score": 1.268405556678772,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1377420",
+      "repetition": 3,
+      "duration_seconds": 4.3895625,
+      "wall_seconds": 0.01204989998950623,
+      "decode_seconds": 0.002466099977027625,
+      "inference_seconds": 0.009528499998850748,
+      "score": 1.1086516380310059,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1403371",
+      "repetition": 3,
+      "duration_seconds": 3.580125,
+      "wall_seconds": 0.011026000021956861,
+      "decode_seconds": 0.002629700000397861,
+      "inference_seconds": 0.008335899998201057,
+      "score": 0.7305324077606201,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1590530",
+      "repetition": 3,
+      "duration_seconds": 3.3246875,
+      "wall_seconds": 0.010524399986024946,
+      "decode_seconds": 0.0023079000238794833,
+      "inference_seconds": 0.008158899989211932,
+      "score": 0.7959258556365967,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1595036",
+      "repetition": 3,
+      "duration_seconds": 2.555,
+      "wall_seconds": 0.00989129999652505,
+      "decode_seconds": 0.0021858999971300364,
+      "inference_seconds": 0.007643899996764958,
+      "score": 1.1098744869232178,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1618135",
+      "repetition": 3,
+      "duration_seconds": 4.38975,
+      "wall_seconds": 0.011786799994297326,
+      "decode_seconds": 0.0024520999868400395,
+      "inference_seconds": 0.009278100013034418,
+      "score": 1.3679152727127075,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1624385",
+      "repetition": 3,
+      "duration_seconds": 2.945375,
+      "wall_seconds": 0.010526099998969585,
+      "decode_seconds": 0.0021825000003445894,
+      "inference_seconds": 0.008287699980428442,
+      "score": 1.0194172859191895,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1766721",
+      "repetition": 3,
+      "duration_seconds": 4.3879375,
+      "wall_seconds": 0.011935699993046,
+      "decode_seconds": 0.002448899991577491,
+      "inference_seconds": 0.0094229000096675,
+      "score": 1.174749732017517,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1833136",
+      "repetition": 3,
+      "duration_seconds": 5.92725,
+      "wall_seconds": 0.01362030001473613,
+      "decode_seconds": 0.002742800017585978,
+      "inference_seconds": 0.01077569997869432,
+      "score": 1.0219303369522095,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1837988",
+      "repetition": 3,
+      "duration_seconds": 2.9759375,
+      "wall_seconds": 0.01649940002243966,
+      "decode_seconds": 0.002956700016511604,
+      "inference_seconds": 0.013431100000161678,
+      "score": 1.21718430519104,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1849134",
+      "repetition": 3,
+      "duration_seconds": 4.9041875,
+      "wall_seconds": 0.019884200009983033,
+      "decode_seconds": 0.003807999979471788,
+      "inference_seconds": 0.01599990000249818,
+      "score": 0.7864648103713989,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1865278",
+      "repetition": 3,
+      "duration_seconds": 3.3215625,
+      "wall_seconds": 0.013890900008846074,
+      "decode_seconds": 0.0029467999993357807,
+      "inference_seconds": 0.010841199982678518,
+      "score": 1.3720715045928955,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1896334",
+      "repetition": 3,
+      "duration_seconds": 4.0915,
+      "wall_seconds": 0.01586079999106005,
+      "decode_seconds": 0.002926800021668896,
+      "inference_seconds": 0.012864499993156642,
+      "score": 1.380746841430664,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_1911275",
+      "repetition": 3,
+      "duration_seconds": 2.81325,
+      "wall_seconds": 0.01682670001173392,
+      "decode_seconds": 0.003168099996400997,
+      "inference_seconds": 0.013559399987570941,
+      "score": 1.576585054397583,
+      "saved_score_absolute_error": 0.0
+    },
+    {
+      "utterance_id": "LA_D_2112837",
+      "repetition": 3,
+      "duration_seconds": 3.705,
+      "wall_seconds": 0.018659699999261647,
+      "decode_seconds": 0.0034635000047273934,
+      "inference_seconds": 0.015090500004589558,
+      "score": 1.2976990938186646,
+      "saved_score_absolute_error": 0.0
+    }
+  ],
+  "clean_score_comparison": "All 60 observations within 1e-10 of saved seed-43 scores",
+  "resources": {
+    "initial": {
+      "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+      "rss_bytes": 134230016,
+      "peak_rss_bytes": 198205440,
+      "system_total_ram_bytes": 16872415232,
+      "system_available_ram_bytes": 2591535104
+    },
+    "final": {
+      "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+      "rss_bytes": 138784768,
+      "peak_rss_bytes": 198205440,
+      "system_total_ram_bytes": 16872415232,
+      "system_available_ram_bytes": 2819870720
+    }
+  },
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+      "version": "0.3.34.106.0",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "vcomp",
+      "filepath": "vcomp140.dll",
+      "version": null
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "libscipy_openblas-197ee2fc9b4d071f7e048078cac74115.dll",
+      "version": "0.3.31.dev",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    }
+  ],
+  "limitations": [
+    "20 fixed dev recordings, three repeated passes; observations are dependent",
+    "First 20 official rows are bonafide from one speaker; timing does not cover attack or speaker diversity",
+    "Warm file cache and process; model load excluded from per-record timings",
+    "Specific local CPU and software; no production or hardware-general latency claim"
+  ],
+  "eval_enabled": false,
+  "training_started": false
+}

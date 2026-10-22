@@ -1,0 +1,181 @@
+{
+  "client_date": "2026-10-11",
+  "status": "supervised_smoke_complete",
+  "strict_resource_gate_pass": true,
+  "training_started": false,
+  "full_192_extraction_started": false,
+  "official_benchmark": false,
+  "seed": 45,
+  "supervisor": {
+    "status": "complete",
+    "created_utc": "2026-10-10T22:02:06.325496+00:00",
+    "training_started": false,
+    "worker_seconds": 180,
+    "peak_rss_bytes": 1356173312,
+    "worker_sha256": "c3c38b21e0d1b3a672831bff57cd8fec33d9dc7f2d91e2227176b11528e21337",
+    "supervisor_sha256": "2074f299b257d2a4a9b1a2ac527e8132696d91b5eebb7e8c9edf2f8e4b149107",
+    "manifest_sha256": "0f4df17c238c3df1b369239342c86fd4552011cd3e4c8c745fbf8e65048f5c7c",
+    "exit_grace_seconds": 1.0,
+    "worker_pid": null,
+    "last_memory": {
+      "system_available_ram_bytes": 11012042752,
+      "disk_free_bytes": 74735386624,
+      "rss_bytes": 1356173312,
+      "peak_rss_bytes": 1356173312
+    },
+    "last_process_probe_error": {
+      "error_type": "ProcessProbeUnavailable",
+      "error": "Process 4338 lacks VmRSS,VmHWM; state=Z (zombie)",
+      "grace_seconds": 1.0
+    },
+    "exit_code": 0,
+    "resources_after_worker_exit": {
+      "system_available_ram_bytes": 11791462400,
+      "disk_free_bytes": 74735386624
+    },
+    "elapsed_seconds": 12.638304915000163,
+    "finished_utc": "2026-10-10T22:02:18.963998+00:00"
+  },
+  "worker": {
+    "status": "complete",
+    "created_utc": "2026-10-10T22:02:06.390610+00:00",
+    "recording_id": "LA_T_1963829",
+    "training_started": false,
+    "labels_opened": false,
+    "dev_audio_accessed": false,
+    "eval_accessed": false,
+    "downloaded_by_worker": false,
+    "official_benchmark": false,
+    "warnings": [
+      {
+        "category": "UserWarning",
+        "message": "Passing `gradient_checkpointing` to a config initialization is deprecated and will be removed in v5 Transformers. Using `model.gradient_checkpointing_enable()` instead, or if you are using the `Trainer` API, pass `gradient_checkpointing=True` in your `TrainingArguments`."
+      }
+    ],
+    "source_sha256": "c3c38b21e0d1b3a672831bff57cd8fec33d9dc7f2d91e2227176b11528e21337",
+    "manifest_sha256": "0f4df17c238c3df1b369239342c86fd4552011cd3e4c8c745fbf8e65048f5c7c",
+    "resources_before_import": {
+      "system_available_ram_bytes": 11785854976,
+      "rss_bytes": 21528576,
+      "peak_rss_bytes": 21528576
+    },
+    "environment": {
+      "torch": "2.11.0+cu130",
+      "transformers": "4.57.6",
+      "numpy": "2.2.6",
+      "soundfile": "0.13.1",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "0.36.2"
+    },
+    "hardware": {
+      "device": "cuda:0",
+      "gpu_name": "Tesla T4",
+      "gpu_free_bytes_before_load": 15420162048,
+      "gpu_total_bytes": 15637086208,
+      "cuda_version": "13.0",
+      "cpu_threads": 2,
+      "tf32": false,
+      "dtype": "float32"
+    },
+    "resources_before_model_load": {
+      "system_available_ram_bytes": 11316109312,
+      "rss_bytes": 776032256,
+      "peak_rss_bytes": 776032256
+    },
+    "model_load_seconds": 0.24446363200013366,
+    "model_loading_info": {
+      "missing_keys": [],
+      "unexpected_keys": [
+        "project_hid.bias",
+        "project_hid.weight",
+        "project_q.bias",
+        "project_q.weight",
+        "quantizer.codevectors",
+        "quantizer.weight_proj.bias",
+        "quantizer.weight_proj.weight"
+      ],
+      "mismatched_keys": [],
+      "error_msgs": []
+    },
+    "resources_after_load": {
+      "system_available_ram_bytes": 11312668672,
+      "rss_bytes": 783962112,
+      "peak_rss_bytes": 1161437184
+    },
+    "extraction_seconds": 1.9117309560001559,
+    "resources_after_extraction": {
+      "system_available_ram_bytes": 11004514304,
+      "rss_bytes": 1242734592,
+      "peak_rss_bytes": 1242734592
+    },
+    "gpu_peak_allocated_bytes": 474936320,
+    "gpu_peak_reserved_bytes": 522190848,
+    "cpu_reference_comparison": {
+      "reference_sha256": "61afc89b7d6eceb1d767631867034fca77b318835ad91a6ae3e54c98c4a88ebb",
+      "maximum_absolute_difference": 0.00012731552124023438,
+      "root_mean_square_difference": 1.4250690121122746e-06,
+      "interpretation": "Numerical diagnostic only; no result-dependent tuning or performance claim"
+    },
+    "resources_before_completion": {
+      "system_available_ram_bytes": 10997596160,
+      "rss_bytes": 1249599488,
+      "peak_rss_bytes": 1249599488
+    },
+    "source_frame_count": 368,
+    "aligned_shape": [
+      369,
+      768
+    ],
+    "features_sha256": "7ac0e98cc02389644521cdc346744a5881f14a37c189f71ef849c448fdfca076",
+    "features_bytes": 1133696,
+    "audio_sha256": "a9e12df4f477580c27b1be39104317654dde668ab1cdca2b84509f82a4656e31",
+    "audio_seconds": 7.3786875,
+    "real_time_factor": 0.25908821263946413,
+    "offline_whole_recording_context": true,
+    "elapsed_seconds": 7.8081126560000484,
+    "finished_utc": "2026-10-10T22:02:14.198728+00:00"
+  },
+  "archive": {
+    "path": "outputs/colab/session-v2/ssl_colab_smoke_result_supervisor_v2.zip",
+    "bytes": 1185174,
+    "sha256": "63b024352568df62936fa804dae29a97a6be1f3b84c1a9750c32202f69928554",
+    "recovery": "Visible notebook textarea after browser download event timed out."
+  },
+  "local_feature_validation": {
+    "sha256_matches": true,
+    "shape": [
+      369,
+      768
+    ],
+    "dtype": "float32",
+    "finite": true,
+    "independent_cpu_comparison_matches": true,
+    "maximum_absolute_difference": 0.00012731552124023438,
+    "root_mean_square_difference": 1.4250690121122746e-06
+  },
+  "checkpoint_transfer": {
+    "url": "https://huggingface.co/facebook/wav2vec2-base/resolve/0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8/pytorch_model.bin",
+    "status": "verified",
+    "bytes": 380267417,
+    "automatic_retry": false,
+    "sha256": "3249fe98bfc62fcbc26067f724716a6ec49d12c4728a2af1df659013905dff21",
+    "elapsed_seconds": 7.292240364000008
+  },
+  "environment_lock_sha256": "fe010d9bf8b1b012c5807731cb734202769d7937484298a30769042224ecb5d4",
+  "isolated_pip_check": "passed",
+  "evidence_directory": "outputs/colab/session-v2/result-v2",
+  "previous_attempt": "v1 remains stopped and is not used as a strict gate pass",
+  "limitations": [
+    "One train recording only; no classifier fitting, dev scoring, eval or accuracy result.",
+    "CPU reference is a preliminary numerical reference, not a past strict resource-gate pass.",
+    "Timings differ by hardware and Torch builds; no CPU/GPU speedup claim.",
+    "Legacy configuration and torch_dtype deprecation warnings retained.",
+    "Pretraining recording-level disjointness with PartialSpoof is unverified."
+  ],
+  "independent_review": {
+    "status": "passed",
+    "scope": "Read-only independent archive CRC/hash/member parity, supervisor/worker/manifest pins, scope/resource limits and NPY/CPU comparison checks",
+    "blocking_findings": 0
+  },
+  "screenshot_path": "outputs/colab/session-v2/colab-smoke-v2-proof.png"
+}

@@ -1,0 +1,1990 @@
+{
+  "status": "complete",
+  "charged_payload_bytes": 4056652110,
+  "known_received_bytes": 4055073906,
+  "splits": {
+    "train": {
+      "status": "complete",
+      "selection_sha256": "c7efeacc6a19e80557fed89183131ebbc64e476ce5c240b0a02fe151b6cfc374",
+      "archive_sha256": "d34d99e0eb59707ab23195bb87fc8a9251373257fae6319119c826f0cd030f71",
+      "archive_md5": "c4853ddd831e8e96b0e279fc0a512e7e",
+      "records": [
+        {
+          "utterance_id": "CON_T_0000106",
+          "path": "database/train/con_wav/CON_T_0000106.wav",
+          "size_bytes": 106058,
+          "sha256": "dea3080defcff415f0c7237d906e6117f1a67237b1a0065193c5e12d28bc2296",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 53007,
+          "duration_seconds": 3.3129375
+        },
+        {
+          "utterance_id": "CON_T_0000356",
+          "path": "database/train/con_wav/CON_T_0000356.wav",
+          "size_bytes": 92946,
+          "sha256": "97e00aa706d5ef5dbe5ff629c2f1ce2b2f5f3d2678dd32377d925c09024fbe3f",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 46451,
+          "duration_seconds": 2.9031875
+        },
+        {
+          "utterance_id": "CON_T_0000811",
+          "path": "database/train/con_wav/CON_T_0000811.wav",
+          "size_bytes": 82388,
+          "sha256": "10009458fb6613564dc3805f2bd11284a1345b890b78ea296ff409ccd359b5fd",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 41172,
+          "duration_seconds": 2.57325
+        },
+        {
+          "utterance_id": "CON_T_0000985",
+          "path": "database/train/con_wav/CON_T_0000985.wav",
+          "size_bytes": 44978,
+          "sha256": "3cd577ccccf8c4dd952e29836b2dea48e576fd0d7ff4f0d59de5c957cc1e61c9",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 22467,
+          "duration_seconds": 1.4041875
+        },
+        {
+          "utterance_id": "CON_T_0001032",
+          "path": "database/train/con_wav/CON_T_0001032.wav",
+          "size_bytes": 43902,
+          "sha256": "44b2eca4c25957225da4ab16a876aa0648d37f0b20803de8c22841893bf0ce07",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 21929,
+          "duration_seconds": 1.3705625
+        },
+        {
+          "utterance_id": "CON_T_0001766",
+          "path": "database/train/con_wav/CON_T_0001766.wav",
+          "size_bytes": 79706,
+          "sha256": "bbab8fc483f4ee7860f0ac813f5bf19f3ae744d92d83b1787be33485dde31145",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 39831,
+          "duration_seconds": 2.4894375
+        },
+        {
+          "utterance_id": "CON_T_0002189",
+          "path": "database/train/con_wav/CON_T_0002189.wav",
+          "size_bytes": 151766,
+          "sha256": "22f1712caa537c73729efc64bd7cc9ed33716c8710df252b1d765801f3977b1d",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 75861,
+          "duration_seconds": 4.7413125
+        },
+        {
+          "utterance_id": "CON_T_0002235",
+          "path": "database/train/con_wav/CON_T_0002235.wav",
+          "size_bytes": 102420,
+          "sha256": "18b441b27db996a75835018abdb4d27bc2cd2ce02a660d1696cca5fe49a70b21",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 51188,
+          "duration_seconds": 3.19925
+        },
+        {
+          "utterance_id": "CON_T_0002303",
+          "path": "database/train/con_wav/CON_T_0002303.wav",
+          "size_bytes": 79342,
+          "sha256": "170a239c8fd1ea503fa3f6455be68ed0df3bbe8d1413443d71acc283e8f2d828",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 39649,
+          "duration_seconds": 2.4780625
+        },
+        {
+          "utterance_id": "CON_T_0002951",
+          "path": "database/train/con_wav/CON_T_0002951.wav",
+          "size_bytes": 79028,
+          "sha256": "9866cf2f32e7e90297dcb0c8afd4b46553db1f8c54ec3de38a84e6b6b62773a0",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 39492,
+          "duration_seconds": 2.46825
+        },
+        {
+          "utterance_id": "CON_T_0003089",
+          "path": "database/train/con_wav/CON_T_0003089.wav",
+          "size_bytes": 88934,
+          "sha256": "75d497645e5ce77389754a21fcfce81d4f16addc861ef9e3d11e7bb836e4611e",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 44445,
+          "duration_seconds": 2.7778125
+        },
+        {
+          "utterance_id": "CON_T_0003296",
+          "path": "database/train/con_wav/CON_T_0003296.wav",
+          "size_bytes": 99028,
+          "sha256": "eaa72d0d279c4036ebb0f69ca7931e252f3d3220f882c92b58bdf1e73e58e2e9",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 49492,
+          "duration_seconds": 3.09325
+        },
+        {
+          "utterance_id": "CON_T_0003420",
+          "path": "database/train/con_wav/CON_T_0003420.wav",
+          "size_bytes": 128592,
+          "sha256": "dd962db6832f7743267de0ec13ab5ff2671999b79f35843aba35c6a12ad875b5",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 64274,
+          "duration_seconds": 4.017125
+        },
+        {
+          "utterance_id": "CON_T_0003692",
+          "path": "database/train/con_wav/CON_T_0003692.wav",
+          "size_bytes": 64236,
+          "sha256": "0af4d4638bb35173f5f5b5219e69c9708891d6652ba7bcec3b4691fd1ffc4107",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 32096,
+          "duration_seconds": 2.006
+        },
+        {
+          "utterance_id": "CON_T_0004784",
+          "path": "database/train/con_wav/CON_T_0004784.wav",
+          "size_bytes": 79634,
+          "sha256": "05887b361507046a4efdb4d5c496dc1a349f694be1dc26f24a43eccee2c7833e",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 39795,
+          "duration_seconds": 2.4871875
+        },
+        {
+          "utterance_id": "CON_T_0005370",
+          "path": "database/train/con_wav/CON_T_0005370.wav",
+          "size_bytes": 109782,
+          "sha256": "6235d77fde3d9ecde4f5e01719f6eef58b39c390c6ac1887ce72f7598153c517",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 54869,
+          "duration_seconds": 3.4293125
+        },
+        {
+          "utterance_id": "CON_T_0005932",
+          "path": "database/train/con_wav/CON_T_0005932.wav",
+          "size_bytes": 103722,
+          "sha256": "b9712e0855563d0a829676384a0303c9f69cc2cd54866b98692b3292afcb171c",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 51839,
+          "duration_seconds": 3.2399375
+        },
+        {
+          "utterance_id": "CON_T_0006098",
+          "path": "database/train/con_wav/CON_T_0006098.wav",
+          "size_bytes": 77554,
+          "sha256": "9e3b9bc5da598f1c71944d03153b3a96387ded99221af1e663eead2f3b1b8c52",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 38755,
+          "duration_seconds": 2.4221875
+        },
+        {
+          "utterance_id": "CON_T_0006345",
+          "path": "database/train/con_wav/CON_T_0006345.wav",
+          "size_bytes": 97598,
+          "sha256": "f3810e63d6199b420eedaf7a72804c21fea26325916836f8a7d029401b79c4dc",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 48777,
+          "duration_seconds": 3.0485625
+        },
+        {
+          "utterance_id": "CON_T_0006631",
+          "path": "database/train/con_wav/CON_T_0006631.wav",
+          "size_bytes": 84720,
+          "sha256": "a165a0d8bf56a94309bc2fdaac7a9a34ee4d856a30b1d5b596aee292ef0043aa",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 42338,
+          "duration_seconds": 2.646125
+        },
+        {
+          "utterance_id": "CON_T_0007273",
+          "path": "database/train/con_wav/CON_T_0007273.wav",
+          "size_bytes": 60212,
+          "sha256": "c673025d6fbef3e4b513316054a0dfe162923f5d2fa1581f067b01759a61b1d6",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 30084,
+          "duration_seconds": 1.88025
+        },
+        {
+          "utterance_id": "CON_T_0007789",
+          "path": "database/train/con_wav/CON_T_0007789.wav",
+          "size_bytes": 108312,
+          "sha256": "40b574440a1ab08c61ad394d128bcd09416209c7305876dd097a3bb77705246e",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 54134,
+          "duration_seconds": 3.383375
+        },
+        {
+          "utterance_id": "CON_T_0008177",
+          "path": "database/train/con_wav/CON_T_0008177.wav",
+          "size_bytes": 157680,
+          "sha256": "7bd3e81ef45c1a184f77dc54ca15843eefbc6f06d98abaf4525fed2063b4b949",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 78818,
+          "duration_seconds": 4.926125
+        },
+        {
+          "utterance_id": "CON_T_0008811",
+          "path": "database/train/con_wav/CON_T_0008811.wav",
+          "size_bytes": 125240,
+          "sha256": "c17ae66007891a2d7a6a443cd494e885fb5feaf6c19e3be71b43a3ab66debb1b",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 62598,
+          "duration_seconds": 3.912375
+        },
+        {
+          "utterance_id": "CON_T_0009544",
+          "path": "database/train/con_wav/CON_T_0009544.wav",
+          "size_bytes": 99080,
+          "sha256": "00d6754cbfcaa4f7551b3a2aa5d10a8328480ea55a21d9c19aa0bac4dfe664d2",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 49518,
+          "duration_seconds": 3.094875
+        },
+        {
+          "utterance_id": "CON_T_0009848",
+          "path": "database/train/con_wav/CON_T_0009848.wav",
+          "size_bytes": 204426,
+          "sha256": "3918e11140fa6812c119370effd25b57a95449ef37589c71b2a97bbd476f3502",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 102191,
+          "duration_seconds": 6.3869375
+        },
+        {
+          "utterance_id": "CON_T_0010123",
+          "path": "database/train/con_wav/CON_T_0010123.wav",
+          "size_bytes": 100616,
+          "sha256": "99c52782f3d174237c160bc4eddecad70d03dde0a0d80f53bb877775c0370ad0",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 50286,
+          "duration_seconds": 3.142875
+        },
+        {
+          "utterance_id": "CON_T_0010171",
+          "path": "database/train/con_wav/CON_T_0010171.wav",
+          "size_bytes": 69458,
+          "sha256": "87cf1d79876c0a67b50f525e95e3ca339dcdec7044bc4584c8c2488fc183a362",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 34707,
+          "duration_seconds": 2.1691875
+        },
+        {
+          "utterance_id": "CON_T_0010503",
+          "path": "database/train/con_wav/CON_T_0010503.wav",
+          "size_bytes": 63924,
+          "sha256": "3ba693e7c084674c1cc86bf21bf379f76059c9a03942cc2225a1d587005fc7dc",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 31940,
+          "duration_seconds": 1.99625
+        },
+        {
+          "utterance_id": "CON_T_0010950",
+          "path": "database/train/con_wav/CON_T_0010950.wav",
+          "size_bytes": 126778,
+          "sha256": "a45ab444c0d27d0be60a0f841d6c8012bd3963550413f473714b85387712164c",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 63367,
+          "duration_seconds": 3.9604375
+        },
+        {
+          "utterance_id": "CON_T_0011612",
+          "path": "database/train/con_wav/CON_T_0011612.wav",
+          "size_bytes": 110504,
+          "sha256": "9a2244ede150f4a29f0cb5460c43e5958c89a32a4be103258ec8d80a838c1906",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 55230,
+          "duration_seconds": 3.451875
+        },
+        {
+          "utterance_id": "CON_T_0012029",
+          "path": "database/train/con_wav/CON_T_0012029.wav",
+          "size_bytes": 58662,
+          "sha256": "8f81bb9be76c1734a96e3379da0f578a9d31f7260a1f2523fdd49d043939eba2",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 29309,
+          "duration_seconds": 1.8318125
+        },
+        {
+          "utterance_id": "CON_T_0013234",
+          "path": "database/train/con_wav/CON_T_0013234.wav",
+          "size_bytes": 67336,
+          "sha256": "b162ea29d824da613a8be635b81e78a7f06afc85228d2ccb98c4baa286d141bd",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 33646,
+          "duration_seconds": 2.102875
+        },
+        {
+          "utterance_id": "CON_T_0014061",
+          "path": "database/train/con_wav/CON_T_0014061.wav",
+          "size_bytes": 132134,
+          "sha256": "3d35231dce1bbae313aba764248f645e08bc81361a9d7fa0cceb4e49d28583b4",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 66045,
+          "duration_seconds": 4.1278125
+        },
+        {
+          "utterance_id": "CON_T_0014359",
+          "path": "database/train/con_wav/CON_T_0014359.wav",
+          "size_bytes": 40458,
+          "sha256": "3a79df6c0012bd852ef7a882aaee8190425c8f126278e151cf5439e2d31b0f89",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 20207,
+          "duration_seconds": 1.2629375
+        },
+        {
+          "utterance_id": "CON_T_0014689",
+          "path": "database/train/con_wav/CON_T_0014689.wav",
+          "size_bytes": 80382,
+          "sha256": "60c099e354e4313faad501fbade6759875da7809f7650e58cb5512211d9be603",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 40169,
+          "duration_seconds": 2.5105625
+        },
+        {
+          "utterance_id": "CON_T_0016089",
+          "path": "database/train/con_wav/CON_T_0016089.wav",
+          "size_bytes": 99362,
+          "sha256": "e596f7cde2268fa6e543d683433896be7bd6dab6f4739884740ae5444474a02d",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 49659,
+          "duration_seconds": 3.1036875
+        },
+        {
+          "utterance_id": "CON_T_0016662",
+          "path": "database/train/con_wav/CON_T_0016662.wav",
+          "size_bytes": 93598,
+          "sha256": "98a000c9cdb72a773f2e499792bdc9444eaeca8cbfab152f270183f0a631fd1a",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 46777,
+          "duration_seconds": 2.9235625
+        },
+        {
+          "utterance_id": "CON_T_0016681",
+          "path": "database/train/con_wav/CON_T_0016681.wav",
+          "size_bytes": 138748,
+          "sha256": "a460022ec328591324e10d62205933e0be3c75e72e63529ba6dd37a1ac48964b",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 69352,
+          "duration_seconds": 4.3345
+        },
+        {
+          "utterance_id": "CON_T_0017531",
+          "path": "database/train/con_wav/CON_T_0017531.wav",
+          "size_bytes": 138774,
+          "sha256": "a3021176fe22619a999a0c75257ea8e930139a75fe26538209057979284de3c8",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 69365,
+          "duration_seconds": 4.3353125
+        },
+        {
+          "utterance_id": "CON_T_0018056",
+          "path": "database/train/con_wav/CON_T_0018056.wav",
+          "size_bytes": 107094,
+          "sha256": "ef4b0d92913ca777031b9f4f5c7782679c025b722d79fb47f9a1513d51d1d367",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 53525,
+          "duration_seconds": 3.3453125
+        },
+        {
+          "utterance_id": "CON_T_0018808",
+          "path": "database/train/con_wav/CON_T_0018808.wav",
+          "size_bytes": 87722,
+          "sha256": "993779989be1d85926eea16531add6710922308132b68c56bb90a1612e075380",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 43839,
+          "duration_seconds": 2.7399375
+        },
+        {
+          "utterance_id": "CON_T_0018926",
+          "path": "database/train/con_wav/CON_T_0018926.wav",
+          "size_bytes": 58102,
+          "sha256": "5a000254d4fa6ba6ea4b04824a846d68e94061ed89fae5a0b527332925d97ad2",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 29029,
+          "duration_seconds": 1.8143125
+        },
+        {
+          "utterance_id": "CON_T_0018997",
+          "path": "database/train/con_wav/CON_T_0018997.wav",
+          "size_bytes": 95690,
+          "sha256": "c9583bb034141db0cdb9cb1247fe7924ca3ab0a2ab8d8388db374979b6005be2",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 47823,
+          "duration_seconds": 2.9889375
+        },
+        {
+          "utterance_id": "CON_T_0019831",
+          "path": "database/train/con_wav/CON_T_0019831.wav",
+          "size_bytes": 116874,
+          "sha256": "b7dfdce38b7debb55dd3d987b1a22b50757dc0dc4120025102ba578586431866",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 58415,
+          "duration_seconds": 3.6509375
+        },
+        {
+          "utterance_id": "CON_T_0020251",
+          "path": "database/train/con_wav/CON_T_0020251.wav",
+          "size_bytes": 182656,
+          "sha256": "d1a3a3d12a87ace2aae7027a7bc2ddab839fcdf2ce5cdf5c27014d3cbcb67e78",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 91306,
+          "duration_seconds": 5.706625
+        },
+        {
+          "utterance_id": "CON_T_0020453",
+          "path": "database/train/con_wav/CON_T_0020453.wav",
+          "size_bytes": 70494,
+          "sha256": "c2670be290ffd3cf81ea1bb10275f8542f0bd769ce978ab0b0a61ecb2156da88",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 35225,
+          "duration_seconds": 2.2015625
+        },
+        {
+          "utterance_id": "CON_T_0021039",
+          "path": "database/train/con_wav/CON_T_0021039.wav",
+          "size_bytes": 76038,
+          "sha256": "fecdf0866050336fa3a735af8f3c4718159394967c806b9b7eb145b2cb22e06f",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 37997,
+          "duration_seconds": 2.3748125
+        },
+        {
+          "utterance_id": "CON_T_0021335",
+          "path": "database/train/con_wav/CON_T_0021335.wav",
+          "size_bytes": 79888,
+          "sha256": "dedb17819514207cbd2da47917930ae842820e5dbe10cc013304434ea9463f72",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 39922,
+          "duration_seconds": 2.495125
+        },
+        {
+          "utterance_id": "CON_T_0021797",
+          "path": "database/train/con_wav/CON_T_0021797.wav",
+          "size_bytes": 69482,
+          "sha256": "3bd7828fec91362bd3a23fc7e5836918029b7824de7e8a63ae4bd2567bf578fd",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 34719,
+          "duration_seconds": 2.1699375
+        },
+        {
+          "utterance_id": "CON_T_0021983",
+          "path": "database/train/con_wav/CON_T_0021983.wav",
+          "size_bytes": 169352,
+          "sha256": "ed3ecf52ae8cd36890271627d45e51ce9c76001787143cdf7dd31ad50c0a9b4e",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 84654,
+          "duration_seconds": 5.290875
+        },
+        {
+          "utterance_id": "CON_T_0022266",
+          "path": "database/train/con_wav/CON_T_0022266.wav",
+          "size_bytes": 129660,
+          "sha256": "121986f56a57047bf791a3b4f6295be3648f314f2cfa94218b585a2f4b6c7b31",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 64808,
+          "duration_seconds": 4.0505
+        },
+        {
+          "utterance_id": "CON_T_0022330",
+          "path": "database/train/con_wav/CON_T_0022330.wav",
+          "size_bytes": 69872,
+          "sha256": "2b41f3d96eba766182fe82f6b7a1a839794f699213b530f9937de34c146526f5",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 34914,
+          "duration_seconds": 2.182125
+        },
+        {
+          "utterance_id": "CON_T_0022580",
+          "path": "database/train/con_wav/CON_T_0022580.wav",
+          "size_bytes": 108444,
+          "sha256": "364077eed1f6051a8325ed8b7df59bc3789bbb02bf5dc0797ca08645f94c711c",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 54200,
+          "duration_seconds": 3.3875
+        },
+        {
+          "utterance_id": "CON_T_0022684",
+          "path": "database/train/con_wav/CON_T_0022684.wav",
+          "size_bytes": 83676,
+          "sha256": "512de49af283fcc9d25b38d70f7b6cbe0b71d0c732a3e1afc476f2cbedeeb64f",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 41816,
+          "duration_seconds": 2.6135
+        },
+        {
+          "utterance_id": "CON_T_0022757",
+          "path": "database/train/con_wav/CON_T_0022757.wav",
+          "size_bytes": 150526,
+          "sha256": "e38828fca94b31815d2f75b4b9eee8547b7109341fef4763c1024fe6a9ff5b23",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 75241,
+          "duration_seconds": 4.7025625
+        },
+        {
+          "utterance_id": "CON_T_0022764",
+          "path": "database/train/con_wav/CON_T_0022764.wav",
+          "size_bytes": 49854,
+          "sha256": "c4afaa06ae02155a6a53dcd35df9b697dd3eb149dac0f044a3d875b046ba7cfc",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 24905,
+          "duration_seconds": 1.5565625
+        },
+        {
+          "utterance_id": "CON_T_0022885",
+          "path": "database/train/con_wav/CON_T_0022885.wav",
+          "size_bytes": 59086,
+          "sha256": "9ea274ee344e71b563e00b88a0c427e575fe2e593327b9b7780e3a454a086e13",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 29521,
+          "duration_seconds": 1.8450625
+        },
+        {
+          "utterance_id": "CON_T_0022991",
+          "path": "database/train/con_wav/CON_T_0022991.wav",
+          "size_bytes": 153780,
+          "sha256": "3aef2f3c6d433bfdf042d0a8d5ada12701a2841ca1d4a12b5a0fdd3b2ee8ce2d",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 76868,
+          "duration_seconds": 4.80425
+        },
+        {
+          "utterance_id": "CON_T_0023533",
+          "path": "database/train/con_wav/CON_T_0023533.wav",
+          "size_bytes": 55134,
+          "sha256": "5538ac508c0be2069acd142224231cca9bd4ce4b5238fa1918ea3749393f6ac5",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 27545,
+          "duration_seconds": 1.7215625
+        },
+        {
+          "utterance_id": "CON_T_0024033",
+          "path": "database/train/con_wav/CON_T_0024033.wav",
+          "size_bytes": 79022,
+          "sha256": "efd953818caf74aa12d79fa3fbe771c5e6586c7ff09117c8432aabdcbd34d029",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 39489,
+          "duration_seconds": 2.4680625
+        },
+        {
+          "utterance_id": "CON_T_0024216",
+          "path": "database/train/con_wav/CON_T_0024216.wav",
+          "size_bytes": 147418,
+          "sha256": "53383b8652f1dc18bdd0944680813dd1fba283be6667eec16bb0062718a78c99",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 73687,
+          "duration_seconds": 4.6054375
+        },
+        {
+          "utterance_id": "CON_T_0024275",
+          "path": "database/train/con_wav/CON_T_0024275.wav",
+          "size_bytes": 45014,
+          "sha256": "384de8a428af9dc36e9797262d87fd15265c7e15ea6b36e21ff374b5dfc7c164",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 22485,
+          "duration_seconds": 1.4053125
+        },
+        {
+          "utterance_id": "CON_T_0025260",
+          "path": "database/train/con_wav/CON_T_0025260.wav",
+          "size_bytes": 232804,
+          "sha256": "bacef98ba4eee12f28f0a557f28c9f7f684b2d2a7d74185d2889bd7d49defa42",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 116380,
+          "duration_seconds": 7.27375
+        },
+        {
+          "utterance_id": "LA_T_1203196",
+          "path": "database/train/con_wav/LA_T_1203196.wav",
+          "size_bytes": 106394,
+          "sha256": "d7f43a348481e68fa2efbb14ec9449c798b28042a7b4fa21beca019f8d78db79",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 53175,
+          "duration_seconds": 3.3234375
+        },
+        {
+          "utterance_id": "LA_T_1271820",
+          "path": "database/train/con_wav/LA_T_1271820.wav",
+          "size_bytes": 140690,
+          "sha256": "6d8d5239b760f13d3a6c2ec79ac18f6dc751addbe1b583f4ded2089613da2c8c",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 70323,
+          "duration_seconds": 4.3951875
+        },
+        {
+          "utterance_id": "LA_T_1325649",
+          "path": "database/train/con_wav/LA_T_1325649.wav",
+          "size_bytes": 75018,
+          "sha256": "8f4f1bc80edd759c19dc750e20f23a0410679c25b90ba762bfac6dea547521a8",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 37487,
+          "duration_seconds": 2.3429375
+        },
+        {
+          "utterance_id": "LA_T_1335486",
+          "path": "database/train/con_wav/LA_T_1335486.wav",
+          "size_bytes": 106540,
+          "sha256": "1b800981d8b495d847db9d26c2f3f040655866a4f207daebcee4718dd718faa6",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 53248,
+          "duration_seconds": 3.328
+        },
+        {
+          "utterance_id": "LA_T_1470659",
+          "path": "database/train/con_wav/LA_T_1470659.wav",
+          "size_bytes": 65394,
+          "sha256": "04a9c1107e2eb6ef88811835de6ef872f80b370a20447dcd747d91f48f6d2613",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 32675,
+          "duration_seconds": 2.0421875
+        },
+        {
+          "utterance_id": "LA_T_1504888",
+          "path": "database/train/con_wav/LA_T_1504888.wav",
+          "size_bytes": 135108,
+          "sha256": "f2381497ed4d2911292297a0b6bc670a72b71fa1174e5aba4a15cbcb13db659a",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 67532,
+          "duration_seconds": 4.22075
+        },
+        {
+          "utterance_id": "LA_T_1749681",
+          "path": "database/train/con_wav/LA_T_1749681.wav",
+          "size_bytes": 103602,
+          "sha256": "da72b55649a01cf64804c32c392fe1f01662afee46a23e07854e641f998226cc",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 51779,
+          "duration_seconds": 3.2361875
+        },
+        {
+          "utterance_id": "LA_T_1787169",
+          "path": "database/train/con_wav/LA_T_1787169.wav",
+          "size_bytes": 81810,
+          "sha256": "ddb9d7f04586cbe52f413e07499546729d18e712c90cd01907b90d2716142938",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 40883,
+          "duration_seconds": 2.5551875
+        },
+        {
+          "utterance_id": "LA_T_1859956",
+          "path": "database/train/con_wav/LA_T_1859956.wav",
+          "size_bytes": 98388,
+          "sha256": "9fa88094ffb20e92f76b9d76172d9952e4f66dbae6400597bfbc60e54dcade24",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 49172,
+          "duration_seconds": 3.07325
+        },
+        {
+          "utterance_id": "LA_T_1931571",
+          "path": "database/train/con_wav/LA_T_1931571.wav",
+          "size_bytes": 118712,
+          "sha256": "3edff3f3b7f0b796702c151f87d36aec0315953ec8022a92c19b87387d67cdaf",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 59334,
+          "duration_seconds": 3.708375
+        },
+        {
+          "utterance_id": "LA_T_1963829",
+          "path": "database/train/con_wav/LA_T_1963829.wav",
+          "size_bytes": 236162,
+          "sha256": "a9e12df4f477580c27b1be39104317654dde668ab1cdca2b84509f82a4656e31",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 118059,
+          "duration_seconds": 7.3786875
+        },
+        {
+          "utterance_id": "LA_T_2092466",
+          "path": "database/train/con_wav/LA_T_2092466.wav",
+          "size_bytes": 86024,
+          "sha256": "e37b1645e5f6ff25a69c1fca2dec5009a3068b29728cd23210e8f9749f594433",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 42990,
+          "duration_seconds": 2.686875
+        },
+        {
+          "utterance_id": "LA_T_2202252",
+          "path": "database/train/con_wav/LA_T_2202252.wav",
+          "size_bytes": 83186,
+          "sha256": "b6f7d4c7f043965283cfd279d7dd0d9588cb1de2d5867b91860bccfb64f71b20",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 41571,
+          "duration_seconds": 2.5981875
+        },
+        {
+          "utterance_id": "LA_T_2272655",
+          "path": "database/train/con_wav/LA_T_2272655.wav",
+          "size_bytes": 96820,
+          "sha256": "41427e726bdfa92093344a408b920b4d7bfa5933dbe9212cb551b20522d7e897",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 48388,
+          "duration_seconds": 3.02425
+        },
+        {
+          "utterance_id": "LA_T_2580639",
+          "path": "database/train/con_wav/LA_T_2580639.wav",
+          "size_bytes": 96764,
+          "sha256": "68b988725980d7d22475068b5e8ba7c25e5037cb1b0623ddbdc8ca2cc6d62e83",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 48360,
+          "duration_seconds": 3.0225
+        },
+        {
+          "utterance_id": "LA_T_2616885",
+          "path": "database/train/con_wav/LA_T_2616885.wav",
+          "size_bytes": 114688,
+          "sha256": "ddd453a80a658d54a86ed440c6a3258ec3e18b0e341272300cdf3fbd9586a6fb",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 57322,
+          "duration_seconds": 3.582625
+        },
+        {
+          "utterance_id": "LA_T_2936703",
+          "path": "database/train/con_wav/LA_T_2936703.wav",
+          "size_bytes": 77712,
+          "sha256": "ff01ec7b695d472b75935432632d41447a6b9facbdcbbd7a186490315f92cb18",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 38834,
+          "duration_seconds": 2.427125
+        },
+        {
+          "utterance_id": "LA_T_3058432",
+          "path": "database/train/con_wav/LA_T_3058432.wav",
+          "size_bytes": 147404,
+          "sha256": "f3396025bc847212e7c29767c4e4eedf9523084158223a0b1112c3a03be8598e",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 73680,
+          "duration_seconds": 4.605
+        },
+        {
+          "utterance_id": "LA_T_3060760",
+          "path": "database/train/con_wav/LA_T_3060760.wav",
+          "size_bytes": 149990,
+          "sha256": "2ef82c0c42cd3b0c04b07f74904da702b00ca34f343158363e9d130c48ef15f2",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 74973,
+          "duration_seconds": 4.6858125
+        },
+        {
+          "utterance_id": "LA_T_3208992",
+          "path": "database/train/con_wav/LA_T_3208992.wav",
+          "size_bytes": 76132,
+          "sha256": "0c1c01eacedc5a1b0ada03856d4181d8d4776d4036051a140caec3577c917828",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 38044,
+          "duration_seconds": 2.37775
+        },
+        {
+          "utterance_id": "LA_T_3226167",
+          "path": "database/train/con_wav/LA_T_3226167.wav",
+          "size_bytes": 118742,
+          "sha256": "a578fcd9fa7c8a819afd7c4bca49c67f0ee4d133cbc6bc5c047690385dad8464",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 59349,
+          "duration_seconds": 3.7093125
+        },
+        {
+          "utterance_id": "LA_T_3449995",
+          "path": "database/train/con_wav/LA_T_3449995.wav",
+          "size_bytes": 96890,
+          "sha256": "68e61d52371b73ea50e8dc4dc4d7376a4784bd5a3fe5bd1aa697f1e779801c22",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 48423,
+          "duration_seconds": 3.0264375
+        },
+        {
+          "utterance_id": "LA_T_3967178",
+          "path": "database/train/con_wav/LA_T_3967178.wav",
+          "size_bytes": 96844,
+          "sha256": "2cada4cc0ab888e6639a22ce8f74dc62748c478f618a6a6755a497a2950b406e",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 48400,
+          "duration_seconds": 3.025
+        },
+        {
+          "utterance_id": "LA_T_3968554",
+          "path": "database/train/con_wav/LA_T_3968554.wav",
+          "size_bytes": 156902,
+          "sha256": "f9805fe2e666d604c46e5b1e1217c746fbc11edac6c2a7cf89b0fb1722b55be0",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 78429,
+          "duration_seconds": 4.9018125
+        },
+        {
+          "utterance_id": "LA_T_3978678",
+          "path": "database/train/con_wav/LA_T_3978678.wav",
+          "size_bytes": 126946,
+          "sha256": "a33fda5146890539cd5b14d9825f1bbbbe9be130d20e149dc85522969a8adbca",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 63451,
+          "duration_seconds": 3.9656875
+        },
+        {
+          "utterance_id": "LA_T_4565832",
+          "path": "database/train/con_wav/LA_T_4565832.wav",
+          "size_bytes": 126788,
+          "sha256": "434cdd92b25d88cdba12acbbe1ab0203def0fcaade3639d9d316f13f228eccdc",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 63372,
+          "duration_seconds": 3.96075
+        },
+        {
+          "utterance_id": "LA_T_4610869",
+          "path": "database/train/con_wav/LA_T_4610869.wav",
+          "size_bytes": 148722,
+          "sha256": "b1597b0fcbd18c8650bab5c7d79b278eec0b3dd37a054a802f956d42ed765de9",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 74339,
+          "duration_seconds": 4.6461875
+        },
+        {
+          "utterance_id": "LA_T_4642103",
+          "path": "database/train/con_wav/LA_T_4642103.wav",
+          "size_bytes": 90078,
+          "sha256": "ea1ef4cd034132a84476a784a557943482431e5ee78a42c158770881a86197b1",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 45017,
+          "duration_seconds": 2.8135625
+        },
+        {
+          "utterance_id": "LA_T_4673290",
+          "path": "database/train/con_wav/LA_T_4673290.wav",
+          "size_bytes": 117350,
+          "sha256": "dd41a9841177d44b521d22474a7e7724fd58a45601102d2475e0f5526e170444",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 58653,
+          "duration_seconds": 3.6658125
+        },
+        {
+          "utterance_id": "LA_T_4871078",
+          "path": "database/train/con_wav/LA_T_4871078.wav",
+          "size_bytes": 80496,
+          "sha256": "77545f04cf6f503f6e3f0a0ad6a3b0e089a5dbde279156a8d7456ef124b575e4",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 40226,
+          "duration_seconds": 2.514125
+        },
+        {
+          "utterance_id": "LA_T_4877664",
+          "path": "database/train/con_wav/LA_T_4877664.wav",
+          "size_bytes": 62632,
+          "sha256": "a20bcb23c511a1d512b88b6adeb11dc3c2730c116c5637f6cdb63d42de2c7c5c",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 31294,
+          "duration_seconds": 1.955875
+        },
+        {
+          "utterance_id": "LA_T_5051764",
+          "path": "database/train/con_wav/LA_T_5051764.wav",
+          "size_bytes": 117422,
+          "sha256": "1c8e3a984c3dff9bce07004abf70b64922d29ac38866d2459b4d7aaa58522160",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 58689,
+          "duration_seconds": 3.6680625
+        },
+        {
+          "utterance_id": "LA_T_5187822",
+          "path": "database/train/con_wav/LA_T_5187822.wav",
+          "size_bytes": 114456,
+          "sha256": "253ef04f94cdd842a2cbd5ea5600efe41f29a4c852dd6c784c74ff975d2ac87e",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 57206,
+          "duration_seconds": 3.575375
+        },
+        {
+          "utterance_id": "LA_T_5337549",
+          "path": "database/train/con_wav/LA_T_5337549.wav",
+          "size_bytes": 80504,
+          "sha256": "0a62fddf4e04adc38e677575ebc4cf5b05166dd49c455a76f5c98abba4879598",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 40230,
+          "duration_seconds": 2.514375
+        },
+        {
+          "utterance_id": "LA_T_5469120",
+          "path": "database/train/con_wav/LA_T_5469120.wav",
+          "size_bytes": 101042,
+          "sha256": "4076898d40a58bf9f5b81940c194eaf34ebcdb44c139a766759a9033c5d8e047",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 50499,
+          "duration_seconds": 3.1561875
+        },
+        {
+          "utterance_id": "LA_T_5572362",
+          "path": "database/train/con_wav/LA_T_5572362.wav",
+          "size_bytes": 135202,
+          "sha256": "78c2ba27ce88a0a6ebce50ecdaef74f856e03c3c353fff1bf3be2cebcabc0542",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 67579,
+          "duration_seconds": 4.2236875
+        },
+        {
+          "utterance_id": "LA_T_5621967",
+          "path": "database/train/con_wav/LA_T_5621967.wav",
+          "size_bytes": 96824,
+          "sha256": "b809b4a15faf1c391089c5480a248a002ca3972394a516840130dc5911c722e8",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 48390,
+          "duration_seconds": 3.024375
+        },
+        {
+          "utterance_id": "LA_T_5633732",
+          "path": "database/train/con_wav/LA_T_5633732.wav",
+          "size_bytes": 132448,
+          "sha256": "5d4943556f0eeb21b5655f287d262f20926d03acced7e2407461120970d4c5fd",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 66202,
+          "duration_seconds": 4.137625
+        },
+        {
+          "utterance_id": "LA_T_5765844",
+          "path": "database/train/con_wav/LA_T_5765844.wav",
+          "size_bytes": 107928,
+          "sha256": "2171add1c9777ca8c6c4875bef14fe5434ae8cdb389d4b750882632e81ed7fea",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 53942,
+          "duration_seconds": 3.371375
+        },
+        {
+          "utterance_id": "LA_T_5891808",
+          "path": "database/train/con_wav/LA_T_5891808.wav",
+          "size_bytes": 106484,
+          "sha256": "d1480b1c4ff0f51c2e7bf7bc9d0bc1b3b26f672d6c488378b5e0e3be5ff391c2",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 53220,
+          "duration_seconds": 3.32625
+        },
+        {
+          "utterance_id": "LA_T_6078217",
+          "path": "database/train/con_wav/LA_T_6078217.wav",
+          "size_bytes": 68212,
+          "sha256": "67528f5393198834e428871b1835423d0e6d29559dace7aaa42b874ce7f1b1d5",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 34084,
+          "duration_seconds": 2.13025
+        },
+        {
+          "utterance_id": "LA_T_6129228",
+          "path": "database/train/con_wav/LA_T_6129228.wav",
+          "size_bytes": 98140,
+          "sha256": "90879e6f2a37da27ba40d5e574c084d5db146851c6c3bebe4123b7ca1faa3b40",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 49048,
+          "duration_seconds": 3.0655
+        },
+        {
+          "utterance_id": "LA_T_6368265",
+          "path": "database/train/con_wav/LA_T_6368265.wav",
+          "size_bytes": 113322,
+          "sha256": "1669b45b7864c341f30ba585ee9c34f50c472d701bf1cb33f883e6402024ef92",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 56639,
+          "duration_seconds": 3.5399375
+        },
+        {
+          "utterance_id": "LA_T_6442486",
+          "path": "database/train/con_wav/LA_T_6442486.wav",
+          "size_bytes": 144704,
+          "sha256": "1bcda27f47190b09c4018ca8bfdafb32390e89306caf12ce8da8aed0280ab534",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 72330,
+          "duration_seconds": 4.520625
+        },
+        {
+          "utterance_id": "LA_T_6499936",
+          "path": "database/train/con_wav/LA_T_6499936.wav",
+          "size_bytes": 102392,
+          "sha256": "f79918a71e484207a98202e8e30b2db5a57508921ab814b1271963132390decf",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 51174,
+          "duration_seconds": 3.198375
+        },
+        {
+          "utterance_id": "LA_T_6533322",
+          "path": "database/train/con_wav/LA_T_6533322.wav",
+          "size_bytes": 189644,
+          "sha256": "ae542ea522377d1e4ba26a69ace2a607f85ce48529b888f336766c75a7f6e8f5",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 94800,
+          "duration_seconds": 5.925
+        },
+        {
+          "utterance_id": "LA_T_6767811",
+          "path": "database/train/con_wav/LA_T_6767811.wav",
+          "size_bytes": 96902,
+          "sha256": "f2215956f654d231ddd5c4c9b895f3e40ea0ee984fe4b6f7511be0bcaf3d7791",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 48429,
+          "duration_seconds": 3.0268125
+        },
+        {
+          "utterance_id": "LA_T_6807168",
+          "path": "database/train/con_wav/LA_T_6807168.wav",
+          "size_bytes": 113128,
+          "sha256": "267c8f8f64c7703d79e2d60fa1e6b3b54bce8a897db101ad6b8a54785b1568a2",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 56542,
+          "duration_seconds": 3.533875
+        },
+        {
+          "utterance_id": "LA_T_6856715",
+          "path": "database/train/con_wav/LA_T_6856715.wav",
+          "size_bytes": 74968,
+          "sha256": "0dd5a028a30c19fd91352339e8066c5e2bcec0edab8f7a575e4f3063fae580c9",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 37462,
+          "duration_seconds": 2.341375
+        },
+        {
+          "utterance_id": "LA_T_6903114",
+          "path": "database/train/con_wav/LA_T_6903114.wav",
+          "size_bytes": 72428,
+          "sha256": "16b918485683fae817ae015779d5206584a35d8b8f151bd218c589b17401477a",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 36192,
+          "duration_seconds": 2.262
+        },
+        {
+          "utterance_id": "LA_T_6992885",
+          "path": "database/train/con_wav/LA_T_6992885.wav",
+          "size_bytes": 79022,
+          "sha256": "37452e77f95ce308afcc3a9edec9685a9b548efe68d535bf8ecea73a67f5b8b3",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 39489,
+          "duration_seconds": 2.4680625
+        },
+        {
+          "utterance_id": "LA_T_7027837",
+          "path": "database/train/con_wav/LA_T_7027837.wav",
+          "size_bytes": 128384,
+          "sha256": "4a4d4ae58457b6a319360a75f7a55ccc2f5668a49b2f2573e1f3f9979a6224c2",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 64170,
+          "duration_seconds": 4.010625
+        },
+        {
+          "utterance_id": "LA_T_7877019",
+          "path": "database/train/con_wav/LA_T_7877019.wav",
+          "size_bytes": 105018,
+          "sha256": "79affccc696274f41c89611a01f9908c6b6ba97122dc6550cd328d6e57d27f7a",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 52487,
+          "duration_seconds": 3.2804375
+        },
+        {
+          "utterance_id": "LA_T_7944475",
+          "path": "database/train/con_wav/LA_T_7944475.wav",
+          "size_bytes": 78994,
+          "sha256": "236728dbd4ef98150c5305379f0f90d74f38206536324df30a3c3778f08fcbdf",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 39475,
+          "duration_seconds": 2.4671875
+        },
+        {
+          "utterance_id": "LA_T_7988057",
+          "path": "database/train/con_wav/LA_T_7988057.wav",
+          "size_bytes": 100808,
+          "sha256": "eea7943493ae7ddb7df09ab062bae7c834a7b8077860a1a1f5bd20a9b55a7638",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 50382,
+          "duration_seconds": 3.148875
+        },
+        {
+          "utterance_id": "LA_T_8105444",
+          "path": "database/train/con_wav/LA_T_8105444.wav",
+          "size_bytes": 62760,
+          "sha256": "4b669d3c81a1452b08f63b333492f21c79bb42627a0b86575d07dc04291a487f",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 31358,
+          "duration_seconds": 1.959875
+        },
+        {
+          "utterance_id": "LA_T_8522600",
+          "path": "database/train/con_wav/LA_T_8522600.wav",
+          "size_bytes": 151584,
+          "sha256": "f1609b747152c948c26571dfcfb04136849a5df57917ecf2e6f78fed5bfcef09",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 75770,
+          "duration_seconds": 4.735625
+        },
+        {
+          "utterance_id": "LA_T_8621866",
+          "path": "database/train/con_wav/LA_T_8621866.wav",
+          "size_bytes": 229222,
+          "sha256": "df02a861b9bb93e0e77ada375d1c32685f54708d0913726c104441eb22454113",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 114589,
+          "duration_seconds": 7.1618125
+        },
+        {
+          "utterance_id": "LA_T_9456128",
+          "path": "database/train/con_wav/LA_T_9456128.wav",
+          "size_bytes": 102266,
+          "sha256": "067b65cf1c8eff365cef734f43260607f7866d7cfd7215654344abc2370c5e38",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 51111,
+          "duration_seconds": 3.1944375
+        },
+        {
+          "utterance_id": "LA_T_9740938",
+          "path": "database/train/con_wav/LA_T_9740938.wav",
+          "size_bytes": 65142,
+          "sha256": "f0b9e08ebdb249db41074da8f3c9af45ee5336cbc460e6dee67aee1eac8bb6e5",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 32549,
+          "duration_seconds": 2.0343125
+        },
+        {
+          "utterance_id": "LA_T_9863654",
+          "path": "database/train/con_wav/LA_T_9863654.wav",
+          "size_bytes": 74894,
+          "sha256": "0242679aca7dd3c1c6f97c1b837f1e586cfaad6a5e15b42540f5e22f9dafc671",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 37425,
+          "duration_seconds": 2.3390625
+        },
+        {
+          "utterance_id": "LA_T_9901878",
+          "path": "database/train/con_wav/LA_T_9901878.wav",
+          "size_bytes": 200686,
+          "sha256": "c8309903637c607e5d83ec344caf3e61d253fc6cb435c460f5247cea039adcc6",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 100321,
+          "duration_seconds": 6.2700625
+        },
+        {
+          "utterance_id": "LA_T_9919874",
+          "path": "database/train/con_wav/LA_T_9919874.wav",
+          "size_bytes": 117296,
+          "sha256": "99ea3461ab10abda9ce8c6cfb5e8cf89b88877b7aa14eb19a8cebcc2cdab74e7",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 58626,
+          "duration_seconds": 3.664125
+        },
+        {
+          "utterance_id": "LA_T_9946390",
+          "path": "database/train/con_wav/LA_T_9946390.wav",
+          "size_bytes": 83340,
+          "sha256": "037acc36bacc2f23059c423cd4371cd9fb5a0352edd6954f4e2e6d0d87ad539c",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 41648,
+          "duration_seconds": 2.603
+        }
+      ],
+      "selected_count": 128,
+      "eval_payload_read": false
+    },
+    "dev": {
+      "status": "complete",
+      "selection_sha256": "c7efeacc6a19e80557fed89183131ebbc64e476ce5c240b0a02fe151b6cfc374",
+      "archive_sha256": "3f773b730e5f82479fcebfbd8effd02f8d8f1169e411c460b812daa707e74452",
+      "archive_md5": "ddd4cd3221b7210ac879f67452fb209e",
+      "records": [
+        {
+          "utterance_id": "CON_D_0000586",
+          "path": "database/dev/con_wav/CON_D_0000586.wav",
+          "size_bytes": 74394,
+          "sha256": "265b9e934eab3016aee7009496149ef2cb6826877b2944d3c4e724476d2d1b7f",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 37175,
+          "duration_seconds": 2.3234375
+        },
+        {
+          "utterance_id": "CON_D_0000734",
+          "path": "database/dev/con_wav/CON_D_0000734.wav",
+          "size_bytes": 85624,
+          "sha256": "0907e1eabc0ad2ca4f1538d0e66aa21c259b91eed21589046904038d3343535e",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 42790,
+          "duration_seconds": 2.674375
+        },
+        {
+          "utterance_id": "CON_D_0002058",
+          "path": "database/dev/con_wav/CON_D_0002058.wav",
+          "size_bytes": 134606,
+          "sha256": "b1005b5a9ce26bac8f21b80a3924fc6a5f18f7f3eaf4ea78b3a058a3d4b197ef",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 67281,
+          "duration_seconds": 4.2050625
+        },
+        {
+          "utterance_id": "CON_D_0003090",
+          "path": "database/dev/con_wav/CON_D_0003090.wav",
+          "size_bytes": 51802,
+          "sha256": "6bda96ffc5bfb557a8e8e3c06d5949b65a2acc814240f2f516bd8aeb95ba8743",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 25879,
+          "duration_seconds": 1.6174375
+        },
+        {
+          "utterance_id": "CON_D_0003229",
+          "path": "database/dev/con_wav/CON_D_0003229.wav",
+          "size_bytes": 86998,
+          "sha256": "f8e9513c1b62dd39b3fe8e4d335daea1a78f7cafa0053efc3053260be1e67a2e",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 43477,
+          "duration_seconds": 2.7173125
+        },
+        {
+          "utterance_id": "CON_D_0005417",
+          "path": "database/dev/con_wav/CON_D_0005417.wav",
+          "size_bytes": 136890,
+          "sha256": "c6e0232f6779012a78889b06b96fa4e021e56a4dadb052b9692aa776697636a3",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 68423,
+          "duration_seconds": 4.2764375
+        },
+        {
+          "utterance_id": "CON_D_0007306",
+          "path": "database/dev/con_wav/CON_D_0007306.wav",
+          "size_bytes": 62102,
+          "sha256": "7e8cd32849745739a18cbd20974cc2136c71acba58eee50e4ebfed262ce0e9f2",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 31029,
+          "duration_seconds": 1.9393125
+        },
+        {
+          "utterance_id": "CON_D_0007314",
+          "path": "database/dev/con_wav/CON_D_0007314.wav",
+          "size_bytes": 56532,
+          "sha256": "0275d34de6420126d73cd43f97249e88b009af397755adcd66a347fefca47c94",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 28244,
+          "duration_seconds": 1.76525
+        },
+        {
+          "utterance_id": "CON_D_0008727",
+          "path": "database/dev/con_wav/CON_D_0008727.wav",
+          "size_bytes": 166988,
+          "sha256": "f2742f6f68b513e6128113c061e256e16a16568824f756099f3d26b9a7ac4772",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 83472,
+          "duration_seconds": 5.217
+        },
+        {
+          "utterance_id": "CON_D_0008895",
+          "path": "database/dev/con_wav/CON_D_0008895.wav",
+          "size_bytes": 108008,
+          "sha256": "ba12416f68cf66b942b53932444829ff332a5d172b5e62d3aa55e06641f4cddf",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 53982,
+          "duration_seconds": 3.373875
+        },
+        {
+          "utterance_id": "CON_D_0010275",
+          "path": "database/dev/con_wav/CON_D_0010275.wav",
+          "size_bytes": 71456,
+          "sha256": "222f0fbef3c82e3181dd0264755d680dff56be86c22ec0c9551f1494f2f2ca57",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 35706,
+          "duration_seconds": 2.231625
+        },
+        {
+          "utterance_id": "CON_D_0011093",
+          "path": "database/dev/con_wav/CON_D_0011093.wav",
+          "size_bytes": 171718,
+          "sha256": "652b3a39380a821d70362a620ed7a38e9599d03b9170cb74f6863ceaa06efefc",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 85837,
+          "duration_seconds": 5.3648125
+        },
+        {
+          "utterance_id": "CON_D_0011199",
+          "path": "database/dev/con_wav/CON_D_0011199.wav",
+          "size_bytes": 146444,
+          "sha256": "3bbf9fb61ff21a47ab60a106e3566b817d836a8ebe6f81f8f2a408c602243835",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 73200,
+          "duration_seconds": 4.575
+        },
+        {
+          "utterance_id": "CON_D_0011498",
+          "path": "database/dev/con_wav/CON_D_0011498.wav",
+          "size_bytes": 134724,
+          "sha256": "1c9bc3c855f073e6d1296f814d2106e9135c393b8048550e37dd3b96136c2931",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 67340,
+          "duration_seconds": 4.20875
+        },
+        {
+          "utterance_id": "CON_D_0012291",
+          "path": "database/dev/con_wav/CON_D_0012291.wav",
+          "size_bytes": 155040,
+          "sha256": "5f7011ac90cd09262d6d1bf27610376f7b11824d1f4ed2543138d3504818711b",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 77498,
+          "duration_seconds": 4.843625
+        },
+        {
+          "utterance_id": "CON_D_0013088",
+          "path": "database/dev/con_wav/CON_D_0013088.wav",
+          "size_bytes": 101794,
+          "sha256": "038f726005963705902d68f1e307741e65ae20c74b6a6d11eaf48da7f20a28da",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 50875,
+          "duration_seconds": 3.1796875
+        },
+        {
+          "utterance_id": "CON_D_0013550",
+          "path": "database/dev/con_wav/CON_D_0013550.wav",
+          "size_bytes": 81990,
+          "sha256": "fac74b2ff9948037b85a91fd23e3e2e75fb808f503ef74da466207348c315e23",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 40973,
+          "duration_seconds": 2.5608125
+        },
+        {
+          "utterance_id": "CON_D_0014412",
+          "path": "database/dev/con_wav/CON_D_0014412.wav",
+          "size_bytes": 36192,
+          "sha256": "992b6c85859e86ddbdb6eb5524ccb371391194c6697b6e0bb779587ba3cf283f",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 18074,
+          "duration_seconds": 1.129625
+        },
+        {
+          "utterance_id": "CON_D_0014522",
+          "path": "database/dev/con_wav/CON_D_0014522.wav",
+          "size_bytes": 69284,
+          "sha256": "e19f5f0dd34b40c35540da28c050450e2bc1c8dda70c4c636f6e3ea1826283a0",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 34620,
+          "duration_seconds": 2.16375
+        },
+        {
+          "utterance_id": "CON_D_0014853",
+          "path": "database/dev/con_wav/CON_D_0014853.wav",
+          "size_bytes": 102624,
+          "sha256": "9a380b8af0b9e71d0c2d5074be8a87ef53c6c3679568be07e060f13d19d43722",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 51290,
+          "duration_seconds": 3.205625
+        },
+        {
+          "utterance_id": "CON_D_0017259",
+          "path": "database/dev/con_wav/CON_D_0017259.wav",
+          "size_bytes": 142032,
+          "sha256": "ba3cd077a93624c6db1d3da0c0a9fa01b76a9493d632de627410d134139a9cc4",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 70994,
+          "duration_seconds": 4.437125
+        },
+        {
+          "utterance_id": "CON_D_0017506",
+          "path": "database/dev/con_wav/CON_D_0017506.wav",
+          "size_bytes": 69774,
+          "sha256": "189e4b0aebca610907d70ffadfa61eb96138ad5cdf8aea5e19ac729ac658b8ec",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 34865,
+          "duration_seconds": 2.1790625
+        },
+        {
+          "utterance_id": "CON_D_0018582",
+          "path": "database/dev/con_wav/CON_D_0018582.wav",
+          "size_bytes": 158378,
+          "sha256": "c80683bd491dd447f50b86fc4c08b5c16843a6ba252d1e74577a99df65fc4707",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 79167,
+          "duration_seconds": 4.9479375
+        },
+        {
+          "utterance_id": "CON_D_0018799",
+          "path": "database/dev/con_wav/CON_D_0018799.wav",
+          "size_bytes": 134452,
+          "sha256": "a2aa9308476076cef8c44bfaf84e9bd7e3299ef1f9f3cddfe51575fd70a068a2",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 67204,
+          "duration_seconds": 4.20025
+        },
+        {
+          "utterance_id": "CON_D_0020736",
+          "path": "database/dev/con_wav/CON_D_0020736.wav",
+          "size_bytes": 101324,
+          "sha256": "2d39cf715d5ac70b16b91c7b740a671967d14409d446cde9b50619896f5b9bc6",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 50640,
+          "duration_seconds": 3.165
+        },
+        {
+          "utterance_id": "CON_D_0021704",
+          "path": "database/dev/con_wav/CON_D_0021704.wav",
+          "size_bytes": 92370,
+          "sha256": "d59d6bba39735dd2120d127e97af1a47175eae4fd10ef23d45f8004cde716617",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 46163,
+          "duration_seconds": 2.8851875
+        },
+        {
+          "utterance_id": "CON_D_0021788",
+          "path": "database/dev/con_wav/CON_D_0021788.wav",
+          "size_bytes": 106874,
+          "sha256": "3506d151f1b39de8d210eed80a39d97fb5013eeea3dc790f3f817fab7b64c895",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 53415,
+          "duration_seconds": 3.3384375
+        },
+        {
+          "utterance_id": "CON_D_0021890",
+          "path": "database/dev/con_wav/CON_D_0021890.wav",
+          "size_bytes": 138982,
+          "sha256": "08d59a59511978c7a7c23f32671c2f4969610c00e70ec2799037798c0b98840a",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 69469,
+          "duration_seconds": 4.3418125
+        },
+        {
+          "utterance_id": "CON_D_0022095",
+          "path": "database/dev/con_wav/CON_D_0022095.wav",
+          "size_bytes": 58372,
+          "sha256": "f68039f7a9b18ced06ed93b057444e0f26560f362b211d34063d9f719405b421",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 29164,
+          "duration_seconds": 1.82275
+        },
+        {
+          "utterance_id": "CON_D_0022484",
+          "path": "database/dev/con_wav/CON_D_0022484.wav",
+          "size_bytes": 113126,
+          "sha256": "5a7b8c48b2f1e0b7a783f749e1d799f0df47da0a2c7b82717c17b62aed411613",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 56541,
+          "duration_seconds": 3.5338125
+        },
+        {
+          "utterance_id": "CON_D_0023089",
+          "path": "database/dev/con_wav/CON_D_0023089.wav",
+          "size_bytes": 156568,
+          "sha256": "9818bd9724886a3921b97cb5fcfeeea3f0400a80cdcd5724f2f3b3e592fdd98a",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 78262,
+          "duration_seconds": 4.891375
+        },
+        {
+          "utterance_id": "CON_D_0023180",
+          "path": "database/dev/con_wav/CON_D_0023180.wav",
+          "size_bytes": 221316,
+          "sha256": "d427246191013b573aa22d3e9cb798848d8b045612f40404c0fee1c234f482c7",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 110636,
+          "duration_seconds": 6.91475
+        },
+        {
+          "utterance_id": "LA_D_1161800",
+          "path": "database/dev/con_wav/LA_D_1161800.wav",
+          "size_bytes": 133560,
+          "sha256": "8b8f9602921d791d84fe58f9d275308cc84d5b1b0592af8baaaac83bb93f276f",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 66758,
+          "duration_seconds": 4.172375
+        },
+        {
+          "utterance_id": "LA_D_1323454",
+          "path": "database/dev/con_wav/LA_D_1323454.wav",
+          "size_bytes": 240224,
+          "sha256": "c391bc5e09330c96b4c7731bc22991d9e76843ae264767cc516079f7da8e4036",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 120090,
+          "duration_seconds": 7.505625
+        },
+        {
+          "utterance_id": "LA_D_1469404",
+          "path": "database/dev/con_wav/LA_D_1469404.wav",
+          "size_bytes": 111756,
+          "sha256": "31b05679851cb2745cd3ec4d22f8a2a1c88cc7ffbb408f86a1de3636aaa20944",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 55856,
+          "duration_seconds": 3.491
+        },
+        {
+          "utterance_id": "LA_D_1494418",
+          "path": "database/dev/con_wav/LA_D_1494418.wav",
+          "size_bytes": 111784,
+          "sha256": "06ce9b49027f78843269aa8f6791a2f1c28fd98ea49de08db68f8d2b47db532e",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 55870,
+          "duration_seconds": 3.491875
+        },
+        {
+          "utterance_id": "LA_D_1796445",
+          "path": "database/dev/con_wav/LA_D_1796445.wav",
+          "size_bytes": 107812,
+          "sha256": "34eb0d31a11635e90aa45566df77def477b9e4a840e9b923fadd680bdf3a2bf0",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 53884,
+          "duration_seconds": 3.36775
+        },
+        {
+          "utterance_id": "LA_D_1902645",
+          "path": "database/dev/con_wav/LA_D_1902645.wav",
+          "size_bytes": 73722,
+          "sha256": "4013d0246222071c399165ef30102f39eede23e61cdbc35fd96c076ef296bec1",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 36839,
+          "duration_seconds": 2.3024375
+        },
+        {
+          "utterance_id": "LA_D_2002365",
+          "path": "database/dev/con_wav/LA_D_2002365.wav",
+          "size_bytes": 66884,
+          "sha256": "299e5a33b6f3f97b1a3126315fe45222d34079ad8d6f168cd65b691c661c2585",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 33420,
+          "duration_seconds": 2.08875
+        },
+        {
+          "utterance_id": "LA_D_2035158",
+          "path": "database/dev/con_wav/LA_D_2035158.wav",
+          "size_bytes": 133824,
+          "sha256": "549a4d32d8f258c499bfbec150ed4a235b4c959bf9a991887b4115f4375b1e7c",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 66890,
+          "duration_seconds": 4.180625
+        },
+        {
+          "utterance_id": "LA_D_2156985",
+          "path": "database/dev/con_wav/LA_D_2156985.wav",
+          "size_bytes": 100820,
+          "sha256": "ba635af8260dd9de1459094a853878519e3dc73642670107682ba359eb38ebd4",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 50388,
+          "duration_seconds": 3.14925
+        },
+        {
+          "utterance_id": "LA_D_2748583",
+          "path": "database/dev/con_wav/LA_D_2748583.wav",
+          "size_bytes": 116004,
+          "sha256": "8718630ae842ad0f4a24aafa67ae8dae0d343fb3a167d55adc5ae171edc3e9b4",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 57980,
+          "duration_seconds": 3.62375
+        },
+        {
+          "utterance_id": "LA_D_2812544",
+          "path": "database/dev/con_wav/LA_D_2812544.wav",
+          "size_bytes": 103660,
+          "sha256": "7d20b608f38dc04e760ca22d977d3644909b1935ad104b8fb57d008d8a80ddd9",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 51808,
+          "duration_seconds": 3.238
+        },
+        {
+          "utterance_id": "LA_D_3056969",
+          "path": "database/dev/con_wav/LA_D_3056969.wav",
+          "size_bytes": 186984,
+          "sha256": "73fd1d2639e5b38787bad631a2c12bb7aea78b49925f44cee21edb75b5018f6c",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 93470,
+          "duration_seconds": 5.841875
+        },
+        {
+          "utterance_id": "LA_D_3170323",
+          "path": "database/dev/con_wav/LA_D_3170323.wav",
+          "size_bytes": 111938,
+          "sha256": "7d8cbf2ad2b817903e80819faa83644400ba085c3c5da56fc81c04a90f4a5497",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 55947,
+          "duration_seconds": 3.4966875
+        },
+        {
+          "utterance_id": "LA_D_3323539",
+          "path": "database/dev/con_wav/LA_D_3323539.wav",
+          "size_bytes": 68088,
+          "sha256": "0ec4e4a3810ce12b5a8d3e9d7aea6cdac168d1221965c765c499b9d88de56e23",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 34022,
+          "duration_seconds": 2.126375
+        },
+        {
+          "utterance_id": "LA_D_3559270",
+          "path": "database/dev/con_wav/LA_D_3559270.wav",
+          "size_bytes": 121430,
+          "sha256": "73802a444182b0da7014a26066eb07c679ae741bce4213af44edb5db0e067ff5",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 60693,
+          "duration_seconds": 3.7933125
+        },
+        {
+          "utterance_id": "LA_D_4148603",
+          "path": "database/dev/con_wav/LA_D_4148603.wav",
+          "size_bytes": 124160,
+          "sha256": "b286d6f284846407ea0ecb5d145d225af889f94e44175140804f43d04028be4a",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 62058,
+          "duration_seconds": 3.878625
+        },
+        {
+          "utterance_id": "LA_D_4771667",
+          "path": "database/dev/con_wav/LA_D_4771667.wav",
+          "size_bytes": 87264,
+          "sha256": "2c72aaf6721e86d68706bd1124853551b3e3d52326336443960606d3b981f881",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 43610,
+          "duration_seconds": 2.725625
+        },
+        {
+          "utterance_id": "LA_D_4828901",
+          "path": "database/dev/con_wav/LA_D_4828901.wav",
+          "size_bytes": 163878,
+          "sha256": "fe443f8d524cff6fd3e04b7a1949ddcb4261e781b552905e2c4ef42ca8c9327a",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 81917,
+          "duration_seconds": 5.1198125
+        },
+        {
+          "utterance_id": "LA_D_5026692",
+          "path": "database/dev/con_wav/LA_D_5026692.wav",
+          "size_bytes": 132346,
+          "sha256": "9a07b2a8e6bdbd7b02bef214bfe5f96728065693bc8b6663186a7a7458842cf9",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 66151,
+          "duration_seconds": 4.1344375
+        },
+        {
+          "utterance_id": "LA_D_5029338",
+          "path": "database/dev/con_wav/LA_D_5029338.wav",
+          "size_bytes": 118828,
+          "sha256": "7a8d1814b481853132d0b6bf04556f90a5f19a5d3568e599cf679b8c28c8e5ea",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 59392,
+          "duration_seconds": 3.712
+        },
+        {
+          "utterance_id": "LA_D_5226379",
+          "path": "database/dev/con_wav/LA_D_5226379.wav",
+          "size_bytes": 148694,
+          "sha256": "45077ccbbdc87465e42969a1c2abd524ef1a2a186b94fa9a966ed5c0e9577562",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 74325,
+          "duration_seconds": 4.6453125
+        },
+        {
+          "utterance_id": "LA_D_5513082",
+          "path": "database/dev/con_wav/LA_D_5513082.wav",
+          "size_bytes": 99730,
+          "sha256": "f29cc7ba7b117113f11151e3a1989099c870e04a7cfbfc6b655b7f81d66347f9",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 49843,
+          "duration_seconds": 3.1151875
+        },
+        {
+          "utterance_id": "LA_D_5651240",
+          "path": "database/dev/con_wav/LA_D_5651240.wav",
+          "size_bytes": 124064,
+          "sha256": "0d6a6eae9bf41a4ca727c4912efb49792c646df45991fdf3c635abed9c8b9803",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 62010,
+          "duration_seconds": 3.875625
+        },
+        {
+          "utterance_id": "LA_D_5774989",
+          "path": "database/dev/con_wav/LA_D_5774989.wav",
+          "size_bytes": 150136,
+          "sha256": "898bfa56dbf036fc735eb613f24e0c0fdd61e0b2905a37adfc702308f097e8d5",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 75046,
+          "duration_seconds": 4.690375
+        },
+        {
+          "utterance_id": "LA_D_6023315",
+          "path": "database/dev/con_wav/LA_D_6023315.wav",
+          "size_bytes": 161028,
+          "sha256": "8f62cff2191ecaa0a69ba6257fdb170393935a0507962339327c843ea56fbf43",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 80492,
+          "duration_seconds": 5.03075
+        },
+        {
+          "utterance_id": "LA_D_6258471",
+          "path": "database/dev/con_wav/LA_D_6258471.wav",
+          "size_bytes": 156954,
+          "sha256": "e5a06fa21dc11e371fc673aab31538b437b7c8a348779d93c74777b45b86eb38",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 78455,
+          "duration_seconds": 4.9034375
+        },
+        {
+          "utterance_id": "LA_D_6900009",
+          "path": "database/dev/con_wav/LA_D_6900009.wav",
+          "size_bytes": 135090,
+          "sha256": "2052b7202a90109fcf1113b7d0eb7de1b4f453e948f1fc45ed828c94a858fe4d",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 67523,
+          "duration_seconds": 4.2201875
+        },
+        {
+          "utterance_id": "LA_D_7050071",
+          "path": "database/dev/con_wav/LA_D_7050071.wav",
+          "size_bytes": 155536,
+          "sha256": "6a72ea8c7540afa5d3eebf54a3b9ecaeefdfa83c300d4cd519c6876ea80167f0",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 77746,
+          "duration_seconds": 4.859125
+        },
+        {
+          "utterance_id": "LA_D_7179593",
+          "path": "database/dev/con_wav/LA_D_7179593.wav",
+          "size_bytes": 83056,
+          "sha256": "0a82d6a33371e161b3466ba708c7badbda1f833d944d3e8148a4c870d079be73",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 41506,
+          "duration_seconds": 2.594125
+        },
+        {
+          "utterance_id": "LA_D_7944625",
+          "path": "database/dev/con_wav/LA_D_7944625.wav",
+          "size_bytes": 139110,
+          "sha256": "ad4baf5c08fe0e0993c9ba7467321c7cd0ac8015fb007db9b6480a96030d8423",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 69533,
+          "duration_seconds": 4.3458125
+        },
+        {
+          "utterance_id": "LA_D_8003563",
+          "path": "database/dev/con_wav/LA_D_8003563.wav",
+          "size_bytes": 77618,
+          "sha256": "a765f388e430333b98a5fc7b8ea710cfaf5bf5cd232792ccbec50cf3659cecd0",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 38787,
+          "duration_seconds": 2.4241875
+        },
+        {
+          "utterance_id": "LA_D_9851827",
+          "path": "database/dev/con_wav/LA_D_9851827.wav",
+          "size_bytes": 88622,
+          "sha256": "d800b18cb8fff2b677aace399e8387395a714b592cfa147449c00923c7aa768a",
+          "sample_rate": 16000,
+          "channels": 1,
+          "frames": 44289,
+          "duration_seconds": 2.7680625
+        }
+      ],
+      "selected_count": 64,
+      "eval_payload_read": false
+    }
+  },
+  "plan": {
+    "dataset": "PartialSpoof v1.2",
+    "record": "5766198",
+    "files": {
+      "train": {
+        "filename": "database_train.tar.gz",
+        "size_bytes": 2027101056,
+        "published_md5": "c4853ddd831e8e96b0e279fc0a512e7e",
+        "url": "https://zenodo.org/records/5766198/files/database_train.tar.gz?download=1"
+      },
+      "dev": {
+        "filename": "database_dev.tar.gz",
+        "size_bytes": 2027972850,
+        "published_md5": "ddd4cd3221b7210ac879f67452fb209e",
+        "url": "https://zenodo.org/records/5766198/files/database_dev.tar.gz?download=1"
+      }
+    },
+    "transfer_budget_bytes": 4500000000,
+    "extraction_budget_bytes": 268435456,
+    "max_audio_bytes": 8388608,
+    "read_timeout_seconds": 60,
+    "max_audio_seconds": 60,
+    "job_timeout_seconds": 1800,
+    "eval_access": false,
+    "timeout_semantics": "Deadline checked between operations; a blocking read can add up to 60 seconds. Use an external supervisor for a strict wall-clock stop.",
+    "minimum_free_ram_bytes": 2147483648,
+    "maximum_process_peak_bytes": 1073741824,
+    "disk_reserve_bytes": 21474836480,
+    "source_sha256": "fc2b59d1a90bbbb2d2f9d5c52e7ff68ea984ffc84a573a413466872bdd23212d",
+    "selection_sha256": "c7efeacc6a19e80557fed89183131ebbc64e476ce5c240b0a02fe151b6cfc374",
+    "metadata_sha256": "1dd5f3394f076f5226891d9a89511c11b891c6470ab03b6f1a800dae69c44469"
+  },
+  "preflight": {
+    "memory": {
+      "method": "Windows GetProcessMemoryInfo / GlobalMemoryStatusEx",
+      "rss_bytes": 35954688,
+      "peak_rss_bytes": 36945920,
+      "system_total_ram_bytes": 16872415232,
+      "system_available_ram_bytes": 5455220736
+    },
+    "disk_free_bytes": 61858820096
+  },
+  "last_error": "Audio RAM guard failed"
+}

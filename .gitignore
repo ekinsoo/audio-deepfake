@@ -1,0 +1,54 @@
+# Local environments and build files
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.cache/
+.ipynb_checkpoints/
+
+# Datasets, audio, models and generated outputs
+data/
+datasets/
+!configs/datasets/
+!configs/datasets/*.json
+artifacts/
+outputs/
+runs/
+checkpoints/
+*.wav
+*.flac
+*.mp3
+*.ogg
+*.m4a
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.pkl
+*.joblib
+*.npy
+*.npz
+
+# Machine-specific configuration and private files
+.env
+.env.*
+!.env.example
+*.local.toml
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Local working notes and temporary staging
+.tmp/
+AGENTS.md
+notes.md

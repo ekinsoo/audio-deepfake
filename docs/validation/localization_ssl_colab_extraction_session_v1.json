@@ -1,0 +1,30 @@
+{
+  "status": "extraction_complete_head_not_started",
+  "created_utc": "2026-10-10T22:38:35.012084+00:00",
+  "user_authorized": {
+    "destination": "existing Google Colab notebook",
+    "public_recordings": 192,
+    "train": 128,
+    "dev": 64,
+    "maximum_extraction_seconds": 1800
+  },
+  "input_bundle": {
+    "path": "outputs/colab/ssl_extraction_inputs_v2.zip",
+    "bytes": 14698353,
+    "sha256": "b622365cdf58773045454cfa9fb27a545a0911ba2ee9546eb1225bda4f7ac03d",
+    "v1_executed": false
+  },
+  "extraction_audit": "docs/validation/localization_ssl_extraction_v1.json",
+  "head_prelaunch_audit": "docs/validation/localization_ssl_head_prelaunch_v1.json",
+  "training_started": false,
+  "eval_accessed": false,
+  "independent_extraction_review": "review_gate verified full archive,12part combination and all192 cache arrays/receipts; no blocker",
+  "independent_metric_adapter_review": "no blocker; no actual metric execution",
+  "ssl_tests_passed": 35,
+  "proof": {
+    "path": "outputs/colab/extraction-session-v1/colab-extraction-proof.png",
+    "sha256": "eca70021763dc5b0722dc2b29d29b48fb4f3b9456d73eb5a907bcfab559757f3"
+  },
+  "transport": "Normal download events timed out. HTML output worked for parts0-7,then Colab output JavaScript load error repeated after normal reload/reconnect to the same preserved session. Parts8-11 recovered as plain text. No encoder rerun or permission change.",
+  "next_step": "Preserve stopped head v1. Inspect RAM with margin over unchanged2GiB gate,then separately review/launch fresh head directory from verified cache. No automatic retry."
+}

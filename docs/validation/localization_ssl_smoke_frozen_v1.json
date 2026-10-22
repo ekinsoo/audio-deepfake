@@ -1,0 +1,20 @@
+{
+  "status": "frozen_before_encoder_smoke",
+  "created_utc": "2026-10-10T20:58:30.848549+00:00",
+  "source_input_sha256": {
+    "scripts/ssl_smoke_job.py": "9a157d9618ac1b2f1e0caf5ee0e82b5b1485dfeb7659caee674d337f31051ca5",
+    "scripts/ssl_smoke_worker.py": "5266ca79204708679726828152dfb2ad2818de4fca729f11299a708c0c096430",
+    "scripts/fetch_ssl_checkpoint.py": "f0c19bc0509d2d55d77e3f706df3aa17a1b3f1aefb97355c98eb69f16baa7dee",
+    "scripts/full_run_job.py": "36d8389fe042b9e882af5df19e3336396c838d24b1f893d9db5d1c945f57504a",
+    "src/audio_deepfake/resources.py": "9d68202f7335b17e83f2138600f0f1c7312adab46c3d73609d61751800282e7a",
+    "src/audio_deepfake/localization_ssl_geometry.py": "ddd6e4fe0de0111560281a3f7281220799f16a24554b9b11a4ea27618480cfe5",
+    "requirements/ssl-windows.lock": "c6b6d75601e7127c6c3e02aba4d1cdbfbe7d71b52f25649878d7304cae1881ca",
+    "configs/localization_ssl_v1.json": "44b1e5d8ae54a9f259fa64051b4ef7ca7267c476454116dc80cb7acaedd9e264",
+    "docs/validation/localization_ssl_plan_v1.json": "92ad463aaa319fce9d9cf80b2393c3915df7f1a55eadf10ea043bc882871a32b",
+    "docs/validation/localization_ssl_checkpoint_v1.json": "c00e8234d508bc0d469b2a8d265511a42bfaf6cb825a4daaff276aaed02ce803",
+    "docs/validation/localization_ssl_environment_v1.json": "72c565a387828f58f87854bf388db1fb6bc28b522ad15192be61648878a4612b"
+  },
+  "training_started": false,
+  "smoke_id": "LA_T_1963829",
+  "tests_passed": 7
+}

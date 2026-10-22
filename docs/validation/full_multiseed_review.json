@@ -1,0 +1,63 @@
+{
+  "status": "ok",
+  "scope": "post-run verification of fixed seeds43/44 and aggregate",
+  "eval_enabled": false,
+  "checks": [
+    {
+      "seed": 43,
+      "rows": 24844,
+      "summary_sha256": "83e54764eb6f042bcf061ea386add55068cde0db70daf0fa300db7f78b7370d7",
+      "scores_sha256": "495b43938850d18ae391cf23f4d9047ef2851e440cba07024f27fa6fc388a069",
+      "model_sha256": "08b77256906a546d5eabbe9fa2cc5bbef0430d7d5dc7b10fc5b9f9e8449a19d0",
+      "official_metrics_exact_match": true,
+      "convergence": {
+        "bonafide": {
+          "converged": true,
+          "iterations": 41,
+          "warnings": []
+        },
+        "spoof": {
+          "converged": true,
+          "iterations": 42,
+          "warnings": []
+        }
+      }
+    },
+    {
+      "seed": 44,
+      "rows": 24844,
+      "summary_sha256": "f740bb9f103e1d0d6d9e6c53a75687f82ec0152d42a2c50e42f24455a6336da4",
+      "scores_sha256": "075c3a1dd993431cebc3e8d7c9e433498cf817dba88f0e6db91e50e9d0b277e6",
+      "model_sha256": "bf35822b7514034d75c8bb4373636bb78bad03abce03a6ac8f00bf6f468d6e10",
+      "official_metrics_exact_match": true,
+      "convergence": {
+        "bonafide": {
+          "converged": true,
+          "iterations": 37,
+          "warnings": []
+        },
+        "spoof": {
+          "converged": true,
+          "iterations": 46,
+          "warnings": []
+        }
+      }
+    }
+  ],
+  "aggregate_exact_match": true,
+  "metrics": {
+    "eer": {
+      "mean": 0.06344142705245273,
+      "std": 0.003315633146181236
+    },
+    "min_tDCF": {
+      "mean": 0.17236673647067657,
+      "std": 0.014112237643348506
+    }
+  },
+  "aggregation_ddof": 0,
+  "limitations": [
+    "Development only; not held-out eval.",
+    "Artifact and direct metric checks; waveform spotchecks for seed42 are in its separate review."
+  ]
+}

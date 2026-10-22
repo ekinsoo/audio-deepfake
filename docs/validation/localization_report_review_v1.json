@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "scope": "Final report delivery review; custom development diagnostics, not official localization benchmark results.",
+  "report_manifest_sha256": "f4f782335fe7eb2a92eff58327f535bbcec0abd10d4a0b7ca307bc1e5fc7968f",
+  "report_outputs_sha256": {
+    "audio_deepfake_report.tex": "cceae060e77abf5bcc4482338b136f90f134a7182d59c777b2ebaf88cd9640de",
+    "audio_deepfake_report.pdf": "9584977a69d0407fe5dcfa7767646bbd359dbf6847e317c1f99458d4ad790de7"
+  },
+  "pdf_pages": 11,
+  "visual_review": {
+    "all_pages_contact_sheet": true,
+    "references_page_full_resolution": true,
+    "render_directory": ".cache/report-localization-final-qa",
+    "outcome": "No visible clipping, overlap or broken plot overlays."
+  },
+  "latex_compilation": "Built-in compiler reported success for the current source before final PDF rendering.",
+  "tests": {
+    "focused_localization_passed": 50,
+    "partial_data_passed": 26,
+    "total_passed": 76
+  },
+  "integrity": {
+    "previous_frozen_input_source_output_checks_passed": 71,
+    "final_report_and_localization_input_hashes_rechecked": true
+  },
+  "localization_locks_remaining": [],
+  "decision": "Keep the original baseline. The single fixed context normalization worsened development EER. Plan a stronger representation separately before more training.",
+  "limitations": [
+    "Publisher RTTM parity remains unverified; derived native-label RangeEER is a custom diagnostic.",
+    "The inspected localization subset is small and has high false-alarm rates.",
+    "Evaluation split remains closed."
+  ]
+}
