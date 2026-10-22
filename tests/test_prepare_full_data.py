@@ -18,6 +18,15 @@ SPEC.loader.exec_module(p)
 
 
 class FullPreparationTests(unittest.TestCase):
+    def setUp(self):
+        # These fixtures contain tiny synthetic audio; resource pressure has
+        # its own explicit failure test below. Do not depend on host RAM or
+        # the availability of a Windows system-memory probe on Linux.
+        memory = patch.object(p, 'memory_snapshot', return_value={
+            'system_available_ram_bytes': 4 * 1024**3})
+        memory.start()
+        self.addCleanup(memory.stop)
+
     def fixture(self,root):
         protocol_dir=root/'keys'
         protocol_dir.mkdir()

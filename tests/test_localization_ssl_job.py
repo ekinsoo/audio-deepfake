@@ -43,6 +43,7 @@ class SSLSupervisorTests(unittest.TestCase):
             with patch.object(job, 'ROOT', root), patch.object(job, 'windows_memory', side_effect=readings), \
                  patch.object(job.shutil, 'disk_usage', return_value=Mock(free=30 * 1024**3)), \
                  patch.object(job, 'base_python', return_value='python'), \
+                 patch.object(job.subprocess, 'CREATE_NO_WINDOW', 0, create=True), \
                  patch.object(job.subprocess, 'Popen', return_value=child), \
                  patch.object(sys, 'argv', ['job', '--execute', '--job-dir', str(directory)]):
                 with self.assertRaisesRegex(RuntimeError, 'available RAM'):
