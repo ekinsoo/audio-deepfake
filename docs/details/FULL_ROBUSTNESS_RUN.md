@@ -2,7 +2,7 @@
 
 This run reuses the three saved models and cached public ASVspoof 2019 LA
 audio. It does not train or download data. The fixed choices are in
-[the frozen plan](FULL_ROBUSTNESS_PLAN.md).
+[the frozen plan](../FULL_ROBUSTNESS_PLAN.md).
 
 On the original Windows environment, start from the project root:
 

@@ -83,4 +83,4 @@ Evidence: [extraction](validation/localization_ssl_extraction_v1.json),
 [sampling preflight](validation/localization_ssl_sampling_preflight_v1.json),
 [first pre-launch stop](validation/localization_ssl_head_prelaunch_v1.json),
 [fitting failure](validation/localization_ssl_head_convergence_v2.json),
-[fixed plan](LOCALIZATION_SSL_PLAN.md), [execution state](LOCALIZATION_SSL_RUN.md).
+[fixed plan](LOCALIZATION_SSL_PLAN.md), [execution state](details/LOCALIZATION_SSL_RUN.md).

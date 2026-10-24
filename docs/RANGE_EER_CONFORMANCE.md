@@ -75,7 +75,7 @@ Real audio/native-label alignment now passes all 192 selected recordings;
 see the [alignment audit](validation/localization_alignment.json). VAD label
 0 remains unsuitable as a binary reference. The checked distribution has no
 publisher RTTM, so native publisher-reference parity remains unverified.
-The later [derived-reference diagnostic](LOCALIZATION_METRICS.md) evaluates
+The later [derived-reference diagnostic](details/LOCALIZATION_METRICS.md) evaluates
 the actual 20 ms predictions against explicitly reconstructed native 10 ms
 spoof ranges. It is separate from these synthetic checks and is not official
 benchmark certification.

@@ -41,7 +41,7 @@ also reproduce the original seeded selection from the official protocol keys.
 
 Train and dev share no speaker or utterance IDs. Both selected splits contain
 all six spoof attack IDs A01-A06. No eval audio was extracted, decoded or scored.
-[Pilot audio access](PILOT_DATA.md) documents the preparation workflow.
+[Pilot audio access](details/PILOT_DATA.md) documents the preparation workflow.
 The existing smoke downloader retains its 100-file cap. Its earlier feature
 profile used only 50 train / 50 dev recordings; those timing and memory numbers
 do not measure training or full-pilot inference.

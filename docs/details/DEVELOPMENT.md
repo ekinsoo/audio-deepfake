@@ -41,7 +41,7 @@ The same command runs on pushes and pull requests in GitHub Actions.
 Two additional suites need prepared environments:
 
 - `python scripts/run_tests.py --suite range`: use the isolated metric
-  environment from [RANGE_EER_CONFORMANCE.md](RANGE_EER_CONFORMANCE.md). It needs
+  environment from [RANGE_EER_CONFORMANCE.md](../RANGE_EER_CONFORMANCE.md). It needs
   the pinned upstream files and its own dependencies.
 - `python scripts/run_tests.py --suite process`: Windows only, using the audited
   `.venv` layout and numerical versions. It checks the real worker PID and RAM
@@ -62,6 +62,6 @@ Compact public result audits and derived figures belong in `docs/`. Historical
 logs contain original local paths and runtime details; those identify the
 recorded run and are not portable installation settings.
 
-See [DATA_PROTOCOL.md](DATA_PROTOCOL.md) and
-[PARTIALSPOOF_PROTOCOL.md](PARTIALSPOOF_PROTOCOL.md) before fetching datasets.
+See [DATA_PROTOCOL.md](../DATA_PROTOCOL.md) and
+[PARTIALSPOOF_PROTOCOL.md](../PARTIALSPOOF_PROTOCOL.md) before fetching datasets.
 Their licenses and the external evaluator/checkpoint licenses are separate.

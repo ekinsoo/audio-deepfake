@@ -62,5 +62,5 @@ The LFCC windows and delta features use adjacent and future samples. This
 implementation is offline; 20 ms output bins do not imply 20 ms latency.
 These small, balanced subsets do not establish full-benchmark performance
 or generalization to new datasets. PartialSpoof and ASVspoof share source
-material. See [pilot plan](LOCALIZATION_PILOT_PLAN.md) and
-[run and recovery guide](LOCALIZATION_RUN.md).
+material. See [pilot plan](../LOCALIZATION_PILOT_PLAN.md) and
+[run and recovery guide](../LOCALIZATION_RUN.md).

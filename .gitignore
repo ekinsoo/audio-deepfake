@@ -52,3 +52,8 @@ Thumbs.db
 .tmp/
 AGENTS.md
 notes.md
+
+# Personal summaries and browser-session troubleshooting
+/docs/BROWSER_ACCESS_DIAGNOSTIC.md
+/docs/EKINOS_SUMMARY.md
+/docs/PORTFOLIO_SUMMARY.md

@@ -1,6 +1,6 @@
 # Getting started
 
-Date: 2026-10-09. The fixed 2,000 train / 1,000 dev pilot and first narrowband experiment are complete. Clean pilot EER is 8.8%; absolute score change did not beat the simple margin baseline for ranking errors. All selected audio and the complete archive checksum are verified. Results and limits are in [reports.md](../reports.md).
+Date: 2026-10-09. The fixed 2,000 train / 1,000 dev pilot and first narrowband experiment are complete. Clean pilot EER is 8.8%; absolute score change did not beat the simple margin baseline for ranking errors. All selected audio and the complete archive checksum are verified. Results and limits are in [reports.md](../../reports.md).
 
 ## Direction
 
@@ -19,7 +19,7 @@ Start with full-recording detection on ASVspoof 2019 LA. Build a CPU LFCC-GMM ba
 
 Review the output of each step before starting the next. Pilot training is not an official benchmark result. If step 3 exceeds the resource budget, reduce the frame/feature cache or move suitable CPU work to Colab. Set performance expectations after the measurement pipeline works.
 
-The next detection step is specified in [FULL_CONFIRMATION_PLAN.md](FULL_CONFIRMATION_PLAN.md).
+The next detection step is specified in [FULL_CONFIRMATION_PLAN.md](../FULL_CONFIRMATION_PLAN.md).
 It preserves official class proportions, excludes unkeyed archive members, and
 measures seed 42 before the other seeds. The existing pilot runner needs a separate
 guarded full-split path before this plan can run.
@@ -42,4 +42,4 @@ A free Colab pilot is a reasonable first option. Do not choose a subscription be
 
 ## Next milestone
 
-After A: PartialSpoof label/RTTM reader → 20 ms frame baseline → RangeEER → recording median/MAD context ablation. A and B share source material, so tests between them must not be presented as independent external generalization. Sources are in [reports.md](../reports.md); open work is in [backlog.md](../backlog.md).
+After A: PartialSpoof label/RTTM reader → 20 ms frame baseline → RangeEER → recording median/MAD context ablation. A and B share source material, so tests between them must not be presented as independent external generalization. Sources are in [reports.md](../../reports.md); open work is in [backlog.md](../../backlog.md).

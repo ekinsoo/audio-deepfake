@@ -28,8 +28,8 @@ RAM was 5,269,901,312 bytes, with 60,061,753,344 free disk bytes. A new
 `outputs/localization/ssl-head-v2` invocation started fitting from the verified
 caches. Fixed lbfgs max_iter 300 emitted ConvergenceWarning, which stopped the
 worker before any model/dev score/result was saved. No SSL metric exists.
-See [fitting audit](validation/localization_ssl_head_convergence_v2.json) and
-[SSL results status](LOCALIZATION_SSL_RESULTS.md).
+See [fitting audit](../validation/localization_ssl_head_convergence_v2.json) and
+[SSL results status](../LOCALIZATION_SSL_RESULTS.md).
 
 The outer monitor accidentally measured the Windows venv redirector; its
 4,648,960-byte peak is invalid as numerical-worker RAM. Repair is limited to
@@ -55,13 +55,13 @@ Normal download and HTML output encountered transport/display failures;
 12 visible-output parts were combined and the whole SHA-256, ZIP CRC/safe paths,
 executed sources, identity, resource receipts and all 192 finite float32
 arrays independently verified. There are 32,710 aligned 768-dimensional bins.
-See [extraction audit](validation/localization_ssl_extraction_v1.json).
+See [extraction audit](../validation/localization_ssl_extraction_v1.json).
 
 The separate local head invocation stopped at its **pre-launch** RAM guard:
 2,004,860,928 bytes were available immediately before invocation, below the
 2 GiB minimum. No worker, fitting, model, dev score or metric run started.
 The stopped directory is preserved; no automatic retry or relaxed limit.
-See [head pre-launch audit](validation/localization_ssl_head_prelaunch_v1.json).
+See [head pre-launch audit](../validation/localization_ssl_head_prelaunch_v1.json).
 
 Next: inspect fresh local RAM with adequate margin, then explicitly launch a
 fresh head output directory using the already verified cache. Do not rerun
@@ -94,7 +94,7 @@ observed owned-child exit and completed its final validation.
   RMS difference: 0.000001425069. Numerical diagnostic only, with no speedup claim.
 
 The recovered archive and local feature/source checks passed. Evidence:
-[fresh v2 smoke audit](validation/localization_ssl_colab_smoke_v2.json).
+[fresh v2 smoke audit](../validation/localization_ssl_colab_smoke_v2.json).
 Artifacts remain ignored under `outputs/colab/session-v2/`. The browser
 download event timed out; the same archive was recovered through visible
 notebook output and its size/hash verified before extraction.
@@ -225,14 +225,14 @@ numerical differences and GPU memory before considering full extraction.
 
 ## Evidence
 
-- [Experiment plan](LOCALIZATION_SSL_PLAN.md)
-- [Environment audit](validation/localization_ssl_environment_v1.json)
-- [Checkpoint receipt](validation/localization_ssl_checkpoint_v1.json)
-- [Both local smoke attempts](validation/localization_ssl_smoke_v1.json)
-- [Colab bundle inventory](validation/localization_ssl_colab_bundle_v1.json)
-- [First GPU smoke audit](validation/localization_ssl_colab_smoke_v1.json)
-- [Current Colab session audit](validation/localization_ssl_colab_session_v1.json)
-- [Clean v2 notebook audit](validation/localization_ssl_colab_notebook_v2.json)
+- [Experiment plan](../LOCALIZATION_SSL_PLAN.md)
+- [Environment audit](../validation/localization_ssl_environment_v1.json)
+- [Checkpoint receipt](../validation/localization_ssl_checkpoint_v1.json)
+- [Both local smoke attempts](../validation/localization_ssl_smoke_v1.json)
+- [Colab bundle inventory](../validation/localization_ssl_colab_bundle_v1.json)
+- [First GPU smoke audit](../validation/localization_ssl_colab_smoke_v1.json)
+- [Current Colab session audit](../validation/localization_ssl_colab_session_v1.json)
+- [Clean v2 notebook audit](../validation/localization_ssl_colab_notebook_v2.json)
 - [PyTorch advisory and patched versions](https://github.com/pytorch/pytorch/security/advisories/GHSA-63cw-57p8-fm3p)
 
 The separate supervisor v2 is now reviewed and source-frozen; nine stdlib
@@ -241,7 +241,7 @@ worker and manifest and keeps all resource limits. Transfer to the existing
 Colab notebook was rejected by browser security policy as permission denied.
 No v2 cloud execution started and no workaround was attempted. Restore
 browser access before the fresh bounded attempt; preserve v1 as stopped.
-Evidence: [supervisor review](validation/localization_ssl_colab_supervisor_v2.json).
+Evidence: [supervisor review](../validation/localization_ssl_colab_supervisor_v2.json).
 
 
 ## Completed follow-up artifact locations

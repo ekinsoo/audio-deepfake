@@ -38,13 +38,13 @@ before any dev scores were saved. That attempt and its freeze are retained.
 The only retry added bounded status-file I/O handling, with the same features,
 model and data; it did not tune parameters based on scores.
 
-![Reference and context-model prediction for a fixed dev recording](figures/localization_context_v1/CON_D_0000586.svg)
+![Reference and context-model prediction for a fixed dev recording](../figures/localization_context_v1/CON_D_0000586.svg)
 
-![Reference and context-model prediction for the nonspeech example](figures/localization_context_v1/CON_D_0003090.svg)
+![Reference and context-model prediction for the nonspeech example](../figures/localization_context_v1/CON_D_0003090.svg)
 
 Ten SVG timelines are saved in `docs/figures/localization_context_v1/`.
-Evidence: [exact plan](LOCALIZATION_CONTEXT_PLAN.md),
-[initial freeze](validation/localization_context_frozen.json),
-[infrastructure retry freeze](validation/localization_context_frozen_v2.json),
-[configuration, results, hashes and comparison](validation/localization_context_v1.json).
+Evidence: [exact plan](../LOCALIZATION_CONTEXT_PLAN.md),
+[initial freeze](../validation/localization_context_frozen.json),
+[infrastructure retry freeze](../validation/localization_context_frozen_v2.json),
+[configuration, results, hashes and comparison](../validation/localization_context_v1.json).
 Raw scores and model stay in the ignored job directory recorded by that audit.

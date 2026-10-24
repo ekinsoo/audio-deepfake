@@ -2,7 +2,7 @@
 
 Status: the first bounded pilot is complete. Real audio alignment passed,
 configuration was frozen before fitting, and ten dev timelines were saved.
-See [results and limitations](LOCALIZATION_RESULTS.md). The completed
+See [results and limitations](details/LOCALIZATION_RESULTS.md). The completed
 full-recording report remains unchanged. The plan below records the original
 gates; final configuration and measurements are in the linked result audit.
 
@@ -126,5 +126,5 @@ before scoring; do not add this ablation to the first fit.
 - Complete: error analysis and extended PDF/LaTeX report.
 
 The result is a custom small dev pilot. Official RangeEER and 10 ms SegmentEER
-remain unreported. Follow the [results](LOCALIZATION_RESULTS.md),
-[training sequence](LOCALIZATION_TRAINING.md) and [resume guide](LOCALIZATION_RUN.md).
+remain unreported. Follow the [results](details/LOCALIZATION_RESULTS.md),
+[training sequence](details/LOCALIZATION_TRAINING.md) and [resume guide](LOCALIZATION_RUN.md).

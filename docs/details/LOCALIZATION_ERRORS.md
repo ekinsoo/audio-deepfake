@@ -115,10 +115,10 @@ small and repeatedly inspected; their errors guide development, not a claim
 of generalization to unseen attacks or datasets. The LFCC delta features
 also use future context, so these results do not describe streaming behavior.
 
-Evidence: [machine-readable analysis](validation/localization_errors_v1.json),
-[pilot configuration and results](validation/localization_pilot_v1.json),
-[alignment audit](validation/localization_alignment.json),
-[analysis script](../scripts/analyze_localization_errors.py).
+Evidence: [machine-readable analysis](../validation/localization_errors_v1.json),
+[pilot configuration and results](../validation/localization_pilot_v1.json),
+[alignment audit](../validation/localization_alignment.json),
+[analysis script](../../scripts/analyze_localization_errors.py).
 
 Reproduce from the retained local pilot artifacts:
 

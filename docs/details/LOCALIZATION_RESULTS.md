@@ -37,9 +37,9 @@ utterances). Dark reference spans represent native binary spoof labels,
 including any nonspeech labelled spoof by the publisher. These are not VAD
 speech-only annotations. Predictions are shown without smoothing.
 
-![Reference and prediction for a preselected dev recording](figures/localization_pilot_v1/CON_D_0000586.svg)
+![Reference and prediction for a preselected dev recording](../figures/localization_pilot_v1/CON_D_0000586.svg)
 
-![Reference and prediction for the nonspeech-label example](figures/localization_pilot_v1/CON_D_0003090.svg)
+![Reference and prediction for the nonspeech-label example](../figures/localization_pilot_v1/CON_D_0003090.svg)
 
 All ten SVGs are in `docs/figures/localization_pilot_v1/`. Model and detailed
 scores remain under the ignored job directory:
@@ -59,7 +59,7 @@ diagnostics. See [reference and metric details](LOCALIZATION_METRICS.md).
 | Missed spoof at fixed zero threshold | 18.29 s | 20.40 s |
 | False alarm at fixed zero threshold | 84.20 s | 87.76 s |
 
-![One fixed normalization comparison](figures/localization_comparison.svg)
+![One fixed normalization comparison](../figures/localization_comparison.svg)
 
 The single fixed transform subtracts the median of each feature dimension
 within its own unlabelled recording and divides by max(1.4826 times MAD, 0.001).
@@ -81,12 +81,12 @@ adding more complexity to the demo.
 Do not tune repeatedly on this small dev subset and call it independent
 validation. PartialSpoof shares source material with ASVspoof.
 
-The [PDF and LaTeX report](report/README.md) now include localization,
+The [PDF and LaTeX report](../report/README.md) now include localization,
 timelines, the negative ablation and metric limitations. Evidence:
-[frozen configuration and results](validation/localization_pilot_v1.json),
-[real alignment audit](validation/localization_alignment.json),
-[independent 16-check review](validation/localization_pilot_review_v1.json),
-[context result](validation/localization_context_v1.json),
-[independent context review](validation/localization_context_review_v1.json),
-[range diagnostic](validation/localization_range_results_v1.json),
-[training sequence](LOCALIZATION_TRAINING.md), [metric limitations](RANGE_EER_CONFORMANCE.md).
+[frozen configuration and results](../validation/localization_pilot_v1.json),
+[real alignment audit](../validation/localization_alignment.json),
+[independent 16-check review](../validation/localization_pilot_review_v1.json),
+[context result](../validation/localization_context_v1.json),
+[independent context review](../validation/localization_context_review_v1.json),
+[range diagnostic](../validation/localization_range_results_v1.json),
+[training sequence](LOCALIZATION_TRAINING.md), [metric limitations](../RANGE_EER_CONFORMANCE.md).

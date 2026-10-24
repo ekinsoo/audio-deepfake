@@ -26,7 +26,7 @@ is 20 ms (`--scale 2`), reference resolution 10 ms. Each worker has an external
 Both model runs stopped their search on a repeated complete state after 55
 iterations. Independent interval arithmetic reproduced FPR/FNR at each
 selected threshold to within 1e-8. This is not exhaustive threshold search
-or interpolated EER. [Compatibility findings](RANGE_EER_CONFORMANCE.md)
+or interpolated EER. [Compatibility findings](../RANGE_EER_CONFORMANCE.md)
 document the upstream errors and exact patches.
 
 | Custom pilot diagnostic | LFCC baseline | Recording median/MAD |
@@ -64,9 +64,9 @@ and recorded source/configuration changes. The metric runner uses the actual
 base Python executable and explicitly selects the isolated metric packages,
 so the original model environment is not changed.
 
-Evidence: [reference audit](validation/localization_references_v1.json),
-[range results and duration check](validation/localization_range_results_v1.json),
-[first pilot](LOCALIZATION_RESULTS.md), [context plan](LOCALIZATION_CONTEXT_PLAN.md).
+Evidence: [reference audit](../validation/localization_references_v1.json),
+[range results and duration check](../validation/localization_range_results_v1.json),
+[first pilot](LOCALIZATION_RESULTS.md), [context plan](../LOCALIZATION_CONTEXT_PLAN.md).
 Cite [Zhang et al. (2023)](https://www.isca-archive.org/interspeech_2023/zhang23v_interspeech.html)
 and [pyannote.metrics](https://pyannote.github.io/pyannote-metrics/) when discussing
 the range evaluator.

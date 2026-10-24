@@ -21,14 +21,14 @@ seed or threshold search. Older entries below are historical.
 
 # Bounded SSL comparison continuation
 
-The [fresh supervisor v2 smoke](validation/localization_ssl_colab_smoke_v2.json)
+The [fresh supervisor v2 smoke](../validation/localization_ssl_colab_smoke_v2.json)
 passed. The next stage uses exactly the frozen 128 train / 64 dev recordings,
 wav2vec2-base revision, float32 last-layer representation, seed 45 and frame
-mapping in [the frozen plan](LOCALIZATION_SSL_PLAN.md). This document is an
+mapping in [the frozen plan](../LOCALIZATION_SSL_PLAN.md). This document is an
 execution guide, not evidence that extraction or training has completed.
 
-Current result: [192-cache extraction verified](validation/localization_ssl_extraction_v1.json).
-The [local head stopped before launch](validation/localization_ssl_head_prelaunch_v1.json)
+Current result: [192-cache extraction verified](../validation/localization_ssl_extraction_v1.json).
+The [local head stopped before launch](../validation/localization_ssl_head_prelaunch_v1.json)
 at the unchanged RAM gate. Reuse the verified cache; preserve the stopped head
 directory and inspect resources before an explicit fresh output attempt.
 

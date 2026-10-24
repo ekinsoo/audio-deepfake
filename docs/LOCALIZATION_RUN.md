@@ -2,7 +2,7 @@
 
 The pilot, one context ablation and derived-reference metric checks are complete.
 The PDF/LaTeX report now covers detection and localization;
-see [localization results](LOCALIZATION_RESULTS.md). Read the [pilot plan](LOCALIZATION_PILOT_PLAN.md),
+see [localization results](details/LOCALIZATION_RESULTS.md). Read the [pilot plan](LOCALIZATION_PILOT_PLAN.md),
 [metadata audit](validation/partial_metadata.json), and
 [metric compatibility review](RANGE_EER_CONFORMANCE.md).
 
@@ -23,7 +23,7 @@ Completed at 19:35:35 Istanbul on 10 October. Both train and dev archives
 passed their published MD5 checks; all 128 train and 64 dev selected WAVs
 have completion receipts and individual hashes. Audio preparation is finished.
 The following resume description is historical. Continue with
-[the training sequence](LOCALIZATION_TRAINING.md), not another audio download.
+[the training sequence](details/LOCALIZATION_TRAINING.md), not another audio download.
 
 Resumed at 19:34 Istanbul on 10 October. Train is complete and its publisher
 MD5 is verified. The earlier job left a stale running status and lock at

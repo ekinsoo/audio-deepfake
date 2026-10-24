@@ -44,3 +44,10 @@ experiment evidence should remain unchanged when editing report prose.
 
 The [final SSL report review](../validation/localization_ssl_report_review_v1.json)
 records the 13-page rendering check and successful LaTeX compilation.
+
+## Markdown edition
+
+`reports.md` at the repository root contains the same report text and tables,
+not the earlier progress log. Regenerate it in the reporting environment with
+`python scripts/export_report_markdown.py`. The historical progress notes remain
+in Git history and a local ignored backup.

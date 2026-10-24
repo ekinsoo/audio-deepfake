@@ -4,7 +4,7 @@ The fixed pilot contains 2,000 train and 1,000 dev recordings, sampled with seed
 The first smoke check uses 50 recordings from each split. Eval is not used here.
 Run all commands below from the repository root. Set up the environment,
 protocol manifests and metric reference first; see the
-[README](../README.md#prepare-metadata). Downloading the 100-record smoke sample
+[README](../../README.md#prepare-metadata). Downloading the 100-record smoke sample
 is optional for the full-pilot workflow. Its existing files are verified when
 present, rather than downloaded again.
 
@@ -16,7 +16,7 @@ and audio journal: 2,000 train and 1,000 dev, 16 kHz mono PCM16 FLAC. Saved audi
 totals 187,197,762 bytes. Train and dev share no selected speakers or recording
 IDs. No eval audio was extracted, decoded or scored.
 
-The [saved data audit](validation/pilot_data_seed42.json) records source URLs,
+The [saved data audit](../validation/pilot_data_seed42.json) records source URLs,
 checksums, split counts, formats and provenance. The reused download prefix may
 contain bytes from both official sources; the completed archive was verified
 as a whole. The baseline and narrowband diagnostic have also completed; see

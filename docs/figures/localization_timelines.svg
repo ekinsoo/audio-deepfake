@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="720" height="285" preserveAspectRatio="xMinYMin meet" viewBox="0 0 720 285" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="720" height="285"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-285)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="720" height="285" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="18" y="260" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,520) scale(1,-1)">CON_D_0000586</text>
+			<text x="18" y="235" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,470) scale(1,-1)">Native binary</text>
+			<rect x="125" y="232" width="565" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,93%,93%); fill-rule: evenodd;"/>
+			<rect x="212.54270342972427" y="232" width="77.81573638197716" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="377.90114324142576" y="232" width="131.3140551445864" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="552.9865501008742" y="232" width="116.72360457296577" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<text x="18" y="208" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,416) scale(1,-1)">Baseline</text>
+			<rect x="125" y="205" width="565" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,93%,93%); fill-rule: evenodd;"/>
+			<rect x="134.72696704774714" y="205" width="19.453934095494276" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="163.90786819098858" y="205" width="4.863483523873555" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="173.63483523873572" y="205" width="4.863483523873583" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="183.36180228648286" y="205" width="9.726967047747138" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="202.81573638197716" y="205" width="14.590450571620721" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="231.99663752521855" y="205" width="4.863483523873583" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="241.7236045729657" y="205" width="4.863483523873583" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="270.90450571620715" y="205" width="24.31741761936786" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="358.4472091459314" y="205" width="24.31741761936786" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="421.67249495628784" y="205" width="19.453934095494276" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="465.44384667114997" y="205" width="4.863483523873583" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="504.3517148621386" y="205" width="4.863483523873583" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="514.0786819098857" y="205" width="9.726967047747053" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="548.1230665770007" y="205" width="29.1809011432415" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="582.1674512441157" y="205" width="19.453934095494333" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="606.4848688634836" y="205" width="4.863483523873583" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="679.437121721587" y="205" width="9.726967047747166" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<path d="M 125,190 L 690,190 Z" style="stroke: rgb(46%,46%,46%); stroke-linecap: butt; stroke-width: 0.6;"/>
+			<text x="116.243" y="176" style="font-family: Helvetica; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,352) scale(1,-1)">0.00</text>
+			<text x="257.493" y="176" style="font-family: Helvetica; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,352) scale(1,-1)">0.58</text>
+			<text x="398.743" y="176" style="font-family: Helvetica; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,352) scale(1,-1)">1.16</text>
+			<text x="539.993" y="176" style="font-family: Helvetica; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,352) scale(1,-1)">1.74</text>
+			<text x="681.243" y="176" style="font-family: Helvetica; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,352) scale(1,-1)">2.32</text>
+			<text x="18" y="128" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,256) scale(1,-1)">CON_D_0003090</text>
+			<text x="18" y="103" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,206) scale(1,-1)">Native binary</text>
+			<rect x="125" y="100" width="565" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,93%,93%); fill-rule: evenodd;"/>
+			<rect x="125.0" y="100" width="167.6726303180185" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="495.2770586189574" y="100" width="13.972719193168246" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="593.0860929711348" y="100" width="96.91390702886508" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<text x="18" y="76" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,152) scale(1,-1)">Baseline</text>
+			<rect x="125" y="73" width="565" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,93%,93%); fill-rule: evenodd;"/>
+			<rect x="125.0" y="73" width="160.68627072143437" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="299.65898991460256" y="73" width="6.986359596584123" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="376.50894547702774" y="73" width="55.89087677267281" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="460.3452606360369" y="73" width="41.91815757950468" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="523.2224970052938" y="73" width="48.9045171760888" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="600.072452567719" y="73" width="89.92754743228102" height="15" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<path d="M 125,58 L 690,58 Z" style="stroke: rgb(46%,46%,46%); stroke-linecap: butt; stroke-width: 0.6;"/>
+			<text x="116.243" y="44" style="font-family: Helvetica; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,88) scale(1,-1)">0.00</text>
+			<text x="257.493" y="44" style="font-family: Helvetica; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,88) scale(1,-1)">0.40</text>
+			<text x="398.743" y="44" style="font-family: Helvetica; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,88) scale(1,-1)">0.81</text>
+			<text x="539.993" y="44" style="font-family: Helvetica; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,88) scale(1,-1)">1.21</text>
+			<text x="681.243" y="44" style="font-family: Helvetica; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,88) scale(1,-1)">1.62</text>
+			<text x="18" y="5" style="font-family: Helvetica; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,10) scale(1,-1)">Time in seconds. Dark spans indicate binary spoof labels or predictions; threshold fixed at zero.</text>
+		</g>
+	</g>
+</svg>

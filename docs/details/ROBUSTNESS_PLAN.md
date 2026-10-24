@@ -1,8 +1,8 @@
 # Narrowband score stability
 
 Status: first pilot experiment completed. The unchanged pre-result protocol is
-preserved in [the frozen snapshot](validation/robustness_protocol_v1.md).
-The [run audit](validation/robustness_pilot_seed42.json) records the outcomes:
+preserved in [the frozen snapshot](../validation/robustness_protocol_v1.md).
+The [run audit](../validation/robustness_pilot_seed42.json) records the outcomes:
 absolute score change did not beat the simple margin baseline for ranking
 errors. This is one small experiment, not a claim of a new method. The rules
 below describe the original plan; they were not revised after viewing results.

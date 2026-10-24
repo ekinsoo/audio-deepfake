@@ -14,7 +14,7 @@ Run the frozen 50-train / 50-dev mechanical check from the repository root:
 ```
 
 The runner requires the downloaded selection and its hash journal, plus the
-external evaluator and official dev ASV scores described in [METRICS.md](METRICS.md).
+external evaluator and official dev ASV scores described in [METRICS.md](../METRICS.md).
 It checks selection/audio/reference hashes and train/dev speaker separation
 before fitting. Existing output directories are protected; use a new directory
 for another run. It writes `model.joblib`, `scores.csv`, `config.json` and
@@ -27,7 +27,7 @@ pilot.
 For the full pilot, first prepare and verify the fixed audio selection as
 described in [PILOT_DATA.md](PILOT_DATA.md). Prepare the external evaluator and
 official dev ASV scores with `scripts/fetch_metric_reference.py`; see
-[METRICS.md](METRICS.md). Then run from the repository root:
+[METRICS.md](../METRICS.md). Then run from the repository root:
 
 ```powershell
 .venv\Scripts\python.exe scripts/build_pilot_selection.py
@@ -85,7 +85,7 @@ CPU with one numerical thread. Peak process memory was 189.93 MiB. Both class
 models converged without warnings: 43 iterations for bonafide and 30 for spoof.
 The retained training budget was 50,000 frames per class. Peak memory includes
 imports; filesystem cache was not controlled. See the
-[saved pilot report](validation/baseline_pilot_seed42.json) for exact metrics,
+[saved pilot report](../validation/baseline_pilot_seed42.json) for exact metrics,
 configuration, hashes, environment and resource measurements.
 
 ## Scoring
@@ -192,7 +192,7 @@ below the 0.1002 error-prevalence reference. This is a negative result for the
 frozen hypothesis on this dev subset, not a reason to reverse the score direction
 after looking at the labels. Transformed scoring took 10.28 seconds, with
 145.19 MiB peak process memory. The
-[saved robustness report](validation/robustness_pilot_seed42.json) records the
+[saved robustness report](../validation/robustness_pilot_seed42.json) records the
 frozen partition, calibration, exact results, failure cases and limitations.
 
 ## Local artifacts

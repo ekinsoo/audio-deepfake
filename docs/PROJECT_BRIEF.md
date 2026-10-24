@@ -72,14 +72,14 @@ ablation worsened this diagnostic to 42.92%. The checked distribution has no
 publisher RTTM reference; explicitly derived native-label RangeEER diagnostics
 were 39.38% baseline and 42.97% context. Error analysis and the extended
 PDF/LaTeX report are complete. Publisher-reference parity remains unverified.
-See [results](LOCALIZATION_RESULTS.md), [metric details](LOCALIZATION_METRICS.md),
+See [results](details/LOCALIZATION_RESULTS.md), [metric details](details/LOCALIZATION_METRICS.md),
 [pilot plan](LOCALIZATION_PILOT_PLAN.md) and [source review](PARTIALSPOOF_PROTOCOL.md).
 
 The earlier balanced pilot is preserved separately. Its clean EER was 8.8%
 and fixed-average EER 8.4%; that small benefit did not carry to the full run.
 Both used the same 50,000-frame-per-class cap, but their training recordings,
 sampled frames, dev populations and class balance differ. See the
-[pilot audit](validation/robustness_pilot_seed42.json), [starting plan](START_PLAN.md),
+[pilot audit](validation/robustness_pilot_seed42.json), [starting plan](details/START_PLAN.md),
 [reports](../reports.md) and [backlog](../backlog.md).
 
 
